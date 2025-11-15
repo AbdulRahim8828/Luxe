@@ -7,19 +7,30 @@ const sofaService = {
   id: 'sofa-fabric-change',
   name: 'Sofa Fabric Change',
   image: '../assets/Sofa_Fabric_Change_20.jpg',
-  options: [
-    { name: '1 seater Sofa', price: 3499 },
-    { name: '2 seater Sofa', price: 4499 },
-    { name: '3 seater Sofa', price: 5999 },
-    { name: 'L shape Sofa', price: 8999 },
-    { name: 'Recliner 1 seater', price: 4499 },
-    { name: 'Recliner 2 seater', price: 7499 },
-    { name: 'Recliner 3 seater', price: 9999 },
-    { name: 'Recliner 3-1-1 seater', price: 13999 },
-    { name: 'Sofa cumbed', price: 5999 },
-    { name: 'Bed side 3 side', price: 3499 },
+  categories: [
+    {
+      name: 'Sofa & Miscellaneous',
+      options: [
+        { name: '1 seater Sofa', price: 3499 },
+        { name: '2 seater Sofa', price: 4499 },
+        { name: '3 seater Sofa', price: 5999 },
+        { name: 'L shape Sofa', price: 8999 },
+        { name: 'Sofa cumbed', price: 5999 },
+        { name: 'Bed side 3 side', price: 3499 },
+      ],
+    },
+    {
+      name: 'Recliner Sofa',
+      options: [
+        { name: 'Recliner 1 seater', price: 4499 },
+        { name: 'Recliner 2 seater', price: 7499 },
+        { name: 'Recliner 3 seater', price: 9999 },
+        { name: 'Recliner 3-1-1 seater', price: 13999 },
+      ],
+    },
   ],
   features: [
+    'The listed prices are for labor costs only and do not include the cost of fabric.',
     'High-quality fabric in a variety of colors and textures',
     'Professional removal of old fabric and installation of new fabric',
     'Minor frame repairs and foam padding replacement included',
@@ -28,22 +39,23 @@ const sofaService = {
 };
 
 const SofaFabricChange: React.FC = () => {
-  const [selectedOption, setSelectedOption] = useState(-1);
+  const [selectedOption, setSelectedOption] = useState<{ cat: number; opt: number } | null>(null);
   const [formErrors, setFormErrors] = useState({ variant: '' });
-  const minPrice = Math.min(...sofaService.options.map(o => o.price));
 
+  const allOptions = sofaService.categories.flatMap(c => c.options);
+  const minPrice = Math.min(...allOptions.map(o => o.price));
 
-  const handleOptionChange = (optionIndex: number) => {
-    setSelectedOption(optionIndex);
+  const handleOptionChange = (catIndex: number, optIndex: number) => {
+    setSelectedOption({ cat: catIndex, opt: optIndex });
     setFormErrors({ variant: '' });
   };
 
   const openBookingModal = () => {
-    if (selectedOption === -1) {
+    if (!selectedOption) {
       setFormErrors({ variant: 'Please select a service option.' });
       return;
     }
-    const option = sofaService.options[selectedOption];
+    const option = sofaService.categories[selectedOption.cat].options[selectedOption.opt];
     const message = `I would like to book the Sofa Fabric Change service for a ${option.name} at a price of ₹${option.price}.`;
     const whatsappUrl = `https://wa.me/918828709945?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -52,8 +64,7 @@ const SofaFabricChange: React.FC = () => {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: sofaService.name,
-    image: sofaService.image,
+    serviceType: sofaService.name,
     provider: {
       '@type': 'LocalBusiness',
       name: 'A1 Furniture Polish',
@@ -71,12 +82,23 @@ const SofaFabricChange: React.FC = () => {
       '@type': 'City',
       name: 'Mumbai',
     },
-    offers: sofaService.options.map(option => ({
-      '@type': 'Offer',
-      name: option.name,
-      price: option.price,
-      priceCurrency: 'INR',
-    })),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Sofa Fabric Change Services',
+      itemListElement: sofaService.categories.map(cat => ({
+        '@type': 'OfferCatalog',
+        name: cat.name,
+        itemListElement: cat.options.map(opt => ({
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: opt.name,
+          },
+          price: opt.price,
+          priceCurrency: 'INR',
+        })),
+      })),
+    },
   };
 
   return (
@@ -84,7 +106,7 @@ const SofaFabricChange: React.FC = () => {
       <SEOHead
         title="Sofa Fabric Change Services in Mumbai | A1 Furniture Polish"
         description="Professional sofa fabric change services in Mumbai. Get the best prices for 1, 2, 3-seater, L-shape sofas, recliners, and more."
-        keywords={'sofa fabric change, sofa repair, furniture upholstery, mumbai'}
+        keywords={'sofa fabric change, sofa repair, furniture upholstery, mumbai, recliner fabric change'}
       />
       <JsonLd data={serviceSchema} />
 
@@ -101,24 +123,27 @@ const SofaFabricChange: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Get an estimate</h3>
-
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {sofaService.options.map((option, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleOptionChange(index)}
-                    className={`p-4 border rounded-lg cursor-pointer transition-all duration-200 ${
-                      selectedOption === index
-                        ? 'border-amber-600 bg-amber-50'
-                        : 'border-gray-200 hover:border-amber-400'
-                    }`}
-                  >
-                    <p className="font-semibold text-gray-800">{option.name}</p>
-                    <p className="text-lg font-bold text-gray-900">₹{option.price}</p>
+              {sofaService.categories.map((category, catIndex) => (
+                <div key={catIndex} className="mb-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.name}</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {category.options.map((option, optIndex) => (
+                      <div
+                        key={optIndex}
+                        onClick={() => handleOptionChange(catIndex, optIndex)}
+                        className={`p-4 border rounded-lg cursor-pointer transition-all duration-200 ${
+                          selectedOption?.cat === catIndex && selectedOption?.opt === optIndex
+                            ? 'border-amber-600 bg-amber-50'
+                            : 'border-gray-200 hover:border-amber-400'
+                        }`}>
+                        <p className="font-semibold text-gray-800">{option.name}</p>
+                        <p className="text-lg font-bold text-gray-900">₹{option.price}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+
               {formErrors.variant && <p className="text-red-500 text-sm mt-2">{formErrors.variant}</p>}
 
               <div className="mt-8">
@@ -149,6 +174,6 @@ const SofaFabricChange: React.FC = () => {
       </div>
     </>
   );
-};
+};go
 
 export default SofaFabricChange;
