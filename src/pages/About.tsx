@@ -1,3 +1,4 @@
+import React from 'react';
 import { Award, Users, Shield, Leaf } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
