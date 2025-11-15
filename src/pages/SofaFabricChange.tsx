@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { FaArrowRight } from 'react-icons/fa';
+import BookingModal from '../components/BookingModal';
 
 const sofaService = {
   id: 'sofa-fabric-change',
@@ -40,6 +42,7 @@ const sofaService = {
 
 const SofaFabricChange: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<{ cat: number; opt: number } | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formErrors, setFormErrors] = useState({ variant: '' });
 
   const allOptions = sofaService.categories.flatMap(c => c.options);
@@ -55,11 +58,16 @@ const SofaFabricChange: React.FC = () => {
       setFormErrors({ variant: 'Please select a service option.' });
       return;
     }
-    const option = sofaService.categories[selectedOption.cat].options[selectedOption.opt];
-    const message = `I would like to book the Sofa Fabric Change service for a ${option.name} at a price of ₹${option.price}.`;
-    const whatsappUrl = `https://wa.me/918828709945?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    setIsModalOpen(true);
   };
+
+  const closeBookingModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const selectedService = selectedOption
+    ? sofaService.categories[selectedOption.cat].options[selectedOption.opt]
+    : null;
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -171,9 +179,17 @@ const SofaFabricChange: React.FC = () => {
             </div>
           </div>
         </main>
+
+        {isModalOpen && selectedService && (
+          <BookingModal
+            service={selectedService.name}
+            price={`₹${selectedService.price}`}
+            onClose={closeBookingModal}
+          />
+        )}
       </div>
     </>
   );
-};go
+};
 
 export default SofaFabricChange;
