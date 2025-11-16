@@ -11,11 +11,13 @@ const staticRoutes = [
   '/services',
   '/blog',
   '/contact',
-  '/wooden-furniture-polish',
+  '/services/wooden-furniture-polish',
   '/sofa-chair-polishing',
-  '/table-bed-polishing',
-  '/antique-restoration',
-  '/commercial-polishing'
+  '/services/table-and-bed-polishing',
+  '/services/antique-restoration',
+  '/services/commercial-polishing',
+  '/sofa-fabric-change',
+  '/office-chair-repair'
 ];
 const dynamicRoutes = [...blogPostRoutes, ...staticRoutes];
 

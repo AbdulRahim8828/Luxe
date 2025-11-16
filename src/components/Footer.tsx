@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white pb-16 md:pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -39,11 +39,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-amber-400">Our Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/wooden-furniture-polish" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Wooden Furniture Polish</Link></li>
+              <li><Link to="/services/wooden-furniture-polish" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Wooden Furniture Polish</Link></li>
               <li><Link to="/sofa-chair-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Sofa & Chair Polishing</Link></li>
-              <li><Link to="/table-bed-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Table & Bed Polishing</Link></li>
-              <li><Link to="/antique-restoration" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Antique Restoration</Link></li>
-              <li><Link to="/commercial-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Commercial Polishing</Link></li>
+              <li><Link to="/services/table-and-bed-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Table & Bed Polishing</Link></li>
+              <li><Link to="/services/antique-restoration" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Antique Restoration</Link></li>
+              <li><Link to="/services/commercial-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Commercial Polishing</Link></li>
             </ul>
           </div>
 
@@ -62,9 +62,9 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail size={16} className="text-amber-400" />
-                <a href="mailto:A1furniturepolishservice@gmail.com" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">
+              <div className="flex items-start space-x-2">
+                <Mail size={18} className="text-amber-400 flex-shrink-0 mt-1" />
+                <a href="mailto:A1furniturepolishservice@gmail.com" className="text-gray-300 hover:text-amber-400 transition-colors duration-200 text-sm break-all">
                   A1furniturepolishservice@gmail.com
                 </a>
               </div>

@@ -23,7 +23,8 @@ const BlogPost = () => {
           setPost({ ...postData, content });
         }
       } catch (error) {
-        console.error('Failed to load blog post', error);
+        // Error loading blog post - silently fail in production
+        setPost(null);
       } finally {
         setIsLoading(false);
       }

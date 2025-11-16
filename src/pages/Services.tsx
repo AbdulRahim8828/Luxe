@@ -192,38 +192,38 @@ URL: ${window.location.href}`;
             Discover our range of professional wood polishing services. We offer quality craftsmanship at prices 20% lower than competitors.
           </p>
         </section>
-      <div className="py-16 bg-gray-100">
+      <div className="py-8 md:py-16 bg-gray-100 pb-24 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
             {services.map((service, serviceIndex) => (
               <div key={service.id} className="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
                 <div className="flex justify-center items-center bg-gray-50 p-4">
                     <img
                     src={service.image}
                     alt={service.name}
-                    className="h-64 object-contain transition-transform duration-300"
+                    className="h-48 md:h-64 object-contain transition-transform duration-300"
                     loading="lazy"
                     />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                  <div className="flex items-baseline mb-4">
-                    <span className="text-2xl font-bold text-amber-600">Starts at ₹{service.options[0].price}</span>
-                    <span className="ml-4 px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
+                <div className="p-4 md:p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-0 mb-4">
+                    <span className="text-xl md:text-2xl font-bold text-amber-600">Starts at ₹{service.options[0].price}</span>
+                    <span className="sm:ml-4 px-3 py-1 bg-green-100 text-green-800 text-xs md:text-sm font-semibold rounded-full w-fit">
                       20% Lower than competitors
                     </span>
                   </div>
 
                   <div className="mt-6">
-                    <h4 className="text-lg font-semibold text-gray-800 mb-3">Get an estimate</h4>
+                    <h4 className="text-base md:text-lg font-semibold text-gray-800 mb-3">Get an estimate</h4>
                     <div className="grid grid-cols-2 gap-3">
                       {service.options.map((option, optionIndex) => (
                         <div
                           key={option.name}
                           onClick={() => handleOptionChange(serviceIndex, optionIndex)}
-                          className={`p-4 border rounded-lg cursor-pointer transition-all duration-200 ${service.selectedOption === optionIndex ? 'border-amber-600 bg-amber-50' : 'border-gray-200'}`}>
-                          <p className="font-semibold text-gray-800">{option.name}</p>
-                          <p className="text-lg font-bold text-gray-900">₹{option.price}</p>
+                          className={`p-3 md:p-4 border rounded-lg cursor-pointer transition-all duration-200 ${service.selectedOption === optionIndex ? 'border-amber-600 bg-amber-50' : 'border-gray-200 hover:border-amber-400'}`}>
+                          <p className="text-sm md:text-base font-semibold text-gray-800">{option.name}</p>
+                          <p className="text-base md:text-lg font-bold text-gray-900">₹{option.price}</p>
                         </div>
                       ))}
                     </div>
@@ -231,23 +231,23 @@ URL: ${window.location.href}`;
                   </div>
 
                   <div className="mt-6">
-                     <h4 className="text-lg font-semibold text-gray-800 mb-3">What's included</h4>
+                     <h4 className="text-base md:text-lg font-semibold text-gray-800 mb-3">What's included</h4>
                     <ul className="text-gray-600 space-y-2">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-center">
-                          <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <li key={i} className="flex items-start">
+                          <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          <span>{feature}</span>
+                          <span className="text-sm md:text-base">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <button onClick={() => openBookingModal(service)} className="mt-8 w-full bg-amber-600 text-white px-6 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 font-bold text-lg">
+                  <button onClick={() => openBookingModal(service)} className="mt-6 md:mt-8 w-full bg-amber-600 text-white px-6 py-3 md:py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 font-bold text-base md:text-lg">
                     Book Now
                   </button>
-                  <p className="text-center text-sm text-gray-500 mt-3">
+                  <p className="text-center text-xs md:text-sm text-gray-500 mt-3">
                     Same-day service available in Jogeshwari, Andheri, Goregaon.
                   </p>
                 </div>
@@ -257,29 +257,29 @@ URL: ${window.location.href}`;
         </div>
       </div>
       {isModalOpen && selectedService && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-8 max-w-md w-full">
-            <h2 className="text-2xl font-bold mb-4">Book Service</h2>
-            <p className="mb-4">You are booking: <strong>{selectedService.name} - {selectedService.variant}</strong> for <strong>₹{selectedService.price}</strong></p>
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-[60] p-4">
+          <div className="bg-white rounded-lg p-6 md:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <h2 className="text-xl md:text-2xl font-bold mb-4">Book Service</h2>
+            <p className="mb-4 text-sm md:text-base">You are booking: <strong>{selectedService.name} - {selectedService.variant}</strong> for <strong>₹{selectedService.price}</strong></p>
             <form onSubmit={submitToWhatsApp}>
               <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-                <input type="text" name="name" id="name" value={bookingForm.name} onChange={handleFormChange} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm" />
-                {formErrors.name && <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>}
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
+                <input type="text" name="name" id="name" value={bookingForm.name} onChange={handleFormChange} className="mt-1 block w-full px-3 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base" required />
+                {formErrors.name && <p className="text-red-500 text-xs md:text-sm mt-1">{formErrors.name}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">Mobile</label>
-                <input type="text" name="mobile" id="mobile" value={bookingForm.mobile} onChange={handleFormChange} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm" />
-                {formErrors.mobile && <p className="text-red-500 text-sm mt-1">{formErrors.mobile}</p>}
+                <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">Mobile *</label>
+                <input type="tel" name="mobile" id="mobile" value={bookingForm.mobile} onChange={handleFormChange} className="mt-1 block w-full px-3 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base" required />
+                {formErrors.mobile && <p className="text-red-500 text-xs md:text-sm mt-1">{formErrors.mobile}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700">Address</label>
-                <textarea name="address" id="address" value={bookingForm.address} onChange={handleFormChange} rows={3} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"></textarea>
-                {formErrors.address && <p className="text-red-500 text-sm mt-1">{formErrors.address}</p>}
+                <label htmlFor="address" className="block text-sm font-medium text-gray-700">Address *</label>
+                <textarea name="address" id="address" value={bookingForm.address} onChange={handleFormChange} rows={3} className="mt-1 block w-full px-3 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base" required></textarea>
+                {formErrors.address && <p className="text-red-500 text-xs md:text-sm mt-1">{formErrors.address}</p>}
               </div>
-              <div className="flex justify-end">
-                <button type="button" onClick={() => setIsModalOpen(false)} className="mr-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cancel</button>
-                <button type="submit" disabled={isSubmitting} className="px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 disabled:bg-gray-400">
+              <div className="flex flex-col sm:flex-row justify-end gap-3 sm:gap-0">
+                <button type="button" onClick={() => setIsModalOpen(false)} className="w-full sm:w-auto sm:mr-4 px-4 py-2 md:py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 font-medium">Cancel</button>
+                <button type="submit" disabled={isSubmitting} className="w-full sm:w-auto px-6 py-2 md:py-3 bg-amber-600 text-white rounded-md hover:bg-amber-700 disabled:bg-gray-400 font-medium">
                   {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
               </div>

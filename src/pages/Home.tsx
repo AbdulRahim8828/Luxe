@@ -5,8 +5,17 @@ import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { localBusiness } from '../data/localBusiness.ts';
 import { services as servicesSchema } from '../data/services.ts';
-import { reviews, aggregateRating } from '../data/reviews.ts'; // Import both reviews and aggregateRating
+import { reviews, aggregateRating } from '../data/reviews.ts';
 import OurProcess from '../components/OurProcess';
+import EmergencyBanner from '../components/EmergencyBanner';
+import ServiceAreaCoverage from '../components/ServiceAreaCoverage';
+import BlogPreview from '../components/BlogPreview';
+import ExitIntentPopup from '../components/ExitIntentPopup';
+import UrgencyNotification from '../components/UrgencyNotification';
+import ComparisonTable from '../components/ComparisonTable';
+import StatsCounter from '../components/StatsCounter';
+import StickyWhatsApp from '../components/StickyWhatsApp';
+import { FadeIn, SlideIn } from '../components/ScrollAnimations';
 
 const Home = () => {
   const services = [
@@ -14,7 +23,7 @@ const Home = () => {
       title: 'Wooden Furniture Polish',
       description: 'Professional polishing for all types of wooden furniture',
       image: '/assets/wooden furniture .webp',
-      link: '/wooden-furniture-polish'
+      link: '/services/wooden-furniture-polish'
     },
     {
       title: 'Sofa & Chair Polishing',
@@ -26,19 +35,19 @@ const Home = () => {
       title: 'Table & Bed Polishing',
       description: 'Specialized care for dining tables, beds, and more',
       image: '/assets/Table & Bed Polishing.jpg',
-      link: '/table-bed-polishing'
+      link: '/services/table-and-bed-polishing'
     },
     {
       title: 'Antique Restoration',
       description: 'Specialized care for vintage and antique furniture pieces',
       image: '/assets/Antique Restoration.jpg',
-      link: '/antique-restoration'
+      link: '/services/antique-restoration'
     },
     {
       title: 'Commercial Polishing',
       description: 'Professional furniture polishing for offices and businesses',
       image: '/assets/drying-finishing.webp',
-      link: '/commercial-polishing'
+      link: '/services/commercial-polishing'
     }
   ];
 
@@ -73,13 +82,22 @@ const Home = () => {
       />
       <JsonLd data={localBusiness} />
       <JsonLd data={servicesSchema} />
-      {/* Render each review as a separate JSON-LD script */}
       {reviews.map((review, index) => (
         <JsonLd key={`review-${index}`} data={review} />
       ))}
-      {/* Render the aggregate rating */}
       <JsonLd data={aggregateRating} />
 
+      {/* Emergency Banner */}
+      <EmergencyBanner />
+
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
+
+      {/* Urgency Notifications */}
+      <UrgencyNotification />
+
+      {/* Sticky WhatsApp Button */}
+      <StickyWhatsApp />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-12 md:py-20">
@@ -134,46 +152,74 @@ const Home = () => {
 
       <OurProcess />
 
+      {/* Stats Counter */}
+      <StatsCounter />
+
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose A1 Furniture Polish in Mumbai?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We are Mumbai's most trusted furniture polishing service with years of experience in restoring and maintaining wooden furniture.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Guaranteed</h3>
-              <p className="text-gray-600">100% satisfaction guarantee on all our furniture polishing services in Mumbai.</p>
+          <FadeIn>
+            <div className="text-center mb-16">
+              <span className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Why Choose Us
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose A1 Furniture Polish in Mumbai?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We are Mumbai's most trusted furniture polishing service with years of experience in restoring and maintaining wooden furniture.
+              </p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wrench className="w-8 h-8 text-amber-600" />
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <FadeIn delay={100}>
+              <div className="group relative bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-amber-100 rounded-bl-full opacity-50"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Shield className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Quality Guaranteed</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">100% satisfaction guarantee on all our furniture polishing services in Mumbai.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
-              <p className="text-gray-600">Skilled craftsmen with 10+ years experience in furniture polishing and restoration.</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-amber-600" />
+            </FadeIn>
+            <FadeIn delay={200}>
+              <div className="group relative bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-orange-100 rounded-bl-full opacity-50"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Wrench className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Expert Team</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">Skilled craftsmen with 10+ years experience in furniture polishing and restoration.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Quick Service</h3>
-              <p className="text-gray-600">Fast and efficient furniture polishing service delivery across Mumbai.</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-amber-600" />
+            </FadeIn>
+            <FadeIn delay={300}>
+              <div className="group relative bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-amber-100 rounded-bl-full opacity-50"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Clock className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Quick Service</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">Fast and efficient furniture polishing service delivery across Mumbai.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Eco-Friendly</h3>
-              <p className="text-ray-600">Safe, non-toxic polish products that are environmentally friendly and family-safe.</p>
-            </div>
+            </FadeIn>
+            <FadeIn delay={400}>
+              <div className="group relative bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-orange-100 rounded-bl-full opacity-50"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Star className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Eco-Friendly</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">Safe, non-toxic polish products that are environmentally friendly and family-safe.</p>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -181,71 +227,88 @@ const Home = () => {
       {/* Services Overview */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Furniture Polishing Services in Mumbai
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              From wooden furniture polish to complete restoration, we offer comprehensive furniture care services across Mumbai.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Our Furniture Polishing Services in Mumbai
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                From wooden furniture polish to complete restoration, we offer comprehensive furniture care services across Mumbai.
+              </p>
+            </div>
+          </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.slice(0, 5).map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-48 object-cover"
-                  loading="lazy"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link
-                    to={service.link}
-                    className="text-amber-600 font-medium hover:text-amber-700 transition-colors duration-200"
-                  >
-                    Learn More →
-                  </Link>
+              <FadeIn key={index} delay={index * 100}>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <Link
+                      to={service.link}
+                      className="text-amber-600 font-medium hover:text-amber-700 transition-colors duration-200"
+                    >
+                      Learn More →
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Service Area Coverage */}
+      <ServiceAreaCoverage />
+
+      {/* Comparison Table */}
+      <ComparisonTable />
 
       {/* Testimonials */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Mumbai Customers Say
-            </h2>
-            <p className="text-lg text-gray-600">
-              Trusted by hundreds of satisfied customers across Mumbai
-            </p>
-          </div>
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                What Our Mumbai Customers Say
+              </h2>
+              <p className="text-lg text-gray-600">
+                Trusted by hundreds of satisfied customers across Mumbai
+              </p>
+            </div>
+          </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                <div className="flex text-yellow-400 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={20} fill="currentColor" />
-                  ))}
+              <FadeIn key={index} delay={index * 150}>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+                  <div className="flex text-yellow-400 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={20} fill="currentColor" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                  </div>
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.location}</p>
-                </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Blog Preview */}
+      <BlogPreview />
+
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-12 md:py-16 pb-24 md:pb-16 bg-gradient-to-r from-amber-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Ready to Restore Your Furniture's Beauty?
