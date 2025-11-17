@@ -32,9 +32,9 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen font-sans bg-gray-50">
+      <div className="flex flex-col min-h-screen font-sans bg-white">
         <Header />
-        <main className="flex-grow pb-16 md:pb-0">
+        <main className="flex-grow pb-20 md:pb-0 bg-white">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />

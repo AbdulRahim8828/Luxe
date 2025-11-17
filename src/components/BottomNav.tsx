@@ -22,20 +22,20 @@ const BottomNav = () => {
   };
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-[0_-1px_5px_rgba(0,0,0,0.1)] z-50 border-t border-gray-200">
-      <div className="flex justify-around max-w-full mx-auto">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.1)] z-50 border-t border-gray-200 safe-area-inset-bottom">
+      <div className="flex justify-around items-center max-w-full mx-auto px-2 py-1">
         {navigation.map((item) => (
           <Link
             key={item.name}
             to={item.href}
-            className={`flex flex-col items-center justify-center w-full pt-2 pb-1 text-center transition-colors duration-200 ${
+            className={`flex flex-col items-center justify-center flex-1 py-2 px-1 rounded-lg transition-all duration-200 ${
               isActive(item.href)
-                ? 'text-amber-600'
-                : 'text-gray-600 hover:text-amber-600'
+                ? 'text-amber-600 bg-amber-50'
+                : 'text-gray-600 hover:text-amber-600 hover:bg-gray-50'
             }`}
           >
-            <item.icon size={20} />
-            <span className="text-xs mt-1">{item.name}</span>
+            <item.icon className={`${isActive(item.href) ? 'w-6 h-6' : 'w-5 h-5'} transition-all duration-200`} />
+            <span className={`text-xs mt-1 font-medium ${isActive(item.href) ? 'font-semibold' : ''}`}>{item.name}</span>
           </Link>
         ))}
       </div>

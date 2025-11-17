@@ -30,35 +30,35 @@ const ServiceAreaCoverage = () => {
     <section className="py-12 md:py-16 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
-          <div className="flex items-center justify-center mb-3 md:mb-4">
-            <MapPin className="w-6 h-6 md:w-8 md:h-8 text-amber-600 mr-2" />
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <div className="flex flex-col sm:flex-row items-center justify-center mb-3 md:mb-4 gap-2">
+            <MapPin className="w-6 h-6 md:w-8 md:h-8 text-amber-600" />
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
               Service Areas in Mumbai
             </h2>
           </div>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             We provide professional furniture polishing services across Mumbai. Same-day service available in select areas!
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3 lg:gap-4">
           {areas.map((area, index) => (
             area.link ? (
               <Link
                 key={index}
                 to={area.link}
-                className="flex items-center space-x-2 bg-white p-3 md:p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:bg-amber-50 group"
+                className="flex items-start space-x-2 bg-white p-3 md:p-4 rounded-lg shadow-sm hover:shadow-lg transition-all duration-200 hover:bg-amber-50 group border border-transparent hover:border-amber-200"
               >
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 group-hover:text-amber-600" />
-                <span className="text-sm md:text-base text-gray-700 font-medium group-hover:text-amber-600">{area.name}</span>
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5 group-hover:text-amber-600 transition-colors" />
+                <span className="text-sm md:text-base text-gray-700 font-medium group-hover:text-amber-600 leading-snug transition-colors">{area.name}</span>
               </Link>
             ) : (
               <div 
                 key={index}
-                className="flex items-center space-x-2 bg-white p-3 md:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="flex items-start space-x-2 bg-white p-3 md:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
               >
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
-                <span className="text-sm md:text-base text-gray-700 font-medium">{area.name}</span>
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base text-gray-700 font-medium leading-snug">{area.name}</span>
               </div>
             )
           ))}

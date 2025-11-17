@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Prevent white space below bottom navigation on mobile */
+  html, body {
+    @apply bg-white;
+    overscroll-behavior: none;
+  }
+  
+  /* Safe area for iOS devices */
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 @layer utilities {
+  /* Safe area utility class */
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
   @keyframes fadeIn {
     from {
       opacity: 0;

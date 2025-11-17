@@ -31,7 +31,7 @@ export const servicePadeData = [
         'Prices mentioned are for Hand Polish. Machine Polish will cost extra.'
 
       ],
-      image: '/assets/Door Wood Polish.png',
+      image: '/assets/Door Wood Polish.webp',
       options: [
         { name: '1 Door', price: 1899 },
         { name: '2 Doors', price: 2799 },

@@ -266,24 +266,29 @@ const GoregaonFurniturePolish = () => {
       </section>
 
       {/* Services in Goregaon */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-amber-50">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-8 md:mb-12">
+              <span className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-4">
+                Our Services
+              </span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
                 Our Furniture Polishing Services in Goregaon
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2">
                 Comprehensive furniture care solutions including wooden furniture polish, sofa & chair polishing, table & bed refinishing, scratch repair, antique restoration, and commercial furniture polishing for homes and offices in Goregaon East, Goregaon West, Motilal Nagar, Bangur Nagar, and all nearby areas.
               </p>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
             {services.map((service, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
-                  <CheckCircle className="w-8 h-8 text-amber-600 mb-3" />
-                  <h3 className="text-lg font-semibold text-gray-900">{service}</h3>
+                <div className="group bg-white p-4 md:p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-amber-200 hover:-translate-y-1">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-amber-600 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900 leading-snug group-hover:text-amber-600 transition-colors">{service}</h3>
+                  </div>
                 </div>
               </FadeIn>
             ))}
