@@ -11,6 +11,11 @@ const UrgencyNotification = () => {
     { icon: Users, text: 'Priya from Powai just requested a quote', time: '5 min ago' },
     { icon: Clock, text: '2 slots left today in Goregaon', time: '1 min ago' },
     { icon: Users, text: 'Amit from Jogeshwari just booked', time: '3 min ago' },
+    { icon: Users, text: 'Sneha from Malad just confirmed installation', time: '4 min ago' },
+    { icon: Clock, text: '4 slots left today in Kandivali', time: '2 min ago' },
+    { icon: Users, text: 'Vikram from Borivali just requested a quote', time: '6 min ago' },
+    { icon: Clock, text: '1 slot left today in Dahisar', time: 'Just now' },
+    { icon: Users, text: 'Neha from Vile Parle just booked a service', time: '7 min ago' },
   ];
 
   useEffect(() => {

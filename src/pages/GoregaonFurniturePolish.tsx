@@ -1,0 +1,495 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, MapPin, Clock, Star, CheckCircle, ArrowRight, Shield, Award, Users, MessageCircle } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import JsonLd from '../components/JsonLd';
+import { FadeIn } from '../components/ScrollAnimations';
+import StickyWhatsApp from '../components/StickyWhatsApp';
+
+const GoregaonFurniturePolish = () => {
+  const services = [
+    'Wooden Furniture Polish',
+    'Sofa & Chair Polishing',
+    'Table & Bed Polishing',
+    'Antique Furniture Restoration',
+    'Scratch Repair & Touch-up',
+    'Commercial Furniture Polish',
+    'Door & Window Polishing',
+    'Cabinet & Wardrobe Polish',
+    'Teak Wood Polishing',
+    'Sheesham Wood Polish',
+    'Office Furniture Polish',
+    'Home Furniture Refinishing'
+  ];
+
+  const landmarks = [
+    'Goregaon East',
+    'Goregaon West',
+    'Aarey Colony',
+    'Film City Road',
+    'Motilal Nagar',
+    'Bangur Nagar',
+    'Dindoshi',
+    'Jawahar Nagar',
+    'Vanrai Colony',
+    'Sanjay Gandhi National Park Area',
+    'Oberoi Mall Area',
+    'Inorbit Mall Area',
+    'Mindspace Malad',
+    'Patkar College Area',
+    'Goregaon Station',
+    'Ram Mandir Area',
+    'Aarey Road',
+    'Link Road Goregaon'
+  ];
+
+  const testimonials = [
+    {
+      name: 'Suresh Mehta',
+      area: 'Goregaon East',
+      rating: 5,
+      text: 'A1 Furniture Polish did an amazing job on my teak wood dining set. The team was professional and the results exceeded my expectations. Highly recommend for anyone in Goregaon!'
+    },
+    {
+      name: 'Kavita Desai',
+      area: 'Goregaon West',
+      rating: 5,
+      text: 'My old wooden furniture looks brand new after their polishing service. Quick service, reasonable rates, and excellent quality. Best furniture polish service in Goregaon!'
+    },
+    {
+      name: 'Anil Sharma',
+      area: 'Motilal Nagar',
+      rating: 5,
+      text: 'They restored my antique cabinet beautifully. Very skilled craftsmen who know their work. Will definitely use their services again for my office furniture.'
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'Do you provide furniture polishing services in all areas of Goregaon?',
+      answer: 'Yes, we cover all areas of Goregaon including Goregaon East, Goregaon West, Aarey Colony, Film City Road, Motilal Nagar, Bangur Nagar, and surrounding localities.'
+    },
+    {
+      question: 'How long does furniture polishing take in Goregaon?',
+      answer: 'Depending on the furniture type and condition, polishing typically takes 2-4 hours for small items and 1-2 days for complete furniture sets. We offer 24/7 service and same-day service for urgent requirements in Goregaon.'
+    },
+    {
+      question: 'What is the cost of furniture polishing in Goregaon?',
+      answer: 'Our pricing is competitive and depends on furniture type, size, and condition. We provide free quotes and estimates. Call us 24/7 at +91 7897995178 for exact pricing for your Goregaon location.'
+    },
+    {
+      question: 'Do you use eco-friendly polish products?',
+      answer: 'Yes, we use high-quality, eco-friendly, and non-toxic polish products that are safe for your family and pets. All our products are certified and environmentally friendly.'
+    },
+    {
+      question: 'Can you polish antique furniture in Goregaon?',
+      answer: 'Absolutely! We specialize in antique furniture restoration and polishing. Our skilled craftsmen have years of experience handling delicate and valuable antique pieces in Goregaon.'
+    }
+  ];
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    'name': 'A1 Furniture Polish - Goregaon',
+    'image': '/assets/Sofa And chair.jpg',
+    'description': 'Professional furniture polishing and restoration services in Goregaon, Mumbai. Expert wooden furniture polish, sofa polishing, and antique restoration.',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': 'Goregaon',
+      'addressLocality': 'Mumbai',
+      'addressRegion': 'Maharashtra',
+      'postalCode': '400063',
+      'addressCountry': 'IN'
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 19.1663,
+      'longitude': 72.8526
+    },
+    'telephone': '+917897995178',
+    'priceRange': '₹₹',
+    'openingHours': 'Mo-Su 00:00-23:59',
+    'areaServed': {
+      '@type': 'City',
+      'name': 'Goregaon, Mumbai'
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.9',
+      'reviewCount': '87'
+    }
+  };
+
+  return (
+    <>
+      <SEOHead
+        title="Furniture Polish in Goregaon | Best Furniture Polishing Services Near Me | A1 Furniture Polish"
+        description="Professional furniture polishing services in Goregaon East & West. Expert wooden furniture polish, sofa restoration, table polishing, bed polishing, scratch repair, antique restoration. 24/7 service available. Call +91 7897995178"
+        keywords="furniture polish goregaon, furniture polishing goregaon east, furniture polishing goregaon west, wooden furniture polish goregaon, sofa polishing goregaon, furniture restoration goregaon mumbai, table polishing goregaon, bed polishing goregaon, chair polishing goregaon, cabinet polishing goregaon, wardrobe polishing goregaon, door polishing goregaon, antique furniture restoration goregaon, furniture repair goregaon, scratch repair goregaon, furniture refinishing goregaon, teak wood polishing goregaon, sheesham wood polishing goregaon, furniture polish near me goregaon, best furniture polish goregaon, affordable furniture polishing goregaon, furniture polishing service goregaon, home furniture polish goregaon, office furniture polish goregaon, commercial furniture polishing goregaon, furniture polish goregaon east mumbai, furniture polish goregaon west mumbai, furniture polishing motilal nagar, furniture polishing bangur nagar, furniture polishing aarey colony, furniture polishing film city road, furniture polishing dindoshi, furniture polishing vanrai colony, 24 hour furniture polish goregaon, emergency furniture polishing goregaon, same day furniture polish goregaon, quick furniture polishing goregaon"
+        ogUrl="https://a1furniturepolish.com/goregaon-furniture-polish"
+        ogImage="/assets/Sofa And chair.jpg"
+      />
+      <JsonLd data={localBusinessSchema} />
+      <StickyWhatsApp />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <FadeIn>
+              <div>
+                <div className="flex items-center space-x-2 mb-4">
+                  <MapPin className="w-6 h-6 text-amber-600" />
+                  <span className="text-amber-600 font-semibold">Goregaon, Mumbai</span>
+                </div>
+                <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Professional <span className="text-amber-600">Furniture Polish</span> Services in Goregaon
+                </h1>
+                <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                  Transform your furniture with A1 Furniture Polish - Goregaon's most trusted experts in wooden furniture polishing, sofa restoration, table polishing, bed polishing, and complete furniture refinishing. We specialize in teak wood polish, sheesham wood polish, antique restoration, and scratch repair. Serving Goregaon East, Goregaon West, Motilal Nagar, Bangur Nagar, Aarey Colony, Film City Road, and all nearby areas with 24/7 emergency service.
+                </p>
+                <div className="flex flex-wrap gap-2 md:gap-4 mb-6 md:mb-8">
+                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">24/7 Available</span>
+                  </div>
+                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">Same-Day Service</span>
+                  </div>
+                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">Free Estimates</span>
+                  </div>
+                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">10+ Years Experience</span>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="tel:+917897995178"
+                    className="flex items-center justify-center space-x-2 bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    <Phone size={20} />
+                    <span className="font-semibold">Call Now</span>
+                  </a>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Goregaon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    <MessageCircle size={20} />
+                    <span className="font-semibold">WhatsApp Us</span>
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <div className="relative">
+                <img
+                  src="/assets/wooden furniture .webp"
+                  alt="Furniture polishing service in Goregaon"
+                  className="rounded-lg shadow-2xl w-full h-80 md:h-96 object-cover"
+                  loading="eager"
+                />
+                <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-lg shadow-xl">
+                  <div className="flex items-center space-x-1.5 md:space-x-2 mb-1 md:mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={16} className="md:w-[18px] md:h-[18px]" fill="currentColor" />
+                      ))}
+                    </div>
+                    <span className="text-base md:text-lg font-bold text-gray-900">4.9/5</span>
+                  </div>
+                  <p className="text-xs md:text-sm text-gray-600">87+ Happy Customers</p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us for Goregaon */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose A1 Furniture Polish in Goregaon?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We are Goregaon's most trusted furniture polishing and restoration service with a proven track record of excellence. Specializing in wooden furniture polish, sofa polishing, table & bed polishing, cabinet refinishing, and antique restoration for homes and offices.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <FadeIn delay={100}>
+              <div className="text-center p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl">
+                <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Expert Craftsmen</h3>
+                <p className="text-gray-600">Skilled professionals with 10+ years of experience in furniture polishing</p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <div className="text-center p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl">
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">24/7 Service</h3>
+                <p className="text-gray-600">Available round the clock for urgent requirements in Goregaon</p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={300}>
+              <div className="text-center p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl">
+                <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Guaranteed</h3>
+                <p className="text-gray-600">100% satisfaction guarantee on all our polishing services</p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={400}>
+              <div className="text-center p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl">
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Local Experts</h3>
+                <p className="text-gray-600">Deep understanding of Goregaon area and customer needs</p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Services in Goregaon */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-amber-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Furniture Polishing Services in Goregaon
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Comprehensive furniture care solutions including wooden furniture polish, sofa & chair polishing, table & bed refinishing, scratch repair, antique restoration, and commercial furniture polishing for homes and offices in Goregaon East, Goregaon West, Motilal Nagar, Bangur Nagar, and all nearby areas.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <FadeIn key={index} delay={index * 50}>
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+                  <CheckCircle className="w-8 h-8 text-amber-600 mb-3" />
+                  <h3 className="text-lg font-semibold text-gray-900">{service}</h3>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center space-x-2 bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+            >
+              <span>View All Services</span>
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Areas Covered in Goregaon */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-8 md:mb-12">
+              <div className="flex flex-col sm:flex-row items-center justify-center mb-3 md:mb-4 gap-2">
+                <MapPin className="w-6 h-6 md:w-8 md:h-8 text-amber-600" />
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+                  Areas We Cover in Goregaon
+                </h2>
+              </div>
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+                We provide furniture polishing services across all localities in Goregaon and surrounding areas.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {landmarks.map((landmark, index) => (
+              <FadeIn key={index} delay={index * 30}>
+                <div className="flex items-start space-x-2 bg-gradient-to-br from-amber-50 to-orange-50 p-3 md:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base font-medium text-gray-700 leading-snug">{landmark}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What Goregaon Customers Say
+              </h2>
+              <p className="text-lg text-gray-600">
+                Trusted by hundreds of satisfied customers in Goregaon
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <FadeIn key={index} delay={index * 150}>
+                <div className="bg-white p-6 rounded-lg shadow-lg">
+                  <div className="flex text-yellow-400 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={20} fill="currentColor" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.area}, Goregaon</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Info Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-4 md:p-8 rounded-2xl shadow-lg">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 md:mb-6 text-center">
+                Complete Furniture Polishing Solutions in Goregaon
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-gray-700">
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold text-amber-600 mb-3">Wood Types We Polish</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Teak Wood Furniture Polish - Premium quality finish for teak furniture</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Sheesham Wood Polish - Expert polishing for sheesham furniture</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Mango Wood Polish - Specialized care for mango wood pieces</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Oak Wood Polish - Professional oak furniture refinishing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Mahogany Polish - Expert mahogany furniture restoration</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold text-amber-600 mb-3">Furniture Types We Service</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Dining Table Polish - Restore shine to your dining tables</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Bed Frame Polishing - Complete bed furniture refinishing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Sofa Set Polish - Professional sofa and chair polishing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Wardrobe & Cabinet Polish - Interior and exterior polishing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base">Office Desk Polish - Commercial furniture polishing services</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-6 md:mt-8 text-center">
+                <p className="text-gray-700 text-sm md:text-base lg:text-lg px-2">
+                  Serving all areas of Goregaon including Goregaon East, Goregaon West, Motilal Nagar, Bangur Nagar, Aarey Colony, Film City Road, Dindoshi, Vanrai Colony, and nearby localities with 24/7 emergency furniture polishing services.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-amber-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Common questions about furniture polishing services in Goregaon
+              </p>
+            </div>
+          </FadeIn>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <FadeIn key={index} delay={index * 100}>
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-lg shadow-md">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-amber-600 to-orange-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Furniture in Goregaon?
+          </h2>
+          <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
+            Contact A1 Furniture Polish today for professional furniture polishing services in Goregaon. Available 24/7 with free quotes and same-day service!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+917897995178"
+              className="flex items-center justify-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+            >
+              <Phone size={20} />
+              <span>Call: +91 7897995178</span>
+            </a>
+            <a
+              href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Goregaon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+            >
+              <MessageCircle size={20} />
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default GoregaonFurniturePolish;

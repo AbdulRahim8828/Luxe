@@ -21,7 +21,7 @@ const OurProcess = () => {
       step: 3,
       title: 'Cleaning & Sanding',
       description: 'Our team meticulously cleans and sands the furniture to prepare it for polishing.',
-      image: '/assets/Cleaning & Sanding.jpg',
+      image: '/assets/Cleaning & Sanding.webp',
       color: 'from-amber-500 to-orange-500'
     },
     {

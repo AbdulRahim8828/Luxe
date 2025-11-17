@@ -1,22 +1,32 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/contact';
-import BlogPostPage from './pages/BlogPostPage';
-import BlogListPage from './pages/BlogListPage';
-import WoodenFurniturePolish from './pages/WoodenFurniturePolish';
-import SofaAndChairPolishing from './pages/SofaAndChairPolishing';
-import TableAndBedPolishing from './pages/TableAndBedPolishing';
-import AntiqueRestoration from './pages/AntiqueRestoration';
-import CommercialPolishing from './pages/CommercialPolishing';
 import ScrollToTop from './components/ScrollToTop';
 import BottomNav from './components/BottomNav';
-import SofaFabricChange from './pages/SofaFabricChange';
-import OfficeChairRepair from './pages/OfficeChairRepair';
+
+// Lazy load pages for better performance
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/contact'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+const BlogListPage = lazy(() => import('./pages/BlogListPage'));
+const WoodenFurniturePolish = lazy(() => import('./pages/WoodenFurniturePolish'));
+const SofaAndChairPolishing = lazy(() => import('./pages/SofaAndChairPolishing'));
+const TableAndBedPolishing = lazy(() => import('./pages/TableAndBedPolishing'));
+const AntiqueRestoration = lazy(() => import('./pages/AntiqueRestoration'));
+const CommercialPolishing = lazy(() => import('./pages/CommercialPolishing'));
+const SofaFabricChange = lazy(() => import('./pages/SofaFabricChange'));
+const OfficeChairRepair = lazy(() => import('./pages/OfficeChairRepair'));
+const GoregaonFurniturePolish = lazy(() => import('./pages/GoregaonFurniturePolish'));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
+  </div>
+);
 
 function App() {
   return (
@@ -25,24 +35,29 @@ function App() {
       <div className="flex flex-col min-h-screen font-sans bg-gray-50">
         <Header />
         <main className="flex-grow pb-16 md:pb-0">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<BlogListPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
-            
-            {/* Service Pages */}
-            <Route path="/services/wooden-furniture-polish" element={<WoodenFurniturePolish />} />
-            <Route path="/sofa-chair-polishing" element={<SofaAndChairPolishing />} />
-            <Route path="/services/table-and-bed-polishing" element={<TableAndBedPolishing />} />
-            <Route path="/services/antique-restoration" element={<AntiqueRestoration />} />
-            <Route path="/services/commercial-polishing" element={<CommercialPolishing />} />
-            <Route path="/sofa-fabric-change" element={<SofaFabricChange />} />
-            <Route path="/office-chair-repair" element={<OfficeChairRepair />} />
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<BlogListPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              
+              {/* Service Pages */}
+              <Route path="/services/wooden-furniture-polish" element={<WoodenFurniturePolish />} />
+              <Route path="/sofa-chair-polishing" element={<SofaAndChairPolishing />} />
+              <Route path="/services/table-and-bed-polishing" element={<TableAndBedPolishing />} />
+              <Route path="/services/antique-restoration" element={<AntiqueRestoration />} />
+              <Route path="/services/commercial-polishing" element={<CommercialPolishing />} />
+              <Route path="/sofa-fabric-change" element={<SofaFabricChange />} />
+              <Route path="/office-chair-repair" element={<OfficeChairRepair />} />
+              
+              {/* Location Pages */}
+              <Route path="/goregaon-furniture-polish" element={<GoregaonFurniturePolish />} />
 
-          </Routes>
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <BottomNav />

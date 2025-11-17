@@ -17,7 +17,8 @@ const staticRoutes = [
   '/services/antique-restoration',
   '/services/commercial-polishing',
   '/sofa-fabric-change',
-  '/office-chair-repair'
+  '/office-chair-repair',
+  '/goregaon-furniture-polish'
 ];
 const dynamicRoutes = [...blogPostRoutes, ...staticRoutes];
 
@@ -39,4 +40,31 @@ export default defineConfig({
       dynamicRoutes
     }),
   ],
+  build: {
+    // Optimize build output
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+        drop_debugger: true
+      }
+    },
+    // Code splitting
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'icons': ['lucide-react'],
+        }
+      }
+    },
+    // Chunk size warnings
+    chunkSizeWarningLimit: 1000,
+    // Source maps for production debugging (optional)
+    sourcemap: false
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react']
+  }
 });

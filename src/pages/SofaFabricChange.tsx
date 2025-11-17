@@ -8,7 +8,7 @@ import BookingModal from '../components/BookingModal';
 const sofaService = {
   id: 'sofa-fabric-change',
   name: 'Sofa Fabric Change',
-  image: '../assets/Sofa_Fabric_Change_20.jpg',
+  image: '../assets/Sofa_Fabric_Change_20.webp',
   categories: [
     {
       name: 'Sofa & Miscellaneous',

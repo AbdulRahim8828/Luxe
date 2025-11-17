@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Shield, Clock, Phone, MessageCircle, Wrench } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -6,16 +6,18 @@ import JsonLd from '../components/JsonLd';
 import { localBusiness } from '../data/localBusiness.ts';
 import { services as servicesSchema } from '../data/services.ts';
 import { reviews, aggregateRating } from '../data/reviews.ts';
-import OurProcess from '../components/OurProcess';
 import EmergencyBanner from '../components/EmergencyBanner';
-import ServiceAreaCoverage from '../components/ServiceAreaCoverage';
-import BlogPreview from '../components/BlogPreview';
-import ExitIntentPopup from '../components/ExitIntentPopup';
 import UrgencyNotification from '../components/UrgencyNotification';
-import ComparisonTable from '../components/ComparisonTable';
-import StatsCounter from '../components/StatsCounter';
 import StickyWhatsApp from '../components/StickyWhatsApp';
-import { FadeIn, SlideIn } from '../components/ScrollAnimations';
+import { FadeIn } from '../components/ScrollAnimations';
+
+// Lazy load heavy components
+const OurProcess = lazy(() => import('../components/OurProcess'));
+const ServiceAreaCoverage = lazy(() => import('../components/ServiceAreaCoverage'));
+const BlogPreview = lazy(() => import('../components/BlogPreview'));
+const ExitIntentPopup = lazy(() => import('../components/ExitIntentPopup'));
+const ComparisonTable = lazy(() => import('../components/ComparisonTable'));
+const StatsCounter = lazy(() => import('../components/StatsCounter'));
 
 const Home = () => {
   const services = [
@@ -91,7 +93,9 @@ const Home = () => {
       <EmergencyBanner />
 
       {/* Exit Intent Popup */}
-      <ExitIntentPopup />
+      <Suspense fallback={null}>
+        <ExitIntentPopup />
+      </Suspense>
 
       {/* Urgency Notifications */}
       <UrgencyNotification />
@@ -150,10 +154,14 @@ const Home = () => {
         </div>
       </section>
 
-      <OurProcess />
+      <Suspense fallback={<div className="py-16 bg-white"></div>}>
+        <OurProcess />
+      </Suspense>
 
       {/* Stats Counter */}
-      <StatsCounter />
+      <Suspense fallback={<div className="py-16"></div>}>
+        <StatsCounter />
+      </Suspense>
 
       {/* Why Choose Us */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-amber-50">
@@ -265,10 +273,14 @@ const Home = () => {
       </section>
 
       {/* Service Area Coverage */}
-      <ServiceAreaCoverage />
+      <Suspense fallback={<div className="py-16 bg-gradient-to-br from-amber-50 to-orange-50"></div>}>
+        <ServiceAreaCoverage />
+      </Suspense>
 
       {/* Comparison Table */}
-      <ComparisonTable />
+      <Suspense fallback={<div className="py-16"></div>}>
+        <ComparisonTable />
+      </Suspense>
 
       {/* Testimonials */}
       <section className="py-16 bg-white">
@@ -305,7 +317,9 @@ const Home = () => {
       </section>
 
       {/* Blog Preview */}
-      <BlogPreview />
+      <Suspense fallback={<div className="py-16 bg-gray-50"></div>}>
+        <BlogPreview />
+      </Suspense>
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 pb-24 md:pb-16 bg-gradient-to-r from-amber-600 to-orange-600">
