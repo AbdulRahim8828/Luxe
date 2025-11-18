@@ -267,5 +267,23 @@ export const servicePadeData = [
         { name: 'Large', price: 4499 },
       ],
       selectedOption: -1,
+    },
+    {
+      id: 'floor-polishing',
+      name: 'Floor Polishing',
+      duration: 'Varies by area',
+      features: [
+        'Professional floor polishing service',
+        'Restores shine and protects wooden floors',
+        'Removes scratches and minor damages',
+        'Eco-friendly polishing materials',
+        'Hand Polish: ₹219/sqft | Machine Polish: ₹249/sqft'
+      ],
+      image: '/assets/Floor-polishing.jpeg',
+      options: [
+        { name: 'Hand Polish (per sqft)', price: 219 },
+        { name: 'Machine Polish (per sqft)', price: 249 },
+      ],
+      selectedOption: -1,
     }
   ];
