@@ -1,10 +1,12 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop';
 import BottomNav from './components/BottomNav';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
 const About = lazy(() => import('./pages/About'));
@@ -30,12 +32,14 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen font-sans bg-white">
-        <Header />
-        <main className="flex-grow pb-20 md:pb-0 bg-white">
-          <Suspense fallback={<PageLoader />}>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <div className="flex flex-col min-h-screen font-sans bg-white">
+            <Header />
+            <main className="flex-grow pb-20 md:pb-0 bg-white">
+              <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -55,14 +59,19 @@ function App() {
               
               {/* Location Pages */}
               <Route path="/goregaon-furniture-polish" element={<GoregaonFurniturePolish />} />
+              
+              {/* Redirect old route to /services */}
+              <Route path="/furniture-polish-services" element={<Navigate to="/services" replace />} />
 
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-        <BottomNav />
-      </div>
-    </Router>
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+          <BottomNav />
+        </div>
+      </Router>
+    </ErrorBoundary>
+  </HelmetProvider>
   );
 }
 

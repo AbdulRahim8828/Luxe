@@ -1,292 +1,543 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-import JsonLd from '../components/JsonLd';
-import { useState, ChangeEvent, FormEvent } from 'react';
-import { servicePadeData } from '../data/servicePageData';
+import { useState, useCallback, useMemo } from 'react';
+import { servicePageData } from '../data/servicePageData';
+import ServiceDetailModal from '../components/ServiceDetailModal';
+import BookingSummary from '../components/BookingSummary';
+import SEO from '../components/SEO';
+import LoadingSpinner from '../components/LoadingSpinner';
+import { SelectedService } from '../types';
+import { openWhatsAppBooking } from '../utils/whatsappBooking';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+import { useAnalytics } from '../hooks/useAnalytics';
 
-interface ServiceOption {
-  name: string;
-  price: number;
-}
-
-interface Service {
-  id: string;
-  name: string;
-  duration: string;
-  features: string[];
-  image: string;
-  options: ServiceOption[];
-  selectedOption: number;
-}
-
-interface SelectedService {
-  id: string;
-  name: string;
-  variant: string;
-  price: number;
-}
-
-interface BookingForm {
-  name: string;
-  mobile: string;
-  address: string;
-}
-
-interface FormErrors {
-  name: string;
-  mobile: string;
-  address: string;
-  variant: string;
-}
+// Constants for quantity limits
+const MIN_QUANTITY = 1;
+const MAX_QUANTITY = 10;
 
 const Services = () => {
-  const [services, setServices] = useState<Service[]>(servicePadeData.map(s => ({ ...s, selectedOption: -1, features: s.features.filter((f): f is string => !!f) })));
+  const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
+  const [selectedServices, setSelectedServices] = useLocalStorage<SelectedService[]>('cart', []);
+  const [bookingError, setBookingError] = useState<string | null>(null);
+  const [showCart, setShowCart] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const analytics = useAnalytics();
 
- 
-  const [selectedService, setSelectedService] = useState<SelectedService | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [bookingForm, setBookingForm] = useState<BookingForm>({ name: '', mobile: '', address: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formErrors, setFormErrors] = useState<FormErrors>({ name: '', mobile: '', address: '', variant: '' });
+  const handleViewDetails = (serviceId: string) => {
+    const service = servicePageData.find(s => s.id === serviceId);
+    if (service) {
+      analytics.trackServiceView(serviceId, service.name);
+    }
+    setSelectedServiceId(serviceId);
+  };
 
-  const handleOptionChange = (serviceIndex: number, optionIndex: number) => {
-    setServices(currentServices =>
-      currentServices.map((service, index) => {
-        if (index === serviceIndex) {
-          return { ...service, selectedOption: optionIndex };
+  const handleCloseModal = () => {
+    setSelectedServiceId(null);
+  };
+
+  /**
+   * Calculate total price of all selected services - Memoized for performance
+   */
+  const calculateTotal = useMemo((): number => {
+    return selectedServices.reduce((sum, service) => {
+      return sum + service.price * service.quantity;
+    }, 0);
+  }, [selectedServices]);
+
+  /**
+   * Add a service or update quantity if already exists
+   */
+  const addService = useCallback(
+    (serviceId: string, optionIndex: number, quantity: number = 1) => {
+      const service = servicePageData.find((s) => s.id === serviceId);
+      if (!service) {
+        console.error(`Service with id ${serviceId} not found`);
+        return;
+      }
+
+      const option = service.options[optionIndex];
+      if (!option) {
+        console.error(`Option at index ${optionIndex} not found for service ${serviceId}`);
+        return;
+      }
+
+      // Validate quantity
+      const validQuantity = Math.max(MIN_QUANTITY, Math.min(MAX_QUANTITY, quantity));
+
+      setSelectedServices((prevServices) => {
+        // Check if this service option is already selected
+        const existingIndex = prevServices.findIndex(
+          (s) => s.serviceId === serviceId && s.optionId === (option.id || `${serviceId}-${optionIndex}`)
+        );
+
+        if (existingIndex >= 0) {
+          // Update existing service quantity (respecting max limit)
+          const updated = [...prevServices];
+          const newQuantity = Math.min(updated[existingIndex].quantity + validQuantity, MAX_QUANTITY);
+          updated[existingIndex] = {
+            ...updated[existingIndex],
+            quantity: newQuantity,
+          };
+          return updated;
+        } else {
+          // Add new service
+          const newService: SelectedService = {
+            serviceId: service.id,
+            serviceName: service.name,
+            optionId: option.id || `${serviceId}-${optionIndex}`,
+            optionName: option.name,
+            price: option.price,
+            quantity: validQuantity,
+            image: service.image,
+          };
+          return [...prevServices, newService];
+        }
+      });
+    },
+    []
+  );
+
+  /**
+   * Update quantity of a selected service
+   */
+  const updateQuantity = useCallback((serviceId: string, optionId: string, newQuantity: number) => {
+    // Validate quantity within limits
+    const validQuantity = Math.max(MIN_QUANTITY, Math.min(MAX_QUANTITY, newQuantity));
+
+    setSelectedServices((prevServices) => {
+      return prevServices.map((service) => {
+        if (service.serviceId === serviceId && service.optionId === optionId) {
+          return {
+            ...service,
+            quantity: validQuantity,
+          };
         }
         return service;
-      })
-    );
-    setFormErrors({ ...formErrors, variant: '' });
-  };
-
-  const openBookingModal = (service: Service) => {
-    if (service.selectedOption === -1) {
-      setFormErrors({ ...formErrors, variant: 'Please select a variant.' });
-      return;
-    }
-    const selectedOption = service.options[service.selectedOption];
-    setSelectedService({
-      id: service.id,
-      name: service.name,
-      variant: selectedOption.name,
-      price: selectedOption.price,
+      });
     });
-    setIsModalOpen(true);
+  }, []);
+
+  /**
+   * Remove a service from the booking summary
+   */
+  const removeService = useCallback((serviceId: string, optionId: string) => {
+    setSelectedServices((prevServices) => {
+      return prevServices.filter((service) => !(service.serviceId === serviceId && service.optionId === optionId));
+    });
+  }, []);
+
+  /**
+   * Quick add handler for service cards (adds 1 quantity)
+   */
+  const handleQuickAdd = (serviceId: string, optionIndex: number) => {
+    addService(serviceId, optionIndex, 1);
   };
 
-  const handleFormChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setBookingForm({ ...bookingForm, [name]: value });
+  /**
+   * Add service handler for modal (supports custom quantity)
+   */
+  const handleAddService = (serviceId: string, optionIndex: number, quantity: number = 1) => {
+    addService(serviceId, optionIndex, quantity);
   };
 
-  const submitToWhatsApp = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const errors: Partial<FormErrors> = {};
-    if (!bookingForm.name) errors.name = 'Name is required.';
-    if (!bookingForm.mobile) errors.mobile = 'Mobile is required.';
-    if (!bookingForm.address) errors.address = 'Address is required.';
+  /**
+   * Handle View Cart
+   */
+  const handleViewCart = useCallback(() => {
+    analytics.trackViewCart(selectedServices.length, calculateTotal);
+    setShowCart(true);
+  }, [selectedServices.length, calculateTotal, analytics]);
 
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors as FormErrors);
-      return;
+  /**
+   * Handle WhatsApp booking
+   */
+  const handleBookNow = useCallback(() => {
+    // Clear any previous errors
+    setBookingError(null);
+    setIsLoading(true);
+
+    try {
+      // Validate empty booking
+      if (selectedServices.length === 0) {
+        setBookingError('Please select at least one service before booking');
+        setIsLoading(false);
+        return;
+      }
+
+      // Track booking initiation
+      analytics.trackBooking(selectedServices.length, calculateTotal);
+
+      // Open WhatsApp with booking details
+      openWhatsAppBooking(selectedServices, calculateTotal);
+      
+      setIsLoading(false);
+    } catch (error) {
+      // Handle any errors during WhatsApp opening
+      const errorMessage = error instanceof Error ? error.message : 'Failed to open WhatsApp. Please try again.';
+      setBookingError(errorMessage);
+      console.error('WhatsApp booking error:', error);
+      setIsLoading(false);
     }
+  }, [selectedServices, calculateTotal, analytics]);
 
-    setIsSubmitting(true);
+  // Get selected option indices for the current service
+  const getSelectedOptions = (serviceId: string): number[] => {
+    const service = servicePageData.find((s) => s.id === serviceId);
+    if (!service) return [];
 
-    if (selectedService) {
-      const message = `New booking from website:
-Name: ${bookingForm.name}
-Mobile: ${bookingForm.mobile}
-Address: ${bookingForm.address}
-Service: ${selectedService.name}
-Variant: ${selectedService.variant}
-Price: ${selectedService.price}
-URL: ${window.location.href}`;
-
-      const whatsappUrl = `https://wa.me/918828709945?text=${encodeURIComponent(message)}`;
-
-      window.open(whatsappUrl, '_blank');
-      alert('WhatsApp opened with your booking details. Please tap Send in WhatsApp to send the message.');
-      setIsModalOpen(false);
-    }
-
-    setIsSubmitting(false);
+    return service.options
+      .map((option, index) => {
+        const optionId = option.id || `${serviceId}-${index}`;
+        const isSelected = selectedServices.some((s) => s.serviceId === serviceId && s.optionId === optionId);
+        return isSelected ? index : -1;
+      })
+      .filter((index) => index >= 0);
   };
 
-  const serviceSchema = services.map(service => ({
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.name,
-    image: service.image,
-    provider: {
-      '@type': 'LocalBusiness',
-      name: 'A1 Furniture Polish',
-      image: 'https://a1furniturepolish.com/logo.png',
-      telephone: '+918828709945',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Jogeshwari West',
-        addressLocality: 'Mumbai',
-        addressRegion: 'MH',
-        postalCode: '400102',
-        addressCountry: 'IN',
-      },
-    },
-    areaServed: {
-      '@type': 'City',
-      name: 'Mumbai',
-    },
-    offers: service.options.map(option => ({
-      '@type': 'Offer',
-      name: option.name,
-      price: option.price,
-      priceCurrency: 'INR',
-    })),
-    estimatedDuration: 'PT3H',
-  }));
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How is pricing calculated?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We compare UrbanCompany prices and offer a 20% discount on all our wood polishing services.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does polishing take?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A standard piece of furniture like a bed or a door typically takes around 3-5 hours to polish.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer same-day service?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we offer same-day service in Jogeshwari, Andheri, and Goregaon areas of Mumbai.',
-        },
-      },
-    ],
-  };
+  const selectedService = servicePageData.find((s) => s.id === selectedServiceId);
 
   return (
     <>
-      <SEOHead
-        title="Wood Polishing Services in Mumbai — A1 Furniture Polish"
-        description="Affordable wood polishing for bed, door, cabinet, and table in Mumbai. A1 Furniture Polish offers professional service at rates 20% lower than UrbanCompany."
+      <SEO 
+        title="Furniture Polish Services - A1 Polish | 15+ Professional Services"
+        description="Book professional furniture polishing services in Mumbai. Sofa, bed, door, table, wardrobe polish with 1-year warranty. Expert craftsmen, premium materials."
+        keywords="furniture polish Mumbai, wood polish services, sofa polish, bed polish, door polish, wardrobe polish, professional furniture care"
       />
-      <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
-        <section className="bg-amber-50 py-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-amber-800">Our Services</h1>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover our range of professional wood polishing services. We offer quality craftsmanship at prices 20% lower than competitors.
-          </p>
-        </section>
-      <div className="py-8 md:py-16 bg-gray-100 pb-24 md:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
-            {services.map((service, serviceIndex) => (
-              <div key={service.id} className="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                <div className="flex justify-center items-center bg-gray-50 p-4">
-                    <img
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Header - Centered Clean UI */}
+        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-b-2 border-amber-200">
+          <div className="max-w-7xl mx-auto px-4 py-6 text-center">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              Furniture Wood Polish
+            </h1>
+            <p className="text-gray-600 text-sm md:text-base">
+              Professional polishing services for all types of furniture
+            </p>
+          </div>
+        </div>
+
+      {/* Category Grid Section - Compact Mobile View */}
+      <section className="bg-gray-50 py-4 sm:py-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3">
+            {servicePageData.map((service) => (
+              <button
+                key={service.id}
+                onClick={() => handleViewDetails(service.id)}
+                className="flex flex-col items-center gap-1.5 sm:gap-2 p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg active:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 group"
+                aria-label={`View ${service.name} options`}
+                type="button"
+              >
+                <div className="w-full aspect-square bg-gray-50 rounded-md overflow-hidden flex items-center justify-center p-1.5 sm:p-2 group-hover:bg-gray-100 transition-colors">
+                  <img
                     src={service.image}
                     alt={service.name}
-                    className="h-48 md:h-64 object-contain transition-transform duration-300"
+                    className="w-full h-full object-contain"
                     loading="lazy"
-                    />
+                  />
                 </div>
-                <div className="p-4 md:p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-0 mb-4">
-                    <span className="text-xl md:text-2xl font-bold text-amber-600">Starts at ₹{service.options[0].price}</span>
-                    <span className="sm:ml-4 px-3 py-1 bg-green-100 text-green-800 text-xs md:text-sm font-semibold rounded-full w-fit">
-                      20% Lower than competitors
-                    </span>
-                  </div>
-
-                  <div className="mt-6">
-                    <h4 className="text-base md:text-lg font-semibold text-gray-800 mb-3">Get an estimate</h4>
-                    <div className="grid grid-cols-2 gap-3">
-                      {service.options.map((option, optionIndex) => (
-                        <div
-                          key={option.name}
-                          onClick={() => handleOptionChange(serviceIndex, optionIndex)}
-                          className={`p-3 md:p-4 border rounded-lg cursor-pointer transition-all duration-200 ${service.selectedOption === optionIndex ? 'border-amber-600 bg-amber-50' : 'border-gray-200 hover:border-amber-400'}`}>
-                          <p className="text-sm md:text-base font-semibold text-gray-800">{option.name}</p>
-                          <p className="text-base md:text-lg font-bold text-gray-900">₹{option.price}</p>
-                        </div>
-                      ))}
-                    </div>
-                    {formErrors.variant && service.selectedOption === -1 && <p className="text-red-500 text-sm mt-2">{formErrors.variant}</p>}
-                  </div>
-
-                  <div className="mt-6">
-                     <h4 className="text-base md:text-lg font-semibold text-gray-800 mb-3">What's included</h4>
-                    <ul className="text-gray-600 space-y-2">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-start">
-                          <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                          <span className="text-sm md:text-base">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <button onClick={() => openBookingModal(service)} className="mt-6 md:mt-8 w-full bg-amber-600 text-white px-6 py-3 md:py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 font-bold text-base md:text-lg">
-                    Book Now
-                  </button>
-                  <p className="text-center text-xs md:text-sm text-gray-500 mt-3">
-                    Same-day service available in Jogeshwari, Andheri, Goregaon.
-                  </p>
-                </div>
-              </div>
+                <span className="text-[10px] sm:text-xs font-medium text-gray-900 text-center line-clamp-2 w-full leading-tight">
+                  {service.name}
+                </span>
+              </button>
             ))}
           </div>
         </div>
-      </div>
-      {isModalOpen && selectedService && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-[60] p-4">
-          <div className="bg-white rounded-lg p-6 md:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <h2 className="text-xl md:text-2xl font-bold mb-4">Book Service</h2>
-            <p className="mb-4 text-sm md:text-base">You are booking: <strong>{selectedService.name} - {selectedService.variant}</strong> for <strong>₹{selectedService.price}</strong></p>
-            <form onSubmit={submitToWhatsApp}>
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
-                <input type="text" name="name" id="name" value={bookingForm.name} onChange={handleFormChange} className="mt-1 block w-full px-3 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base" required />
-                {formErrors.name && <p className="text-red-500 text-xs md:text-sm mt-1">{formErrors.name}</p>}
+      </section>
+
+      {/* Section-wise Service Cards - Urban Company Style */}
+      <main className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+        {servicePageData.map((service) => {
+          const minPrice = Math.min(...service.options.map(opt => opt.price));
+          
+          return (
+            <section key={service.id} className="space-y-4">
+              {/* Section Heading */}
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                {service.name.replace(' Wood Polish', '').replace(' Polish', '')}
+              </h2>
+
+              {/* Service Card */}
+              <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 hover:shadow-lg transition-shadow">
+                <div className="flex gap-4">
+                  {/* Left Side - Service Details */}
+                  <div className="flex-1 space-y-2 sm:space-y-3">
+                    {/* Service Name */}
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                      {service.name}
+                    </h3>
+
+                    {/* Rating */}
+                    <div className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      <span className="text-sm font-semibold text-gray-900">{service.rating}</span>
+                      <span className="text-xs text-gray-600">
+                        ({service.reviewCount >= 1000 ? `${(service.reviewCount / 1000).toFixed(0)}` : service.reviewCount} reviews)
+                      </span>
+                    </div>
+
+                    {/* Starting Price */}
+                    <p className="text-base sm:text-lg font-bold text-gray-900">
+                      Starts at ₹{minPrice.toLocaleString()}
+                    </p>
+
+                    {/* Divider */}
+                    <div className="border-t border-gray-200"></div>
+
+                    {/* Features */}
+                    <ul className="space-y-1.5">
+                      {service.features.slice(0, 2).map((feature, index) => (
+                        <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-gray-700">
+                          <span className="text-gray-400">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* View Details Link */}
+                    <button
+                      onClick={() => handleViewDetails(service.id)}
+                      className="text-amber-600 font-semibold text-sm hover:text-amber-700 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 rounded"
+                      type="button"
+                    >
+                      View details
+                    </button>
+                  </div>
+
+                  {/* Right Side - Image and Add Button (Compact) */}
+                  <div className="flex flex-col items-center gap-2 w-32 sm:w-40 flex-shrink-0">
+                    {/* Service Image */}
+                    <div className="w-full aspect-square bg-gray-50 rounded-lg overflow-hidden flex items-center justify-center p-3">
+                      <img
+                        src={service.image}
+                        alt={service.name}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {/* Add Button */}
+                    <button
+                      onClick={() => handleQuickAdd(service.id, 0)}
+                      className="w-full px-4 py-2 bg-white text-amber-600 font-semibold text-sm rounded-lg border-2 border-amber-600 hover:bg-amber-50 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+                      type="button"
+                      aria-label={`Add ${service.name} to booking`}
+                    >
+                      Add
+                    </button>
+
+                    {/* Options Count */}
+                    <p className="text-xs text-gray-600">
+                      {service.options.length} options
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="mb-4">
-                <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">Mobile *</label>
-                <input type="tel" name="mobile" id="mobile" value={bookingForm.mobile} onChange={handleFormChange} className="mt-1 block w-full px-3 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base" required />
-                {formErrors.mobile && <p className="text-red-500 text-xs md:text-sm mt-1">{formErrors.mobile}</p>}
+            </section>
+          );
+        })}
+      </main>
+
+      {/* Service Detail Modal */}
+      <ServiceDetailModal
+        service={selectedService || null}
+        isOpen={!!selectedServiceId}
+        onClose={handleCloseModal}
+        onAddService={handleAddService}
+        onRemoveService={removeService}
+        onUpdateQuantity={updateQuantity}
+        onViewCart={handleViewCart}
+        selectedOptions={selectedServiceId ? getSelectedOptions(selectedServiceId) : []}
+      />
+
+      {/* Booking Summary */}
+      {!showCart && (
+        <BookingSummary
+          selectedServices={selectedServices}
+          totalPrice={calculateTotal}
+          onUpdateQuantity={updateQuantity}
+          onRemoveService={removeService}
+          onBookNow={handleBookNow}
+          onViewCart={handleViewCart}
+          showDoneButton={selectedServices.length > 0}
+        />
+      )}
+
+      {/* Cart View */}
+      {showCart && (
+        <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+          <div className="min-h-screen">
+            {/* Header */}
+            <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+              <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-4">
+                <button
+                  onClick={() => setShowCart(false)}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  aria-label="Go back"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <h1 className="text-xl font-bold">Your cart</h1>
               </div>
-              <div className="mb-4">
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700">Address *</label>
-                <textarea name="address" id="address" value={bookingForm.address} onChange={handleFormChange} rows={3} className="mt-1 block w-full px-3 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 text-base" required></textarea>
-                {formErrors.address && <p className="text-red-500 text-xs md:text-sm mt-1">{formErrors.address}</p>}
-              </div>
-              <div className="flex flex-col sm:flex-row justify-end gap-3 sm:gap-0">
-                <button type="button" onClick={() => setIsModalOpen(false)} className="w-full sm:w-auto sm:mr-4 px-4 py-2 md:py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 font-medium">Cancel</button>
-                <button type="submit" disabled={isSubmitting} className="w-full sm:w-auto px-6 py-2 md:py-3 bg-amber-600 text-white rounded-md hover:bg-amber-700 disabled:bg-gray-400 font-medium">
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
+            </header>
+
+            <main className="max-w-3xl mx-auto px-4 py-6 space-y-6 pb-32">
+              {/* Checkout Section */}
+              <section className="bg-white rounded-lg p-4 shadow-sm">
+                <h2 className="text-lg font-bold mb-4">Checkout</h2>
+                
+                {/* Services List */}
+                <div className="space-y-6">
+                  {selectedServices.map((service) => (
+                    <div key={`${service.serviceId}-${service.optionId}`} className="space-y-3">
+                      <h3 className="font-semibold text-gray-900">{service.serviceName}</h3>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700">{service.optionName}</span>
+                        
+                        <div className="flex items-center gap-4">
+                          {/* Quantity Selector */}
+                          <div className="flex items-center gap-3 border-2 border-amber-600 rounded-lg px-3 py-1">
+                            <button
+                              onClick={() => {
+                                if (service.quantity > 1) {
+                                  updateQuantity(service.serviceId, service.optionId, service.quantity - 1);
+                                } else {
+                                  removeService(service.serviceId, service.optionId);
+                                }
+                              }}
+                              className="text-amber-600 font-bold text-lg w-6 h-6 flex items-center justify-center"
+                              aria-label="Decrease quantity"
+                            >
+                              −
+                            </button>
+                            <span className="font-semibold text-amber-600 min-w-[20px] text-center">
+                              {service.quantity}
+                            </span>
+                            <button
+                              onClick={() => updateQuantity(service.serviceId, service.optionId, service.quantity + 1)}
+                              className="text-amber-600 font-bold text-lg w-6 h-6 flex items-center justify-center"
+                              aria-label="Increase quantity"
+                            >
+                              +
+                            </button>
+                          </div>
+                          
+                          {/* Price */}
+                          <span className="font-semibold text-gray-900 min-w-[80px] text-right">
+                            ₹{(service.price * service.quantity).toLocaleString()}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* Coupons Section */}
+              <section className="bg-white rounded-lg p-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 text-xl">%</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900">Coupons and offers</h3>
+                    <p className="text-sm text-gray-600">Login/Sign up to view offers</p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Payment Summary */}
+              <section className="bg-white rounded-lg p-4 shadow-sm space-y-4">
+                <h2 className="text-lg font-bold">Payment summary</h2>
+                
+                <div className="space-y-3">
+                  <div className="flex justify-between text-gray-700">
+                    <span>Item total</span>
+                    <span className="font-semibold">₹{calculateTotal.toLocaleString()}</span>
+                  </div>
+                  
+                  <div className="flex justify-between text-gray-700">
+                    <span>Taxes and Fee</span>
+                    <span className="font-semibold">₹{Math.round(calculateTotal * 0.08).toLocaleString()}</span>
+                  </div>
+                  
+                  <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
+                    <span className="font-bold">Total amount</span>
+                    <span className="font-bold">₹{(calculateTotal + Math.round(calculateTotal * 0.08)).toLocaleString()}</span>
+                  </div>
+                  
+                  <div className="flex justify-between text-gray-700">
+                    <span>Advance payment</span>
+                    <span className="font-semibold">₹49</span>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600">
+                    ₹{(calculateTotal + Math.round(calculateTotal * 0.08) - 49).toLocaleString()} payable after service
+                  </p>
+                  
+                  <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
+                    <span className="font-bold">Amount to pay</span>
+                    <span className="font-bold">₹49</span>
+                  </div>
+                </div>
+              </section>
+            </main>
+
+            {/* Bottom CTA - Above bottom nav on mobile */}
+            <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg mb-16 md:mb-0 z-40">
+              <div className="max-w-3xl mx-auto">
+                <button
+                  onClick={handleBookNow}
+                  className="w-full bg-amber-600 text-white font-semibold py-4 rounded-lg hover:bg-amber-700 transition-colors shadow-md active:scale-95"
+                >
+                  Book Now
                 </button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       )}
+
+      {/* Error Toast */}
+      {bookingError && (
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 animate-slideInUp">
+          <div className="bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 max-w-md">
+            <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span className="font-medium">{bookingError}</span>
+            <button
+              onClick={() => setBookingError(null)}
+              className="ml-2 hover:bg-red-600 rounded p-1 transition-colors"
+              aria-label="Close error message"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Loading Overlay */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6">
+            <LoadingSpinner size="lg" text="Opening WhatsApp..." />
+          </div>
+        </div>
+      )}
+    </div>
     </>
   );
 };
