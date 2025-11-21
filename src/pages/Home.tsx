@@ -78,9 +78,11 @@ const Home = () => {
     <>
       <SEOHead
         title="A1 Furniture Polish — Professional Wooden Furniture Polishing in Mumbai"
-        description="A1 Furniture Polish offers expert wooden furniture polishing, scratch repair, and restoration in Mumbai. Book online or call for a free estimate."
+        description="Leading furniture polishing services in Mumbai. We restore and polish your wooden furniture to perfection with eco-friendly products and skilled craftsmen. Expert sofa, bed, door, table, wardrobe polish. 6 months warranty. Book now!"
+        keywords="furniture polish Mumbai, wood polishing services, sofa polish, bed polish, door polish, table polish, wardrobe polish, furniture restoration Mumbai, A1 furniture polish"
         ogUrl="https://a1furniturepolish.com/"
         ogImage="/assets/Sofa And chair.jpg"
+        canonical="https://a1furniturepolish.com/"
       />
       <JsonLd data={localBusiness} />
       <JsonLd data={servicesSchema} />
