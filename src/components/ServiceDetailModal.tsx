@@ -209,8 +209,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
           </div>
 
           {/* Scrollable Content - Responsive padding and spacing */}
-          <div className="overflow-y-auto h-[calc(100vh-64px)] md:h-auto md:max-h-[calc(90vh-64px)]">
-            <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-5 md:space-y-6">
+          <div className="overflow-y-auto h-[calc(100vh-64px-80px)] md:h-auto md:max-h-[calc(90vh-64px)] overscroll-contain scroll-smooth webkit-overflow-scrolling-touch">
+            <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-5 md:space-y-6 pb-4">
               {/* Service Options Section - Responsive text and spacing */}
               <section aria-labelledby="service-options-heading">
                 <h3 id="service-options-heading" className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
@@ -454,11 +454,11 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
 
               {/* FAQ Section - Mobile friendly with extra bottom padding */}
-              <section className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-4 md:p-5 mb-32 md:mb-0" aria-labelledby="faq-heading">
+              <section className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-4 md:p-5 mb-40 md:mb-8" aria-labelledby="faq-heading">
                 <h3 id="faq-heading" className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
                   Frequently Asked Questions
                 </h3>
-                <div className="space-y-2 sm:space-y-3">
+                <div className="space-y-2 sm:space-y-3 pb-4">
                   {service.faqs.map((faq, index) => (
                     <div
                       key={index}
@@ -475,7 +475,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                         aria-controls={`faq-answer-${index}`}
                         type="button"
                       >
-                        <span className="text-xs sm:text-sm font-semibold text-gray-900 flex-1">
+                        <span className="text-xs sm:text-sm font-semibold text-gray-900 flex-1 pr-2">
                           {faq.question}
                         </span>
                         <ChevronDown
@@ -489,7 +489,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                       <div
                         id={`faq-answer-${index}`}
                         className={`overflow-hidden transition-all duration-300 ease-in-out
-                                  ${expandedFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                                  ${expandedFAQ === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                       >
                         <div className="p-3 sm:p-4 pt-0 text-xs sm:text-sm text-gray-600 leading-relaxed">
                           {faq.answer}
@@ -505,9 +505,9 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
 
 
 
-        {/* Bottom Bar - Mobile (above bottom nav) */}
+        {/* Bottom Bar - Mobile (inside modal, above bottom nav) */}
         {selectedOptions.length > 0 && (
-          <div className="md:hidden fixed bottom-16 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-30">
+          <div className="md:hidden absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-20">
             <div className="px-4 py-3 flex items-center justify-between gap-3">
               <div className="flex flex-col flex-1 min-w-0">
                 <p className="text-xs text-gray-600">

@@ -201,6 +201,8 @@ const Services = () => {
         title="Furniture Polish Services - A1 Polish | 15+ Professional Services"
         description="Book professional furniture polishing services in Mumbai. Sofa, bed, door, table, wardrobe polish with 1-year warranty. Expert craftsmen, premium materials."
         keywords="furniture polish Mumbai, wood polish services, sofa polish, bed polish, door polish, wardrobe polish, professional furniture care"
+        url="https://a1furniturepolish.com/services"
+        image="/assets/Sofa And chair.jpg"
       />
       
       <div className="min-h-screen bg-gray-50">

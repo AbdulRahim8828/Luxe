@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { SelectedService } from '../types';
+import SEO from '../components/SEO';
 
 interface CartProps {
   selectedServices: SelectedService[];
@@ -27,9 +28,15 @@ const Cart: React.FC<CartProps> = ({
   const payableAfterService = totalAmount - advancePayment;
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <>
+      <SEO
+        title="Your Cart - A1 Furniture Polish | Review Your Booking"
+        description="Review your furniture polishing service booking. Check selected services, pricing, and proceed to checkout for professional furniture care in Mumbai."
+        keywords="furniture polish cart, booking review, service checkout, Mumbai furniture services"
+      />
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-4">
           <button
             onClick={() => navigate(-1)}
@@ -156,7 +163,8 @@ const Cart: React.FC<CartProps> = ({
           </button>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
