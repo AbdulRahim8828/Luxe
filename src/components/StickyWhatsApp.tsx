@@ -20,19 +20,20 @@ const StickyWhatsApp = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-24 md:bottom-6 right-4 md:right-6 z-50">
+    <div className="fixed bottom-20 md:bottom-6 right-3 md:right-6 z-50">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-full right-0 mb-2 animate-slideInUp">
-          <div className="bg-gray-900 text-white px-4 py-2 rounded-lg shadow-xl text-sm whitespace-nowrap relative">
-            Need help? Chat with us!
+        <div className="absolute bottom-full right-0 mb-3 animate-slideInUp">
+          <div className="bg-gradient-to-r from-green-600 to-green-500 text-white px-3 py-2 rounded-lg shadow-2xl text-xs md:text-sm whitespace-nowrap relative">
+            <span className="font-semibold">💬 Need help? Chat now!</span>
             <button
               onClick={() => setShowTooltip(false)}
-              className="absolute -top-1 -right-1 bg-gray-700 rounded-full p-1 hover:bg-gray-600"
+              className="absolute -top-1.5 -right-1.5 bg-white text-green-600 rounded-full p-0.5 hover:bg-gray-100 shadow-md"
+              aria-label="Close tooltip"
             >
-              <X size={12} />
+              <X size={14} />
             </button>
-            <div className="absolute bottom-0 right-4 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>
+            <div className="absolute bottom-0 right-5 transform translate-y-1/2 rotate-45 w-2.5 h-2.5 bg-green-500"></div>
           </div>
         </div>
       )}
@@ -42,19 +43,19 @@ const StickyWhatsApp = () => {
         href="https://wa.me/918828709945?text=Hi! I'm interested in your furniture polishing services."
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110"
+        className="group relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95"
         aria-label="Chat on WhatsApp"
       >
         {/* Pulse Animation */}
-        <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+        <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60 animate-ping"></span>
         
         {/* Icon */}
-        <MessageCircle className="relative w-6 h-6 md:w-8 md:h-8 text-white" />
+        <MessageCircle className="relative w-7 h-7 md:w-8 md:h-8 text-white drop-shadow-lg" strokeWidth={2.5} />
         
         {/* Notification Badge */}
-        <span className="absolute -top-1 -right-1 flex h-4 w-4 md:h-5 md:w-5 items-center justify-center">
+        <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 md:h-6 md:w-6 items-center justify-center">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3 w-3 md:h-4 md:w-4 bg-red-500 border-2 border-white"></span>
+          <span className="relative inline-flex rounded-full h-4 w-4 md:h-5 md:w-5 bg-red-500 border-2 border-white shadow-lg"></span>
         </span>
       </a>
     </div>

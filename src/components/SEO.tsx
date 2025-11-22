@@ -13,7 +13,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Professional furniture polishing services in Mumbai. 15+ services including sofa, bed, door, table, wardrobe polish with 1-year warranty. Book now!',
   keywords = 'furniture polish, wood polish, sofa polish, bed polish, door polish, Mumbai furniture services, A1 polish',
   image = '/assets/og-image.jpg',
-  url = 'https://a1polish.com/services',
+  url = 'https://a1furniturepolish.com/services',
 }) => {
   return (
     <Helmet>

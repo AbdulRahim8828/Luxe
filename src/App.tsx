@@ -11,7 +11,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 // Lazy load pages for better performance
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/contact'));
+const Contact = lazy(() => import('./pages/Contact'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 const BlogListPage = lazy(() => import('./pages/BlogListPage'));
 const WoodenFurniturePolish = lazy(() => import('./pages/WoodenFurniturePolish'));

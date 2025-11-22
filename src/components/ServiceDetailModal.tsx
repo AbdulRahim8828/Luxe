@@ -3,6 +3,7 @@ import { X, ArrowLeft, Shield, Wrench, Award, Umbrella, FileCheck, ChevronDown }
 import { ServiceData } from '../types';
 import ServiceOptionCard from './ServiceOptionCard';
 import OptimizedImage from './OptimizedImage';
+import ServiceSelectionSummary from './ServiceSelectionSummary';
 
 interface ServiceDetailModalProps {
   service: ServiceData | null;
@@ -155,6 +156,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
       aria-labelledby="modal-title"
     >
       {/* Backdrop */}
+      {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black bg-opacity-50 animate-fade-in"
         onClick={onClose}
@@ -162,13 +164,13 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
       />
 
       {/* Modal Container - Full-screen on mobile, overlay on desktop */}
-      <div className="fixed inset-0 flex items-stretch md:items-center md:justify-center">
+      <div className="fixed inset-0 flex items-stretch md:items-center md:justify-center pb-16 md:pb-0">
         {/* Modal Content - Full-screen mobile (< 768px), overlay desktop (>= 768px) */}
         <div
           ref={modalRef}
           tabIndex={-1}
-          className="relative w-full h-full md:h-auto md:max-h-[90vh] md:max-w-4xl md:w-auto bg-white 
-                     md:rounded-2xl shadow-2xl overflow-hidden
+          className="relative w-full h-full md:h-auto md:max-h-[90vh] md:max-w-2xl md:w-auto bg-white 
+                     md:rounded-2xl shadow-2xl flex flex-col z-50
                      animate-slide-up md:animate-scale-in"
         >
           {/* Header - Sticky, touch-friendly buttons (min 44x44px) */}
@@ -209,18 +211,18 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
           </div>
 
           {/* Scrollable Content - Responsive padding and spacing */}
-          <div className="overflow-y-auto h-[calc(100vh-64px-80px)] md:h-auto md:max-h-[calc(90vh-64px)] overscroll-contain scroll-smooth webkit-overflow-scrolling-touch">
+          <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth webkit-overflow-scrolling-touch">
             <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-5 md:space-y-6 pb-4">
               {/* Service Options Section - Responsive text and spacing */}
-              <section aria-labelledby="service-options-heading">
+              <section aria-labelledby="service-options-heading" className="bg-gray-50 -mx-3 sm:-mx-4 md:mx-0 px-3 sm:px-4 md:px-0 py-3 sm:py-4 md:py-0 md:bg-transparent rounded-lg md:rounded-none">
                 <h3 id="service-options-heading" className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
                   Select Service Option
                 </h3>
-                {/* Mobile: Horizontal scroll with compact cards, Desktop: Vertical stack */}
-                <div className="md:space-y-3">
-                  <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none scrollbar-hide" role="group" aria-label="Service pricing options">
+                {/* Mobile & Desktop: Horizontal scroll with cards */}
+                <div className="-mx-3 sm:-mx-4 md:mx-0">
+                  <div className="flex flex-row gap-2 md:gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide px-3 sm:px-4 md:px-0" role="group" aria-label="Service pricing options">
                     {service.options.map((option, index) => (
-                      <div key={option.id || index} className="flex-shrink-0 w-[45%] md:w-full snap-start">
+                      <div key={option.id || index} className="flex-shrink-0 w-[220px] md:w-[260px] snap-start">
                         <ServiceOptionCard
                           option={option}
                           serviceImage={service.image}
@@ -453,8 +455,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                 </ol>
               </section>
 
-              {/* FAQ Section - Mobile friendly with extra bottom padding */}
-              <section className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-4 md:p-5 mb-40 md:mb-8" aria-labelledby="faq-heading">
+              {/* FAQ Section - Mobile friendly */}
+              <section className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-4 md:p-5 mb-8" aria-labelledby="faq-heading">
                 <h3 id="faq-heading" className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
                   Frequently Asked Questions
                 </h3>
@@ -501,75 +503,21 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
             </div>
           </div>
+
+          {/* Service Selection Summary - Separate Component */}
+          <ServiceSelectionSummary
+            selectedCount={selectedOptions.length}
+            totalPrice={service.options
+              .filter((_, index) => selectedOptions.includes(index))
+              .reduce((sum, opt) => sum + opt.price, 0)}
+            onDone={() => {
+              onClose();
+              if (onViewCart) {
+                setTimeout(() => onViewCart(), 100);
+              }
+            }}
+          />
         </div>
-
-
-
-        {/* Bottom Bar - Mobile (inside modal, above bottom nav) */}
-        {selectedOptions.length > 0 && (
-          <div className="md:hidden absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-20">
-            <div className="px-4 py-3 flex items-center justify-between gap-3">
-              <div className="flex flex-col flex-1 min-w-0">
-                <p className="text-xs text-gray-600">
-                  {selectedOptions.length} item{selectedOptions.length > 1 ? 's' : ''} added
-                </p>
-                <p className="text-sm font-bold text-gray-900">
-                  Total: ₹{service.options
-                    .filter((_, index) => selectedOptions.includes(index))
-                    .reduce((sum, opt) => sum + opt.price, 0)
-                    .toLocaleString()}
-                </p>
-              </div>
-              
-              <button
-                onClick={() => {
-                  onClose();
-                  if (onViewCart) {
-                    setTimeout(() => onViewCart(), 100);
-                  }
-                }}
-                className="px-6 py-2.5 bg-amber-600 text-white text-sm font-semibold rounded-lg hover:bg-amber-700 transition-colors shadow-md active:scale-95 whitespace-nowrap"
-                type="button"
-              >
-                Done
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Bottom Bar - Desktop Only */}
-        {selectedOptions.length > 0 && (
-          <div className="hidden md:block sticky bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg">
-            <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3 flex-1 min-w-0">
-                <div className="flex flex-col">
-                  <p className="text-xs text-gray-600">
-                    {selectedOptions.length} {selectedOptions.length === 1 ? 'item' : 'items'} added
-                  </p>
-                  <p className="text-base font-bold text-gray-900">
-                    Total: ₹{service.options
-                      .filter((_, index) => selectedOptions.includes(index))
-                      .reduce((sum, opt) => sum + opt.price, 0)
-                      .toLocaleString()}
-                  </p>
-                </div>
-              </div>
-              
-              <button
-                onClick={() => {
-                  onClose();
-                  if (onViewCart) {
-                    setTimeout(() => onViewCart(), 100);
-                  }
-                }}
-                className="px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors shadow-md hover:shadow-lg active:scale-95 whitespace-nowrap"
-                type="button"
-              >
-                Done
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

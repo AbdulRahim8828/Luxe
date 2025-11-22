@@ -1,9 +1,15 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { servicePageData } from '../data/servicePageData';
 import ServiceDetailModal from '../components/ServiceDetailModal';
 import BookingSummary from '../components/BookingSummary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+import CouponModal from '../components/CouponModal';
+import CouponSection from '../components/CouponSection';
+import PaymentSummary from '../components/PaymentSummary';
+import CartIcon from '../components/CartIcon';
+import FloatingCartButton from '../components/FloatingCartButton';
+import Toast from '../components/Toast';
 import { SelectedService } from '../types';
 import { openWhatsAppBooking } from '../utils/whatsappBooking';
 import { useLocalStorage } from '../hooks/useLocalStorage';
@@ -13,14 +19,66 @@ import { useAnalytics } from '../hooks/useAnalytics';
 const MIN_QUANTITY = 1;
 const MAX_QUANTITY = 10;
 
+// Cart version - increment this when cart structure changes
+const CART_VERSION = '1.0.0';
+
 const Services = () => {
   const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
   const [selectedServices, setSelectedServices] = useLocalStorage<SelectedService[]>('cart', []);
   const [bookingError, setBookingError] = useState<string | null>(null);
   const [showCart, setShowCart] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const [showCouponModal, setShowCouponModal] = useState(false);
+  const [appliedCoupon, setAppliedCoupon] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
   
   const analytics = useAnalytics();
+
+  // Check cart version and clear if outdated
+  useEffect(() => {
+    const storedVersion = localStorage.getItem('cartVersion');
+    if (storedVersion !== CART_VERSION) {
+      localStorage.removeItem('cart');
+      localStorage.setItem('cartVersion', CART_VERSION);
+      setSelectedServices([]);
+    }
+  }, [setSelectedServices]);
+
+  // Handle browser back button for cart
+  useEffect(() => {
+    const handlePopState = () => {
+      if (showCart) {
+        setShowCart(false);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [showCart]);
+
+  // Update URL when cart opens/closes
+  useEffect(() => {
+    if (showCart) {
+      window.history.pushState({ cart: true }, '', '?cart=open');
+    } else if (window.location.search.includes('cart=open')) {
+      window.history.pushState({}, '', window.location.pathname);
+    }
+  }, [showCart]);
+
+  // Valid coupons
+  const validCoupons: { [key: string]: { discount: number; description: string } } = {
+    'FIRST10': { discount: 0.10, description: 'First Booking - 10% OFF' },
+  };
+
+  // Coupon handlers
+  const handleApplyCoupon = useCallback((code: string) => {
+    setAppliedCoupon(code);
+  }, []);
+
+  const handleRemoveCoupon = useCallback(() => {
+    setAppliedCoupon(null);
+  }, []);
 
   const handleViewDetails = (serviceId: string) => {
     const service = servicePageData.find(s => s.id === serviceId);
@@ -48,20 +106,23 @@ const Services = () => {
    */
   const addService = useCallback(
     (serviceId: string, optionIndex: number, quantity: number = 1) => {
-      const service = servicePageData.find((s) => s.id === serviceId);
-      if (!service) {
-        console.error(`Service with id ${serviceId} not found`);
-        return;
-      }
+      setIsAddingToCart(true);
+      
+      try {
+        const service = servicePageData.find((s) => s.id === serviceId);
+        if (!service) {
+          console.error(`Service with id ${serviceId} not found`);
+          return;
+        }
 
-      const option = service.options[optionIndex];
-      if (!option) {
-        console.error(`Option at index ${optionIndex} not found for service ${serviceId}`);
-        return;
-      }
+        const option = service.options[optionIndex];
+        if (!option) {
+          console.error(`Option at index ${optionIndex} not found for service ${serviceId}`);
+          return;
+        }
 
-      // Validate quantity
-      const validQuantity = Math.max(MIN_QUANTITY, Math.min(MAX_QUANTITY, quantity));
+        // Validate quantity
+        const validQuantity = Math.max(MIN_QUANTITY, Math.min(MAX_QUANTITY, quantity));
 
       setSelectedServices((prevServices) => {
         // Check if this service option is already selected
@@ -92,15 +153,20 @@ const Services = () => {
           return [...prevServices, newService];
         }
       });
+        // Show success toast
+        setToastMessage(`${option.name} added to cart`);
+      } finally {
+        // Reset loading state after a short delay for smooth UX
+        setTimeout(() => setIsAddingToCart(false), 300);
+      }
     },
-    []
+    [setSelectedServices]
   );
 
   /**
    * Update quantity of a selected service
    */
   const updateQuantity = useCallback((serviceId: string, optionId: string, newQuantity: number) => {
-    // Validate quantity within limits
     const validQuantity = Math.max(MIN_QUANTITY, Math.min(MAX_QUANTITY, newQuantity));
 
     setSelectedServices((prevServices) => {
@@ -114,23 +180,20 @@ const Services = () => {
         return service;
       });
     });
-  }, []);
+  }, [setSelectedServices]);
 
   /**
    * Remove a service from the booking summary
    */
   const removeService = useCallback((serviceId: string, optionId: string) => {
     setSelectedServices((prevServices) => {
-      return prevServices.filter((service) => !(service.serviceId === serviceId && service.optionId === optionId));
+      return prevServices.filter((service) => {
+        return !(service.serviceId === serviceId && service.optionId === optionId);
+      });
     });
-  }, []);
+  }, [setSelectedServices]);
 
-  /**
-   * Quick add handler for service cards (adds 1 quantity)
-   */
-  const handleQuickAdd = (serviceId: string, optionIndex: number) => {
-    addService(serviceId, optionIndex, 1);
-  };
+
 
   /**
    * Add service handler for modal (supports custom quantity)
@@ -206,31 +269,62 @@ const Services = () => {
       />
       
       <div className="min-h-screen bg-gray-50">
-        {/* Header - Centered Clean UI */}
-        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-b-2 border-amber-200">
-          <div className="max-w-7xl mx-auto px-4 py-6 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-              Furniture Wood Polish
-            </h1>
-            <p className="text-gray-600 text-sm md:text-base">
-              Professional polishing services for all types of furniture
-            </p>
+        {/* Header - Enhanced UI with Cart Icon */}
+        <header className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-b-2 border-amber-200 shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
+            <div className="flex items-center justify-between gap-4">
+              {/* Left - Back/Home Button (Optional) */}
+              <div className="flex items-center">
+                <div className="w-10 md:w-12 flex items-center justify-center">
+                  {/* Placeholder for future back button */}
+                </div>
+              </div>
+              
+              {/* Center - Title with Icon */}
+              <div className="flex-1 text-center">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <svg 
+                    className="w-6 h-6 md:w-7 md:h-7 text-amber-600 hidden sm:block" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
+                    Furniture Wood Polish
+                  </h1>
+                </div>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base font-medium">
+                  Professional polishing • 1 Year Warranty • Expert Craftsmen
+                </p>
+              </div>
+              
+              {/* Right - Cart Icon with Enhanced Badge */}
+              <div className="flex items-center">
+                <CartIcon
+                  itemCount={selectedServices.length}
+                  onClick={handleViewCart}
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        </header>
 
-      {/* Category Grid Section - Compact Mobile View */}
-      <section className="bg-gray-50 py-4 sm:py-6">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6">
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3">
+      {/* Category Grid Section - Extra Compact */}
+      <section className="bg-gray-50 py-3 sm:py-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4">
+          <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1.5 sm:gap-2">
             {servicePageData.map((service) => (
               <button
                 key={service.id}
                 onClick={() => handleViewDetails(service.id)}
-                className="flex flex-col items-center gap-1.5 sm:gap-2 p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg active:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 group"
+                className="flex flex-col items-center gap-1 p-1.5 sm:p-2 bg-white rounded-md hover:shadow-md active:shadow-sm transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-amber-600 group"
                 aria-label={`View ${service.name} options`}
                 type="button"
               >
-                <div className="w-full aspect-square bg-gray-50 rounded-md overflow-hidden flex items-center justify-center p-1.5 sm:p-2 group-hover:bg-gray-100 transition-colors">
+                <div className="w-full aspect-square bg-gray-50 rounded overflow-hidden flex items-center justify-center p-1 sm:p-1.5 group-hover:bg-gray-100 transition-colors">
                   <img
                     src={service.image}
                     alt={service.name}
@@ -238,7 +332,7 @@ const Services = () => {
                     loading="lazy"
                   />
                 </div>
-                <span className="text-[10px] sm:text-xs font-medium text-gray-900 text-center line-clamp-2 w-full leading-tight">
+                <span className="text-[9px] sm:text-[10px] font-medium text-gray-900 text-center line-clamp-2 w-full leading-tight">
                   {service.name}
                 </span>
               </button>
@@ -251,6 +345,9 @@ const Services = () => {
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-8">
         {servicePageData.map((service) => {
           const minPrice = Math.min(...service.options.map(opt => opt.price));
+          
+          // Check if service is per sqft based
+          const isPerSqft = ['floor-polishing', 'pu-polish', 'deco-polish', 'metal-almirah-paint', 'metal-bed-powder-coating', 'steel-bed-buffing', 'kitchen-trolley-buffing'].includes(service.id);
           
           return (
             <section key={service.id} className="space-y-4">
@@ -276,13 +373,13 @@ const Services = () => {
                       </svg>
                       <span className="text-sm font-semibold text-gray-900">{service.rating}</span>
                       <span className="text-xs text-gray-600">
-                        ({service.reviewCount >= 1000 ? `${(service.reviewCount / 1000).toFixed(0)}` : service.reviewCount} reviews)
+                        ({service.reviewCount >= 1000 ? `${(service.reviewCount / 1000).toFixed(1)}K` : service.reviewCount} reviews)
                       </span>
                     </div>
 
                     {/* Starting Price */}
                     <p className="text-base sm:text-lg font-bold text-gray-900">
-                      Starts at ₹{minPrice.toLocaleString()}
+                      Starts at ₹{minPrice.toLocaleString()}{isPerSqft && '/sqft'}
                     </p>
 
                     {/* Divider */}
@@ -322,7 +419,7 @@ const Services = () => {
 
                     {/* Add Button */}
                     <button
-                      onClick={() => handleQuickAdd(service.id, 0)}
+                      onClick={() => handleViewDetails(service.id)}
                       className="w-full px-4 py-2 bg-white text-amber-600 font-semibold text-sm rounded-lg border-2 border-amber-600 hover:bg-amber-50 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
                       type="button"
                       aria-label={`Add ${service.name} to booking`}
@@ -369,129 +466,148 @@ const Services = () => {
 
       {/* Cart View */}
       {showCart && (
-        <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
-          <div className="min-h-screen">
+        <div className="fixed inset-0 bg-white z-50 overflow-y-auto md:pb-0 pb-20">
+          <div className="min-h-screen md:min-h-auto">
             {/* Header */}
             <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-              <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-4">
-                <button
-                  onClick={() => setShowCart(false)}
-                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-                  aria-label="Go back"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <h1 className="text-xl font-bold">Your cart</h1>
+              <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={() => setShowCart(false)}
+                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    aria-label="Go back"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <h1 className="text-xl font-bold">Your cart</h1>
+                </div>
+                {selectedServices.length > 0 && (
+                  <button
+                    onClick={() => {
+                      if (confirm('Clear all items from cart?')) {
+                        setSelectedServices([]);
+                        setShowCart(false);
+                      }
+                    }}
+                    className="text-sm text-red-600 hover:text-red-700 font-medium"
+                    type="button"
+                  >
+                    Clear Cart
+                  </button>
+                )}
               </div>
             </header>
 
-            <main className="max-w-3xl mx-auto px-4 py-6 space-y-6 pb-32">
-              {/* Checkout Section */}
-              <section className="bg-white rounded-lg p-4 shadow-sm">
-                <h2 className="text-lg font-bold mb-4">Checkout</h2>
-                
-                {/* Services List */}
-                <div className="space-y-6">
-                  {selectedServices.map((service) => (
-                    <div key={`${service.serviceId}-${service.optionId}`} className="space-y-3">
-                      <h3 className="font-semibold text-gray-900">{service.serviceName}</h3>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">{service.optionName}</span>
+            <main className="max-w-3xl mx-auto px-4 py-6 space-y-6 pb-40 md:pb-32">
+              {/* Empty Cart Message */}
+              {selectedServices.length === 0 ? (
+                <section className="bg-white rounded-lg p-8 shadow-sm text-center">
+                  <div className="max-w-sm mx-auto">
+                    <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                      </svg>
+                    </div>
+                    <h2 className="text-xl font-bold text-gray-900 mb-2">Your cart is empty</h2>
+                    <p className="text-gray-600 mb-6">Add services to get started with your booking</p>
+                    <button
+                      onClick={() => setShowCart(false)}
+                      className="px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors"
+                      type="button"
+                    >
+                      Browse Services
+                    </button>
+                  </div>
+                </section>
+              ) : (
+                <>
+                  {/* Checkout Section */}
+                  <section className="bg-white rounded-lg p-4 shadow-sm">
+                    <h2 className="text-lg font-bold mb-4">Checkout</h2>
+                    
+                    {/* Services List */}
+                    <div className="space-y-6">
+                  {selectedServices.map((service) => {
+                    // Capture service details in closure to avoid stale references
+                    const currentServiceId = service.serviceId;
+                    const currentOptionId = service.optionId;
+                    const currentQuantity = service.quantity;
+                    
+                    return (
+                      <div key={`${currentServiceId}-${currentOptionId}`} className="space-y-3">
+                        <h3 className="font-semibold text-gray-900">{service.serviceName}</h3>
                         
-                        <div className="flex items-center gap-4">
-                          {/* Quantity Selector */}
-                          <div className="flex items-center gap-3 border-2 border-amber-600 rounded-lg px-3 py-1">
-                            <button
-                              onClick={() => {
-                                if (service.quantity > 1) {
-                                  updateQuantity(service.serviceId, service.optionId, service.quantity - 1);
-                                } else {
-                                  removeService(service.serviceId, service.optionId);
-                                }
-                              }}
-                              className="text-amber-600 font-bold text-lg w-6 h-6 flex items-center justify-center"
-                              aria-label="Decrease quantity"
-                            >
-                              −
-                            </button>
-                            <span className="font-semibold text-amber-600 min-w-[20px] text-center">
-                              {service.quantity}
-                            </span>
-                            <button
-                              onClick={() => updateQuantity(service.serviceId, service.optionId, service.quantity + 1)}
-                              className="text-amber-600 font-bold text-lg w-6 h-6 flex items-center justify-center"
-                              aria-label="Increase quantity"
-                            >
-                              +
-                            </button>
-                          </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-700">{service.optionName}</span>
                           
-                          {/* Price */}
-                          <span className="font-semibold text-gray-900 min-w-[80px] text-right">
-                            ₹{(service.price * service.quantity).toLocaleString()}
-                          </span>
+                          <div className="flex items-center gap-4">
+                            {/* Quantity Selector */}
+                            <div className="flex items-center gap-3 border-2 border-amber-600 rounded-lg px-3 py-1">
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (currentQuantity > 1) {
+                                    updateQuantity(currentServiceId, currentOptionId, currentQuantity - 1);
+                                  } else {
+                                    removeService(currentServiceId, currentOptionId);
+                                  }
+                                }}
+                                className="text-amber-600 font-bold text-lg w-6 h-6 flex items-center justify-center hover:bg-amber-50 rounded transition-colors"
+                                aria-label="Decrease quantity"
+                                type="button"
+                              >
+                                −
+                              </button>
+                              <span className="font-semibold text-amber-600 min-w-[20px] text-center">
+                                {currentQuantity}
+                              </span>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  updateQuantity(currentServiceId, currentOptionId, currentQuantity + 1);
+                                }}
+                                className="text-amber-600 font-bold text-lg w-6 h-6 flex items-center justify-center hover:bg-amber-50 rounded transition-colors"
+                                aria-label="Increase quantity"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          
+                            {/* Price */}
+                            <span className="font-semibold text-gray-900 min-w-[80px] text-right">
+                              ₹{(service.price * currentQuantity).toLocaleString()}
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </section>
 
               {/* Coupons Section */}
-              <section className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 text-xl">%</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900">Coupons and offers</h3>
-                    <p className="text-sm text-gray-600">Login/Sign up to view offers</p>
-                  </div>
-                </div>
-              </section>
+              <CouponSection
+                appliedCoupon={appliedCoupon}
+                validCoupons={validCoupons}
+                onOpenModal={() => setShowCouponModal(true)}
+              />
 
               {/* Payment Summary */}
-              <section className="bg-white rounded-lg p-4 shadow-sm space-y-4">
-                <h2 className="text-lg font-bold">Payment summary</h2>
-                
-                <div className="space-y-3">
-                  <div className="flex justify-between text-gray-700">
-                    <span>Item total</span>
-                    <span className="font-semibold">₹{calculateTotal.toLocaleString()}</span>
-                  </div>
-                  
-                  <div className="flex justify-between text-gray-700">
-                    <span>Taxes and Fee</span>
-                    <span className="font-semibold">₹{Math.round(calculateTotal * 0.08).toLocaleString()}</span>
-                  </div>
-                  
-                  <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
-                    <span className="font-bold">Total amount</span>
-                    <span className="font-bold">₹{(calculateTotal + Math.round(calculateTotal * 0.08)).toLocaleString()}</span>
-                  </div>
-                  
-                  <div className="flex justify-between text-gray-700">
-                    <span>Advance payment</span>
-                    <span className="font-semibold">₹49</span>
-                  </div>
-                  
-                  <p className="text-sm text-gray-600">
-                    ₹{(calculateTotal + Math.round(calculateTotal * 0.08) - 49).toLocaleString()} payable after service
-                  </p>
-                  
-                  <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
-                    <span className="font-bold">Amount to pay</span>
-                    <span className="font-bold">₹49</span>
-                  </div>
-                </div>
-              </section>
+              <PaymentSummary
+                itemTotal={calculateTotal}
+                appliedCoupon={appliedCoupon}
+                validCoupons={validCoupons}
+              />
+              </>
+              )}
             </main>
 
-            {/* Bottom CTA - Above bottom nav on mobile */}
-            <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg mb-16 md:mb-0 z-40">
+            {/* Bottom CTA - Above bottom nav on mobile - Only show if cart has items */}
+            {selectedServices.length > 0 && (
+              <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg mb-16 md:mb-0 z-40">
               <div className="max-w-3xl mx-auto">
                 <button
                   onClick={handleBookNow}
@@ -500,10 +616,21 @@ const Services = () => {
                   Book Now
                 </button>
               </div>
-            </div>
+              </div>
+            )}
           </div>
         </div>
       )}
+
+      {/* Coupon Modal */}
+      <CouponModal
+        isOpen={showCouponModal}
+        onClose={() => setShowCouponModal(false)}
+        onApplyCoupon={handleApplyCoupon}
+        onRemoveCoupon={handleRemoveCoupon}
+        appliedCoupon={appliedCoupon}
+        validCoupons={validCoupons}
+      />
 
       {/* Error Toast */}
       {bookingError && (
@@ -536,6 +663,33 @@ const Services = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6">
             <LoadingSpinner size="lg" text="Opening WhatsApp..." />
+          </div>
+        </div>
+      )}
+
+      {/* Floating Cart Button - Shows after scrolling */}
+      {!showCart && (
+        <FloatingCartButton
+          itemCount={selectedServices.length}
+          onClick={handleViewCart}
+        />
+      )}
+
+      {/* Toast Notification - Mobile Friendly */}
+      {toastMessage && (
+        <Toast
+          message={toastMessage}
+          type="success"
+          onClose={() => setToastMessage(null)}
+        />
+      )}
+
+      {/* Loading Indicator - Mobile Friendly */}
+      {isAddingToCart && (
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 w-full max-w-sm">
+          <div className="bg-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow-lg flex items-center gap-2 sm:gap-3 mx-auto">
+            <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-amber-600 flex-shrink-0"></div>
+            <span className="font-medium text-gray-900 text-sm sm:text-base">Adding to cart...</span>
           </div>
         </div>
       )}

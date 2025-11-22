@@ -37,7 +37,7 @@ export function openWhatsAppBooking(selectedServices: SelectedService[], totalPr
   };
 
   const message = generateWhatsAppMessage(booking);
-  const phoneNumber = "917897995178"; // Business WhatsApp number
+  const phoneNumber = "918828709945"; // Business WhatsApp number
   const encodedMessage = encodeURIComponent(message);
   
   // Detect mobile vs desktop for appropriate WhatsApp URL

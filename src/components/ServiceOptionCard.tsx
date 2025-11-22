@@ -55,7 +55,7 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
       )}
 
       {/* Option Image - Top */}
-      <div className="w-full mb-2 bg-gray-50 rounded-lg overflow-hidden aspect-square flex items-center justify-center p-2">
+      <div className="w-full mb-2 bg-gray-50 rounded-lg overflow-hidden aspect-square flex items-center justify-center p-1.5 sm:p-2 max-h-28 sm:max-h-36">
         <OptimizedImage
           src={optionImage}
           alt={`${option.name} service option`}
@@ -67,21 +67,21 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
       {/* Option Details - Bottom */}
       <div className="flex-1 flex flex-col">
         {/* Option Name */}
-        <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-1 line-clamp-2">
+        <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-0.5 line-clamp-2">
           {option.name}
         </h4>
 
         {/* Estimated Time */}
         {option.estimatedTime && (
-          <div className="flex items-center gap-1 mb-1" aria-label={`Estimated time ${option.estimatedTime}`}>
-            <Clock className="w-3 h-3 text-gray-500" aria-hidden="true" />
-            <span className="text-xs text-gray-600">{option.estimatedTime}</span>
+          <div className="flex items-center gap-0.5 mb-1" aria-label={`Estimated time ${option.estimatedTime}`}>
+            <Clock className="w-2.5 h-2.5 text-gray-500" aria-hidden="true" />
+            <span className="text-[10px] sm:text-xs text-gray-600">{option.estimatedTime}</span>
           </div>
         )}
 
         {/* Price */}
-        <div className="mb-2">
-          <p className="text-base sm:text-lg font-bold text-gray-900" aria-label={`Price ${option.price} rupees`}>
+        <div className="mb-1.5">
+          <p className="text-sm sm:text-base font-bold text-gray-900" aria-label={`Price ${option.price} rupees`}>
             ₹{option.price.toLocaleString()}
           </p>
         </div>
@@ -91,24 +91,24 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
           {!isSelected ? (
             <button
               onClick={onAdd}
-              className="w-full px-2 py-1.5 rounded-md font-medium text-xs transition-all duration-200 ease-out
-                         focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2
+              className="w-full px-2 py-1 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-200 ease-out
+                         focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-1
                          active:scale-95 flex items-center justify-center shadow-sm hover:shadow-md
                          bg-white text-amber-600 border-2 border-amber-600 hover:bg-amber-50
-                         min-h-[36px]"
+                         min-h-[32px] sm:min-h-[36px]"
               aria-label={`Add ${option.name} to booking for ${option.price} rupees`}
               type="button"
             >
               Add
             </button>
           ) : (
-            <div className="flex items-center justify-center gap-2 sm:gap-3 border-2 border-amber-600 rounded-lg px-2 sm:px-3 py-2 bg-white relative z-10">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 border-2 border-amber-600 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 bg-white relative z-10">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   onDecrease();
                 }}
-                className="text-amber-600 font-bold text-xl min-w-[44px] min-h-[44px] sm:min-w-[32px] sm:min-h-[32px] 
+                className="text-amber-600 font-bold text-lg sm:text-xl min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px] 
                            flex items-center justify-center hover:bg-amber-50 rounded transition-colors
                            active:bg-amber-100 touch-manipulation cursor-pointer"
                 aria-label="Decrease quantity"
@@ -116,7 +116,7 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
               >
                 −
               </button>
-              <span className="font-semibold text-amber-600 min-w-[28px] text-center text-lg pointer-events-none">
+              <span className="font-semibold text-amber-600 min-w-[24px] text-center text-base sm:text-lg pointer-events-none">
                 {quantity}
               </span>
               <button
@@ -124,7 +124,7 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
                   e.stopPropagation();
                   onIncrease();
                 }}
-                className="text-amber-600 font-bold text-xl min-w-[44px] min-h-[44px] sm:min-w-[32px] sm:min-h-[32px]
+                className="text-amber-600 font-bold text-lg sm:text-xl min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px]
                            flex items-center justify-center hover:bg-amber-50 rounded transition-colors
                            active:bg-amber-100 touch-manipulation cursor-pointer"
                 aria-label="Increase quantity"

@@ -28,6 +28,16 @@
   }
 
   /* Accessibility: Enhanced focus indicators for keyboard navigation */
+  
+  /* Hide scrollbar for horizontal scroll */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
   *:focus-visible {
     outline: 2px solid #d97706; /* amber-600 */
     outline-offset: 2px;

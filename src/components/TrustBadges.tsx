@@ -1,55 +1,67 @@
 import React from 'react';
-import { Shield, Award, ThumbsUp, Zap } from 'lucide-react';
+import { Shield, Star, Clock, Users } from 'lucide-react';
 
-const TrustBadges = () => {
+const TrustBadges: React.FC = () => {
   const badges = [
     {
-      icon: <Shield className="w-6 h-6 text-blue-600" />,
-      title: '100% Safe',
-      description: 'Eco-Friendly Products'
+      icon: Users,
+      number: '50,000+',
+      text: 'Services Completed',
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
     },
     {
-      icon: <Award className="w-6 h-6 text-amber-600" />,
-      title: 'Certified',
-      description: '10+ Years Experience'
+      icon: Star,
+      number: '4.8',
+      text: 'Google Rating',
+      color: 'text-amber-600',
+      bgColor: 'bg-amber-50',
+      showStar: true,
     },
     {
-      icon: <ThumbsUp className="w-6 h-6 text-green-600" />,
-      title: 'Guaranteed',
-      description: 'Satisfaction Promise'
+      icon: Clock,
+      number: 'Same Day',
+      text: 'Service Available',
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-600" />,
-      title: 'Fast Service',
-      description: 'Same-Day Available'
-    }
+      icon: Shield,
+      number: '100%',
+      text: 'Satisfaction Guarantee',
+      color: 'text-amber-600',
+      bgColor: 'bg-amber-50',
+    },
   ];
 
   return (
-    <div className="bg-white py-6 border-y border-gray-200">
+    <section className="py-4 md:py-6 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {badges.map((badge, index) => (
-            <div 
-              key={index}
-              className="flex items-center space-x-3 p-3 md:p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            >
-              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                {badge.icon}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs md:text-sm font-bold text-gray-900 truncate">
-                  {badge.title}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {badges.map((badge, index) => {
+            const IconComponent = badge.icon;
+            return (
+              <div
+                key={index}
+                className="flex items-center gap-2 md:gap-3 p-2 md:p-3 rounded-lg hover:shadow-md transition-all duration-200"
+              >
+                <div className={`p-1.5 md:p-2 rounded-full ${badge.bgColor} flex-shrink-0`}>
+                  <IconComponent className={`w-4 h-4 md:w-5 md:h-5 ${badge.color}`} />
                 </div>
-                <div className="text-xs text-gray-600 truncate">
-                  {badge.description}
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-gray-900 text-xs md:text-base whitespace-nowrap">
+                    {badge.number}{badge.showStar && '★'}
+                  </p>
+                  <p className="text-[10px] md:text-sm text-gray-600 leading-tight">
+                    {badge.text}
+                  </p>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

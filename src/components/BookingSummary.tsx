@@ -137,7 +137,7 @@ const BookingSummary: React.FC<BookingSummaryProps> = ({
             {showDoneButton ? (
               <button
                 onClick={onViewCart}
-                className="px-4 sm:px-6 py-2.5 sm:py-3 bg-purple-600 text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-purple-700 hover:shadow-xl active:scale-95 transition-all duration-200 ease-out shadow-md flex-shrink-0 min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                className="px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-600 text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-amber-700 hover:shadow-xl active:scale-95 transition-all duration-200 ease-out shadow-md flex-shrink-0 min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
                 aria-label="View cart"
                 type="button"
               >

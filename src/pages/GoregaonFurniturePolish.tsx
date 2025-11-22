@@ -14,7 +14,6 @@ const GoregaonFurniturePolish = () => {
     'Antique Furniture Restoration',
     'Scratch Repair & Touch-up',
     'Commercial Furniture Polish',
-    'Door & Window Polishing',
     'Cabinet & Wardrobe Polish',
     'Teak Wood Polishing',
     'Sheesham Wood Polish',
@@ -95,10 +94,10 @@ const GoregaonFurniturePolish = () => {
     'description': 'Professional furniture polishing and restoration services in Goregaon, Mumbai. Expert wooden furniture polish, sofa polishing, and antique restoration.',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': 'Goregaon',
-      'addressLocality': 'Mumbai',
+      'streetAddress': 'Shop No 5, Ram Mandir Rd, Mahatma Jyotiba Phule Nagar',
+      'addressLocality': 'Goregaon West, Mumbai',
       'addressRegion': 'Maharashtra',
-      'postalCode': '400063',
+      'postalCode': '400104',
       'addressCountry': 'IN'
     },
     'geo': {
@@ -124,7 +123,7 @@ const GoregaonFurniturePolish = () => {
     <>
       <SEOHead
         title="Furniture Polish in Goregaon | Best Furniture Polishing Services Near Me | A1 Furniture Polish"
-        description="Professional furniture polishing services in Goregaon East & West. Expert wooden furniture polish, sofa restoration, table polishing, bed polishing, scratch repair, antique restoration. 24/7 service available. Call +91 7897995178"
+        description="Professional furniture polishing services in Goregaon East & West. Expert wooden furniture polish, sofa restoration, table polishing, bed polishing, scratch repair, antique restoration. 24/7 service available. Call +91 8828709945"
         keywords="furniture polish goregaon, furniture polishing goregaon east, furniture polishing goregaon west, wooden furniture polish goregaon, sofa polishing goregaon, furniture restoration goregaon mumbai, table polishing goregaon, bed polishing goregaon, chair polishing goregaon, cabinet polishing goregaon, wardrobe polishing goregaon, door polishing goregaon, antique furniture restoration goregaon, furniture repair goregaon, scratch repair goregaon, furniture refinishing goregaon, teak wood polishing goregaon, sheesham wood polishing goregaon, furniture polish near me goregaon, best furniture polish goregaon, affordable furniture polishing goregaon, furniture polishing service goregaon, home furniture polish goregaon, office furniture polish goregaon, commercial furniture polishing goregaon, furniture polish goregaon east mumbai, furniture polish goregaon west mumbai, furniture polishing motilal nagar, furniture polishing bangur nagar, furniture polishing aarey colony, furniture polishing film city road, furniture polishing dindoshi, furniture polishing vanrai colony, 24 hour furniture polish goregaon, emergency furniture polishing goregaon, same day furniture polish goregaon, quick furniture polishing goregaon"
         ogUrl="https://a1furniturepolish.com/goregaon-furniture-polish"
         ogImage="/assets/Sofa And chair.jpg"
@@ -140,7 +139,10 @@ const GoregaonFurniturePolish = () => {
               <div>
                 <div className="flex items-center space-x-2 mb-4">
                   <MapPin className="w-6 h-6 text-amber-600" />
-                  <span className="text-amber-600 font-semibold">Goregaon, Mumbai</span>
+                  <div className="flex flex-col">
+                    <span className="text-amber-600 font-semibold">Goregaon, Mumbai</span>
+                    <span className="text-sm text-gray-600">Shop No 5, Ram Mandir Rd, Mahatma Jyotiba Phule Nagar, Goregaon West - 400104</span>
+                  </div>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Professional <span className="text-amber-600">Furniture Polish</span> Services in Goregaon
@@ -461,6 +463,71 @@ const GoregaonFurniturePolish = () => {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Visit Us Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Left - Address Info */}
+                <div className="p-8 md:p-12">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <MapPin className="w-8 h-8 text-amber-600" />
+                    <h2 className="text-3xl font-bold text-gray-900">Visit Our Shop</h2>
+                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        Shop No 5, Ram Mandir Rd,<br />
+                        Mahatma Jyotiba Phule Nagar,<br />
+                        Goregaon West, Mumbai,<br />
+                        Maharashtra 400104
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact</h3>
+                      <a href="tel:+917897995178" className="text-amber-600 font-semibold hover:text-amber-700 text-lg">
+                        +91 7897995178
+                      </a>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Hours</h3>
+                      <p className="text-gray-700">Open 24/7 - Available anytime for your convenience</p>
+                    </div>
+                    <div className="pt-4">
+                      <a
+                        href="https://maps.google.com/?q=Shop+No+5,+Ram+Mandir+Rd,+Mahatma+Jyotiba+Phule+Nagar,+Goregaon+West,+Mumbai,+Maharashtra+400104"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+                      >
+                        <MapPin size={20} />
+                        <span>Get Directions</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {/* Right - Map */}
+                <div className="h-full min-h-[400px] bg-gray-200">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.8!2d72.8526!3d19.1663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA5JzU4LjciTiA3MsKwNTEnMDkuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="A1 Furniture Polish Goregaon Location"
+                    className="rounded-r-2xl"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

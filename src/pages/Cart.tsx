@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Tag, X } from 'lucide-react';
 import { SelectedService } from '../types';
 import SEO from '../components/SEO';
 
@@ -18,14 +18,47 @@ const Cart: React.FC<CartProps> = ({
   onProceedToCheckout,
 }) => {
   const navigate = useNavigate();
+  const [couponCode, setCouponCode] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState<string | null>(null);
+  const [couponError, setCouponError] = useState('');
+
+  // Valid coupons
+  const validCoupons = {
+    'FIRST10': { discount: 0.10, description: 'First Booking - 10% OFF' },
+  };
 
   // Calculate totals
   const itemTotal = selectedServices.reduce((sum, service) => sum + service.price * service.quantity, 0);
   const taxesAndFee = Math.round(itemTotal * 0.08); // 8% taxes
-  const totalAmount = itemTotal + taxesAndFee;
+  
+  // Apply coupon discount
+  let discount = 0;
+  if (appliedCoupon && validCoupons[appliedCoupon as keyof typeof validCoupons]) {
+    discount = Math.round(itemTotal * validCoupons[appliedCoupon as keyof typeof validCoupons].discount);
+  }
+  
+  const totalAmount = itemTotal + taxesAndFee - discount;
   const advancePayment = 49; // Fixed advance payment
   const amountToPay = advancePayment;
   const payableAfterService = totalAmount - advancePayment;
+
+  // Handle coupon application
+  const handleApplyCoupon = () => {
+    const code = couponCode.toUpperCase().trim();
+    if (validCoupons[code as keyof typeof validCoupons]) {
+      setAppliedCoupon(code);
+      setCouponError('');
+    } else {
+      setCouponError('Invalid coupon code');
+      setAppliedCoupon(null);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponCode('');
+    setCouponError('');
+  };
 
   return (
     <>
@@ -104,15 +137,52 @@ const Cart: React.FC<CartProps> = ({
 
         {/* Coupons Section */}
         <section className="bg-white rounded-lg p-4 shadow-sm">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-              <span className="text-green-600 text-xl">%</span>
-            </div>
-            <div className="flex-1">
-              <h3 className="font-semibold text-gray-900">Coupons and offers</h3>
-              <p className="text-sm text-gray-600">Login/Sign up to view offers</p>
-            </div>
+          <div className="flex items-center gap-2 mb-3">
+            <Tag className="w-5 h-5 text-green-600" />
+            <h3 className="font-semibold text-gray-900">Apply Coupon</h3>
           </div>
+          
+          {!appliedCoupon ? (
+            <div className="space-y-2">
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={couponCode}
+                  onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
+                  placeholder="Enter coupon code"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 uppercase"
+                />
+                <button
+                  onClick={handleApplyCoupon}
+                  className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold"
+                >
+                  Apply
+                </button>
+              </div>
+              {couponError && (
+                <p className="text-sm text-red-600">{couponError}</p>
+              )}
+              <div className="mt-3 p-3 bg-green-50 rounded-lg border border-green-200">
+                <p className="text-sm font-semibold text-green-800 mb-1">Available Offer:</p>
+                <p className="text-xs text-green-700">Use code <span className="font-bold">FIRST10</span> for 10% OFF on first booking</p>
+              </div>
+            </div>
+          ) : (
+            <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+              <div>
+                <p className="font-semibold text-green-800">{appliedCoupon}</p>
+                <p className="text-sm text-green-700">
+                  {validCoupons[appliedCoupon as keyof typeof validCoupons].description}
+                </p>
+              </div>
+              <button
+                onClick={handleRemoveCoupon}
+                className="p-1 hover:bg-green-100 rounded transition-colors"
+              >
+                <X className="w-5 h-5 text-green-700" />
+              </button>
+            </div>
+          )}
         </section>
 
         {/* Payment Summary */}
@@ -129,6 +199,13 @@ const Cart: React.FC<CartProps> = ({
               <span>Taxes and Fee</span>
               <span className="font-semibold">₹{taxesAndFee.toLocaleString()}</span>
             </div>
+            
+            {discount > 0 && (
+              <div className="flex justify-between text-green-600">
+                <span>Coupon Discount ({appliedCoupon})</span>
+                <span className="font-semibold">-₹{discount.toLocaleString()}</span>
+              </div>
+            )}
             
             <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
               <span className="font-bold">Total amount</span>

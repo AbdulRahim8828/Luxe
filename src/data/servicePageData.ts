@@ -13,12 +13,20 @@ export const servicePageData: ServiceData[] = [
       'Premium wood finish',
       'Scratch removal included',
     ],
-    image: '/assets/Sofa.jpeg',
+    image: '/assets/sofa-polish.webp',
     options: [
+      { 
+        id: 'sofa-1seater',
+        name: '1 Seater Sofa', 
+        price: 1449,
+        rating: 4.9,
+        reviewCount: 356,
+        estimatedTime: '1.5 hrs'
+      },
       { 
         id: 'sofa-2seater',
         name: '2 Seater Sofa', 
-        price: 1899,
+        price: 1999,
         rating: 4.9,
         reviewCount: 456,
         estimatedTime: '2 hrs'
@@ -26,23 +34,15 @@ export const servicePageData: ServiceData[] = [
       { 
         id: 'sofa-3seater',
         name: '3 Seater Sofa', 
-        price: 2499,
+        price: 2949,
         rating: 4.8,
         reviewCount: 678,
         estimatedTime: '2.5 hrs'
       },
       { 
-        id: 'sofa-5seater',
-        name: '5 Seater Sofa Set', 
-        price: 4999,
-        rating: 4.9,
-        reviewCount: 892,
-        estimatedTime: '4 hrs'
-      },
-      { 
         id: 'sofa-lshape',
         name: 'L-Shape Sofa', 
-        price: 5499,
+        price: 6449,
         rating: 4.8,
         reviewCount: 234,
         estimatedTime: '4.5 hrs'
@@ -51,7 +51,7 @@ export const servicePageData: ServiceData[] = [
     selectedOption: -1,
     priceIncludes: [
       'Material & labour cost',
-      'Premium polish brand (Melamine/PU)',
+      'Premium polish brand',
       'Post-service cleaning',
       'Scratch removal & surface preparation',
       '6 months warranty on polish'
@@ -138,46 +138,54 @@ export const servicePageData: ServiceData[] = [
     name: 'Bed Wood Polish',
     category: 'furniture-polish',
     rating: 4.8,
-    reviewCount: 1247,
+    reviewCount: 1847,
     duration: '~3 hrs',
     features: [
       '6 Months Polished Warranty',
       'Choice of clear or coloured finishes',
       'Removes scratches and enhances natural look',
     ],
-    image: '/assets/Bed.jpeg',
+    image: '/assets/Bed-polish.webp',
     options: [
       { 
         id: 'bed-single',
         name: 'Single Bed', 
-        price: 2299,
+        price: 2449,
         rating: 4.8,
         reviewCount: 342,
         estimatedTime: '3 hrs'
       },
       { 
         id: 'bed-queen',
-        name: 'Double bed (Queen)', 
-        price: 2799,
+        name: 'Queen Size Bed', 
+        price: 2999,
         rating: 4.9,
         reviewCount: 521,
         estimatedTime: '3.5 hrs'
       },
       { 
         id: 'bed-king',
-        name: 'Double bed (King)', 
-        price: 3099,
+        name: 'King Size Bed', 
+        price: 3799,
         rating: 4.8,
         reviewCount: 284,
         estimatedTime: '4 hrs'
       },
       { 
-        id: 'bed-sofacum',
-        name: 'Sofacum Bed', 
-        price: 3999,
+        id: 'bed-storage',
+        name: 'Double Bed with Storage', 
+        price: 4449,
+        rating: 4.8,
+        reviewCount: 234,
+        estimatedTime: '4.5 hrs'
+      },
+      { 
+        id: 'bed-bunk',
+        name: 'Bunk Bed', 
+        price: 5799,
         rating: 4.7,
         reviewCount: 100,
-        estimatedTime: '4 hrs'
+        estimatedTime: '5 hrs'
       },
     ],
     selectedOption: -1,
@@ -269,20 +277,20 @@ export const servicePageData: ServiceData[] = [
     id: 'door-polish',
     name: 'Door Wood Polish',
     category: 'furniture-polish',
-    rating: 4.7,
-    reviewCount: 1834,
+    rating: 4.8,
+    reviewCount: 1934,
     duration: '~2 hrs',
     features: [
       '6 Months Polished Warranty',
       'Both sides polishing',
       'Frame polishing included',
     ],
-    image: '/assets/Door Wood Polish.webp',
+    image: '/assets/Door-polish.webp',
     options: [
-      { id: 'door-single', name: 'Single Door', price: 1499, rating: 4.7, reviewCount: 523, estimatedTime: '2 hrs' },
-      { id: 'door-double', name: 'Double Door', price: 2499, rating: 4.8, reviewCount: 789, estimatedTime: '3 hrs' },
-      { id: 'door-main', name: 'Main Door (Heavy)', price: 2999, rating: 4.7, reviewCount: 345, estimatedTime: '3.5 hrs' },
-      { id: 'door-frame', name: 'Door with Frame', price: 1999, rating: 4.8, reviewCount: 177, estimatedTime: '2.5 hrs' },
+      { id: 'door-single', name: 'Single Door', price: 2449, rating: 4.7, reviewCount: 523, estimatedTime: '2 hrs' },
+      { id: 'door-2door', name: '2 Door', price: 3899, rating: 4.8, reviewCount: 789, estimatedTime: '3 hrs' },
+      { id: 'door-3door', name: '3 Door', price: 4899, rating: 4.7, reviewCount: 345, estimatedTime: '3.5 hrs' },
+      { id: 'door-4door', name: '4 Door', price: 5899, rating: 4.8, reviewCount: 277, estimatedTime: '4 hrs' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Both sides polishing', '6 months warranty on polish'],
@@ -312,15 +320,15 @@ export const servicePageData: ServiceData[] = [
     name: 'Table Wood Polish',
     category: 'furniture-polish',
     rating: 4.8,
-    reviewCount: 1567,
+    reviewCount: 1767,
     duration: '~2.5 hrs',
     features: ['6 Months Polished Warranty', 'Scratch-resistant finish', 'Food-safe polish options'],
-    image: '/assets/Table Wood Polish.jpeg',
+    image: '/assets/side-table.webp',
     options: [
-      { id: 'table-coffee', name: 'Coffee Table', price: 1299, rating: 4.8, reviewCount: 234, estimatedTime: '1.5 hrs' },
-      { id: 'table-dining4', name: 'Dining Table (4 Seater)', price: 2299, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs' },
-      { id: 'table-dining6', name: 'Dining Table (6 Seater)', price: 2999, rating: 4.8, reviewCount: 456, estimatedTime: '3 hrs' },
-      { id: 'table-study', name: 'Study/Office Table', price: 1799, rating: 4.7, reviewCount: 310, estimatedTime: '2 hrs' },
+      { id: 'table-coffee', name: 'Coffee Table', price: 1549, rating: 4.8, reviewCount: 234, estimatedTime: '1.5 hrs', image: '/assets/Coffe-table-polish.webp' },
+      { id: 'table-center', name: 'Center Table', price: 2899, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/Center-table-polish.webp' },
+      { id: 'table-side', name: 'Side Table', price: 1999, rating: 4.8, reviewCount: 456, estimatedTime: '2 hrs', image: '/assets/side-table.webp' },
+      { id: 'table-study', name: 'Study Table', price: 3899, rating: 4.7, reviewCount: 310, estimatedTime: '3 hrs', image: '/assets/Study-table-polish.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Scratch removal & surface preparation', '6 months warranty on polish'],
@@ -353,12 +361,12 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 2345,
     duration: '~4 hrs',
     features: ['6 Months Polished Warranty', 'Inside & outside polishing', 'Handles & fittings care'],
-    image: '/assets/Wardrobe.jpg',
+    image: '/assets/Wardrobe-polish.webp',
     options: [
-      { id: 'wardrobe-2door', name: '2 Door Wardrobe', price: 3499, rating: 4.9, reviewCount: 678, estimatedTime: '3.5 hrs' },
-      { id: 'wardrobe-3door', name: '3 Door Wardrobe', price: 4499, rating: 4.8, reviewCount: 892, estimatedTime: '4.5 hrs' },
-      { id: 'wardrobe-4door', name: '4 Door Wardrobe', price: 5499, rating: 4.9, reviewCount: 456, estimatedTime: '5 hrs' },
-      { id: 'wardrobe-sliding', name: 'Sliding Door Wardrobe', price: 4999, rating: 4.8, reviewCount: 319, estimatedTime: '4 hrs' },
+      { id: 'wardrobe-2door', name: '2 Door Wardrobe', price: 3499, rating: 4.9, reviewCount: 678, estimatedTime: '3.5 hrs', image: '/assets/Wardrobe-polish.webp' },
+      { id: 'wardrobe-3door', name: '3 Door Wardrobe', price: 4449, rating: 4.8, reviewCount: 892, estimatedTime: '4.5 hrs', image: '/assets/3-Door-wardrobe.webp' },
+      { id: 'wardrobe-4door', name: '4 Door Wardrobe', price: 5849, rating: 4.9, reviewCount: 456, estimatedTime: '5 hrs', image: '/assets/4-Door-Wardrobe.webp' },
+      { id: 'wardrobe-sliding', name: 'Sliding Door Wardrobe', price: 6799, rating: 4.8, reviewCount: 319, estimatedTime: '4 hrs', image: '/assets/Sliding-wardrobe.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish'],
@@ -391,11 +399,11 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1876,
     duration: '~5 hrs',
     features: ['6 Months Polished Warranty', 'Complete polish for table and chairs', 'Heat and water-resistant finish', 'All Materials & Labour Cost'],
-    image: '/assets/Dining set polish.jpg',
+    image: '/assets/Dining-polish.webp',
     options: [
-      { id: 'dining-4seater', name: '4 Seater Dining Set', price: 3899, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs' },
-      { id: 'dining-6seater', name: '6 Seater Dining Set', price: 5099, rating: 4.9, reviewCount: 789, estimatedTime: '5 hrs' },
-      { id: 'dining-8seater', name: '8 Seater Dining Set', price: 6199, rating: 4.8, reviewCount: 345, estimatedTime: '6 hrs' }
+      { id: 'dining-2seater', name: '2 Seater + Bench', price: 4449, rating: 4.9, reviewCount: 467, estimatedTime: '3.5 hrs' },
+      { id: 'dining-4seater', name: '4 Seater Dining Set', price: 3849, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs' },
+      { id: 'dining-6seater', name: '6 Seater Dining Set', price: 5099, rating: 4.9, reviewCount: 789, estimatedTime: '5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Complete polish for table and chairs', 'Heat and water-resistant finish', '6 months warranty on polish'],
@@ -428,12 +436,12 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1456,
     duration: '~2.5 hrs',
     features: ['6 Months Polished Warranty', 'Inside & outside polishing', 'Handles & hinges care'],
-    image: '/assets/Cabinet Wood Polish.jpeg',
+    image: '/assets/Cabinet-polish.webp',
     options: [
-      { id: 'cabinet-single', name: 'Single Door Cabinet', price: 1499, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs' },
-      { id: 'cabinet-double', name: 'Double Door Cabinet', price: 2299, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs' },
-      { id: 'cabinet-kitchen', name: 'Kitchen Cabinet (Per unit)', price: 899, rating: 4.7, reviewCount: 234, estimatedTime: '1.5 hrs' },
-      { id: 'cabinet-crockery', name: 'Crockery Unit', price: 3499, rating: 4.8, reviewCount: 310, estimatedTime: '3.5 hrs' },
+      { id: 'cabinet-single', name: 'Single Door Cabinet', price: 2449, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/assets/Single-Door-cabinet.webp' },
+      { id: 'cabinet-double', name: 'Double Door Cabinet', price: 2999, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/3-Door-Cabinet.webp' },
+      { id: 'cabinet-3door', name: '3 Door Cabinet', price: 3899, rating: 4.7, reviewCount: 234, estimatedTime: '3 hrs', image: '/assets/3-Door-Cabinet.webp' },
+      { id: 'cabinet-crockery', name: 'Crockery Self', price: 3999, rating: 4.8, reviewCount: 310, estimatedTime: '3.5 hrs', image: '/assets/Crockery.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish'],
@@ -459,44 +467,6 @@ export const servicePageData: ServiceData[] = [
     ]
   },
   {
-    id: 'window-polish',
-    name: 'Window Wood Polish',
-    category: 'furniture-polish',
-    rating: 4.7,
-    reviewCount: 876,
-    duration: '~2 hrs',
-    features: ['6 Months Polished Warranty', 'Frame & panel polishing', 'Weather-resistant finish'],
-    image: '/assets/Door Wood Polish.webp',
-    options: [
-      { id: 'window-single', name: 'Single Window', price: 1299, rating: 4.7, reviewCount: 234, estimatedTime: '1.5 hrs' },
-      { id: 'window-double', name: 'Double Window', price: 1999, rating: 4.8, reviewCount: 345, estimatedTime: '2.5 hrs' },
-      { id: 'window-bay', name: 'Bay Window', price: 2999, rating: 4.7, reviewCount: 156, estimatedTime: '3 hrs' },
-      { id: 'window-french', name: 'French Window', price: 2499, rating: 4.8, reviewCount: 141, estimatedTime: '2.5 hrs' },
-    ],
-    selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Frame & panel polishing', '6 months warranty on polish'],
-    materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
-    processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the window surface to remove old polish and scratches.', image: '/assets/Cleaning & Sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your window and home décor.', image: '/assets/select-wood-polish-shade.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/assets/filling-gaps-polish-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/assets/drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed window.', image: '/assets/wooden furniture .webp' }
-    ],
-    faqs: [
-      { question: 'How long does window polishing take?', answer: 'Typically, window polishing takes 1.5-3 hours depending on the size and type. We ensure thorough work without rushing.' },
-      { question: 'Is the polish weather-resistant?', answer: 'Yes, we use weather-resistant polish that can withstand sunlight and moisture.' },
-      { question: 'What type of polish do you use?', answer: 'We use premium quality Melamine or PU polish based on your preference. Both are durable and provide excellent finish.' },
-      { question: 'Is there a warranty on the polish?', answer: 'Yes, we provide a 1-year warranty on all our polishing work against peeling or fading under normal use.' }
-    ],
-    trustBadges: [
-      { icon: 'shield-check', text: 'Background verified professionals' },
-      { icon: 'wrench', text: '300+ hours of training' },
-      { icon: 'medal', text: 'Certified under Skill India Programme' }
-    ]
-  },
-  {
     id: 'bookshelf-rack-polish',
     name: 'Bookshelf / Rack Polish',
     category: 'furniture-polish',
@@ -506,8 +476,8 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
     image: '/assets/Book Shelves.jpg',
     options: [
-      { id: 'shelf-3', name: '3 Shelf', price: 1899, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs' },
-      { id: 'shelf-5', name: '5 Shelf', price: 2299, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs' },
+      { id: 'shelf-3', name: '3 Shelf', price: 1999, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs' },
+      { id: 'shelf-5', name: '5 Shelf', price: 2799, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs' },
       { id: 'shelf-7', name: '7 Shelf', price: 3499, rating: 4.8, reviewCount: 322, estimatedTime: '3.5 hrs' }
     ],
     selectedOption: -1,
@@ -539,9 +509,9 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
     image: '/assets/Wooden Shelves.jpeg',
     options: [
-      { id: 'shelf-small', name: 'Small', price: 799, rating: 4.7, reviewCount: 234, estimatedTime: '1 hr' },
-      { id: 'shelf-medium', name: 'Medium', price: 1099, rating: 4.8, reviewCount: 245, estimatedTime: '1.5 hrs' },
-      { id: 'shelf-large', name: 'Large', price: 1499, rating: 4.7, reviewCount: 175, estimatedTime: '2 hrs' }
+      { id: 'shelf-small', name: 'Small', price: 999, rating: 4.7, reviewCount: 234, estimatedTime: '1 hr' },
+      { id: 'shelf-medium', name: 'Medium', price: 1449, rating: 4.8, reviewCount: 245, estimatedTime: '1.5 hrs' },
+      { id: 'shelf-large', name: 'Large', price: 1999, rating: 4.7, reviewCount: 175, estimatedTime: '2 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -570,9 +540,9 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 987,
     duration: '~3 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/Mandir.jpg',
+    image: '/assets/Mandir-polish.webp',
     options: [
-      { id: 'mandir-standard', name: 'Standard', price: 2399, rating: 4.9, reviewCount: 987, estimatedTime: '3 hrs' }
+      { id: 'mandir-standard', name: 'Mandir', price: 2999, rating: 4.9, reviewCount: 987, estimatedTime: '3 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -603,7 +573,9 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
     image: '/assets/Jhula.jpeg',
     options: [
-      { id: 'jhula-standard', name: 'Standard', price: 2799, rating: 4.8, reviewCount: 765, estimatedTime: '4 hrs' }
+      { id: 'jhula-1seater', name: '1 Seater Jhula', price: 1999, rating: 4.8, reviewCount: 465, estimatedTime: '3 hrs' },
+      { id: 'jhula-2seater', name: '2 Seater Jhula', price: 2799, rating: 4.8, reviewCount: 765, estimatedTime: '4 hrs' },
+      { id: 'jhula-3seater', name: '3 Seater Jhula', price: 3449, rating: 4.9, reviewCount: 345, estimatedTime: '5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -634,9 +606,11 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
     image: '/assets/Chester Drawer.jpeg',
     options: [
-      { id: 'drawer-2', name: '2 Drawer', price: 1499, rating: 4.7, reviewCount: 234, estimatedTime: '2 hrs' },
-      { id: 'drawer-3', name: '3 Drawer', price: 1799, rating: 4.8, reviewCount: 189, estimatedTime: '2.5 hrs' },
-      { id: 'drawer-4', name: '4 Drawer', price: 2100, rating: 4.7, reviewCount: 120, estimatedTime: '3 hrs' }
+      { id: 'drawer-2', name: '2 Drawer', price: 1449, rating: 4.7, reviewCount: 234, estimatedTime: '2 hrs' },
+      { id: 'drawer-3', name: '3 Drawer', price: 2199, rating: 4.8, reviewCount: 189, estimatedTime: '2.5 hrs' },
+      { id: 'drawer-4', name: '4 Drawer', price: 2799, rating: 4.7, reviewCount: 120, estimatedTime: '3 hrs' },
+      { id: 'drawer-5', name: '5 Drawer', price: 3449, rating: 4.8, reviewCount: 95, estimatedTime: '3.5 hrs' },
+      { id: 'drawer-6', name: '6 Drawer', price: 3999, rating: 4.7, reviewCount: 78, estimatedTime: '4 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -659,17 +633,17 @@ export const servicePageData: ServiceData[] = [
   },
   {
     id: 'tv-unit-polish',
-    name: 'TV Unit Polish (2 Door with Storage)',
+    name: 'TV Unit Polish',
     category: 'furniture-polish',
     rating: 4.8,
     reviewCount: 1123,
     duration: '~4 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/TV Unit.jpg',
+    image: '/assets/TV-unit-polish.webp',
     options: [
-      { id: 'tv-small', name: 'Small', price: 2199, rating: 4.8, reviewCount: 345, estimatedTime: '3 hrs' },
-      { id: 'tv-medium', name: 'Medium', price: 3499, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs' },
-      { id: 'tv-large', name: 'Large', price: 4499, rating: 4.8, reviewCount: 211, estimatedTime: '5 hrs' }
+      { id: 'tv-small', name: 'Small', price: 2899, rating: 4.8, reviewCount: 345, estimatedTime: '3 hrs' },
+      { id: 'tv-medium', name: 'Medium', price: 3899, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs' },
+      { id: 'tv-large', name: 'Large', price: 4899, rating: 4.8, reviewCount: 211, estimatedTime: '5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -757,7 +731,7 @@ export const servicePageData: ServiceData[] = [
   },
   {
     id: 'deco-polish',
-    name: 'Deco Polish',
+    name: 'Deco Paint',
     category: 'furniture-polish',
     rating: 4.7,
     reviewCount: 723,

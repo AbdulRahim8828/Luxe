@@ -10,7 +10,13 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.warn(`Error loading localStorage key "${key}":`, error);
+      console.error(`❌ Error loading localStorage key "${key}":`, error);
+      // Clear corrupted data
+      try {
+        window.localStorage.removeItem(key);
+      } catch (clearError) {
+        console.error('Failed to clear corrupted localStorage:', clearError);
+      }
       return initialValue;
     }
   });
@@ -20,11 +26,31 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
+      
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        try {
+          window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        } catch (storageError: any) {
+          // Handle quota exceeded error
+          if (storageError.name === 'QuotaExceededError' || storageError.code === 22) {
+            console.error('❌ localStorage quota exceeded. Clearing old data...');
+            // Try to clear some space
+            try {
+              window.localStorage.clear();
+              window.localStorage.setItem(key, JSON.stringify(valueToStore));
+              console.log('✅ localStorage cleared and data saved');
+            } catch (retryError) {
+              console.error('❌ Failed to save even after clearing:', retryError);
+              // Show user-friendly error
+              alert('Cart storage is full. Please clear your browser data or use a different browser.');
+            }
+          } else {
+            throw storageError;
+          }
+        }
       }
     } catch (error) {
-      console.warn(`Error setting localStorage key "${key}":`, error);
+      console.error(`❌ Error setting localStorage key "${key}":`, error);
     }
   };
 
