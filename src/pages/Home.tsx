@@ -30,7 +30,7 @@ const Home = () => {
         description="Leading furniture polishing services in Mumbai. We restore and polish your wooden furniture to perfection with eco-friendly products and skilled craftsmen. Expert sofa, bed, door, table, wardrobe polish. 6 months warranty. Book now!"
         keywords="furniture polish Mumbai, wood polishing services, sofa polish, bed polish, door polish, table polish, wardrobe polish, furniture restoration Mumbai, A1 furniture polish"
         ogUrl="https://a1furniturepolish.com/"
-        ogImage="/assets/Sofa And chair.jpg"
+        ogImage="/assets/Sofa And chair.webp"
         canonical="https://a1furniturepolish.com/"
       />
       <JsonLd data={localBusiness} />
@@ -69,7 +69,7 @@ const Home = () => {
             </p>
             <div className="relative mb-6">
               <img
-                src="/assets/Sofa And chair.jpg"
+                src="/assets/Sofa And chair.webp"
                 alt="Professional furniture polishing in Mumbai"
                 className="rounded-lg shadow-2xl w-full h-80 md:h-96 object-cover"
                 loading="lazy"

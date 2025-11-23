@@ -474,11 +474,11 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1234,
     duration: '~3 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/Book Shelves.jpg',
+    image: '/assets/5-Shelves.webp',
     options: [
-      { id: 'shelf-3', name: '3 Shelf', price: 1999, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs' },
-      { id: 'shelf-5', name: '5 Shelf', price: 2799, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs' },
-      { id: 'shelf-7', name: '7 Shelf', price: 3499, rating: 4.8, reviewCount: 322, estimatedTime: '3.5 hrs' }
+      { id: 'shelf-3', name: '3 Shelf', price: 1999, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/assets/3-Shelves.webp' },
+      { id: 'shelf-5', name: '5 Shelf', price: 2799, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/5-Shelves.webp' },
+      { id: 'shelf-7', name: '7 Shelf', price: 3499, rating: 4.8, reviewCount: 322, estimatedTime: '3.5 hrs', image: '/assets/7-Shelves.webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -507,7 +507,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 654,
     duration: '~1 hr',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/Wooden Shelves.jpeg',
+    image: '/assets/Wooden-Shelves.webp',
     options: [
       { id: 'shelf-small', name: 'Small', price: 999, rating: 4.7, reviewCount: 234, estimatedTime: '1 hr' },
       { id: 'shelf-medium', name: 'Medium', price: 1449, rating: 4.8, reviewCount: 245, estimatedTime: '1.5 hrs' },
@@ -571,7 +571,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 765,
     duration: '~4 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/Jhula.jpeg',
+    image: '/assets/Jhula-Polish.webp',
     options: [
       { id: 'jhula-1seater', name: '1 Seater Jhula', price: 1999, rating: 4.8, reviewCount: 465, estimatedTime: '3 hrs' },
       { id: 'jhula-2seater', name: '2 Seater Jhula', price: 2799, rating: 4.8, reviewCount: 765, estimatedTime: '4 hrs' },
@@ -604,13 +604,13 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 543,
     duration: '~3 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/Chester Drawer.jpeg',
+    image: '/assets/3-Chester-Drawer.webp',
     options: [
-      { id: 'drawer-2', name: '2 Drawer', price: 1449, rating: 4.7, reviewCount: 234, estimatedTime: '2 hrs' },
-      { id: 'drawer-3', name: '3 Drawer', price: 2199, rating: 4.8, reviewCount: 189, estimatedTime: '2.5 hrs' },
-      { id: 'drawer-4', name: '4 Drawer', price: 2799, rating: 4.7, reviewCount: 120, estimatedTime: '3 hrs' },
-      { id: 'drawer-5', name: '5 Drawer', price: 3449, rating: 4.8, reviewCount: 95, estimatedTime: '3.5 hrs' },
-      { id: 'drawer-6', name: '6 Drawer', price: 3999, rating: 4.7, reviewCount: 78, estimatedTime: '4 hrs' }
+      { id: 'drawer-2', name: '2 Drawer', price: 1449, rating: 4.7, reviewCount: 234, estimatedTime: '2 hrs', image: '/assets/2-Chester-Drawer.webp' },
+      { id: 'drawer-3', name: '3 Drawer', price: 2199, rating: 4.8, reviewCount: 189, estimatedTime: '2.5 hrs', image: '/assets/3-Chester-Drawer.webp' },
+      { id: 'drawer-4', name: '4 Drawer', price: 2799, rating: 4.7, reviewCount: 120, estimatedTime: '3 hrs', image: '/assets/4-Chester-Drawer.webp' },
+      { id: 'drawer-5', name: '5 Drawer', price: 3449, rating: 4.8, reviewCount: 95, estimatedTime: '3.5 hrs', image: '/assets/5-Chester-Drawer.webp' },
+      { id: 'drawer-6', name: '6 Drawer', price: 3999, rating: 4.7, reviewCount: 78, estimatedTime: '4 hrs', image: '/assets/6-Chester-Drawer.webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
@@ -770,7 +770,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 542,
     duration: 'Varies by size',
     features: ['Multi-color available', 'Durable paint', 'Professional finish', 'Travelling cost extra'],
-    image: '/assets/Metal-Almirah.webp',
+    image: '/assets/Metal-cupboard.webp',
     options: [
       { id: 'almirah-paint', name: 'Metal Almirah Paint (per sqft)', price: 249, rating: 4.6, reviewCount: 542, estimatedTime: 'Varies' }
     ],
@@ -802,7 +802,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 634,
     duration: 'Varies by size',
     features: ['Powder coating finish', 'Durable protection', 'Fitting charge extra', 'Travelling cost extra'],
-    image: '/assets/Metal-Bed-poweder.webp',
+    image: '/assets/Metal-Bed.webp',
     options: [
       { id: 'bed-powder-coating', name: 'Metal Bed Powder Coating (per sqft)', price: 160, rating: 4.7, reviewCount: 634, estimatedTime: 'Varies' }
     ],
@@ -834,7 +834,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 478,
     duration: 'Varies by size',
     features: ['Buffing polish', 'Junk removal included', 'Fitting charge extra', 'Travelling cost extra'],
-    image: '/assets/Steel-Bed-Buffing.webp',
+    image: '/assets/Steel-Bed.webp',
     options: [
       { id: 'steel-bed-buffing', name: 'Steel Bed Buffing (per sqft)', price: 189, rating: 4.8, reviewCount: 478, estimatedTime: 'Varies' }
     ],
@@ -866,7 +866,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 392,
     duration: 'Varies by size',
     features: ['Buffing polish only', 'Junk removal included', 'Labour cost extra', 'Travelling cost extra'],
-    image: '/assets/Kitchen-trolly.webp',
+    image: '/assets/Kitchen-Steel.webp',
     options: [
       { id: 'trolley-buffing', name: 'Kitchen Trolley Buffing (per sqft)', price: 189, rating: 4.7, reviewCount: 392, estimatedTime: 'Varies' }
     ],

@@ -90,7 +90,7 @@ const GoregaonFurniturePolish = () => {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'A1 Furniture Polish - Goregaon',
-    'image': '/assets/Sofa And chair.jpg',
+    'image': '/assets/Sofa And chair.webp',
     'description': 'Professional furniture polishing and restoration services in Goregaon, Mumbai. Expert wooden furniture polish, sofa polishing, and antique restoration.',
     'address': {
       '@type': 'PostalAddress',
@@ -126,7 +126,7 @@ const GoregaonFurniturePolish = () => {
         description="Professional furniture polishing services in Goregaon East & West. Expert wooden furniture polish, sofa restoration, table polishing, bed polishing, scratch repair, antique restoration. 24/7 service available. Call +91 8828709945"
         keywords="furniture polish goregaon, furniture polishing goregaon east, furniture polishing goregaon west, wooden furniture polish goregaon, sofa polishing goregaon, furniture restoration goregaon mumbai, table polishing goregaon, bed polishing goregaon, chair polishing goregaon, cabinet polishing goregaon, wardrobe polishing goregaon, door polishing goregaon, antique furniture restoration goregaon, furniture repair goregaon, scratch repair goregaon, furniture refinishing goregaon, teak wood polishing goregaon, sheesham wood polishing goregaon, furniture polish near me goregaon, best furniture polish goregaon, affordable furniture polishing goregaon, furniture polishing service goregaon, home furniture polish goregaon, office furniture polish goregaon, commercial furniture polishing goregaon, furniture polish goregaon east mumbai, furniture polish goregaon west mumbai, furniture polishing motilal nagar, furniture polishing bangur nagar, furniture polishing aarey colony, furniture polishing film city road, furniture polishing dindoshi, furniture polishing vanrai colony, 24 hour furniture polish goregaon, emergency furniture polishing goregaon, same day furniture polish goregaon, quick furniture polishing goregaon"
         ogUrl="https://a1furniturepolish.com/goregaon-furniture-polish"
-        ogImage="/assets/Sofa And chair.jpg"
+        ogImage="/assets/Sofa And chair.webp"
       />
       <JsonLd data={localBusinessSchema} />
       <StickyWhatsApp />
