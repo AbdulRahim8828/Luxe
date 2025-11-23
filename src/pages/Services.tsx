@@ -1,4 +1,5 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { servicePageData } from '../data/servicePageData';
 import ServiceDetailModal from '../components/ServiceDetailModal';
 import BookingSummary from '../components/BookingSummary';
@@ -23,6 +24,7 @@ const MAX_QUANTITY = 10;
 const CART_VERSION = '1.0.0';
 
 const Services = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
   const [selectedServices, setSelectedServices] = useLocalStorage<SelectedService[]>('cart', []);
   const [bookingError, setBookingError] = useState<string | null>(null);
@@ -34,6 +36,17 @@ const Services = () => {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   
   const analytics = useAnalytics();
+
+  // Handle URL parameter for opening service modal
+  useEffect(() => {
+    const serviceId = searchParams.get('service');
+    if (serviceId && servicePageData.find(s => s.id === serviceId)) {
+      setSelectedServiceId(serviceId);
+      // Remove the parameter from URL after opening modal
+      searchParams.delete('service');
+      setSearchParams(searchParams, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
 
   // Check cart version and clear if outdated
   useEffect(() => {

@@ -80,19 +80,6 @@ const WhyBookOnline: React.FC = () => {
             );
           })}
         </div>
-
-        <div className="mt-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-8 text-center text-white">
-          <h3 className="text-2xl font-bold mb-3">
-            Join 50,000+ Happy Customers
-          </h3>
-          <p className="text-amber-100 mb-6 max-w-2xl mx-auto">
-            Trusted by thousands of homes and offices across Mumbai for quality furniture polishing services
-          </p>
-          <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition-colors inline-flex items-center gap-2">
-            Book Your Service Now
-            <span className="text-xl">→</span>
-          </button>
-        </div>
       </div>
     </section>
   );

@@ -77,10 +77,10 @@ const CustomerPhotos: React.FC = () => {
     <section className="py-8 md:py-12 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
-            Happy Customers
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+            Join 50,000+ Happy Customers
           </h2>
-          <p className="text-sm text-gray-600">Real reviews from real customers</p>
+          <p className="text-sm md:text-base text-gray-600">Trusted by thousands of homes and offices across Mumbai for quality furniture polishing services</p>
         </div>
 
         <div className="relative max-w-3xl mx-auto">

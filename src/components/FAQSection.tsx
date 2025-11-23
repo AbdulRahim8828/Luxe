@@ -11,7 +11,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: 'What type of polish do you use? Is it safe?',
-      answer: 'We use premium quality PU (Polyurethane) polish, Deco paint, and melamine polish. All materials are eco-friendly, non-toxic, and safe for homes with children and pets. We provide 1-year warranty on all polishing work.',
+      answer: 'We use premium quality PU (Polyurethane) polish, Deco paint, and melamine polish. All materials are eco-friendly, non-toxic, and safe for homes with children and pets. We provide 6 months warranty on all polishing work.',
     },
     {
       question: 'Do I need to empty my furniture before polishing?',
@@ -23,7 +23,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: 'What is included in the price?',
-      answer: 'Our price includes: Material cost (polish, sandpaper, primer), Labor charges, Transportation of materials, and 1-year service warranty. No hidden charges.',
+      answer: 'Our price includes: Material cost (polish, sandpaper, primer), Labor charges, Transportation of materials, and 6 months service warranty. No hidden charges.',
     },
     {
       question: 'Do you provide color matching service?',
@@ -31,7 +31,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: 'What if I am not satisfied with the work?',
-      answer: 'We offer 100% satisfaction guarantee. If you are not happy with the work, we will redo it for free within 7 days. We also provide 1-year warranty against peeling or color fading.',
+      answer: 'We offer 100% satisfaction guarantee. If you are not happy with the work, we will redo it for free within 7 days. We also provide 6 months warranty against peeling or color fading.',
     },
     {
       question: 'Do you work on weekends and holidays?',
@@ -78,26 +78,6 @@ const FAQSection: React.FC = () => {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="mt-8 text-center p-6 bg-orange-50 rounded-xl">
-          <p className="text-gray-700 mb-4">
-            Still have questions? We're here to help!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="tel:+919876543210"
-              className="inline-flex items-center justify-center px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold"
-            >
-              Call Us Now
-            </a>
-            <a
-              href="https://wa.me/919876543210"
-              className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
-            >
-              WhatsApp Chat
-            </a>
-          </div>
         </div>
       </div>
     </section>

@@ -16,6 +16,8 @@ import OfferBanner from '../components/OfferBanner.tsx';
 import QuickQuoteCalculator from '../components/QuickQuoteCalculator.tsx';
 import FAQSection from '../components/FAQSection.tsx';
 import WhyBookOnline from '../components/WhyBookOnline.tsx';
+import FinalCTA from '../components/FinalCTA';
+import ContactCTA from '../components/ContactCTA';
 
 // Lazy load heavy components
 const OurProcess = lazy(() => import('../components/OurProcess'));
@@ -122,10 +124,10 @@ const Home = () => {
         <StatsCounter />
       </Suspense>
 
-      {/* Customer Photos Carousel */}
+      {/* Customer Photos Carousel - Join 50,000+ Happy Customers */}
       <CustomerPhotos />
 
-      {/* Quick Quote Calculator */}
+      {/* Quick Quote Calculator - Get Instant Quote */}
       <QuickQuoteCalculator />
 
       {/* Why Book Online */}
@@ -133,6 +135,12 @@ const Home = () => {
 
       {/* FAQ Section */}
       <FAQSection />
+
+      {/* Final CTA - Join 50,000+ Happy Customers */}
+      <FinalCTA />
+
+      {/* Contact CTA - Still have questions */}
+      <ContactCTA />
     </>
   );
 };

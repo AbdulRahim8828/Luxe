@@ -1,37 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Star, Clock, ArrowRight } from 'lucide-react';
-import ServiceDetailModal from './ServiceDetailModal';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Star, ArrowRight } from 'lucide-react';
 import { servicePageData } from '../data/servicePageData';
 
 const PopularServices: React.FC = () => {
-  const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
-  const [selectedServices, setSelectedServices] = useState<any[]>([]);
+  const navigate = useNavigate();
 
   // Get top 6 popular services
   const popularServices = servicePageData.slice(0, 6);
 
   const handleQuickBook = (serviceId: string) => {
-    setSelectedServiceId(serviceId);
-  };
-
-  const handleAddService = (serviceId: string, optionIndex: number, quantity: number) => {
-    // Close modal and redirect to services page where cart functionality exists
-    setSelectedServiceId(null);
-    // User can add from services page
-  };
-
-  const handleRemoveService = (serviceId: string, optionId: string) => {
-    // Not needed in this component - handled in Services page
-  };
-
-  const handleUpdateQuantity = (serviceId: string, optionId: string, quantity: number) => {
-    // Not needed in this component - handled in Services page
-  };
-
-  const selectedService = servicePageData.find(s => s.id === selectedServiceId);
-  const getSelectedOptions = (serviceId: string): number[] => {
-    return [];
+    // Navigate to services page with service ID in URL
+    navigate(`/services?service=${serviceId}`);
   };
 
   return (
@@ -125,17 +105,6 @@ const PopularServices: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Service Detail Modal */}
-      <ServiceDetailModal
-        service={selectedService || null}
-        isOpen={!!selectedServiceId}
-        onClose={() => setSelectedServiceId(null)}
-        onAddService={handleAddService}
-        onRemoveService={handleRemoveService}
-        onUpdateQuantity={handleUpdateQuantity}
-        selectedOptions={selectedServiceId ? getSelectedOptions(selectedServiceId) : []}
-      />
     </>
   );
 };
