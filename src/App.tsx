@@ -19,9 +19,12 @@ const SofaAndChairPolishing = lazy(() => import('./pages/SofaAndChairPolishing')
 const TableAndBedPolishing = lazy(() => import('./pages/TableAndBedPolishing'));
 const AntiqueRestoration = lazy(() => import('./pages/AntiqueRestoration'));
 const CommercialPolishing = lazy(() => import('./pages/CommercialPolishing'));
+const SofaServices = lazy(() => import('./pages/SofaServices'));
 const SofaFabricChange = lazy(() => import('./pages/SofaFabricChange'));
 const OfficeChairRepair = lazy(() => import('./pages/OfficeChairRepair'));
 const GoregaonFurniturePolish = lazy(() => import('./pages/GoregaonFurniturePolish'));
+const PowaiFurniturePolish = lazy(() => import('./pages/PowaiFurniturePolish'));
+const Products = lazy(() => import('./pages/Products'));
 
 // Loading component
 const PageLoader = () => (
@@ -54,11 +57,16 @@ function App() {
               <Route path="/services/table-and-bed-polishing" element={<TableAndBedPolishing />} />
               <Route path="/services/antique-restoration" element={<AntiqueRestoration />} />
               <Route path="/services/commercial-polishing" element={<CommercialPolishing />} />
-              <Route path="/sofa-fabric-change" element={<SofaFabricChange />} />
+              <Route path="/sofa-fabric-change" element={<SofaServices />} />
+              <Route path="/sofa-services" element={<SofaServices />} />
               <Route path="/office-chair-repair" element={<OfficeChairRepair />} />
               
               {/* Location Pages */}
               <Route path="/goregaon-furniture-polish" element={<GoregaonFurniturePolish />} />
+              <Route path="/powai-furniture-polish" element={<PowaiFurniturePolish />} />
+              
+              {/* Products Page */}
+              <Route path="/products" element={<Products />} />
               
               {/* Redirect old route to /services */}
               <Route path="/furniture-polish-services" element={<Navigate to="/services" replace />} />

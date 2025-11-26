@@ -2,6 +2,9 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { Star } from 'lucide-react';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const WoodenFurniturePolish = () => {
   const pageUrl = "https://a1furniturepolish.com/wooden-furniture-polish";
@@ -85,7 +88,7 @@ const WoodenFurniturePolish = () => {
       <SEOHead
         title="Wooden Furniture Polish in Mumbai | A1 Furniture Polish"
         description="Expert wooden furniture polishing in Mumbai. We restore sofas, chairs, tables, beds, and more. Get a free quote for services in Bandra, Andheri, Juhu, and South Mumbai."
-        ogUrl={pageUrl}
+        canonical={getCanonicalURL('/wooden-furniture-polish')}
       />
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
@@ -122,11 +125,13 @@ const WoodenFurniturePolish = () => {
 
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img
+              <OptimizedImage
                 src="/assets/wooden furniture .webp"
                 alt="A polished living room set including a sofa and coffee table"
+                width={1920}
+                height={1080}
                 className="rounded-lg shadow-xl block mx-auto"
-                loading="lazy"
+                sizes={COMMON_SIZES.content}
               />
             </div>
             <div>

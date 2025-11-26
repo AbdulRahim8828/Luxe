@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { FadeIn } from '../components/ScrollAnimations';
+import { getCanonicalURL } from '../utils/canonicalURL';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -179,6 +180,7 @@ const Contact = () => {
         title="Contact A1 Furniture Polish in Mumbai"
         description="Get in touch with A1 Furniture Polish for expert wood polishing services in Mumbai. Contact us for a free quote for your furniture."
         keywords="a1 furniture polish contact, furniture polishing mumbai, wood polish service, contact for furniture polish"
+        canonical={getCanonicalURL('/contact')}
       />
       
       <div className="bg-white text-gray-800">

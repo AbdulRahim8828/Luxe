@@ -47,6 +47,7 @@ export interface ServiceData {
   id: string;
   name: string;
   category: string;
+  tabCategory?: 'polish' | 'sofa' | 'product';
   rating: number;
   reviewCount: number;
   duration: string;

@@ -1,3 +1,4 @@
+import { getCanonicalURL, getCurrentCanonicalURL } from '../utils/canonicalURL';
 
 interface SEOHeadProps {
   title: string;
@@ -9,6 +10,8 @@ interface SEOHeadProps {
   ogUrl?: string;
   ogType?: string;
   canonical?: string;
+  noindex?: boolean;
+  structuredData?: object;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -21,23 +24,33 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogUrl,
   ogType,
   canonical,
+  noindex = false,
+  structuredData,
 }) => {
+  // Generate canonical URL if not provided
+  const canonicalUrl = canonical || getCurrentCanonicalURL();
+  
+  // Use canonical URL for OG URL if not provided
+  const openGraphUrl = ogUrl || canonicalUrl;
+  
   return (
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       <meta name="author" content="A1 Furniture Polish" />
       <meta name="language" content="English" />
-      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Canonical URL - Always included */}
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:type" content={ogType || 'website'} />
       {ogImage && <meta property="og:image" content={ogImage} />}
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      <meta property="og:url" content={openGraphUrl} />
       <meta property="og:site_name" content="A1 Furniture Polish" />
       
       {/* Twitter */}
@@ -45,6 +58,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
+      
+      {/* Structured Data (JSON-LD) */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
     </>
   );
 };

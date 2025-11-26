@@ -4,7 +4,10 @@ import { Phone, MapPin, Clock, Star, CheckCircle, ArrowRight, Shield, Award, Use
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { FadeIn } from '../components/ScrollAnimations';
+import { getCanonicalURL } from '../utils/canonicalURL';
 import StickyWhatsApp from '../components/StickyWhatsApp';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const GoregaonFurniturePolish = () => {
   const services = [
@@ -125,8 +128,8 @@ const GoregaonFurniturePolish = () => {
         title="Furniture Polish in Goregaon | Best Furniture Polishing Services Near Me | A1 Furniture Polish"
         description="Professional furniture polishing services in Goregaon East & West. Expert wooden furniture polish, sofa restoration, table polishing, bed polishing, scratch repair, antique restoration. 24/7 service available. Call +91 8828709945"
         keywords="furniture polish goregaon, furniture polishing goregaon east, furniture polishing goregaon west, wooden furniture polish goregaon, sofa polishing goregaon, furniture restoration goregaon mumbai, table polishing goregaon, bed polishing goregaon, chair polishing goregaon, cabinet polishing goregaon, wardrobe polishing goregaon, door polishing goregaon, antique furniture restoration goregaon, furniture repair goregaon, scratch repair goregaon, furniture refinishing goregaon, teak wood polishing goregaon, sheesham wood polishing goregaon, furniture polish near me goregaon, best furniture polish goregaon, affordable furniture polishing goregaon, furniture polishing service goregaon, home furniture polish goregaon, office furniture polish goregaon, commercial furniture polishing goregaon, furniture polish goregaon east mumbai, furniture polish goregaon west mumbai, furniture polishing motilal nagar, furniture polishing bangur nagar, furniture polishing aarey colony, furniture polishing film city road, furniture polishing dindoshi, furniture polishing vanrai colony, 24 hour furniture polish goregaon, emergency furniture polishing goregaon, same day furniture polish goregaon, quick furniture polishing goregaon"
-        ogUrl="https://a1furniturepolish.com/goregaon-furniture-polish"
         ogImage="/assets/Sofa And chair.webp"
+        canonical={getCanonicalURL('/goregaon-furniture-polish')}
       />
       <JsonLd data={localBusinessSchema} />
       <StickyWhatsApp />
@@ -190,11 +193,15 @@ const GoregaonFurniturePolish = () => {
             </FadeIn>
             <FadeIn delay={200}>
               <div className="relative">
-                <img
+                <OptimizedImage
                   src="/assets/wooden furniture .webp"
                   alt="Furniture polishing service in Goregaon"
-                  className="rounded-lg shadow-2xl w-full h-80 md:h-96 object-cover"
-                  loading="eager"
+                  width={1920}
+                  height={1080}
+                  className="rounded-lg shadow-2xl"
+                  priority={true}
+                  sizes={COMMON_SIZES.hero}
+                  objectFit="cover"
                 />
                 <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-lg shadow-xl">
                   <div className="flex items-center space-x-1.5 md:space-x-2 mb-1 md:mb-2">
@@ -514,7 +521,7 @@ const GoregaonFurniturePolish = () => {
                 {/* Right - Map */}
                 <div className="h-full min-h-[400px] bg-gray-200">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.8!2d72.8526!3d19.1663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA5JzU4LjciTiA3MsKwNTEnMDkuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0745428549635!2d72.84334127595923!3d19.148214049700115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b70bfb2384a1%3A0x74c488cc31818849!2sA1%20Furniture%20Polish%20Service!5e0!3m2!1sen!2sin!4v1764016149029!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

@@ -10,12 +10,11 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(`❌ Error loading localStorage key "${key}":`, error);
-      // Clear corrupted data
+      // Clear corrupted data silently
       try {
         window.localStorage.removeItem(key);
       } catch (clearError) {
-        console.error('Failed to clear corrupted localStorage:', clearError);
+        // Failed to clear, continue silently
       }
       return initialValue;
     }
@@ -33,14 +32,11 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
         } catch (storageError: any) {
           // Handle quota exceeded error
           if (storageError.name === 'QuotaExceededError' || storageError.code === 22) {
-            console.error('❌ localStorage quota exceeded. Clearing old data...');
             // Try to clear some space
             try {
               window.localStorage.clear();
               window.localStorage.setItem(key, JSON.stringify(valueToStore));
-              console.log('✅ localStorage cleared and data saved');
             } catch (retryError) {
-              console.error('❌ Failed to save even after clearing:', retryError);
               // Show user-friendly error
               alert('Cart storage is full. Please clear your browser data or use a different browser.');
             }
@@ -50,7 +46,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
         }
       }
     } catch (error) {
-      console.error(`❌ Error setting localStorage key "${key}":`, error);
+      // Error handled silently
     }
   };
 

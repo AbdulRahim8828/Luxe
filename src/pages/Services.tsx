@@ -5,6 +5,7 @@ import ServiceDetailModal from '../components/ServiceDetailModal';
 import BookingSummary from '../components/BookingSummary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { getCanonicalURL } from '../utils/canonicalURL';
 import CouponModal from '../components/CouponModal';
 import CouponSection from '../components/CouponSection';
 import PaymentSummary from '../components/PaymentSummary';
@@ -124,13 +125,11 @@ const Services = () => {
       try {
         const service = servicePageData.find((s) => s.id === serviceId);
         if (!service) {
-          console.error(`Service with id ${serviceId} not found`);
           return;
         }
 
         const option = service.options[optionIndex];
         if (!option) {
-          console.error(`Option at index ${optionIndex} not found for service ${serviceId}`);
           return;
         }
 
@@ -250,7 +249,6 @@ const Services = () => {
       // Handle any errors during WhatsApp opening
       const errorMessage = error instanceof Error ? error.message : 'Failed to open WhatsApp. Please try again.';
       setBookingError(errorMessage);
-      console.error('WhatsApp booking error:', error);
       setIsLoading(false);
     }
   }, [selectedServices, calculateTotal, analytics]);
@@ -277,7 +275,7 @@ const Services = () => {
         title="Furniture Polish Services - A1 Polish | 15+ Professional Services"
         description="Book professional furniture polishing services in Mumbai. Sofa, bed, door, table, wardrobe polish with 1-year warranty. Expert craftsmen, premium materials."
         keywords="furniture polish Mumbai, wood polish services, sofa polish, bed polish, door polish, wardrobe polish, professional furniture care"
-        url="https://a1furniturepolish.com/services"
+        canonical={getCanonicalURL('/services')}
         image="/assets/Sofa And chair.webp"
       />
       

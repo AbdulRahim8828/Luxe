@@ -21,7 +21,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Error caught and displayed to user
+    // In production, you could send this to an error tracking service like Sentry
   }
 
   private handleReset = () => {

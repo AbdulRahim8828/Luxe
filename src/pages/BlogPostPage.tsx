@@ -5,6 +5,8 @@ import { BlogPostData } from '../types';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -117,7 +119,15 @@ const BlogPostPage = () => {
             </header>
             
             <div className="mb-8">
-              <img src={post.image} alt={post.title} className="w-full rounded-lg shadow-md" />
+              <OptimizedImage 
+                src={post.image} 
+                alt={post.title} 
+                width={1920} 
+                height={1080} 
+                className="rounded-lg shadow-md" 
+                sizes={COMMON_SIZES.fullWidth}
+                objectFit="cover"
+              />
             </div>
 
             <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />

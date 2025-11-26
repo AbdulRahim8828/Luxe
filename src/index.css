@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  /* Font optimization: Using system fonts for instant rendering (no font loading delay) */
+  /* System font stack provides optimal performance with font-display: swap behavior by default */
+  
   /* Prevent white space below bottom navigation on mobile */
   html, body {
     @apply bg-white;

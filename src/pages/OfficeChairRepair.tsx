@@ -4,6 +4,9 @@ import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { FaArrowRight } from 'react-icons/fa';
 import BookingModal from '../components/BookingModal';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const repairService = {
   id: 'office-chair-repair',
@@ -111,13 +114,22 @@ const OfficeChairRepair: React.FC = () => {
         title="Office Chair Repair Services in Mumbai | A1 Furniture Polish"
         description="Expert office chair repair in Mumbai. We offer base, wheel, and hydraulic replacement with on-site service at competitive prices."
         keywords="office chair repair, chair repair mumbai, chair base replacement, chair wheel replacement, hydraulic replacement, furniture repair"
+        canonical={getCanonicalURL('/office-chair-repair')}
       />
       <JsonLd data={serviceSchema} />
 
       <div className="bg-gray-100 min-h-screen block">
         <main className="container mx-auto px-4 py-6 md:py-8 pb-24 md:pb-8">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <img src={repairService.image} alt={repairService.name} className="w-full h-48 md:h-64 object-cover" />
+            <OptimizedImage 
+              src={repairService.image} 
+              alt={repairService.name} 
+              width={1920} 
+              height={1080} 
+              className="w-full h-48 md:h-64" 
+              sizes={COMMON_SIZES.fullWidth}
+              objectFit="cover"
+            />
             <div className="p-4 md:p-6">
               <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{repairService.name}</h1>
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-0 mt-2 mb-6">

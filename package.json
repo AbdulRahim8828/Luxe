@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run format:sitemap",
+    "build": "npm run optimize:images && vite build && npm run format:sitemap",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format:sitemap": "prettier --write dist/sitemap.xml"
+    "format:sitemap": "prettier --write dist/sitemap.xml",
+    "optimize:images": "tsx scripts/optimizeImages.ts"
   },
   "dependencies": {
     "@sparticuz/chromium": "^123.0.0",
@@ -41,6 +42,7 @@
     "rollup-plugin-copy": "^3.5.0",
     "tailwindcss": "^3.4.3",
     "terser": "^5.44.1",
+    "tsx": "^4.20.6",
     "typescript": "^5.2.2",
     "vite": "^7.2.2",
     "vite-plugin-sitemap": "^0.8.2",

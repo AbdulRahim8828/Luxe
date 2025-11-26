@@ -1,10 +1,14 @@
 import { ServiceData } from '../types';
 
+// Service categories for tabs
+export type ServiceCategory = 'polish' | 'sofa' | 'product';
+
 export const servicePageData: ServiceData[] = [
   {
     id: 'sofa-polish',
     name: 'Sofa Wood Polish',
     category: 'furniture-polish',
+    tabCategory: 'sofa' as ServiceCategory,
     rating: 4.9,
     reviewCount: 2156,
     duration: '~2.5 hrs',

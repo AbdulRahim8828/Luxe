@@ -2,6 +2,9 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { Star } from 'lucide-react';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const TableAndBedPolishing = () => {
   const pageUrl = "https://a1furniturepolish.com/table-bed-polishing";
@@ -85,7 +88,7 @@ const TableAndBedPolishing = () => {
       <SEOHead
         title="Table & Bed Polishing in Mumbai | A1 Furniture Polish"
         description="Professional table and bed polishing in Mumbai. We restore dining tables, coffee tables, and wooden beds in Jogeshwari, Andheri & Goregaon. Contact us!"
-        ogUrl={pageUrl}
+        canonical={getCanonicalURL('/table-bed-polishing')}
       />
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
@@ -122,11 +125,13 @@ const TableAndBedPolishing = () => {
 
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img
+              <OptimizedImage
                 src="/assets/Table & Bed Polishing.jpg"
                 alt="Craftsman polishing a dining table in Mumbai"
+                width={1920}
+                height={1280}
                 className="rounded-lg shadow-xl"
-                loading="lazy"
+                sizes={COMMON_SIZES.content}
               />
             </div>
             <div>

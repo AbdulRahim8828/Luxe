@@ -2,6 +2,9 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { Star } from 'lucide-react';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const CommercialPolishing = () => {
   const pageUrl = "https://a1furniturepolish.com/commercial-polishing";
@@ -85,7 +88,7 @@ const CommercialPolishing = () => {
       <SEOHead
         title="Commercial Furniture Polishing in Mumbai | A1 Furniture Polish"
         description="Professional commercial furniture polishing in Mumbai. We service offices, hotels, & restaurants in BKC, Andheri, Lower Parel. Flexible hours, durable finishes."
-        ogUrl={pageUrl}
+        canonical={getCanonicalURL('/commercial-polishing')}
       />
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
@@ -122,11 +125,13 @@ const CommercialPolishing = () => {
 
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img
+              <OptimizedImage
                 src="/assets/drying-finishing.webp"
                 alt="Polished furniture in a commercial space"
+                width={1920}
+                height={1280}
                 className="rounded-lg shadow-xl"
-                loading="lazy"
+                sizes={COMMON_SIZES.content}
               />
             </div>
             <div>

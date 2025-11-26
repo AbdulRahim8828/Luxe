@@ -444,8 +444,11 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                             <OptimizedImage
                               src={step.image}
                               alt={`${step.title} - ${step.description}`}
-                              className="w-full h-32 sm:h-36 md:h-40 object-contain"
+                              width={800}
+                              height={600}
+                              className="w-full h-auto"
                               loading="lazy"
+                              objectFit="cover"
                             />
                           </div>
                         </div>

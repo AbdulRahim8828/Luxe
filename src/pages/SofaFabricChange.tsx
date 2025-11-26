@@ -4,6 +4,9 @@ import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { FaArrowRight } from 'react-icons/fa';
 import BookingModal from '../components/BookingModal';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const sofaService = {
   id: 'sofa-fabric-change',
@@ -30,13 +33,25 @@ const sofaService = {
         { name: 'Recliner 3-1-1 seater', price: 13999 },
       ],
     },
+    {
+      name: 'Office Chair Repair',
+      options: [
+        { name: 'Steel Finish Base', price: 749 },
+        { name: 'Black Finish Base', price: 619 },
+        { name: 'Nylon Base', price: 549 },
+        { name: 'Plastic Base', price: 549 },
+        { name: 'Wheel Replacement', price: 449 },
+        { name: 'Hydraulic Replacement', price: 599 },
+      ],
+    },
   ],
   features: [
-    'The listed prices are for labor costs only and do not include the cost of fabric.',
+    'Sofa Fabric Change: Labor costs only, fabric cost separate',
     'High-quality fabric in a variety of colors and textures',
     'Professional removal of old fabric and installation of new fabric',
-    'Minor frame repairs and foam padding replacement included',
-    'Free consultation and fabric sample selection at your home',
+    'Office Chair Repair: On-site repair with high-quality spare parts',
+    'Warranty on all replaced chair parts',
+    'Free consultation at your home',
   ],
 };
 
@@ -115,13 +130,22 @@ const SofaFabricChange: React.FC = () => {
         title="Sofa Fabric Change Services in Mumbai | A1 Furniture Polish"
         description="Professional sofa fabric change services in Mumbai. Get the best prices for 1, 2, 3-seater, L-shape sofas, recliners, and more."
         keywords={'sofa fabric change, sofa repair, furniture upholstery, mumbai, recliner fabric change'}
+        canonical={getCanonicalURL('/sofa-fabric-change')}
       />
       <JsonLd data={serviceSchema} />
 
       <div className="bg-gray-100 min-h-screen">
         <main className="container mx-auto px-4 py-6 md:py-8 pb-24 md:pb-8">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <img src={sofaService.image} alt="Sofa Fabric Change" className="w-full h-48 md:h-64 object-cover" />
+            <OptimizedImage 
+              src={sofaService.image} 
+              alt="Sofa Fabric Change" 
+              width={1920} 
+              height={1080} 
+              className="w-full h-48 md:h-64" 
+              sizes={COMMON_SIZES.fullWidth}
+              objectFit="cover"
+            />
             <div className="p-4 md:p-6">
               <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{sofaService.name}</h1>
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-0 mt-2 mb-6">

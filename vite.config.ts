@@ -18,7 +18,9 @@ const staticRoutes = [
   '/services/commercial-polishing',
   '/sofa-fabric-change',
   '/office-chair-repair',
-  '/goregaon-furniture-polish'
+  '/goregaon-furniture-polish',
+  '/powai-furniture-polish',
+  '/products'
 ];
 const dynamicRoutes = [...blogPostRoutes, ...staticRoutes];
 
@@ -49,19 +51,60 @@ export default defineConfig({
         drop_debugger: true
       }
     },
-    // Code splitting
+    // Enhanced code splitting for better performance
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'icons': ['lucide-react'],
-        }
+        manualChunks: (id) => {
+          // Core React libraries - loaded on every page
+          if (id.includes('node_modules/react') || 
+              id.includes('node_modules/react-dom') || 
+              id.includes('node_modules/react-router-dom')) {
+            return 'react-vendor';
+          }
+          
+          // UI libraries - icons and components
+          if (id.includes('node_modules/lucide-react')) {
+            return 'icons';
+          }
+          
+          // SEO and meta libraries
+          if (id.includes('node_modules/react-helmet-async')) {
+            return 'seo-vendor';
+          }
+          
+          // Markdown and content libraries (used in blog)
+          if (id.includes('node_modules/react-markdown') || 
+              id.includes('node_modules/remark-gfm')) {
+            return 'markdown-vendor';
+          }
+          
+          // Route-based code splitting for pages
+          if (id.includes('src/pages/')) {
+            const pageName = id.split('src/pages/')[1].split('.')[0];
+            return `page-${pageName.toLowerCase()}`;
+          }
+          
+          // Component chunks for lazy-loaded components
+          if (id.includes('src/components/ExitIntentPopup') ||
+              id.includes('src/components/OurProcess') ||
+              id.includes('src/components/StatsCounter')) {
+            return 'lazy-components';
+          }
+        },
+        // Optimize chunk file names
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     },
     // Chunk size warnings
     chunkSizeWarningLimit: 1000,
     // Source maps for production debugging (optional)
-    sourcemap: false
+    sourcemap: false,
+    // CSS code splitting
+    cssCodeSplit: true,
+    // Optimize CSS
+    cssMinify: true
   },
   // Optimize dependencies
   optimizeDeps: {

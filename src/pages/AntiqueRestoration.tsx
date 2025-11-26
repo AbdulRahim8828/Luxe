@@ -2,6 +2,9 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { Star } from 'lucide-react';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const AntiqueRestoration = () => {
   const pageUrl = "https://a1furniturepolish.com/antique-restoration";
@@ -85,7 +88,7 @@ const AntiqueRestoration = () => {
       <SEOHead
         title="Antique Furniture Restoration in Mumbai | A1 Furniture Polish"
         description="Expert antique furniture restoration in Mumbai. We preserve the value and beauty of your heirlooms with traditional techniques. Serving South Mumbai, Bandra, Juhu."
-        ogUrl={pageUrl}
+        canonical={getCanonicalURL('/antique-restoration')}
       />
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
@@ -122,11 +125,13 @@ const AntiqueRestoration = () => {
 
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img
+              <OptimizedImage
                 src="/assets/Antique Restoration.jpg"
                 alt="Restored antique furniture"
+                width={1920}
+                height={1280}
                 className="rounded-lg shadow-xl"
-                loading="lazy"
+                sizes={COMMON_SIZES.content}
               />
             </div>
             <div>

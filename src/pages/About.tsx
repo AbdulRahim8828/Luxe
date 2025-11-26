@@ -1,6 +1,7 @@
 import { Award, Users, Shield, Leaf, Target, Heart, Zap, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { FadeIn } from '../components/ScrollAnimations';
+import { getCanonicalURL } from '../utils/canonicalURL';
 
 const About = () => {
   const values = [
@@ -33,6 +34,7 @@ const About = () => {
         description="Learn about A1 Furniture Polish, Mumbai's leading furniture polishing service. 10+ years experience, eco-friendly products, skilled craftsmen. Serving all Mumbai areas."
         ogTitle="About A1 Furniture Polish - Mumbai's Trusted Furniture Polishing Experts"
         ogDescription="Learn about A1 Furniture Polish, Mumbai's leading furniture polishing service. 10+ years experience, eco-friendly products, skilled craftsmen. Serving all Mumbai areas."
+        canonical={getCanonicalURL('/about')}
       />
 
       {/* Hero Section */}

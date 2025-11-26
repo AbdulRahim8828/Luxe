@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
 import SEOHead from '../components/SEOHead';
 import { Calendar, Clock } from 'lucide-react';
+import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const BlogListPage = () => {
   return (
@@ -9,7 +12,7 @@ const BlogListPage = () => {
       <SEOHead
         title="Blog | A1 Furniture Polish"
         description="Read our latest articles on furniture care, polishing tips, and restoration guides to keep your wooden furniture looking its best."
-        ogUrl="https://a1furniturepolish.com/blog"
+        canonical={getCanonicalURL('/blog')}
       />
       <div className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +28,15 @@ const BlogListPage = () => {
             {blogPosts.map((post) => (
               <div key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
                 <Link to={`/blog/${post.slug}`} className="block">
-                  <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                  <OptimizedImage 
+                    src={post.image} 
+                    alt={post.title} 
+                    width={640} 
+                    height={480} 
+                    className="w-full h-48" 
+                    sizes={COMMON_SIZES.grid}
+                    objectFit="cover"
+                  />
                   <div className="p-6">
                     <span className="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                       {post.category}

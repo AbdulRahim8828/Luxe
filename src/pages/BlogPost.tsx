@@ -6,6 +6,8 @@ import remarkGfm from 'remark-gfm';
 import SEOHead from '../components/SEOHead';
 import { blogPosts, fetchBlogPostContent } from '../data/blogPosts';
 import { BlogPostData } from '../types';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -84,7 +86,15 @@ const BlogPost = () => {
           </div>
 
           <div className="w-full mb-6 md:mb-8 rounded-lg overflow-hidden">
-            <img src={post.image} alt={post.title} className="w-full h-auto object-cover" />
+            <OptimizedImage 
+              src={post.image} 
+              alt={post.title} 
+              width={1920} 
+              height={1080} 
+              className="w-full" 
+              sizes={COMMON_SIZES.fullWidth}
+              objectFit="cover"
+            />
           </div>
 
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">

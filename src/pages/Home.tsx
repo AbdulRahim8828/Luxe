@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Phone } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import JsonLd from '../components/JsonLd';
+import { getCanonicalURL } from '../utils/canonicalURL';
 import { localBusiness } from '../data/localBusiness.ts';
 import { services as servicesSchema } from '../data/services.ts';
 import { reviews, aggregateRating } from '../data/reviews.ts';
@@ -18,6 +19,8 @@ import FAQSection from '../components/FAQSection.tsx';
 import WhyBookOnline from '../components/WhyBookOnline.tsx';
 import FinalCTA from '../components/FinalCTA';
 import ContactCTA from '../components/ContactCTA';
+import OptimizedImage from '../components/OptimizedImage';
+import { COMMON_SIZES } from '../utils/imageHelpers';
 
 // Lazy load heavy components
 const OurProcess = lazy(() => import('../components/OurProcess'));
@@ -31,9 +34,8 @@ const Home = () => {
         title="A1 Furniture Polish — Professional Wooden Furniture Polishing in Mumbai"
         description="Leading furniture polishing services in Mumbai. We restore and polish your wooden furniture to perfection with eco-friendly products and skilled craftsmen. Expert sofa, bed, door, table, wardrobe polish. 6 months warranty. Book now!"
         keywords="furniture polish Mumbai, wood polishing services, sofa polish, bed polish, door polish, table polish, wardrobe polish, furniture restoration Mumbai, A1 furniture polish"
-        ogUrl="https://a1furniturepolish.com/"
         ogImage="/assets/Sofa And chair.webp"
-        canonical="https://a1furniturepolish.com/"
+        canonical={getCanonicalURL('/')}
       />
       <JsonLd data={localBusiness} />
       <JsonLd data={servicesSchema} />
@@ -70,11 +72,15 @@ const Home = () => {
               Transform your old furniture into brand new! Expert polishing for sofas, beds, wardrobes & more. Premium quality materials, skilled craftsmen, and 6-month warranty. Starting at just ₹1,299.
             </p>
             <div className="relative mb-6">
-              <img
+              <OptimizedImage
                 src="/assets/Sofa And chair.webp"
                 alt="Professional furniture polishing in Mumbai"
-                className="rounded-lg shadow-2xl w-full h-80 md:h-96 object-cover"
-                loading="lazy"
+                width={1920}
+                height={1080}
+                className="rounded-lg shadow-2xl"
+                priority={true}
+                sizes={COMMON_SIZES.hero}
+                objectFit="cover"
               />
               <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">
