@@ -81,3 +81,132 @@ export interface BookingData {
     address?: string;
   };
 }
+
+// Bulk SEO Page Generator Types
+
+export interface ServiceItem {
+  name: string;
+  description: string;
+  icon?: string;
+}
+
+export interface PricingInfo {
+  startingPrice: number;
+  priceRange: string;
+  factors: string[];
+}
+
+export interface BenefitItem {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface RelatedService {
+  name: string;
+  url: string;
+}
+
+export interface LocalBusinessSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  image: string;
+  '@id': string;
+  url: string;
+  telephone: string;
+  priceRange: string;
+  address: {
+    '@type': string;
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  geo: {
+    '@type': string;
+    latitude: number;
+    longitude: number;
+  };
+  openingHoursSpecification: {
+    '@type': string;
+    dayOfWeek: string[];
+    opens: string;
+    closes: string;
+  };
+  sameAs: string[];
+  aggregateRating?: {
+    '@type': string;
+    ratingValue: string;
+    bestRating: string;
+    worstRating: string;
+    ratingCount: string;
+  };
+}
+
+export interface ServiceSchema {
+  '@context': string;
+  '@type': string;
+  serviceType: string;
+  provider: {
+    '@type': string;
+    name: string;
+  };
+  areaServed: {
+    '@type': string;
+    name: string;
+  };
+  hasOfferCatalog?: {
+    '@type': string;
+    name: string;
+    itemListElement: Array<{
+      '@type': string;
+      itemOffered: {
+        '@type': string;
+        name: string;
+      };
+    }>;
+  };
+}
+
+export interface PageData {
+  // SEO Fields
+  title: string;
+  metaDescription: string;
+  h1: string;
+  url: string;
+  canonicalUrl: string;
+  
+  // Service Information
+  serviceCategory: string;
+  serviceName: string;
+  location: string;
+  titleVariation: 'affordable' | 'top-rated' | 'professional' | 'best';
+  
+  // Content Sections
+  introduction: string;
+  services: ServiceItem[];
+  process: ProcessStep[];
+  locationAreas: string[];
+  serviceAreaDescription: string;
+  pricing: PricingInfo;
+  whyChooseUs: BenefitItem[];
+  faqs: FAQItem[];
+  relatedServices: RelatedService[];
+  
+  // Schema Data
+  schema: {
+    localBusiness: LocalBusinessSchema;
+    service: ServiceSchema;
+  };
+  
+  // Keywords
+  primaryKeyword: string;
+  secondaryKeywords: string[];
+}

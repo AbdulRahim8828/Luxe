@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import sitemap from 'vite-plugin-sitemap';
 import { blogPosts } from './src/data/blogPosts';
+import { pagesData } from './src/data/generatedPagesData';
 
 const blogPostRoutes = blogPosts.map(post => `/blog/${post.slug}`);
 const staticRoutes = [
@@ -22,7 +23,11 @@ const staticRoutes = [
   '/powai-furniture-polish',
   '/products'
 ];
-const dynamicRoutes = [...blogPostRoutes, ...staticRoutes];
+
+// Add all 150 generated service pages to sitemap
+const generatedServiceRoutes = pagesData.map(page => page.url);
+
+const dynamicRoutes = [...blogPostRoutes, ...staticRoutes, ...generatedServiceRoutes];
 
 
 // https://vitejs.dev/config/
@@ -81,6 +86,7 @@ export default defineConfig({
           // Route-based code splitting for pages
           if (id.includes('src/pages/')) {
             const pageName = id.split('src/pages/')[1].split('.')[0];
+            // Don't bundle generated pages together - let them be lazy loaded individually
             return `page-${pageName.toLowerCase()}`;
           }
           
@@ -89,6 +95,18 @@ export default defineConfig({
               id.includes('src/components/OurProcess') ||
               id.includes('src/components/StatsCounter')) {
             return 'lazy-components';
+          }
+          
+          // Data modules - shared across generated pages
+          if (id.includes('src/data/contentTemplates') ||
+              id.includes('src/data/pageDataGenerator') ||
+              id.includes('src/data/generatedPagesConfig')) {
+            return 'page-data';
+          }
+          
+          // Generated pages data - separate chunk
+          if (id.includes('src/data/generatedPagesData')) {
+            return 'generated-data';
           }
         },
         // Optimize chunk file names

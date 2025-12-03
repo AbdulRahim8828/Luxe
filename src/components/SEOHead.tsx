@@ -11,7 +11,7 @@ interface SEOHeadProps {
   ogType?: string;
   canonical?: string;
   noindex?: boolean;
-  structuredData?: object;
+  structuredData?: object | object[];
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -61,9 +61,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data (JSON-LD) */}
       {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        Array.isArray(structuredData) ? (
+          structuredData.map((data, index) => (
+            <script key={index} type="application/ld+json">
+              {JSON.stringify(data)}
+            </script>
+          ))
+        ) : (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )
       )}
     </>
   );
