@@ -1,7 +1,7 @@
 import { ServiceData } from '../types';
 
 // Service categories for tabs
-export type ServiceCategory = 'polish' | 'sofa' | 'product';
+export type ServiceCategory = 'polish' | 'sofa' | 'product' | 'ikea';
 
 export const servicePageData: ServiceData[] = [
   {
@@ -888,6 +888,273 @@ export const servicePageData: ServiceData[] = [
     faqs: [
       { question: 'What is included in the price?', answer: 'The price includes only buffing polish. Labour and travelling costs are charged separately.' },
       { question: 'Is junk removal included?', answer: 'Yes, junk removal is included in the buffing service.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  // IKEA Furniture Assembly Services
+  {
+    id: 'ikea-bed-assembly',
+    name: 'Bed Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.85,
+    reviewCount: 3456,
+    duration: '~2 hrs',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/Bed-polish.webp',
+    options: [
+      { id: 'ikea-single-bed', name: 'Single bed assembly', price: 449, rating: 4.85, reviewCount: 3000, estimatedTime: '2 hrs' },
+      { id: 'ikea-double-bed', name: 'Double bed assembly', price: 599, rating: 4.87, reviewCount: 13000, estimatedTime: '2 hrs' },
+      { id: 'ikea-hydraulic-bed', name: 'Hydraulic bed assembly', price: 1299, rating: 4.86, reviewCount: 3000, estimatedTime: '2.5 hrs' },
+      { id: 'ikea-daydiwan-bed', name: 'Day/diwan bed assembly', price: 549, rating: 4.80, reviewCount: 392, estimatedTime: '2 hrs' },
+      { id: 'ikea-loft-bed', name: 'Loft/bunk bed assembly', price: 929, rating: 4.80, reviewCount: 553, estimatedTime: '2.5 hrs' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly of your furniture following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability and proper assembly.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up packaging and hand over your assembled furniture.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'How long does assembly take?', answer: 'Most bed assemblies take 2-2.5 hours depending on complexity.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'ikea-wardrobe-assembly',
+    name: 'Wardrobe Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.82,
+    reviewCount: 2500,
+    duration: '~2.5 hrs',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/Wardrobe-polish.webp',
+    options: [
+      { id: 'ikea-single-wardrobe', name: 'Single door wardrobe assembly', price: 599, rating: 4.84, reviewCount: 824, estimatedTime: '2 hrs' },
+      { id: 'ikea-double-wardrobe', name: 'Double door wardrobe assembly', price: 849, rating: 4.81, reviewCount: 2000, estimatedTime: '2 hrs' },
+      { id: 'ikea-three-wardrobe', name: 'Three door wardrobe assembly', price: 949, rating: 4.78, reviewCount: 3000, estimatedTime: '2.5 hrs' },
+      { id: 'ikea-four-wardrobe', name: 'Four door wardrobe assembly', price: 1049, rating: 4.79, reviewCount: 2000, estimatedTime: '3 hrs' },
+      { id: 'ikea-sliding-wardrobe', name: 'Sliding door wardrobe assembly', price: 799, rating: 4.79, reviewCount: 832, estimatedTime: '3.5 hrs' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly of your wardrobe following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability and proper assembly.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up packaging and hand over your assembled wardrobe.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'How long does assembly take?', answer: 'Wardrobe assembly takes 2-3.5 hours depending on size and type.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'ikea-dining-assembly',
+    name: 'Dining & Kitchen Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.86,
+    reviewCount: 1800,
+    duration: '~1.5 hrs',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/Dining-polish.webp',
+    options: [
+      { id: 'ikea-dining-table', name: 'Wooden dining table assembly', price: 349, rating: 4.85, reviewCount: 1000, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-extendable-table', name: 'Extendable dining table assembly', price: 499, rating: 4.73, reviewCount: 183, estimatedTime: '2 hrs' },
+      { id: 'ikea-dining-chair', name: 'Dining chair assembly', price: 199, rating: 4.86, reviewCount: 719, estimatedTime: '30 mins' },
+      { id: 'ikea-dining-set', name: 'Dining table with chair assembly', price: 699, rating: 4.89, reviewCount: 751, estimatedTime: '2 hrs' },
+      { id: 'ikea-utensil-rack', name: 'Utensil rack assembly', price: 269, rating: 4.82, reviewCount: 1000, estimatedTime: '30 mins' },
+      { id: 'ikea-bar-trolley', name: 'Bar trolley assembly', price: 699, rating: 4.85, reviewCount: 36, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-bar-cabinet', name: 'Bar cabinet assembly', price: 449, rating: 4.83, reviewCount: 112, estimatedTime: '1 hr' },
+      { id: 'ikea-bar-stool', name: 'Bar stool assembly', price: 399, rating: 4.83, reviewCount: 66, estimatedTime: '1 hr' },
+      { id: 'ikea-bar-table', name: 'Bar table assembly', price: 699, rating: 4.88, reviewCount: 26, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-bar-set', name: 'Bar table set assembly', price: 1099, rating: 4.88, reviewCount: 26, estimatedTime: '2 hrs' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up and hand over your assembled furniture.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'How long does assembly take?', answer: 'Assembly time varies from 30 mins to 2 hours depending on the item.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'ikea-tables-chairs-assembly',
+    name: 'Tables & Chairs Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.88,
+    reviewCount: 1500,
+    duration: '~1.5 hrs',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/Study-table-polish.webp',
+    options: [
+      { id: 'ikea-study-table', name: 'Study table assembly', price: 449, rating: 4.90, reviewCount: 7000, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-standing-table', name: 'Standing table assembly', price: 999, rating: 4.86, reviewCount: 704, estimatedTime: '2.5 hrs' },
+      { id: 'ikea-coffee-table', name: 'Coffee table assembly', price: 269, rating: 4.88, reviewCount: 2000, estimatedTime: '1 hr' },
+      { id: 'ikea-side-table', name: 'Side table assembly', price: 199, rating: 4.85, reviewCount: 2000, estimatedTime: '1 hr' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up and hand over your assembled furniture.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'How long does assembly take?', answer: 'Assembly time varies from 1 to 2.5 hours depending on the item.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'ikea-living-tv-assembly',
+    name: 'Living & TV Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.82,
+    reviewCount: 1800,
+    duration: '~1.5 hrs',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/sofa-polish.webp',
+    options: [
+      { id: 'ikea-sofa', name: 'Sofa assembly', price: 449, rating: 4.87, reviewCount: 1000, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-chaise-lounger', name: 'Chaise lounger assembly', price: 449, rating: 4.68, reviewCount: 44, estimatedTime: '1 hr 15 mins' },
+      { id: 'ikea-lshaped-sofa', name: 'L-shaped sofa assembly', price: 599, rating: 4.81, reviewCount: 315, estimatedTime: '2 hrs' },
+      { id: 'ikea-corner-sofa', name: 'Corner sofa assembly', price: 599, rating: 4.80, reviewCount: 166, estimatedTime: '2 hrs' },
+      { id: 'ikea-sofa-cum-bed', name: 'Sofa cum bed assembly', price: 549, rating: 4.87, reviewCount: 802, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-recliner', name: 'Recliner assembly', price: 399, rating: 4.78, reviewCount: 557, estimatedTime: '1 hr' },
+      { id: 'ikea-tv-bench', name: 'TV bench assembly', price: 449, rating: 4.86, reviewCount: 2000, estimatedTime: '1.5 hrs' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up and hand over your assembled furniture.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'How long does assembly take?', answer: 'Assembly time varies from 1 to 2 hours depending on the item.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'ikea-chairs-assembly',
+    name: 'Chairs & Seating Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.84,
+    reviewCount: 1500,
+    duration: '~45 mins',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/Study-table-polish.webp',
+    options: [
+      { id: 'ikea-stool', name: 'Stool assembly', price: 179, rating: 4.92, reviewCount: 213, estimatedTime: '30 mins' },
+      { id: 'ikea-bench', name: 'Bench assembly', price: 249, rating: 4.81, reviewCount: 271, estimatedTime: '45 mins' },
+      { id: 'ikea-office-chair', name: 'Office chair assembly', price: 249, rating: 4.85, reviewCount: 6000, estimatedTime: '45 mins' },
+      { id: 'ikea-gaming-chair', name: 'Gaming chair assembly', price: 799, rating: 4.84, reviewCount: 596, estimatedTime: '1 hr' },
+      { id: 'ikea-chair', name: 'Chair assembly', price: 249, rating: 4.83, reviewCount: 693, estimatedTime: '45 mins' },
+      { id: 'ikea-wheels-fitting', name: 'Table/chair wheels fitting', price: 199, rating: 4.78, reviewCount: 1000, estimatedTime: '30 mins' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up and hand over your assembled furniture.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'How long does assembly take?', answer: 'Assembly time varies from 30 mins to 1 hour depending on the item.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'ikea-children-assembly',
+    name: 'Children Furniture Assembly',
+    category: 'ikea-assembly',
+    tabCategory: 'ikea' as ServiceCategory,
+    rating: 4.86,
+    reviewCount: 800,
+    duration: '~1 hr',
+    features: ['Professional assembly', 'All tools provided', '60 days warranty'],
+    image: '/assets/Bed-polish.webp',
+    options: [
+      { id: 'ikea-changing-table', name: 'Changing table assembly', price: 299, rating: 4.84, reviewCount: 224, estimatedTime: '30 mins' },
+      { id: 'ikea-cot', name: 'Cot assembly', price: 399, rating: 4.84, reviewCount: 1000, estimatedTime: '30 mins' },
+      { id: 'ikea-high-chair', name: 'High chair assembly', price: 279, rating: 4.81, reviewCount: 121, estimatedTime: '30 mins' },
+      { id: 'ikea-children-bed', name: "Children's bed assembly", price: 449, rating: 4.90, reviewCount: 114, estimatedTime: '1 hr' },
+      { id: 'ikea-children-desk', name: "Children's desk & chair assembly", price: 729, rating: 4.87, reviewCount: 248, estimatedTime: '1.5 hrs' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
+    materials: ['/assets/consultation-booking.webp', '/assets/Cleaning & Sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Booking', description: 'Book your assembly service online or via WhatsApp.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Professional arrives', description: 'Our trained professional arrives with all necessary tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Assembly', description: 'Expert assembly following manufacturer guidelines.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Quality check', description: 'Thorough inspection to ensure stability and safety.', image: '/assets/drying-finishing.webp' },
+      { step: 5, title: 'Cleanup & handover', description: 'We clean up and hand over your assembled furniture.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
+      { question: 'Is it safe for children?', answer: 'Yes, we ensure all safety standards are met during assembly.' },
+      { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
     ],
     trustBadges: [
       { icon: 'shield-check', text: 'Background verified professionals' },
