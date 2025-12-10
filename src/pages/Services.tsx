@@ -278,7 +278,7 @@ const Services = () => {
     <>
       <SEO 
         title="Furniture Polish Services - A1 Polish | 15+ Professional Services"
-        description="Book professional furniture polishing services in Mumbai. Sofa, bed, door, table, wardrobe polish with 1-year warranty. Expert craftsmen, premium materials."
+        description="Book professional furniture polishing services in Mumbai. Sofa, bed, door, table, wardrobe polish with 6-months warranty. Expert craftsmen, premium materials."
         keywords="furniture polish Mumbai, wood polish services, sofa polish, bed polish, door polish, wardrobe polish, professional furniture care"
         canonical={getCanonicalURL('/services')}
         image="/assets/Sofa And chair.webp"
@@ -313,7 +313,7 @@ const Services = () => {
                   </h1>
                 </div>
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base font-medium">
-                  Professional polishing • 1 Year Warranty • Expert Craftsmen
+                  Professional polishing • 6 Months Warranty • Expert Craftsmen
                 </p>
               </div>
               
