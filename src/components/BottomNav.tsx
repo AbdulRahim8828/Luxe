@@ -1,14 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 import { HiHome } from 'react-icons/hi';
 import { MdBrush } from 'react-icons/md';
-import { FaChair, FaShoppingBag, FaTools } from 'react-icons/fa';
+import { FaChair, FaTools } from 'react-icons/fa';
 
 const navigation = [
   { name: 'A1', href: '/', icon: HiHome },
   { name: 'Polish', href: '/services', icon: MdBrush },
   { name: 'IKEA', href: '/ikea-assembly', icon: FaTools },
   { name: 'Sofa', href: '/sofa-fabric-change', icon: FaChair },
-  { name: 'Shop', href: '/products', icon: FaShoppingBag }, // Shorter name for mobile
 ];
 
 const BottomNav = () => {
