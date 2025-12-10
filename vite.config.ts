@@ -39,6 +39,14 @@ export default defineConfig({
         {
           src: 'assets',
           dest: '.'
+        },
+        {
+          src: 'public/favicon.ico',
+          dest: '.'
+        },
+        {
+          src: 'public/favicon-48x48.png',
+          dest: '.'
         }
       ]
     }),

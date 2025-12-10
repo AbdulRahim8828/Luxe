@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "format:sitemap": "prettier --write dist/sitemap.xml",
     "optimize:images": "tsx scripts/optimizeImages.ts",
-    "generate:pages": "tsx scripts/generatePages.ts"
+    "generate:pages": "tsx scripts/generatePages.ts",
+    "generate:favicons": "tsx scripts/generateFavicons.ts"
   },
   "dependencies": {
     "@sparticuz/chromium": "^123.0.0",
