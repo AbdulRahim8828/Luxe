@@ -15,7 +15,7 @@ import { PageData } from '../../types';
 
 const pageData: PageData = {
   "title": "Top-Rated Jhula Polish in Mumbai | 4.9★ Rated",
-  "metaDescription": "Get top-rated jhula polish in Mumbai. Expert craftsmen, quality materials, affordable pricing. Same-day service available. Book your appointment online now!",
+  "metaDescription": "Top-rated jhula polish services in Mumbai. Expert craftsmen, premium materials, 6-month warranty. Same-day service. Book online now!",
   "h1": "Top-Rated Jhula Polish in Mumbai",
   "url": "/services/top-rated-jhula-polish-mumbai",
   "canonicalUrl": "https://www.a1furniturepolish.com/services/top-rated-jhula-polish-mumbai",

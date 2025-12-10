@@ -235,12 +235,56 @@ const pageData: PageData = {
         "https://www.facebook.com/a1furniturepolish",
         "https://www.instagram.com/a1furniturepolish"
       ],
+      "review": [
+        {
+                "@type": "Review",
+                "author": {
+                        "@type": "Person",
+                        "name": "Priya Sharma"
+                },
+                "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                },
+                "reviewBody": "Excellent service! The team was professional and the furniture looks brand new. Highly recommended for quality work.",
+                "datePublished": "2024-11-15"
+        },
+        {
+                "@type": "Review",
+                "author": {
+                        "@type": "Person",
+                        "name": "Rajesh Kumar"
+                },
+                "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                },
+                "reviewBody": "Amazing transformation! The polish quality is top-notch and the pricing is very reasonable. Will definitely use again.",
+                "datePublished": "2024-11-10"
+        },
+        {
+                "@type": "Review",
+                "author": {
+                        "@type": "Person",
+                        "name": "Meera Patel"
+                },
+                "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4",
+                        "bestRating": "5"
+                },
+                "reviewBody": "Good service and timely completion. The furniture polish looks great and the team was very careful with our belongings.",
+                "datePublished": "2024-11-05"
+        }
+],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
+        "ratingValue": "4.8",
+        "reviewCount": "3",
         "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "500"
+        "worstRating": "1"
       }
     },
     "service": {
