@@ -906,11 +906,11 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/Bed-polish.webp',
     options: [
-      { id: 'ikea-single-bed', name: 'Single bed assembly', price: 449, rating: 4.85, reviewCount: 3000, estimatedTime: '2 hrs' },
-      { id: 'ikea-double-bed', name: 'Double bed assembly', price: 599, rating: 4.87, reviewCount: 13000, estimatedTime: '2 hrs' },
-      { id: 'ikea-hydraulic-bed', name: 'Hydraulic bed assembly', price: 1299, rating: 4.86, reviewCount: 3000, estimatedTime: '2.5 hrs' },
-      { id: 'ikea-daydiwan-bed', name: 'Day/diwan bed assembly', price: 549, rating: 4.80, reviewCount: 392, estimatedTime: '2 hrs' },
-      { id: 'ikea-loft-bed', name: 'Loft/bunk bed assembly', price: 929, rating: 4.80, reviewCount: 553, estimatedTime: '2.5 hrs' }
+      { id: 'ikea-single-bed', name: 'Single bed assembly', price: 1449, rating: 4.85, reviewCount: 3000, estimatedTime: '2 hrs' },
+      { id: 'ikea-double-bed', name: 'Double bed assembly', price: 1599, rating: 4.87, reviewCount: 13000, estimatedTime: '2 hrs' },
+      { id: 'ikea-hydraulic-bed', name: 'Hydraulic bed assembly', price: 2299, rating: 4.86, reviewCount: 3000, estimatedTime: '2.5 hrs' },
+      { id: 'ikea-daydiwan-bed', name: 'Day/diwan bed assembly', price: 1549, rating: 4.80, reviewCount: 392, estimatedTime: '2 hrs' },
+      { id: 'ikea-loft-bed', name: 'Loft/bunk bed assembly', price: 1929, rating: 4.80, reviewCount: 553, estimatedTime: '2.5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
@@ -943,11 +943,11 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/Wardrobe-polish.webp',
     options: [
-      { id: 'ikea-single-wardrobe', name: 'Single door wardrobe assembly', price: 599, rating: 4.84, reviewCount: 824, estimatedTime: '2 hrs' },
-      { id: 'ikea-double-wardrobe', name: 'Double door wardrobe assembly', price: 849, rating: 4.81, reviewCount: 2000, estimatedTime: '2 hrs' },
-      { id: 'ikea-three-wardrobe', name: 'Three door wardrobe assembly', price: 949, rating: 4.78, reviewCount: 3000, estimatedTime: '2.5 hrs' },
-      { id: 'ikea-four-wardrobe', name: 'Four door wardrobe assembly', price: 1049, rating: 4.79, reviewCount: 2000, estimatedTime: '3 hrs' },
-      { id: 'ikea-sliding-wardrobe', name: 'Sliding door wardrobe assembly', price: 799, rating: 4.79, reviewCount: 832, estimatedTime: '3.5 hrs' }
+      { id: 'ikea-single-wardrobe', name: 'Single door wardrobe assembly', price: 1599, rating: 4.84, reviewCount: 824, estimatedTime: '2 hrs' },
+      { id: 'ikea-double-wardrobe', name: 'Double door wardrobe assembly', price: 1849, rating: 4.81, reviewCount: 2000, estimatedTime: '2 hrs' },
+      { id: 'ikea-three-wardrobe', name: 'Three door wardrobe assembly', price: 1949, rating: 4.78, reviewCount: 3000, estimatedTime: '2.5 hrs' },
+      { id: 'ikea-four-wardrobe', name: 'Four door wardrobe assembly', price: 2049, rating: 4.79, reviewCount: 2000, estimatedTime: '3 hrs' },
+      { id: 'ikea-sliding-wardrobe', name: 'Sliding door wardrobe assembly', price: 1799, rating: 4.79, reviewCount: 832, estimatedTime: '3.5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
@@ -980,16 +980,16 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/Dining-polish.webp',
     options: [
-      { id: 'ikea-dining-table', name: 'Wooden dining table assembly', price: 349, rating: 4.85, reviewCount: 1000, estimatedTime: '1.5 hrs' },
-      { id: 'ikea-extendable-table', name: 'Extendable dining table assembly', price: 499, rating: 4.73, reviewCount: 183, estimatedTime: '2 hrs' },
-      { id: 'ikea-dining-chair', name: 'Dining chair assembly', price: 199, rating: 4.86, reviewCount: 719, estimatedTime: '30 mins' },
-      { id: 'ikea-dining-set', name: 'Dining table with chair assembly', price: 699, rating: 4.89, reviewCount: 751, estimatedTime: '2 hrs' },
-      { id: 'ikea-utensil-rack', name: 'Utensil rack assembly', price: 269, rating: 4.82, reviewCount: 1000, estimatedTime: '30 mins' },
-      { id: 'ikea-bar-trolley', name: 'Bar trolley assembly', price: 699, rating: 4.85, reviewCount: 36, estimatedTime: '1.5 hrs' },
-      { id: 'ikea-bar-cabinet', name: 'Bar cabinet assembly', price: 449, rating: 4.83, reviewCount: 112, estimatedTime: '1 hr' },
-      { id: 'ikea-bar-stool', name: 'Bar stool assembly', price: 399, rating: 4.83, reviewCount: 66, estimatedTime: '1 hr' },
-      { id: 'ikea-bar-table', name: 'Bar table assembly', price: 699, rating: 4.88, reviewCount: 26, estimatedTime: '1.5 hrs' },
-      { id: 'ikea-bar-set', name: 'Bar table set assembly', price: 1099, rating: 4.88, reviewCount: 26, estimatedTime: '2 hrs' }
+      { id: 'ikea-dining-table', name: 'Wooden dining table assembly', price: 1349, rating: 4.85, reviewCount: 1000, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-extendable-table', name: 'Extendable dining table assembly', price: 1499, rating: 4.73, reviewCount: 183, estimatedTime: '2 hrs' },
+      { id: 'ikea-dining-chair', name: 'Dining chair assembly', price: 1199, rating: 4.86, reviewCount: 719, estimatedTime: '30 mins' },
+      { id: 'ikea-dining-set', name: 'Dining table with chair assembly', price: 1699, rating: 4.89, reviewCount: 751, estimatedTime: '2 hrs' },
+      { id: 'ikea-utensil-rack', name: 'Utensil rack assembly', price: 1269, rating: 4.82, reviewCount: 1000, estimatedTime: '30 mins' },
+      { id: 'ikea-bar-trolley', name: 'Bar trolley assembly', price: 1699, rating: 4.85, reviewCount: 36, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-bar-cabinet', name: 'Bar cabinet assembly', price: 1449, rating: 4.83, reviewCount: 112, estimatedTime: '1 hr' },
+      { id: 'ikea-bar-stool', name: 'Bar stool assembly', price: 1399, rating: 4.83, reviewCount: 66, estimatedTime: '1 hr' },
+      { id: 'ikea-bar-table', name: 'Bar table assembly', price: 1699, rating: 4.88, reviewCount: 26, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-bar-set', name: 'Bar table set assembly', price: 2099, rating: 4.88, reviewCount: 26, estimatedTime: '2 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
@@ -1022,10 +1022,10 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/Study-table-polish.webp',
     options: [
-      { id: 'ikea-study-table', name: 'Study table assembly', price: 449, rating: 4.90, reviewCount: 7000, estimatedTime: '1.5 hrs' },
-      { id: 'ikea-standing-table', name: 'Standing table assembly', price: 999, rating: 4.86, reviewCount: 704, estimatedTime: '2.5 hrs' },
-      { id: 'ikea-coffee-table', name: 'Coffee table assembly', price: 269, rating: 4.88, reviewCount: 2000, estimatedTime: '1 hr' },
-      { id: 'ikea-side-table', name: 'Side table assembly', price: 199, rating: 4.85, reviewCount: 2000, estimatedTime: '1 hr' }
+      { id: 'ikea-study-table', name: 'Study table assembly', price: 1449, rating: 4.90, reviewCount: 7000, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-standing-table', name: 'Standing table assembly', price: 1999, rating: 4.86, reviewCount: 704, estimatedTime: '2.5 hrs' },
+      { id: 'ikea-coffee-table', name: 'Coffee table assembly', price: 1269, rating: 4.88, reviewCount: 2000, estimatedTime: '1 hr' },
+      { id: 'ikea-side-table', name: 'Side table assembly', price: 1199, rating: 4.85, reviewCount: 2000, estimatedTime: '1 hr' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
@@ -1058,13 +1058,13 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/sofa-polish.webp',
     options: [
-      { id: 'ikea-sofa', name: 'Sofa assembly', price: 449, rating: 4.87, reviewCount: 1000, estimatedTime: '1.5 hrs' },
-      { id: 'ikea-chaise-lounger', name: 'Chaise lounger assembly', price: 449, rating: 4.68, reviewCount: 44, estimatedTime: '1 hr 15 mins' },
-      { id: 'ikea-lshaped-sofa', name: 'L-shaped sofa assembly', price: 599, rating: 4.81, reviewCount: 315, estimatedTime: '2 hrs' },
-      { id: 'ikea-corner-sofa', name: 'Corner sofa assembly', price: 599, rating: 4.80, reviewCount: 166, estimatedTime: '2 hrs' },
-      { id: 'ikea-sofa-cum-bed', name: 'Sofa cum bed assembly', price: 549, rating: 4.87, reviewCount: 802, estimatedTime: '1.5 hrs' },
-      { id: 'ikea-recliner', name: 'Recliner assembly', price: 399, rating: 4.78, reviewCount: 557, estimatedTime: '1 hr' },
-      { id: 'ikea-tv-bench', name: 'TV bench assembly', price: 449, rating: 4.86, reviewCount: 2000, estimatedTime: '1.5 hrs' }
+      { id: 'ikea-sofa', name: 'Sofa assembly', price: 1449, rating: 4.87, reviewCount: 1000, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-chaise-lounger', name: 'Chaise lounger assembly', price: 1449, rating: 4.68, reviewCount: 44, estimatedTime: '1 hr 15 mins' },
+      { id: 'ikea-lshaped-sofa', name: 'L-shaped sofa assembly', price: 1599, rating: 4.81, reviewCount: 315, estimatedTime: '2 hrs' },
+      { id: 'ikea-corner-sofa', name: 'Corner sofa assembly', price: 1599, rating: 4.80, reviewCount: 166, estimatedTime: '2 hrs' },
+      { id: 'ikea-sofa-cum-bed', name: 'Sofa cum bed assembly', price: 1549, rating: 4.87, reviewCount: 802, estimatedTime: '1.5 hrs' },
+      { id: 'ikea-recliner', name: 'Recliner assembly', price: 1399, rating: 4.78, reviewCount: 557, estimatedTime: '1 hr' },
+      { id: 'ikea-tv-bench', name: 'TV bench assembly', price: 1449, rating: 4.86, reviewCount: 2000, estimatedTime: '1.5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
@@ -1097,12 +1097,12 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/Study-table-polish.webp',
     options: [
-      { id: 'ikea-stool', name: 'Stool assembly', price: 179, rating: 4.92, reviewCount: 213, estimatedTime: '30 mins' },
-      { id: 'ikea-bench', name: 'Bench assembly', price: 249, rating: 4.81, reviewCount: 271, estimatedTime: '45 mins' },
-      { id: 'ikea-office-chair', name: 'Office chair assembly', price: 249, rating: 4.85, reviewCount: 6000, estimatedTime: '45 mins' },
-      { id: 'ikea-gaming-chair', name: 'Gaming chair assembly', price: 799, rating: 4.84, reviewCount: 596, estimatedTime: '1 hr' },
-      { id: 'ikea-chair', name: 'Chair assembly', price: 249, rating: 4.83, reviewCount: 693, estimatedTime: '45 mins' },
-      { id: 'ikea-wheels-fitting', name: 'Table/chair wheels fitting', price: 199, rating: 4.78, reviewCount: 1000, estimatedTime: '30 mins' }
+      { id: 'ikea-stool', name: 'Stool assembly', price: 1179, rating: 4.92, reviewCount: 213, estimatedTime: '30 mins' },
+      { id: 'ikea-bench', name: 'Bench assembly', price: 1249, rating: 4.81, reviewCount: 271, estimatedTime: '45 mins' },
+      { id: 'ikea-office-chair', name: 'Office chair assembly', price: 1249, rating: 4.85, reviewCount: 6000, estimatedTime: '45 mins' },
+      { id: 'ikea-gaming-chair', name: 'Gaming chair assembly', price: 1799, rating: 4.84, reviewCount: 596, estimatedTime: '1 hr' },
+      { id: 'ikea-chair', name: 'Chair assembly', price: 1249, rating: 4.83, reviewCount: 693, estimatedTime: '45 mins' },
+      { id: 'ikea-wheels-fitting', name: 'Table/chair wheels fitting', price: 1199, rating: 4.78, reviewCount: 1000, estimatedTime: '30 mins' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
@@ -1135,11 +1135,11 @@ export const servicePageData: ServiceData[] = [
     features: ['Professional assembly', 'All tools provided', '60 days warranty'],
     image: '/assets/Bed-polish.webp',
     options: [
-      { id: 'ikea-changing-table', name: 'Changing table assembly', price: 299, rating: 4.84, reviewCount: 224, estimatedTime: '30 mins' },
-      { id: 'ikea-cot', name: 'Cot assembly', price: 399, rating: 4.84, reviewCount: 1000, estimatedTime: '30 mins' },
-      { id: 'ikea-high-chair', name: 'High chair assembly', price: 279, rating: 4.81, reviewCount: 121, estimatedTime: '30 mins' },
-      { id: 'ikea-children-bed', name: "Children's bed assembly", price: 449, rating: 4.90, reviewCount: 114, estimatedTime: '1 hr' },
-      { id: 'ikea-children-desk', name: "Children's desk & chair assembly", price: 729, rating: 4.87, reviewCount: 248, estimatedTime: '1.5 hrs' }
+      { id: 'ikea-changing-table', name: 'Changing table assembly', price: 1299, rating: 4.84, reviewCount: 224, estimatedTime: '30 mins' },
+      { id: 'ikea-cot', name: 'Cot assembly', price: 1399, rating: 4.84, reviewCount: 1000, estimatedTime: '30 mins' },
+      { id: 'ikea-high-chair', name: 'High chair assembly', price: 1279, rating: 4.81, reviewCount: 121, estimatedTime: '30 mins' },
+      { id: 'ikea-children-bed', name: "Children's bed assembly", price: 1449, rating: 4.90, reviewCount: 114, estimatedTime: '1 hr' },
+      { id: 'ikea-children-desk', name: "Children's desk & chair assembly", price: 1729, rating: 4.87, reviewCount: 248, estimatedTime: '1.5 hrs' }
     ],
     selectedOption: -1,
     priceIncludes: ['Professional assembly', 'All tools & hardware', 'Post-assembly cleaning', '60 days warranty'],
