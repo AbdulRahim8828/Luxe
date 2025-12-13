@@ -70,35 +70,35 @@ const Cart: React.FC<CartProps> = ({
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-4">
+        <div className="max-w-3xl mx-auto px-3 py-2 md:py-4 flex items-center gap-2 md:gap-4">
           <button
             onClick={() => navigate(-1)}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-1.5 hover:bg-gray-100 rounded-full transition-colors touch-manipulation"
             aria-label="Go back"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-4 h-4 md:w-6 md:h-6" />
           </button>
-          <h1 className="text-xl font-bold">Your cart</h1>
+          <h1 className="text-base md:text-xl font-bold">Your cart</h1>
         </div>
       </header>
 
-      <main className="max-w-3xl mx-auto px-4 py-6 space-y-6">
+      <main className="max-w-3xl mx-auto px-3 py-3 space-y-3 md:space-y-6 pb-28 md:pb-24">
         {/* Checkout Section */}
-        <section className="bg-white rounded-lg p-4 shadow-sm">
-          <h2 className="text-lg font-bold mb-4">Checkout</h2>
+        <section className="bg-white rounded-lg p-3 md:p-6 shadow-sm">
+          <h2 className="text-base md:text-xl font-bold mb-3">Checkout</h2>
           
           {/* Services List */}
-          <div className="space-y-6">
+          <div className="space-y-3 md:space-y-6">
             {selectedServices.map((service) => (
-              <div key={`${service.serviceId}-${service.optionId}`} className="space-y-3">
-                <h3 className="font-semibold text-gray-900">{service.serviceName}</h3>
+              <div key={`${service.serviceId}-${service.optionId}`} className="space-y-2">
+                <h3 className="font-semibold text-gray-900 text-xs md:text-base leading-tight">{service.serviceName}</h3>
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-700">{service.optionName}</span>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <span className="text-xs text-gray-700 flex-1 leading-tight">{service.optionName}</span>
                   
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-between sm:justify-end gap-3">
                     {/* Quantity Selector */}
-                    <div className="flex items-center gap-3 border-2 border-purple-600 rounded-lg px-3 py-1">
+                    <div className="flex items-center gap-1 border border-purple-600 rounded px-1.5 py-1">
                       <button
                         onClick={() => {
                           if (service.quantity > 1) {
@@ -107,17 +107,17 @@ const Cart: React.FC<CartProps> = ({
                             onRemoveService(service.serviceId, service.optionId);
                           }
                         }}
-                        className="text-purple-600 font-bold text-lg w-6 h-6 flex items-center justify-center"
+                        className="text-purple-600 font-bold text-sm w-6 h-6 flex items-center justify-center touch-manipulation"
                         aria-label="Decrease quantity"
                       >
                         −
                       </button>
-                      <span className="font-semibold text-purple-600 min-w-[20px] text-center">
+                      <span className="font-semibold text-purple-600 min-w-[16px] text-center text-sm">
                         {service.quantity}
                       </span>
                       <button
                         onClick={() => onUpdateQuantity(service.serviceId, service.optionId, service.quantity + 1)}
-                        className="text-purple-600 font-bold text-lg w-6 h-6 flex items-center justify-center"
+                        className="text-purple-600 font-bold text-sm w-6 h-6 flex items-center justify-center touch-manipulation"
                         aria-label="Increase quantity"
                       >
                         +
@@ -125,7 +125,7 @@ const Cart: React.FC<CartProps> = ({
                     </div>
                     
                     {/* Price */}
-                    <span className="font-semibold text-gray-900 min-w-[80px] text-right">
+                    <span className="font-semibold text-gray-900 min-w-[60px] text-right text-xs md:text-base">
                       ₹{(service.price * service.quantity).toLocaleString()}
                     </span>
                   </div>
@@ -136,105 +136,105 @@ const Cart: React.FC<CartProps> = ({
         </section>
 
         {/* Coupons Section */}
-        <section className="bg-white rounded-lg p-4 shadow-sm">
-          <div className="flex items-center gap-2 mb-3">
-            <Tag className="w-5 h-5 text-green-600" />
-            <h3 className="font-semibold text-gray-900">Apply Coupon</h3>
+        <section className="bg-white rounded-lg p-3 md:p-6 shadow-sm">
+          <div className="flex items-center gap-1.5 mb-2">
+            <Tag className="w-4 h-4 text-green-600" />
+            <h3 className="font-semibold text-gray-900 text-xs md:text-base">Apply Coupon</h3>
           </div>
           
           {!appliedCoupon ? (
             <div className="space-y-2">
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="text"
                   value={couponCode}
                   onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
                   placeholder="Enter coupon code"
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 uppercase"
+                  className="flex-1 px-2 py-2 md:py-2 border border-gray-300 rounded focus:ring-1 focus:ring-orange-500 focus:border-orange-500 uppercase text-xs md:text-base"
                 />
                 <button
                   onClick={handleApplyCoupon}
-                  className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold"
+                  className="px-3 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors font-semibold text-xs md:text-base touch-manipulation"
                 >
                   Apply
                 </button>
               </div>
               {couponError && (
-                <p className="text-sm text-red-600">{couponError}</p>
+                <p className="text-xs text-red-600">{couponError}</p>
               )}
-              <div className="mt-3 p-3 bg-green-50 rounded-lg border border-green-200">
-                <p className="text-sm font-semibold text-green-800 mb-1">Available Offer:</p>
+              <div className="mt-2 p-2 bg-green-50 rounded border border-green-200">
+                <p className="text-xs font-semibold text-green-800 mb-0.5">Available Offer:</p>
                 <p className="text-xs text-green-700">Use code <span className="font-bold">FIRST10</span> for 10% OFF on first booking</p>
               </div>
             </div>
           ) : (
-            <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
-              <div>
-                <p className="font-semibold text-green-800">{appliedCoupon}</p>
-                <p className="text-sm text-green-700">
+            <div className="flex items-center justify-between p-2 bg-green-50 rounded border border-green-200">
+              <div className="flex-1">
+                <p className="font-semibold text-green-800 text-xs md:text-base">{appliedCoupon}</p>
+                <p className="text-xs text-green-700">
                   {validCoupons[appliedCoupon as keyof typeof validCoupons].description}
                 </p>
               </div>
               <button
                 onClick={handleRemoveCoupon}
-                className="p-1 hover:bg-green-100 rounded transition-colors"
+                className="p-1 hover:bg-green-100 rounded transition-colors touch-manipulation"
               >
-                <X className="w-5 h-5 text-green-700" />
+                <X className="w-4 h-4 text-green-700" />
               </button>
             </div>
           )}
         </section>
 
         {/* Payment Summary */}
-        <section className="bg-white rounded-lg p-4 shadow-sm space-y-4">
-          <h2 className="text-lg font-bold">Payment summary</h2>
+        <section className="bg-white rounded-lg p-3 md:p-6 shadow-sm space-y-2">
+          <h2 className="text-base md:text-xl font-bold">Payment summary</h2>
           
-          <div className="space-y-3">
-            <div className="flex justify-between text-gray-700">
+          <div className="space-y-2">
+            <div className="flex justify-between text-gray-700 text-xs md:text-base">
               <span>Item total</span>
               <span className="font-semibold">₹{itemTotal.toLocaleString()}</span>
             </div>
             
-            <div className="flex justify-between text-gray-700">
+            <div className="flex justify-between text-gray-700 text-xs md:text-base">
               <span>Taxes and Fee</span>
               <span className="font-semibold">₹{taxesAndFee.toLocaleString()}</span>
             </div>
             
             {discount > 0 && (
-              <div className="flex justify-between text-green-600">
+              <div className="flex justify-between text-green-600 text-xs md:text-base">
                 <span>Coupon Discount ({appliedCoupon})</span>
                 <span className="font-semibold">-₹{discount.toLocaleString()}</span>
               </div>
             )}
             
-            <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
-              <span className="font-bold">Total amount</span>
-              <span className="font-bold">₹{totalAmount.toLocaleString()}</span>
+            <div className="border-t border-gray-200 pt-2 flex justify-between text-gray-900">
+              <span className="font-bold text-xs md:text-base">Total amount</span>
+              <span className="font-bold text-xs md:text-base">₹{totalAmount.toLocaleString()}</span>
             </div>
             
-            <div className="flex justify-between text-gray-700">
+            <div className="flex justify-between text-gray-700 text-xs md:text-base">
               <span>Advance payment</span>
               <span className="font-semibold">₹{advancePayment}</span>
             </div>
             
-            <p className="text-sm text-gray-600">
+            <p className="text-xs text-gray-600">
               ₹{payableAfterService.toLocaleString()} payable after service
             </p>
             
-            <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900">
-              <span className="font-bold">Amount to pay</span>
-              <span className="font-bold">₹{amountToPay}</span>
+            <div className="border-t border-gray-200 pt-2 flex justify-between text-gray-900">
+              <span className="font-bold text-sm md:text-lg">Amount to pay</span>
+              <span className="font-bold text-sm md:text-lg">₹{amountToPay}</span>
             </div>
           </div>
         </section>
       </main>
 
       {/* Bottom CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 shadow-lg mb-20 md:mb-0 z-20">
         <div className="max-w-3xl mx-auto">
           <button
             onClick={onProceedToCheckout}
-            className="w-full bg-purple-600 text-white font-semibold py-4 rounded-lg hover:bg-purple-700 transition-colors"
+            className="w-full bg-purple-600 text-white font-semibold py-3 md:py-3 rounded hover:bg-purple-700 transition-colors text-sm md:text-lg touch-manipulation"
           >
             Login/Sign up to proceed
           </button>

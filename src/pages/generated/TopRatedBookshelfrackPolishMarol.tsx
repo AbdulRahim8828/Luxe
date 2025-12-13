@@ -16,7 +16,7 @@ import { PageData } from '../../types';
 const pageData: PageData = {
   "title": "Top-Rated Bookshelf/Rack Polish in Marol | 4.9★ Rated",
   "metaDescription": "Get top-rated bookshelf/rack polish in Marol. Expert craftsmen, quality materials, affordable pricing. Same-day service available. Book your appointment onli...",
-  "h1": "Top-Rated Bookshelf/Rack Polish in Marol",
+  "h1": "Furniture Polish",
   "url": "/services/top-rated-bookshelfrack-polish-marol",
   "canonicalUrl": "https://www.a1furniturepolish.com/services/top-rated-bookshelfrack-polish-marol",
   "serviceCategory": "bookshelf-rack-polish",

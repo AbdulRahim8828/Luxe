@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { FaArrowRight } from 'react-icons/fa';
 import BookingModal from '../components/BookingModal';
 import { getCanonicalURL } from '../utils/canonicalURL';
-import OptimizedImage from '../components/OptimizedImage';
-import { COMMON_SIZES } from '../utils/imageHelpers';
+import OptimizedImage from '../../src/components/OptimizedImage';
+import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const repairService = {
   id: 'office-chair-repair',

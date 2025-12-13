@@ -16,7 +16,7 @@ import { PageData } from '../../types';
 const pageData: PageData = {
   "title": "Top-Rated PU Gloss Polish in Lokhandwala | 4.9★ Rated",
   "metaDescription": "Get top-rated pu gloss polish in Lokhandwala. Expert craftsmen, quality materials, affordable pricing. Same-day service available. Book your appointment onli...",
-  "h1": "Top-Rated PU Gloss Polish in Lokhandwala",
+  "h1": "Furniture Polish",
   "url": "/services/top-rated-pu-gloss-polish-lokhandwala",
   "canonicalUrl": "https://www.a1furniturepolish.com/services/top-rated-pu-gloss-polish-lokhandwala",
   "serviceCategory": "pu-gloss-polish",

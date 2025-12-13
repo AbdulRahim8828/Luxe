@@ -11,6 +11,47 @@ export interface BlogPostData {
   description: string;
   keywords: string;
   content: string;
+  tags?: string[];
+  featured?: boolean;
+  publishedAt?: string;
+  updatedAt?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  canonicalUrl?: string;
+  relatedPosts?: string[];
+  tableOfContents?: boolean;
+  excerpt?: string;
+  status?: 'draft' | 'published' | 'archived';
+}
+
+export interface BlogCategory {
+  id: string;
+  name: string;
+  description: string;
+  slug: string;
+  color: string;
+  icon?: string;
+  postCount?: number;
+}
+
+export interface BlogTag {
+  id: string;
+  name: string;
+  slug: string;
+  description?: string;
+  postCount?: number;
+}
+
+export interface BlogAuthor {
+  id: string;
+  name: string;
+  bio?: string;
+  avatar?: string;
+  social?: {
+    twitter?: string;
+    linkedin?: string;
+    website?: string;
+  };
 }
 
 // Urban Company Style Service UI Types

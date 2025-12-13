@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Phone } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { getCanonicalURL } from '../utils/canonicalURL';
 import { localBusiness } from '../data/localBusiness.ts';
@@ -19,8 +19,8 @@ import FAQSection from '../components/FAQSection.tsx';
 import WhyBookOnline from '../components/WhyBookOnline.tsx';
 import FinalCTA from '../components/FinalCTA';
 import ContactCTA from '../components/ContactCTA';
-import OptimizedImage from '../components/OptimizedImage';
-import { COMMON_SIZES } from '../utils/imageHelpers';
+import OptimizedImage from '../../src/components/OptimizedImage';
+import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 // Lazy load heavy components
 const OurProcess = lazy(() => import('../components/OurProcess'));

@@ -16,7 +16,7 @@ import { PageData } from '../../types';
 const pageData: PageData = {
   "title": "Top-Rated Wooden Floor Polishing in Dahisar | 4.9★ Rated",
   "metaDescription": "Get top-rated wooden floor polishing in Dahisar. Expert craftsmen, quality materials, affordable pricing. Same-day service available. Book your appointment o...",
-  "h1": "Top-Rated Wooden Floor Polishing in Dahisar",
+  "h1": "Furniture Polish",
   "url": "/services/top-rated-wooden-floor-polishing-dahisar",
   "canonicalUrl": "https://www.a1furniturepolish.com/services/top-rated-wooden-floor-polishing-dahisar",
   "serviceCategory": "wooden-floor-polishing",

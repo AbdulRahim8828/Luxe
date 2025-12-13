@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceOption } from '../types';
 import { Clock } from 'lucide-react';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../../src/components/OptimizedImage';
 
 interface ServiceOptionCardProps {
   option: ServiceOption;

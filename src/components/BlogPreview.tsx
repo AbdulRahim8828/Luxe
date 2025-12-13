@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts } from '../../blog/data/blogPosts';
+import OptimizedImage from '../../src/components/OptimizedImage';
 
 const BlogPreview = () => {
   const latestPosts = blogPosts.slice(0, 3);
@@ -19,16 +19,18 @@ const BlogPreview = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {latestPosts.map((post, index) => (
+          {latestPosts.map((post: any, index: number) => (
             <Link
               key={index}
               to={`/blog/${post.slug}`}
               className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <OptimizedImage
                   src={post.image}
                   alt={post.title}
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />

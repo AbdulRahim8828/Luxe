@@ -16,7 +16,7 @@ import { PageData } from '../../types';
 const pageData: PageData = {
   "title": "Top-Rated Mandir Polish in Mira Road | 4.9★ Rated",
   "metaDescription": "Get top-rated mandir polish in Mira Road. Expert craftsmen, quality materials, affordable pricing. Same-day service available. Book your appointment online now!",
-  "h1": "Top-Rated Mandir Polish in Mira Road",
+  "h1": "Furniture Polish",
   "url": "/services/top-rated-mandir-polish-mira-road",
   "canonicalUrl": "https://www.a1furniturepolish.com/services/top-rated-mandir-polish-mira-road",
   "serviceCategory": "mandir-polish",

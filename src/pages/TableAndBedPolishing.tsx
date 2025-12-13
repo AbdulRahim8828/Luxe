@@ -1,10 +1,10 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { Star } from 'lucide-react';
 import { getCanonicalURL } from '../utils/canonicalURL';
-import OptimizedImage from '../components/OptimizedImage';
-import { COMMON_SIZES } from '../utils/imageHelpers';
+import OptimizedImage from '../../src/components/OptimizedImage';
+import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const TableAndBedPolishing = () => {
   const pageUrl = "https://a1furniturepolish.com/table-bed-polishing";

@@ -15,11 +15,11 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { PageData } from '../types';
-import SEOHead from './SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import StickyWhatsApp from './StickyWhatsApp';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../../src/components/OptimizedImage';
 import { FadeIn } from './ScrollAnimations';
-import { COMMON_SIZES } from '../utils/imageHelpers';
+import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 interface ServicePageTemplateProps {
   pageData: PageData;

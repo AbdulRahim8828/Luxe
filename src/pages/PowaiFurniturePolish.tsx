@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, Star, CheckCircle, ArrowRight, Shield, Award, Users, MessageCircle } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { FadeIn } from '../components/ScrollAnimations';
 import { getCanonicalURL } from '../utils/canonicalURL';
 import StickyWhatsApp from '../components/StickyWhatsApp';
-import OptimizedImage from '../components/OptimizedImage';
-import { COMMON_SIZES } from '../utils/imageHelpers';
+import OptimizedImage from '../../src/components/OptimizedImage';
+import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const PowaiFurniturePolish = () => {
   const services = [

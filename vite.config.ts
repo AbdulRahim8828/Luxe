@@ -2,8 +2,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import sitemap from 'vite-plugin-sitemap';
-import { blogPosts } from './src/data/blogPosts';
+// import sitemap from 'vite-plugin-sitemap'; // Replaced with custom sitemap generation
+import { blogPosts } from './blog/data/blogPosts';
 import { pagesData } from './src/data/generatedPagesData';
 
 const blogPostRoutes = blogPosts.map(post => `/blog/${post.slug}`);
@@ -47,13 +47,17 @@ export default defineConfig({
         {
           src: 'public/favicon-48x48.png',
           dest: '.'
+        },
+        {
+          src: 'public/browserconfig.xml',
+          dest: '.'
         }
       ]
     }),
-    sitemap({ 
-      hostname: 'https://a1furniturepolish.com', 
-      dynamicRoutes
-    }),
+    // sitemap({ 
+    //   hostname: 'https://a1furniturepolish.com', 
+    //   dynamicRoutes
+    // }), // Replaced with custom optimized sitemap generation
   ],
   build: {
     // Optimize build output

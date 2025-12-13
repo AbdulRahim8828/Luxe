@@ -12,8 +12,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
-const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
-const BlogListPage = lazy(() => import('./pages/BlogListPage'));
+const BlogPostPage = lazy(() => import('../blog/pages/BlogPostPage'));
+const BlogListPage = lazy(() => import('../blog/pages/BlogListPage'));
 const WoodenFurniturePolish = lazy(() => import('./pages/WoodenFurniturePolish'));
 const SofaAndChairPolishing = lazy(() => import('./pages/SofaAndChairPolishing'));
 const TableAndBedPolishing = lazy(() => import('./pages/TableAndBedPolishing'));
@@ -201,7 +201,7 @@ function App() {
           <ScrollToTop />
           <div className="flex flex-col min-h-screen font-sans bg-white">
             <Header />
-            <main className="flex-grow pb-20 md:pb-0 bg-white">
+            <main className="flex-grow pb-24 md:pb-0 bg-white">
               <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />

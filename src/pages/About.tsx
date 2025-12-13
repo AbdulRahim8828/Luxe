@@ -1,7 +1,8 @@
 import { Award, Users, Shield, Leaf, Target, Heart, Zap, CheckCircle2 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import { FadeIn } from '../components/ScrollAnimations';
 import { getCanonicalURL } from '../utils/canonicalURL';
+import OptimizedImage from '../../src/components/OptimizedImage';
 
 const About = () => {
   const values = [
@@ -81,10 +82,13 @@ const About = () => {
             <FadeIn delay={200}>
               <div className="relative mt-8 lg:mt-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="https://images.pexels.com/photos/2062431/pexels-photo-2062431.jpeg"
+                  <OptimizedImage
+                    src="/assets/Sofa And chair.webp"
                     alt="Professional furniture polishing team in Mumbai"
                     className="w-full h-80 lg:h-[500px] object-cover"
+                    width={800}
+                    height={500}
+                    loading="lazy"
                   />
                   {/* Overlay Badge */}
                   <div className="absolute bottom-6 left-6 right-6 bg-white bg-opacity-95 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-xl">

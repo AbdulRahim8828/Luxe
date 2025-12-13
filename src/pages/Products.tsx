@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import { getCanonicalURL } from '../utils/canonicalURL';
 import { FaShoppingBag } from 'react-icons/fa';
 

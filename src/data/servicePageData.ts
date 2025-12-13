@@ -54,11 +54,12 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: [
-      'Material & labour cost',
+      'Material & labour cost (Hand Polish)',
       'Premium polish brand',
       'Post-service cleaning',
       'Scratch removal & surface preparation',
-      '6 months warranty on polish'
+      '6 months warranty on polish',
+      'Machine Polish: Extra ₹1,499/-'
     ],
     materials: [
       '/assets/select-wood-polish-shade.webp',
@@ -160,9 +161,17 @@ export const servicePageData: ServiceData[] = [
         estimatedTime: '3 hrs'
       },
       { 
+        id: 'bed-diwan',
+        name: 'Diwan', 
+        price: 2999,
+        rating: 4.8,
+        reviewCount: 156,
+        estimatedTime: '2.5 hrs'
+      },
+      { 
         id: 'bed-queen',
         name: 'Queen Size Bed', 
-        price: 2999,
+        price: 3449,
         rating: 4.9,
         reviewCount: 521,
         estimatedTime: '3.5 hrs'
@@ -184,6 +193,14 @@ export const servicePageData: ServiceData[] = [
         estimatedTime: '4.5 hrs'
       },
       { 
+        id: 'bed-sofacumbed',
+        name: 'Sofa cum Bed', 
+        price: 4799,
+        rating: 4.7,
+        reviewCount: 89,
+        estimatedTime: '4 hrs'
+      },
+      { 
         id: 'bed-bunk',
         name: 'Bunk Bed', 
         price: 5799,
@@ -194,11 +211,12 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: [
-      'Material & labour cost',
+      'Material & labour cost (Hand Polish)',
       'Premium polish brand (Melamine/PU)',
       'Post-service cleaning',
       'Scratch removal & surface preparation',
-      '6 months warranty on polish'
+      '6 months warranty on polish',
+      'Machine Polish: Extra ₹1,499/-'
     ],
     materials: [
       '/assets/select-wood-polish-shade.webp',
@@ -297,7 +315,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'door-4door', name: '4 Door', price: 5899, rating: 4.8, reviewCount: 277, estimatedTime: '4 hrs' },
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Both sides polishing', '6 months warranty on polish'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Both sides polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -335,7 +353,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'table-study', name: 'Study Table', price: 3899, rating: 4.7, reviewCount: 310, estimatedTime: '3 hrs', image: '/assets/Study-table-polish.webp' },
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Scratch removal & surface preparation', '6 months warranty on polish'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Scratch removal & surface preparation', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -373,7 +391,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'wardrobe-sliding', name: 'Sliding Door Wardrobe', price: 6799, rating: 4.8, reviewCount: 319, estimatedTime: '4 hrs', image: '/assets/Sliding-wardrobe.webp' },
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -410,7 +428,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'dining-6seater', name: '6 Seater Dining Set', price: 5099, rating: 4.9, reviewCount: 789, estimatedTime: '5 hrs' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Complete polish for table and chairs', 'Heat and water-resistant finish', '6 months warranty on polish'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Complete polish for table and chairs', 'Heat and water-resistant finish', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -448,7 +466,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'cabinet-crockery', name: 'Crockery Self', price: 3999, rating: 4.8, reviewCount: 310, estimatedTime: '3.5 hrs', image: '/assets/Crockery.webp' },
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -485,7 +503,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'shelf-7', name: '7 Shelf', price: 3499, rating: 4.8, reviewCount: 322, estimatedTime: '3.5 hrs', image: '/assets/7-Shelves.webp' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -518,7 +536,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'shelf-large', name: 'Large', price: 1999, rating: 4.7, reviewCount: 175, estimatedTime: '2 hrs' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -549,7 +567,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'mandir-standard', name: 'Mandir', price: 2999, rating: 4.9, reviewCount: 987, estimatedTime: '3 hrs' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -582,7 +600,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'jhula-3seater', name: '3 Seater Jhula', price: 3449, rating: 4.9, reviewCount: 345, estimatedTime: '5 hrs' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -617,7 +635,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'drawer-6', name: '6 Drawer', price: 3999, rating: 4.7, reviewCount: 78, estimatedTime: '4 hrs', image: '/assets/6-Chester-Drawer.webp' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },
@@ -650,7 +668,7 @@ export const servicePageData: ServiceData[] = [
       { id: 'tv-large', name: 'Large', price: 4899, rating: 4.8, reviewCount: 211, estimatedTime: '5 hrs' }
     ],
     selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', '6 months warranty'],
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
     materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp'],
     processSteps: [
       { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/consultation-booking.webp' },

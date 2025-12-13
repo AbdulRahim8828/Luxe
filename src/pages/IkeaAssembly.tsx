@@ -547,7 +547,7 @@ const IkeaAssembly = () => {
             </main>
 
             {selectedServices.length > 0 && (
-              <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg mb-16 md:mb-0 z-40">
+              <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg mb-20 md:mb-0 z-40">
               <div className="max-w-3xl mx-auto">
                 <button
                   onClick={handleBookNow}

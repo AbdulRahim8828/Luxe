@@ -36,6 +36,7 @@ import {
   generateLocalBusinessSchema,
   generateServiceSchema,
 } from '../utils/schemaGenerator';
+import { seoIntegrationService } from '../seo/integration/SEOIntegrationService';
 
 /**
  * Generates a single PageData object
@@ -178,8 +179,9 @@ function generatePhase2Pages(existingUrls: Set<string>): PageData[] {
 /**
  * Main function to generate all 150 pages
  * Uses two-pass approach: first collect all URLs, then generate pages with valid related services
+ * Integrates with SEO system for optimization
  */
-export function generateAllPages(): PageData[] {
+export async function generateAllPages(): Promise<PageData[]> {
   const existingUrls = new Set<string>();
   
   // Phase 1: Generate 80 Mumbai generic pages (first pass - collect URLs)
@@ -191,7 +193,7 @@ export function generateAllPages(): PageData[] {
   console.log(`Phase 2 complete: Generated ${phase2Pages.length} location-specific pages`);
   
   // Combine all pages
-  const allPages = [...phase1Pages, ...phase2Pages];
+  let allPages = [...phase1Pages, ...phase2Pages];
   console.log(`Total pages generated: ${allPages.length}`);
   console.log(`Total URLs collected: ${existingUrls.size}`);
   
@@ -222,6 +224,84 @@ export function generateAllPages(): PageData[] {
   });
   console.log(`Sample page word count: ${wordCount} words`);
   
+  // SEO Integration: Process all pages through SEO system
+  console.log('Processing pages through SEO system...');
+  try {
+    allPages = await seoIntegrationService.processPages(allPages);
+    console.log('SEO processing completed successfully');
+    
+    // Perform SEO health check
+    const healthCheckResult = await seoIntegrationService.performHealthCheck(allPages);
+    console.log(`SEO health check completed: ${healthCheckResult.successfulPages.length} pages checked`);
+  } catch (error) {
+    console.warn('SEO processing failed, continuing with original pages:', error);
+  }
+  
+  return allPages;
+}
+
+/**
+ * Generate Mumbai generic pages (Phase 1)
+ */
+export function generateMumbaiGenericPages(): PageData[] {
+  return generatePhase1Pages(new Set());
+}
+
+/**
+ * Generate location-specific pages (Phase 2)
+ */
+export function generateLocationSpecificPages(): PageData[] {
+  const existingUrls = new Set(generatePhase1Pages(new Set()).map(page => page.url));
+  return generatePhase2Pages(existingUrls);
+}
+
+/**
+ * Generates all pages synchronously (without SEO processing)
+ * Used for validation and testing
+ */
+export function generateAllPagesSync(): PageData[] {
+  console.log('Phase 1: Generating 80 Mumbai generic pages...');
+  const phase1Pages = generateMumbaiGenericPages();
+  console.log(`Phase 1 complete: Generated ${phase1Pages.length} Mumbai generic pages`);
+
+  console.log('Phase 2: Generating 70 location-specific pages...');
+  const phase2Pages = generateLocationSpecificPages();
+  console.log(`Phase 2 complete: Generated ${phase2Pages.length} location-specific pages`);
+
+  const allPages = [...phase1Pages, ...phase2Pages];
+  console.log(`Total pages generated: ${allPages.length}`);
+
+  // Collect all URLs for related services
+  const existingUrls = new Set(allPages.map(page => page.url));
+  console.log(`Total URLs collected: ${existingUrls.size}`);
+
+  // Second pass: Update related services for all pages with valid URLs only
+  console.log('Updating related services with valid URLs...');
+  allPages.forEach(page => {
+    page.relatedServices = generateRelatedServices(
+      page.serviceCategory,
+      page.location.toLowerCase().replace(/\s+/g, '-'),
+      existingUrls
+    );
+  });
+
+  // Count pages with related services
+  const pagesWithRelatedServices = allPages.filter(p => p.relatedServices.length > 0).length;
+  console.log(`Pages with related services: ${pagesWithRelatedServices}/${allPages.length}`);
+
+  // Validate word count for sample pages
+  const samplePage = allPages[0];
+  const wordCount = calculateWordCount({
+    introduction: samplePage.introduction,
+    services: samplePage.services,
+    process: samplePage.process,
+    serviceAreaDescription: samplePage.serviceAreaDescription,
+    pricing: samplePage.pricing,
+    whyChooseUs: samplePage.whyChooseUs,
+    faqs: samplePage.faqs,
+  });
+  console.log(`Sample page word count: ${wordCount} words`);
+
   return allPages;
 }
 

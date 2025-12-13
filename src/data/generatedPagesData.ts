@@ -8,10 +8,10 @@
  */
 
 import { PageData } from '../types';
-import { generateAllPages, validatePages } from './pageDataGenerator';
+import { generateAllPagesSync, validatePages } from './pageDataGenerator';
 
-// Generate all 150 pages
-export const pagesData: PageData[] = generateAllPages();
+// Generate all 150 pages synchronously (without SEO processing)
+export const pagesData: PageData[] = generateAllPagesSync();
 
 // Validate the generated pages
 const validation = validatePages(pagesData);

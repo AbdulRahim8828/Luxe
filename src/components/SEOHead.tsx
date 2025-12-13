@@ -12,6 +12,10 @@ interface SEOHeadProps {
   canonical?: string;
   noindex?: boolean;
   structuredData?: object | object[];
+  // Enhanced SEO props from SEO system
+  openGraphTags?: Record<string, string>;
+  twitterCardTags?: Record<string, string>;
+  cacheHeaders?: Record<string, string>;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -26,6 +30,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   noindex = false,
   structuredData,
+  openGraphTags,
+  twitterCardTags,
+  cacheHeaders,
 }) => {
   // Generate canonical URL if not provided
   const canonicalUrl = canonical || getCurrentCanonicalURL();
@@ -46,18 +53,43 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:title" content={ogTitle || title} />
-      <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:type" content={ogType || 'website'} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      <meta property="og:url" content={openGraphUrl} />
-      <meta property="og:site_name" content="A1 Furniture Polish" />
+      {openGraphTags ? (
+        // Use enhanced Open Graph tags from SEO system
+        Object.entries(openGraphTags).map(([property, content]) => (
+          <meta key={property} property={property} content={content} />
+        ))
+      ) : (
+        // Fallback to basic Open Graph tags
+        <>
+          <meta property="og:title" content={ogTitle || title} />
+          <meta property="og:description" content={ogDescription || description} />
+          <meta property="og:type" content={ogType || 'website'} />
+          {ogImage && <meta property="og:image" content={ogImage} />}
+          <meta property="og:url" content={openGraphUrl} />
+          <meta property="og:site_name" content="A1 Furniture Polish" />
+        </>
+      )}
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={ogTitle || title} />
-      <meta name="twitter:description" content={ogDescription || description} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      {twitterCardTags ? (
+        // Use enhanced Twitter Card tags from SEO system
+        Object.entries(twitterCardTags).map(([name, content]) => (
+          <meta key={name} name={name} content={content} />
+        ))
+      ) : (
+        // Fallback to basic Twitter Card tags
+        <>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={ogTitle || title} />
+          <meta name="twitter:description" content={ogDescription || description} />
+          {ogImage && <meta name="twitter:image" content={ogImage} />}
+        </>
+      )}
+      
+      {/* Cache Headers (for performance optimization) */}
+      {cacheHeaders && Object.entries(cacheHeaders).map(([name, value]) => (
+        <meta key={name} httpEquiv={name} content={value} />
+      ))}
       
       {/* Structured Data (JSON-LD) */}
       {structuredData && (

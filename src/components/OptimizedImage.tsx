@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import {
-  getOptimizedImagePath,
-  generateSrcSet,
-  COMMON_SIZES,
-} from '../utils/imageHelpers';
 
 interface OptimizedImageProps {
   src: string;
@@ -25,7 +20,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   loading = 'lazy',
   priority = false,
-  sizes = COMMON_SIZES.content,
   objectFit = 'cover',
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -46,14 +40,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const loadingStrategy = priority ? 'eager' : loading;
   const fetchPriority = priority ? 'high' : 'auto';
 
-  // Generate srcsets for different formats
-  const avifSrcSet = generateSrcSet(src, 'avif', width);
-  const webpSrcSet = generateSrcSet(src, 'webp', width);
-  const jpgSrcSet = generateSrcSet(src, 'jpg', width);
-
-  // Fallback image path
-  const fallbackSrc = getOptimizedImagePath(src, undefined, 'jpg');
-
   // Object fit classes
   const objectFitClass = {
     cover: 'object-cover',
@@ -72,50 +58,39 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
         )}
 
-        {/* Picture element with modern formats */}
-        <picture>
-          {/* AVIF format - best compression */}
-          <source
-            type="image/avif"
-            srcSet={avifSrcSet}
-            sizes={sizes}
-          />
+        {/* Simple image element for build compatibility */}
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          loading={loadingStrategy}
+          decoding="async"
+          fetchPriority={fetchPriority as 'high' | 'low' | 'auto'}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`absolute inset-0 w-full h-full ${objectFitClass} transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
 
-          {/* WebP format - good compression with wide support */}
-          <source
-            type="image/webp"
-            srcSet={webpSrcSet}
-            sizes={sizes}
-          />
-
-          {/* JPG fallback - universal support */}
-          <source
-            type="image/jpeg"
-            srcSet={jpgSrcSet}
-            sizes={sizes}
-          />
-
-          {/* Fallback img element */}
-          <img
-            src={fallbackSrc}
-            alt={alt}
-            width={width}
-            height={height}
-            loading={loadingStrategy}
-            decoding="async"
-            fetchPriority={fetchPriority as 'high' | 'low' | 'auto'}
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`absolute inset-0 w-full h-full ${objectFitClass} transition-opacity duration-300 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        </picture>
-
-        {/* Error state */}
+        {/* Error state with fallback */}
         {hasError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <span className="text-gray-400 text-sm">Image not available</span>
+            <img
+              src="/assets/wooden furniture .webp"
+              alt={alt}
+              className="w-full h-full object-cover opacity-50"
+              onError={(e) => {
+                // If even fallback fails, show text
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const parent = target.parentElement;
+                if (parent) {
+                  parent.innerHTML = '<span class="text-gray-400 text-sm">Image not available</span>';
+                }
+              }}
+            />
           </div>
         )}
       </div>

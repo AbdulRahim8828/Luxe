@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { X, ArrowLeft, Shield, Wrench, Award, Umbrella, FileCheck, ChevronDown } from 'lucide-react';
 import { ServiceData } from '../types';
 import ServiceOptionCard from './ServiceOptionCard';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../../src/components/OptimizedImage';
 import ServiceSelectionSummary from './ServiceSelectionSummary';
 
 interface ServiceDetailModalProps {

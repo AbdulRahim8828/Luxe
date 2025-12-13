@@ -3,11 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, Phone, MessageCircle, ArrowUpCircle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import SEOHead from '../components/SEOHead';
-import { blogPosts, fetchBlogPostContent } from '../data/blogPosts';
+import SEOHead from '../../src/components/SEOHead';
+import { blogPosts, fetchBlogPostContent } from '../../blog/data/blogPosts';
 import { BlogPostData } from '../types';
-import OptimizedImage from '../components/OptimizedImage';
-import { COMMON_SIZES } from '../utils/imageHelpers';
+import OptimizedImage from '../../src/components/OptimizedImage';
+import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -19,7 +19,7 @@ const BlogPost = () => {
     const getPostContent = async () => {
       setIsLoading(true);
       try {
-        const postData = blogPosts.find((p) => p.slug === slug);
+        const postData = blogPosts.find((p: any) => p.slug === slug);
         if (postData) {
           const content = await fetchBlogPostContent(slug || '');
           setPost({ ...postData, content });
@@ -54,7 +54,7 @@ const BlogPost = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const postIndex = blogPosts.findIndex((p) => p.slug === slug);
+  const postIndex = blogPosts.findIndex((p: any) => p.slug === slug);
   const prevPost = postIndex > 0 ? blogPosts[postIndex - 1] : null;
   const nextPost = postIndex < blogPosts.length - 1 ? blogPosts[postIndex + 1] : null;
 

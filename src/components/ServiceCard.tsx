@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceData } from '../types';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../../src/components/OptimizedImage';
 
 interface ServiceCardProps {
   service: ServiceData;
@@ -40,6 +40,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <OptimizedImage
           src={service.image}
           alt={`${service.name} service`}
+          width={400}
+          height={300}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ease-out"
           loading="lazy"
         />

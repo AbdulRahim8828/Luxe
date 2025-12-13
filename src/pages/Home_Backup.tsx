@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Shield, Clock, Phone, MessageCircle, Wrench } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../../src/components/SEOHead';
 import JsonLd from '../components/JsonLd';
 import { localBusiness } from '../data/localBusiness.ts';
 import { services as servicesSchema } from '../data/services.ts';
@@ -382,4 +382,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home_Backup;
