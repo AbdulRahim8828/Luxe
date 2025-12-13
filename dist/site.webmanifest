@@ -1,46 +1,19 @@
 {
-  "name": "A1 Furniture Polish - Best Furniture Polish Services In Mumbai",
+  "name": "A1 Furniture Polish",
   "short_name": "A1 Polish",
-  "description": "Expert polishing for sofas, beds, wardrobes & more. Premium quality materials, skilled craftsmen, and 6-month warranty. Starting at just ₹1,299.",
   "icons": [
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png"
-    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
       "type": "image/png"
     }
   ],
   "theme_color": "#D97706",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "start_url": "/",
-  "scope": "/",
-  "orientation": "portrait-primary",
-  "categories": ["business", "lifestyle", "utilities"]
+  "background_color": "#D97706",
+  "display": "standalone"
 }
