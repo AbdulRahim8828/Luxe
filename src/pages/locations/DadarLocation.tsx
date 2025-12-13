@@ -381,13 +381,13 @@ const DadarLocation = () => {
             {/* Service Card 1 - Sofa Polish */}
             <FadeIn delay={100}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
                   <OptimizedImage
                     src="/assets/Sofa And chair.webp"
                     alt="Sofa Polishing Service in Dadar"
                     width={600}
                     height={400}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain"
                   />
                   <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
                     POPULAR
@@ -436,13 +436,13 @@ const DadarLocation = () => {
             {/* Service Card 2 - Dining Table */}
             <FadeIn delay={200}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
                   <OptimizedImage
                     src="/assets/Dining-polish.webp"
                     alt="Dining Table Polish Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain"
                   />
                   <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
                     TRENDING
@@ -491,13 +491,13 @@ const DadarLocation = () => {
             {/* Service Card 3 - Bed Polish */}
             <FadeIn delay={300}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
                   <OptimizedImage
                     src="/assets/Bed-polish.webp"
                     alt="Bed Polishing Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4 md:p-5">
@@ -541,13 +541,13 @@ const DadarLocation = () => {
             {/* Service Card 4 - Wardrobe */}
             <FadeIn delay={100}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
                   <OptimizedImage
                     src="/assets/4-Door-Wardrobe.webp"
                     alt="Wardrobe Polishing Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain"
                   />
                   <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
                     PREMIUM
@@ -594,13 +594,13 @@ const DadarLocation = () => {
             {/* Service Card 5 - Door Polish */}
             <FadeIn delay={200}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
                   <OptimizedImage
                     src="/assets/Door-polish.webp"
                     alt="Door Polishing Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4 md:p-5">
@@ -644,13 +644,13 @@ const DadarLocation = () => {
             {/* Service Card 6 - Complete Home */}
             <FadeIn delay={300}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-2 border-amber-300">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
                   <OptimizedImage
                     src="/assets/consultation-booking.webp"
                     alt="Complete Home Furniture Polish in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-contain p-3"
+                    className="w-full h-full object-contain"
                   />
                   <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
                     BEST DEAL
