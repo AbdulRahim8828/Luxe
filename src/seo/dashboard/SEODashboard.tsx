@@ -63,7 +63,10 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
       const newReport = seoMonitor.generateSEOReport(pages);
       setReport(newReport);
     } catch (error) {
-      console.error('Error generating SEO report:', error);
+      // Error generating SEO report - silently fail in production
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error generating SEO report:', error);
+      }
     } finally {
       setLoading(false);
     }
@@ -118,7 +121,10 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
         await generateReport(); // Refresh report after fixes
       }
     } catch (error) {
-      console.error('Error during auto-fix:', error);
+      // Error during auto-fix - silently fail in production
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error during auto-fix:', error);
+      }
     } finally {
       setLoading(false);
     }
