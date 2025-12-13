@@ -25,6 +25,7 @@ const OfficeChairRepair = lazy(() => import('./pages/OfficeChairRepair'));
 const IkeaAssembly = lazy(() => import('./pages/IkeaAssembly'));
 const GoregaonFurniturePolish = lazy(() => import('./pages/GoregaonFurniturePolish'));
 const PowaiFurniturePolish = lazy(() => import('./pages/PowaiFurniturePolish'));
+const DadarLocation = lazy(() => import('./pages/locations/DadarLocation'));
 const Products = lazy(() => import('./pages/Products'));
 
 // Auto-generated page imports
@@ -225,6 +226,7 @@ function App() {
               {/* Location Pages */}
               <Route path="/goregaon-furniture-polish" element={<GoregaonFurniturePolish />} />
               <Route path="/powai-furniture-polish" element={<PowaiFurniturePolish />} />
+              <Route path="/dadar" element={<DadarLocation />} />
               
               {/* Products Page */}
               <Route path="/products" element={<Products />} />

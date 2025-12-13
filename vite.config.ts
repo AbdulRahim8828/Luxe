@@ -21,6 +21,7 @@ const staticRoutes = [
   '/office-chair-repair',
   '/goregaon-furniture-polish',
   '/powai-furniture-polish',
+  '/dadar',
   '/products'
 ];
 
