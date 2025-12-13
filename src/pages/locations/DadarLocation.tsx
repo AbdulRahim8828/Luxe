@@ -89,7 +89,7 @@ const DadarLocation = () => {
     },
     {
       question: 'What is the cost of furniture polishing in Dadar?',
-      answer: 'Our pricing is competitive and depends on furniture type, size, and condition. We provide free quotes and estimates. Call us 24/7 at +91 7897995178 for exact pricing for your Dadar location.'
+      answer: 'Our pricing is competitive and depends on furniture type, size, and condition. We provide free quotes and estimates. Call us 24/7 at +91 8828709945 for exact pricing for your Dadar location.'
     },
     {
       question: 'Do you use eco-friendly polish products?',
@@ -121,7 +121,7 @@ const DadarLocation = () => {
       'latitude': 19.0176,
       'longitude': 72.8436
     },
-    'telephone': '+917897995178',
+    'telephone': '+918828709945',
     'openingHours': 'Mo-Su 00:00-23:59',
     'areaServed': [
       {
@@ -164,7 +164,7 @@ const DadarLocation = () => {
     <>
       <SEOHead
         title="⭐ Best Furniture Polish Dadar to Colaba | 24/7 Near Cosmos Plaza | ₹249 Starting - Shop No.13"
-        description="Professional furniture polishing services from Dadar to Colaba. Expert wooden furniture polish, sofa restoration covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba. Shop No.13 Cosmos Plaza - Starting ₹249. Call +91 7897995178"
+        description="Professional furniture polishing services from Dadar to Colaba. Expert wooden furniture polish, sofa restoration covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba. Shop No.13 Cosmos Plaza - Starting ₹249. Call +91 8828709945"
         keywords="furniture polish dadar to colaba, furniture polishing dadar parel worli, furniture polishing south mumbai, wooden furniture polish dadar, sofa polishing dadar to fort, furniture restoration dadar mumbai, table polishing dadar parel, bed polishing dadar, furniture polish near cosmos plaza, best furniture polish dadar, furniture polishing lower parel, furniture polishing worli, furniture polishing byculla, furniture polishing fort mumbai, furniture polishing colaba, antique furniture restoration south mumbai, furniture repair dadar, scratch repair dadar to colaba, furniture refinishing mumbai, teak wood polishing dadar, sheesham wood polishing south mumbai, furniture polish bhavani shankar road, furniture polish shivaji park, furniture polishing mahim, furniture polishing matunga, 24 hour furniture polish dadar, emergency furniture polishing south mumbai, same day furniture polish dadar to colaba, furniture polish dadar station, furniture polish near dadar, affordable furniture polishing mumbai, home furniture polish dadar, office furniture polish south mumbai, commercial furniture polishing mumbai central"
         ogImage="/assets/Sofa And chair.webp"
         canonical={getCanonicalURL('/dadar')}
@@ -175,8 +175,8 @@ const DadarLocation = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 py-12 md:py-20 overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 "></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30  "></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -191,23 +191,6 @@ const DadarLocation = () => {
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                   Best <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Furniture Polish</span> in Dadar
                 </h1>
-                
-                {/* Pricing Highlight */}
-                <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl mb-6 border-2 border-amber-200">
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div>
-                      <p className="text-gray-600 text-sm mb-1">Starting from</p>
-                      <p className="text-4xl md:text-5xl font-bold text-amber-600">₹249</p>
-                      <p className="text-gray-500 text-sm">Per furniture item</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg font-semibold mb-2">
-                        ⚡ Book in 30 Seconds
-                      </div>
-                      <p className="text-xs text-gray-600">Via WhatsApp • No OTP • No App</p>
-                    </div>
-                  </div>
-                </div>
 
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                   <strong>Transform your furniture</strong> with Mumbai's most trusted experts in wooden furniture polishing, sofa restoration, and complete furniture refinishing. Covering <strong>Dadar, Parel, Lower Parel, Worli, Byculla, Fort, and Colaba</strong> with 24/7 emergency service.
@@ -236,20 +219,20 @@ const DadarLocation = () => {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Dadar"
+                    href="https://wa.me/918828709945?text=Hi, I need furniture polishing service in Dadar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-2xl font-bold text-lg"
+                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200  shadow-2xl font-bold text-lg"
                   >
                     <MessageCircle size={24} />
                     <span>Book on WhatsApp</span>
                   </a>
                   <a
-                    href="tel:+917897995178"
-                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-200 transform hover:scale-105 shadow-2xl font-bold text-lg"
+                    href="tel:+918828709945"
+                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-200  shadow-2xl font-bold text-lg"
                   >
                     <Phone size={24} />
-                    <span>Call: 7897995178</span>
+                    <span>Call: 9967834585</span>
                   </a>
                 </div>
 
@@ -312,53 +295,55 @@ const DadarLocation = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Service Card 1 - Sofa Polish */}
             <FadeIn delay={100}>
-              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden border-2 border-amber-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                   <OptimizedImage
                     src="/assets/Sofa And chair.webp"
                     alt="Sofa Polishing Service in Dadar"
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-contain p-4"
                   />
-                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    ⚡ Popular
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    POPULAR
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Sofa & Chair Polish</h3>
-                  <p className="text-gray-600 text-sm mb-4">Complete sofa set polishing, scratch removal, and restoration</p>
-                  <div className="flex items-baseline justify-between mb-4">
-                    <div>
-                      <span className="text-3xl font-bold text-amber-600">₹999</span>
-                      <span className="text-gray-500 text-sm ml-2">Starting</span>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Sofa & Chair Polish</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Complete sofa set polishing, scratch removal, and restoration</p>
+                  
+                  <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-4 mb-4">
+                    <div className="flex items-baseline justify-center gap-2 mb-1">
+                      <span className="text-4xl font-bold text-amber-600">₹999</span>
+                      <span className="text-gray-500 text-sm">onwards</span>
                     </div>
-                    <div className="text-right">
-                      <p className="text-xs text-gray-500 line-through">₹1499</p>
-                      <p className="text-sm font-semibold text-green-600">Save 33%</p>
+                    <div className="text-center">
+                      <span className="text-xs text-gray-500 line-through mr-2">₹1499</span>
+                      <span className="text-sm font-semibold text-green-600">Save 33%</span>
                     </div>
                   </div>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      3-Seater Sofa Polishing
+
+                  <ul className="space-y-2.5 mb-6">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2.5 flex-shrink-0" />
+                      <span className="font-medium">3-Seater Sofa Polishing</span>
                     </li>
-                    <li className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      Scratch & Stain Removal
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2.5 flex-shrink-0" />
+                      <span className="font-medium">Scratch & Stain Removal</span>
                     </li>
-                    <li className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      PU Polish Application
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2.5 flex-shrink-0" />
+                      <span className="font-medium">PU Polish Application</span>
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I want to book Sofa Polish service in Dadar for ₹999"
+                    href="https://wa.me/918828709945?text=Hi, I want to book Sofa Polish service in Dadar for ₹999"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3.5 rounded-xl font-bold hover:from-green-600 hover:to-green-700 transition-colors duration-200 shadow-lg text-base"
                   >
-                    📱 Book Now on WhatsApp
+                    Book Now on WhatsApp
                   </a>
                 </div>
               </div>
@@ -366,53 +351,55 @@ const DadarLocation = () => {
 
             {/* Service Card 2 - Dining Table */}
             <FadeIn delay={200}>
-              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden border-2 border-amber-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                   <OptimizedImage
                     src="/assets/Dining-polish.webp"
                     alt="Dining Table Polish Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-4"
                   />
-                  <div className="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    ⭐ Trending
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    TRENDING
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Dining Table Polish</h3>
-                  <p className="text-gray-600 text-sm mb-4">Complete dining set polishing with chair refinishing</p>
-                  <div className="flex items-baseline justify-between mb-4">
-                    <div>
-                      <span className="text-3xl font-bold text-amber-600">₹799</span>
-                      <span className="text-gray-500 text-sm ml-2">Starting</span>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Dining Table Polish</h3>
+                  <p className="text-gray-600 text-sm mb-4 text-center">Complete dining set polishing with chair refinishing</p>
+                  
+                  <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-4 mb-4">
+                    <div className="flex items-baseline justify-center gap-2 mb-1">
+                      <span className="text-4xl font-bold text-amber-600">₹799</span>
+                      <span className="text-gray-500 text-sm">onwards</span>
                     </div>
-                    <div className="text-right">
-                      <p className="text-xs text-gray-500 line-through">₹1199</p>
-                      <p className="text-sm font-semibold text-green-600">Save 33%</p>
+                    <div className="text-center">
+                      <span className="text-xs text-gray-500 line-through mr-2">₹1199</span>
+                      <span className="text-sm font-semibold text-green-600">Save 33%</span>
                     </div>
                   </div>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      6-Seater Dining Table
+
+                  <ul className="space-y-2.5 mb-6">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2.5 flex-shrink-0" />
+                      <span className="font-medium">6-Seater Dining Table</span>
                     </li>
-                    <li className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      Teak/Sheesham Polish
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2.5 flex-shrink-0" />
+                      <span className="font-medium">Teak/Sheesham Polish</span>
                     </li>
-                    <li className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      Melamine Finish Option
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2.5 flex-shrink-0" />
+                      <span className="font-medium">Melamine Finish Option</span>
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I want to book Dining Table Polish service in Dadar for ₹799"
+                    href="https://wa.me/918828709945?text=Hi, I want to book Dining Table Polish service in Dadar for ₹799"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3.5 rounded-xl font-bold hover:from-green-600 hover:to-green-700 transition-colors duration-200 shadow-lg text-base"
                   >
-                    📱 Book Now on WhatsApp
+                    Book Now on WhatsApp
                   </a>
                 </div>
               </div>
@@ -420,14 +407,14 @@ const DadarLocation = () => {
 
             {/* Service Card 3 - Bed Polish */}
             <FadeIn delay={300}>
-              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden transform  border-2 border-amber-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                   <OptimizedImage
                     src="/assets/Bed-polish.webp"
                     alt="Bed Polishing Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-4"
                   />
                 </div>
                 <div className="p-6">
@@ -458,12 +445,12 @@ const DadarLocation = () => {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I want to book Bed Polish service in Dadar for ₹699"
+                    href="https://wa.me/918828709945?text=Hi, I want to book Bed Polish service in Dadar for ₹699"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200  shadow-lg"
                   >
-                    📱 Book Now on WhatsApp
+                    Book Now on WhatsApp
                   </a>
                 </div>
               </div>
@@ -471,17 +458,17 @@ const DadarLocation = () => {
 
             {/* Service Card 4 - Wardrobe */}
             <FadeIn delay={100}>
-              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden transform  border-2 border-amber-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                   <OptimizedImage
                     src="/assets/4-Door-Wardrobe.webp"
                     alt="Wardrobe Polishing Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-4"
                   />
-                  <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    💎 Premium
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    PREMIUM
                   </div>
                 </div>
                 <div className="p-6">
@@ -512,12 +499,12 @@ const DadarLocation = () => {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I want to book Wardrobe Polish service in Dadar for ₹499 per door"
+                    href="https://wa.me/918828709945?text=Hi, I want to book Wardrobe Polish service in Dadar for ₹499 per door"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200  shadow-lg"
                   >
-                    📱 Book Now on WhatsApp
+                    Book Now on WhatsApp
                   </a>
                 </div>
               </div>
@@ -525,14 +512,14 @@ const DadarLocation = () => {
 
             {/* Service Card 5 - Door Polish */}
             <FadeIn delay={200}>
-              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden transform  border-2 border-amber-100">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                   <OptimizedImage
                     src="/assets/Door-polish.webp"
                     alt="Door Polishing Service in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-4"
                   />
                 </div>
                 <div className="p-6">
@@ -563,12 +550,12 @@ const DadarLocation = () => {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I want to book Door Polish service in Dadar for ₹349 per door"
+                    href="https://wa.me/918828709945?text=Hi, I want to book Door Polish service in Dadar for ₹349 per door"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200  shadow-lg"
                   >
-                    📱 Book Now on WhatsApp
+                    Book Now on WhatsApp
                   </a>
                 </div>
               </div>
@@ -576,17 +563,17 @@ const DadarLocation = () => {
 
             {/* Service Card 6 - Complete Home */}
             <FadeIn delay={300}>
-              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border-2 border-amber-400">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden transform  border-2 border-amber-400">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
                   <OptimizedImage
                     src="/assets/Furntiure Polishing Guide For Mumbai.webp"
                     alt="Complete Home Furniture Polish in Dadar"
                     width={400}
                     height={300}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-4"
                   />
-                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                    🔥 Best Deal
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    BEST DEAL
                   </div>
                 </div>
                 <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50">
@@ -617,12 +604,12 @@ const DadarLocation = () => {
                     </li>
                   </ul>
                   <a
-                    href="https://wa.me/917897995178?text=Hi, I want to book Complete Home Package in Dadar at ₹249 per item"
+                    href="https://wa.me/918828709945?text=Hi, I want to book Complete Home Package in Dadar at ₹249 per item"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="block w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-200  shadow-lg"
                   >
-                    📱 Get Free Quote on WhatsApp
+                    Get Free Quote on WhatsApp
                   </a>
                 </div>
               </div>
@@ -633,21 +620,21 @@ const DadarLocation = () => {
           <FadeIn delay={400}>
             <div className="mt-12 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-8 text-center text-white shadow-2xl">
               <div className="flex items-center justify-center space-x-2 mb-3">
-                <Sparkles className="w-6 h-6 animate-bounce" />
-                <h3 className="text-2xl md:text-3xl font-bold">🎉 Limited Time Offer!</h3>
-                <Sparkles className="w-6 h-6 animate-bounce" />
+                <Sparkles className="w-6 h-6" />
+                <h3 className="text-2xl md:text-3xl font-bold">Limited Time Offer!</h3>
+                <Sparkles className="w-6 h-6" />
               </div>
               <p className="text-lg md:text-xl mb-4">
-                Book Any 3 Services & Get <span className="font-bold text-2xl">15% Extra OFF</span>
+                Book Any 3 Services & Get <span className="font-bold text-2xl">10% Extra OFF</span>
               </p>
               <p className="text-sm opacity-90 mb-6">
-                ⏰ Offer Valid Until: 31st December 2025 • First 50 Bookings Only
+                Offer Valid Until: 31st December 2025 • First 50 Bookings Only
               </p>
               <a
-                href="https://wa.me/917897995178?text=Hi, I want to book 3 services and get 15% extra discount in Dadar"
+                href="https://wa.me/918828709945?text=Hi, I want to book 3 services and get 10% extra discount in Dadar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-200  shadow-lg"
               >
                 <MessageCircle size={24} />
                 <span>Claim Offer Now on WhatsApp</span>
@@ -731,9 +718,9 @@ const DadarLocation = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
             {services.map((service, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="group bg-white p-4 md:p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-amber-200 hover:-translate-y-1">
+                <div className="group bg-white p-4 md:p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-amber-100 hover:border-amber-200 ">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-amber-600 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-amber-600 flex-shrink-0 mt-0.5  transition-transform" />
                     <h3 className="text-base md:text-lg font-semibold text-gray-900 leading-snug group-hover:text-amber-600 transition-colors">{service}</h3>
                   </div>
                 </div>
@@ -743,7 +730,7 @@ const DadarLocation = () => {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center space-x-2 bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+              className="inline-flex items-center space-x-2 bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200  shadow-lg font-semibold"
             >
               <span>View All Services</span>
               <ArrowRight size={20} />
@@ -829,7 +816,7 @@ const DadarLocation = () => {
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm md:text-base">Teak Wood Furniture Polish - Premium quality finish for teak furniture</span>
+                      <span className="text-sm md:text-base">Teak Wood Furniture Polish - PREMIUM quality finish for teak furniture</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -935,8 +922,8 @@ const DadarLocation = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact</h3>
-                      <a href="tel:+917897995178" className="text-amber-600 font-semibold hover:text-amber-700 text-lg">
-                        +91 7897995178
+                      <a href="tel:+918828709945" className="text-amber-600 font-semibold hover:text-amber-700 text-lg">
+                        +91 9967834585
                       </a>
                     </div>
                     <div>
@@ -948,7 +935,7 @@ const DadarLocation = () => {
                         href="https://maps.google.com/?q=Shop+No.13,+Nikam+wadi,+Bhavani+Shankar+Road+Near+Cosmos+Plaza,+Dadar+West,+Mumbai,+Maharashtra+400025"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+                        className="inline-flex items-center space-x-2 bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-all duration-200  shadow-lg font-semibold"
                       >
                         <MapPin size={20} />
                         <span>Get Directions</span>
@@ -959,7 +946,7 @@ const DadarLocation = () => {
                 {/* Right - Map */}
                 <div className="h-full min-h-[400px] bg-gray-200">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.0!2d72.8436!3d19.0176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAxJzAzLjQiTiA3MsKwNTAnMzcuMCJF!5e0!3m2!1sen!2sin!4v1764016149029!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.143114956721!2d72.833927!3d19.0134143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf9360626417%3A0x5d3faf15321bb243!2sA1%20Furniture%20Polish%20Service!5e0!3m2!1sen!2sin!4v1765633222945!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -987,17 +974,17 @@ const DadarLocation = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+917897995178"
-              className="flex items-center justify-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+              href="tel:+918828709945"
+              className="flex items-center justify-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200  shadow-lg font-semibold"
             >
               <Phone size={20} />
-              <span>Call: +91 7897995178</span>
+              <span>Call: +91 9967834585</span>
             </a>
             <a
-              href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Dadar"
+              href="https://wa.me/918828709945?text=Hi, I need furniture polishing service in Dadar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
+              className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-200  shadow-lg font-semibold"
             >
               <MessageCircle size={20} />
               <span>WhatsApp Us</span>
@@ -1006,30 +993,7 @@ const DadarLocation = () => {
         </div>
       </section>
 
-      {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-amber-200 shadow-2xl z-50 md:hidden">
-        <div className="grid grid-cols-2 gap-2 p-3">
-          <a
-            href="tel:+917897995178"
-            className="flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-lg font-bold shadow-lg active:scale-95 transition-transform"
-          >
-            <Phone size={20} />
-            <span>Call Now</span>
-          </a>
-          <a
-            href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Dadar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-lg font-bold shadow-lg active:scale-95 transition-transform"
-          >
-            <MessageCircle size={20} />
-            <span>WhatsApp</span>
-          </a>
-        </div>
-        <div className="bg-amber-50 py-2 px-4 text-center text-sm text-gray-700">
-          <span className="font-semibold">⚡ Limited Time:</span> Book Now & Get <span className="text-amber-600 font-bold">15% OFF</span>
-        </div>
-      </div>
+      {/* Mobile Sticky CTA - Removed as per requirements */}
     </>
   );
 };
