@@ -56,7 +56,7 @@ class BlogContentGenerator {
       const { data: frontMatter, content: markdownContent } = matter(content);
       
       const slug = this.generateSlug(path.basename(filePath, '.md'));
-      const htmlContent = marked(markdownContent);
+      const htmlContent = await marked(markdownContent);
       
       // Generate JS file
       const jsFileName = `${slug}.js`;
