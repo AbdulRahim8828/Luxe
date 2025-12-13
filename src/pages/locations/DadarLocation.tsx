@@ -381,7 +381,7 @@ const DadarLocation = () => {
             {/* Service Card 1 - Sofa Polish */}
             <FadeIn delay={100}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
+                <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
                     src="/assets/Sofa And chair.webp"
                     alt="Sofa Polishing Service in Dadar"
@@ -436,7 +436,7 @@ const DadarLocation = () => {
             {/* Service Card 2 - Dining Table */}
             <FadeIn delay={200}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
+                <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
                     src="/assets/Dining-polish.webp"
                     alt="Dining Table Polish Service in Dadar"
@@ -491,7 +491,7 @@ const DadarLocation = () => {
             {/* Service Card 3 - Bed Polish */}
             <FadeIn delay={300}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
+                <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
                     src="/assets/Bed-polish.webp"
                     alt="Bed Polishing Service in Dadar"
@@ -541,7 +541,7 @@ const DadarLocation = () => {
             {/* Service Card 4 - Wardrobe */}
             <FadeIn delay={100}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
+                <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
                     src="/assets/4-Door-Wardrobe.webp"
                     alt="Wardrobe Polishing Service in Dadar"
@@ -594,7 +594,7 @@ const DadarLocation = () => {
             {/* Service Card 5 - Door Polish */}
             <FadeIn delay={200}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
+                <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
                     src="/assets/Door-polish.webp"
                     alt="Door Polishing Service in Dadar"
@@ -644,7 +644,7 @@ const DadarLocation = () => {
             {/* Service Card 6 - Complete Home */}
             <FadeIn delay={300}>
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-2 border-amber-300">
-                <div className="relative h-48 md:h-52 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4">
+                <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
                     src="/assets/consultation-booking.webp"
                     alt="Complete Home Furniture Polish in Dadar"
