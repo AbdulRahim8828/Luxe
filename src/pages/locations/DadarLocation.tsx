@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Clock, Star, CheckCircle, ArrowRight, Shield, Award, Users, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, Clock, Star, CheckCircle, ArrowRight, Shield, Award, Users, MessageCircle, Sparkles } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
 import JsonLd from '../../components/JsonLd';
 import { FadeIn } from '../../components/ScrollAnimations';
@@ -33,6 +33,7 @@ const DadarLocation = () => {
     'Parel',
     'Lower Parel',
     'Matunga East',
+    'Matunga West',
     'Worli',
     'Byculla',
     'Fort',
@@ -42,7 +43,18 @@ const DadarLocation = () => {
     'Prabhadevi',
     'Cosmos Plaza',
     'Bhavani Shankar Road',
-    'Tilak Bridge Dadar'
+    'Tilak Bridge Dadar',
+    'Tardeo',
+    'Mumbai Central',
+    'Charni Road',
+    'Marine Lines',
+    'Breach Candy',
+    'Malabar Hill',
+    'Girgaon',
+    'Kalbadevi',
+    'Crawford Market',
+    'CST',
+    'Ballard Estate'
   ];
 
   const testimonials = [
@@ -92,9 +104,10 @@ const DadarLocation = () => {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'A1 Furniture Polish Service - Dadar',
+    'name': 'A1 Furniture Polish Service - Dadar to Colaba',
     'image': 'https://a1furniturepolish.in/assets/Sofa And chair.webp',
-    'description': 'Professional furniture polishing and restoration services in Dadar, Mumbai. Expert wooden furniture polish, sofa restoration, and antique furniture restoration. Located near Cosmos Plaza, Bhavani Shankar Road.',
+    'description': 'Professional furniture polishing and restoration services covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba, and South Mumbai. Expert wooden furniture polish, sofa restoration, and antique furniture restoration. Located at Shop No.13 near Cosmos Plaza, Bhavani Shankar Road, Dadar West.',
+    'priceRange': '₹249-₹999',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Shop No.13, Nikam wadi, Bhavani Shankar Road Near Cosmos Plaza',
@@ -109,12 +122,37 @@ const DadarLocation = () => {
       'longitude': 72.8436
     },
     'telephone': '+917897995178',
-    'priceRange': '₹₹',
     'openingHours': 'Mo-Su 00:00-23:59',
-    'areaServed': {
-      '@type': 'City',
-      'name': 'Dadar, Mumbai'
-    },
+    'areaServed': [
+      {
+        '@type': 'City',
+        'name': 'Dadar, Mumbai'
+      },
+      {
+        '@type': 'City',
+        'name': 'Parel, Mumbai'
+      },
+      {
+        '@type': 'City',
+        'name': 'Lower Parel, Mumbai'
+      },
+      {
+        '@type': 'City',
+        'name': 'Worli, Mumbai'
+      },
+      {
+        '@type': 'City',
+        'name': 'Byculla, Mumbai'
+      },
+      {
+        '@type': 'City',
+        'name': 'Fort, Mumbai'
+      },
+      {
+        '@type': 'City',
+        'name': 'Colaba, Mumbai'
+      }
+    ],
     'aggregateRating': {
       '@type': 'AggregateRating',
       'ratingValue': '4.9',
@@ -125,9 +163,9 @@ const DadarLocation = () => {
   return (
     <>
       <SEOHead
-        title="⭐ Best Furniture Polish Dadar - 24/7 Service Near Cosmos Plaza | Best Wood Polish Shop No.13"
-        description="Professional furniture polishing services in Dadar West & East. Expert wooden furniture polish, sofa restoration near Cosmos Plaza, Bhavani Shankar Road. Shop No.13, Nikam wadi - 24/7 service available. Call +91 8828709945"
-        keywords="furniture polish dadar, furniture polishing dadar west, furniture polishing dadar east, wooden furniture polish dadar, sofa polishing dadar, furniture restoration dadar mumbai, table polishing dadar, bed polishing dadar, chair polishing dadar, cabinet polishing dadar, wardrobe polishing dadar, door polishing dadar, antique furniture restoration dadar, furniture repair dadar, scratch repair dadar, furniture refinishing dadar, teak wood polishing dadar, sheesham wood polishing dadar, furniture polish near cosmos plaza, best furniture polish dadar, affordable furniture polishing dadar, furniture polishing service dadar, home furniture polish dadar, office furniture polish dadar, commercial furniture polishing dadar, furniture polish bhavani shankar road, furniture polish shivaji park, furniture polishing mahim, furniture polishing parel, furniture polishing lower parel, furniture polishing matunga, furniture polishing worli, 24 hour furniture polish dadar, emergency furniture polishing dadar, same day furniture polish dadar, quick furniture polishing dadar, furniture polish dadar station, furniture polish near dadar"
+        title="⭐ Best Furniture Polish Dadar to Colaba | 24/7 Near Cosmos Plaza | ₹249 Starting - Shop No.13"
+        description="Professional furniture polishing services from Dadar to Colaba. Expert wooden furniture polish, sofa restoration covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba. Shop No.13 Cosmos Plaza - Starting ₹249. Call +91 7897995178"
+        keywords="furniture polish dadar to colaba, furniture polishing dadar parel worli, furniture polishing south mumbai, wooden furniture polish dadar, sofa polishing dadar to fort, furniture restoration dadar mumbai, table polishing dadar parel, bed polishing dadar, furniture polish near cosmos plaza, best furniture polish dadar, furniture polishing lower parel, furniture polishing worli, furniture polishing byculla, furniture polishing fort mumbai, furniture polishing colaba, antique furniture restoration south mumbai, furniture repair dadar, scratch repair dadar to colaba, furniture refinishing mumbai, teak wood polishing dadar, sheesham wood polishing south mumbai, furniture polish bhavani shankar road, furniture polish shivaji park, furniture polishing mahim, furniture polishing matunga, 24 hour furniture polish dadar, emergency furniture polishing south mumbai, same day furniture polish dadar to colaba, furniture polish dadar station, furniture polish near dadar, affordable furniture polishing mumbai, home furniture polish dadar, office furniture polish south mumbai, commercial furniture polishing mumbai central"
         ogImage="/assets/Sofa And chair.webp"
         canonical={getCanonicalURL('/dadar')}
       />
@@ -135,59 +173,96 @@ const DadarLocation = () => {
       <StickyWhatsApp />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 py-12 md:py-20 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeIn>
               <div>
-                <div className="flex items-center space-x-2 mb-4">
-                  <MapPin className="w-6 h-6 text-amber-600" />
-                  <div className="flex flex-col">
-                    <span className="text-amber-600 font-semibold">Dadar, Mumbai</span>
-                    <span className="text-sm text-gray-600">Shop No.13, Nikam wadi, Bhavani Shankar Road Near Cosmos Plaza, Dadar West - 400025</span>
-                  </div>
+                {/* Location Badge */}
+                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full mb-4 shadow-lg">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm font-semibold">Serving Dadar to Colaba</span>
                 </div>
-                <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Professional <span className="text-amber-600">Furniture Polish</span> Services in Dadar
+                
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  Best <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Furniture Polish</span> in Dadar
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                  Transform your furniture with A1 Furniture Polish - Dadar's most trusted experts in wooden furniture polishing, sofa restoration, table polishing, bed polishing, and complete furniture refinishing. We specialize in teak wood polish, sheesham wood polish, antique restoration, and scratch repair. Serving Dadar West, Dadar East, Shivaji Park, Mahim, Parel, Lower Parel, Matunga, Cosmos Plaza area, and all nearby areas with 24/7 emergency service.
-                </p>
-                <div className="flex flex-wrap gap-2 md:gap-4 mb-6 md:mb-8">
-                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">24/7 Available</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">Same-Day Service</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">Free Estimates</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5 md:space-x-2 bg-white px-3 md:px-4 py-2 rounded-lg shadow-sm">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-xs md:text-sm font-medium whitespace-nowrap">10+ Years Experience</span>
+                
+                {/* Pricing Highlight */}
+                <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl mb-6 border-2 border-amber-200">
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                      <p className="text-gray-600 text-sm mb-1">Starting from</p>
+                      <p className="text-4xl md:text-5xl font-bold text-amber-600">₹249</p>
+                      <p className="text-gray-500 text-sm">Per furniture item</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg font-semibold mb-2">
+                        ⚡ Book in 30 Seconds
+                      </div>
+                      <p className="text-xs text-gray-600">Via WhatsApp • No OTP • No App</p>
+                    </div>
                   </div>
                 </div>
+
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <strong>Transform your furniture</strong> with Mumbai's most trusted experts in wooden furniture polishing, sofa restoration, and complete furniture refinishing. Covering <strong>Dadar, Parel, Lower Parel, Worli, Byculla, Fort, and Colaba</strong> with 24/7 emergency service.
+                </p>
+                
+                {/* Trust Badges */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                  <div className="bg-white p-3 rounded-lg shadow-md text-center">
+                    <p className="text-2xl font-bold text-amber-600">5000+</p>
+                    <p className="text-xs text-gray-600">Happy Customers</p>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-md text-center">
+                    <p className="text-2xl font-bold text-amber-600">15+</p>
+                    <p className="text-xs text-gray-600">Years Experience</p>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-md text-center">
+                    <p className="text-2xl font-bold text-amber-600">24/7</p>
+                    <p className="text-xs text-gray-600">Service Available</p>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-md text-center">
+                    <p className="text-2xl font-bold text-amber-600">4.9★</p>
+                    <p className="text-xs text-gray-600">Google Rating</p>
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="tel:+917897995178"
-                    className="flex items-center justify-center space-x-2 bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
-                  >
-                    <Phone size={20} />
-                    <span className="font-semibold">Call Now</span>
-                  </a>
                   <a
                     href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Dadar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-2xl font-bold text-lg"
                   >
-                    <MessageCircle size={20} />
-                    <span className="font-semibold">WhatsApp Us</span>
+                    <MessageCircle size={24} />
+                    <span>Book on WhatsApp</span>
                   </a>
+                  <a
+                    href="tel:+917897995178"
+                    className="flex-1 flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-200 transform hover:scale-105 shadow-2xl font-bold text-lg"
+                  >
+                    <Phone size={24} />
+                    <span>Call: 7897995178</span>
+                  </a>
+                </div>
+
+                {/* Additional Info */}
+                <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <span>Free Inspection</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <span>1 Year Warranty</span>
+                  </div>
                 </div>
               </div>
             </FadeIn>
@@ -217,6 +292,369 @@ const DadarLocation = () => {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Service Cards Section with Pricing */}
+      <section className="py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <span className="text-amber-600">Professional Furniture Polish</span> Services & Pricing
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Book instantly via WhatsApp • 24/7 Service • Free Home Inspection • Same Day Service Available
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Service Card 1 - Sofa Polish */}
+            <FadeIn delay={100}>
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="relative h-48 overflow-hidden">
+                  <OptimizedImage
+                    src="/assets/Sofa And chair.webp"
+                    alt="Sofa Polishing Service in Dadar"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    ⚡ Popular
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Sofa & Chair Polish</h3>
+                  <p className="text-gray-600 text-sm mb-4">Complete sofa set polishing, scratch removal, and restoration</p>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <div>
+                      <span className="text-3xl font-bold text-amber-600">₹999</span>
+                      <span className="text-gray-500 text-sm ml-2">Starting</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 line-through">₹1499</p>
+                      <p className="text-sm font-semibold text-green-600">Save 33%</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      3-Seater Sofa Polishing
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Scratch & Stain Removal
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      PU Polish Application
+                    </li>
+                  </ul>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I want to book Sofa Polish service in Dadar for ₹999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    📱 Book Now on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Service Card 2 - Dining Table */}
+            <FadeIn delay={200}>
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="relative h-48 overflow-hidden">
+                  <OptimizedImage
+                    src="/assets/Dining-polish.webp"
+                    alt="Dining Table Polish Service in Dadar"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    ⭐ Trending
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Dining Table Polish</h3>
+                  <p className="text-gray-600 text-sm mb-4">Complete dining set polishing with chair refinishing</p>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <div>
+                      <span className="text-3xl font-bold text-amber-600">₹799</span>
+                      <span className="text-gray-500 text-sm ml-2">Starting</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 line-through">₹1199</p>
+                      <p className="text-sm font-semibold text-green-600">Save 33%</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      6-Seater Dining Table
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Teak/Sheesham Polish
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Melamine Finish Option
+                    </li>
+                  </ul>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I want to book Dining Table Polish service in Dadar for ₹799"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    📱 Book Now on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Service Card 3 - Bed Polish */}
+            <FadeIn delay={300}>
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="relative h-48 overflow-hidden">
+                  <OptimizedImage
+                    src="/assets/Bed-polish.webp"
+                    alt="Bed Polishing Service in Dadar"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Bed Polish & Repair</h3>
+                  <p className="text-gray-600 text-sm mb-4">Double bed polishing with side tables included</p>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <div>
+                      <span className="text-3xl font-bold text-amber-600">₹699</span>
+                      <span className="text-gray-500 text-sm ml-2">Starting</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 line-through">₹999</p>
+                      <p className="text-sm font-semibold text-green-600">Save 30%</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      King/Queen Size Bed
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Headboard Polishing
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Minor Repairs Included
+                    </li>
+                  </ul>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I want to book Bed Polish service in Dadar for ₹699"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    📱 Book Now on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Service Card 4 - Wardrobe */}
+            <FadeIn delay={100}>
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="relative h-48 overflow-hidden">
+                  <OptimizedImage
+                    src="/assets/4-Door-Wardrobe.webp"
+                    alt="Wardrobe Polishing Service in Dadar"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    💎 Premium
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Wardrobe Polish</h3>
+                  <p className="text-gray-600 text-sm mb-4">Complete wardrobe inside-outside polishing</p>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <div>
+                      <span className="text-3xl font-bold text-amber-600">₹499</span>
+                      <span className="text-gray-500 text-sm ml-2">Per Door</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 line-through">₹699</p>
+                      <p className="text-sm font-semibold text-green-600">Save 29%</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Interior & Exterior Polish
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Handle Cleaning Included
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Scratch Protection
+                    </li>
+                  </ul>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I want to book Wardrobe Polish service in Dadar for ₹499 per door"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    📱 Book Now on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Service Card 5 - Door Polish */}
+            <FadeIn delay={200}>
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="relative h-48 overflow-hidden">
+                  <OptimizedImage
+                    src="/assets/Door-polish.webp"
+                    alt="Door Polishing Service in Dadar"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Door Polish</h3>
+                  <p className="text-gray-600 text-sm mb-4">Wooden door polishing with frame refinishing</p>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <div>
+                      <span className="text-3xl font-bold text-amber-600">₹349</span>
+                      <span className="text-gray-500 text-sm ml-2">Per Door</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 line-through">₹499</p>
+                      <p className="text-sm font-semibold text-green-600">Save 30%</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Both Sides Polishing
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Frame Polish Included
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Quick 2-Hour Service
+                    </li>
+                  </ul>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I want to book Door Polish service in Dadar for ₹349 per door"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    📱 Book Now on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Service Card 6 - Complete Home */}
+            <FadeIn delay={300}>
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border-2 border-amber-400">
+                <div className="relative h-48 overflow-hidden">
+                  <OptimizedImage
+                    src="/assets/Furntiure Polishing Guide For Mumbai.webp"
+                    alt="Complete Home Furniture Polish in Dadar"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
+                    🔥 Best Deal
+                  </div>
+                </div>
+                <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Complete Home Package</h3>
+                  <p className="text-gray-600 text-sm mb-4">Entire home furniture polishing in one go</p>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <div>
+                      <span className="text-3xl font-bold text-amber-600">₹249</span>
+                      <span className="text-gray-500 text-sm ml-2">Per Item</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 line-through">₹399</p>
+                      <p className="text-sm font-semibold text-green-600">Save 38%</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      10+ Items Package Deal
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      Free Home Inspection
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      1 Year Polish Warranty
+                    </li>
+                  </ul>
+                  <a
+                    href="https://wa.me/917897995178?text=Hi, I want to book Complete Home Package in Dadar at ₹249 per item"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  >
+                    📱 Get Free Quote on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* Special Offer Banner */}
+          <FadeIn delay={400}>
+            <div className="mt-12 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+              <div className="flex items-center justify-center space-x-2 mb-3">
+                <Sparkles className="w-6 h-6 animate-bounce" />
+                <h3 className="text-2xl md:text-3xl font-bold">🎉 Limited Time Offer!</h3>
+                <Sparkles className="w-6 h-6 animate-bounce" />
+              </div>
+              <p className="text-lg md:text-xl mb-4">
+                Book Any 3 Services & Get <span className="font-bold text-2xl">15% Extra OFF</span>
+              </p>
+              <p className="text-sm opacity-90 mb-6">
+                ⏰ Offer Valid Until: 31st December 2025 • First 50 Bookings Only
+              </p>
+              <a
+                href="https://wa.me/917897995178?text=Hi, I want to book 3 services and get 15% extra discount in Dadar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                <MessageCircle size={24} />
+                <span>Claim Offer Now on WhatsApp</span>
+                <ArrowRight size={20} />
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -567,6 +1005,31 @@ const DadarLocation = () => {
           </div>
         </div>
       </section>
+
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-amber-200 shadow-2xl z-50 md:hidden">
+        <div className="grid grid-cols-2 gap-2 p-3">
+          <a
+            href="tel:+917897995178"
+            className="flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-lg font-bold shadow-lg active:scale-95 transition-transform"
+          >
+            <Phone size={20} />
+            <span>Call Now</span>
+          </a>
+          <a
+            href="https://wa.me/917897995178?text=Hi, I need furniture polishing service in Dadar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-lg font-bold shadow-lg active:scale-95 transition-transform"
+          >
+            <MessageCircle size={20} />
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <div className="bg-amber-50 py-2 px-4 text-center text-sm text-gray-700">
+          <span className="font-semibold">⚡ Limited Time:</span> Book Now & Get <span className="text-amber-600 font-bold">15% OFF</span>
+        </div>
+      </div>
     </>
   );
 };
