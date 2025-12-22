@@ -185,14 +185,6 @@ export const servicePageData: ServiceData[] = [
         estimatedTime: '4 hrs'
       },
       { 
-        id: 'bed-storage',
-        name: 'Double Bed with Storage', 
-        price: 4449,
-        rating: 4.8,
-        reviewCount: 234,
-        estimatedTime: '4.5 hrs'
-      },
-      { 
         id: 'bed-sofacumbed',
         name: 'Sofa cum Bed', 
         price: 4799,
@@ -782,6 +774,43 @@ export const servicePageData: ServiceData[] = [
     trustBadges: [
       { icon: 'shield-check', text: 'Background verified professionals' },
       { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'antique-carving-furniture',
+    name: 'Antique / Carving Furniture',
+    category: 'furniture-polish',
+    rating: 4.9,
+    reviewCount: 456,
+    duration: '~4-6 hrs',
+    features: ['Antique Wood Restoration', 'Intricate Carving Preservation', 'Traditional Finishing', 'Detail Enhancement'],
+    image: '/assets/Antique Furniture.webp',
+    options: [
+      { id: 'antique-small', name: 'Small Antique Furniture', price: 2449, rating: 4.9, reviewCount: 156, estimatedTime: '4 hrs' },
+      { id: 'antique-medium', name: 'Medium Antique Furniture', price: 2999, rating: 4.9, reviewCount: 189, estimatedTime: '5 hrs' },
+      { id: 'antique-large', name: 'Large Antique Furniture', price: 3799, rating: 4.8, reviewCount: 111, estimatedTime: '6 hrs' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Material & labour cost', 'Antique wood restoration', 'Carving preservation', 'Traditional polish finish', '6 months warranty on polish'],
+    materials: ['/assets/select-wood-polish-shade.webp', '/assets/Cleaning & Sanding.webp', '/assets/filling-gaps-polish-application.webp', '/assets/drying-finishing.webp'],
+    processSteps: [
+      { step: 1, title: 'Consultation & Assessment', description: 'Expert assessment of antique furniture condition and restoration requirements.', image: '/assets/consultation-booking.webp' },
+      { step: 2, title: 'Gentle Cleaning & Preparation', description: 'Careful cleaning of antique wood and intricate carvings with specialized tools.', image: '/assets/Cleaning & Sanding.webp' },
+      { step: 3, title: 'Restoration Work', description: 'Repair damaged areas, fill cracks, and restore original beauty of carvings.', image: '/assets/filling-gaps-polish-application.webp' },
+      { step: 4, title: 'Traditional Polish Application', description: 'Apply authentic traditional polish that enhances antique character.', image: '/assets/select-wood-polish-shade.webp' },
+      { step: 5, title: 'Detail Enhancement', description: 'Highlight intricate carvings and restore original luster with premium finish.', image: '/assets/drying-finishing.webp' },
+      { step: 6, title: 'Final Inspection', description: 'Thorough quality check ensuring antique furniture restored to its former glory.', image: '/assets/wooden furniture .webp' }
+    ],
+    faqs: [
+      { question: 'How long does antique furniture restoration take?', answer: 'Restoration time varies from 4-6 hours depending on the size and condition of the antique piece. We ensure careful, unhurried work.' },
+      { question: 'Do you work with all types of antique wood?', answer: 'Yes, we have expertise in restoring various antique wood types including teak, rosewood, sheesham, and mahogany.' },
+      { question: 'Will the carving details be preserved?', answer: 'Absolutely! We use specialized techniques and tools to carefully preserve and enhance all intricate carving details.' },
+      { question: 'What type of polish do you use for antique furniture?', answer: 'We use traditional polish methods and premium materials suitable for antique wood that enhance its natural character and patina.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' },
+      { icon: 'medal', text: 'Antique restoration experts' }
     ]
   },
   {
