@@ -42,70 +42,70 @@ const About = () => {
       />
 
       {/* Luxury Hero Section */}
-      <section className="relative py-20 md:py-32 luxe-bg-secondary overflow-hidden">
+      <section className="relative py-12 md:py-16 luxe-bg-secondary overflow-hidden">
         {/* Luxury Decorative Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-yellow-600/15 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-gradient-to-br from-yellow-600/15 to-transparent rounded-full blur-2xl"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <FadeIn>
               <div>
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-8">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                  <span className="text-yellow-400 text-sm font-medium tracking-wider uppercase">About LUXE</span>
+                <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-6">
+                  <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></div>
+                  <span className="text-yellow-400 text-xs font-medium tracking-wider uppercase">About LUXE</span>
                 </div>
-                <h1 className="luxe-heading-xl text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: 'Playfair Display' }}>
                   Mumbai's Most <span className="text-yellow-400 luxe-shimmer">Elite</span> Furniture Restoration Experts
                 </h1>
-                <p className="luxe-body-lg text-gray-300 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 mb-4 leading-relaxed">
                   For over a decade, LUXE Premium Furniture Services has been Mumbai's most distinguished name in luxury furniture polishing and restoration. We have transformed thousands of premium furniture pieces across Mumbai's finest properties, bringing them back to their original magnificence.
                 </p>
-                <p className="luxe-body-lg text-gray-300 mb-8 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 mb-6 leading-relaxed">
                   Our team of master craftsmen specializes in luxury wooden furniture restoration, antique preservation, and premium commercial furniture maintenance. We serve discerning residential and commercial clients across all premium areas of Mumbai with uncompromising dedication to excellence.
                 </p>
                 
                 {/* Premium Stats */}
-                <div className="grid grid-cols-3 gap-4 md:gap-6 mt-8">
-                  <div className="text-center p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                    <p className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 luxe-heading">10+</p>
-                    <p className="luxe-body-sm text-gray-300 font-medium">Years Excellence</p>
+                <div className="grid grid-cols-3 gap-3 md:gap-4 mt-6">
+                  <div className="text-center p-4 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                    <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">10+</p>
+                    <p className="text-xs text-gray-300 font-medium">Years Excellence</p>
                   </div>
-                  <div className="text-center p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                    <p className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 luxe-heading">500+</p>
-                    <p className="luxe-body-sm text-gray-300 font-medium">Premium Clients</p>
+                  <div className="text-center p-4 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                    <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">500+</p>
+                    <p className="text-xs text-gray-300 font-medium">Premium Clients</p>
                   </div>
-                  <div className="text-center p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                    <p className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 luxe-heading">100%</p>
-                    <p className="luxe-body-sm text-gray-300 font-medium">Luxury Standard</p>
+                  <div className="text-center p-4 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                    <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">100%</p>
+                    <p className="text-xs text-gray-300 font-medium">Luxury Standard</p>
                   </div>
                 </div>
               </div>
             </FadeIn>
             
             <FadeIn delay={200}>
-              <div className="relative mt-8 lg:mt-0">
+              <div className="relative mt-6 lg:mt-0">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-yellow-500/20">
                   <OptimizedImage
                     src="/assets/Sofa And chair.webp"
                     alt="LUXE premium furniture restoration team in Mumbai"
-                    className="w-full h-80 lg:h-[500px] object-cover"
+                    className="w-full h-64 lg:h-80 object-cover"
                     width={800}
                     height={500}
                     loading="lazy"
                   />
                   {/* Luxury Overlay Badge */}
-                  <div className="absolute bottom-6 left-6 right-6 luxe-glass-card p-6 rounded-2xl shadow-2xl border border-yellow-500/30">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <Award className="w-8 h-8 text-black" />
+                  <div className="absolute bottom-4 left-4 right-4 luxe-glass-card p-4 rounded-2xl shadow-2xl border border-yellow-500/30">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                        <Award className="w-6 h-6 text-black" />
                       </div>
                       <div>
-                        <p className="luxe-heading-sm text-white">Master Craftsmen</p>
-                        <p className="luxe-body-sm text-yellow-400">Trusted by 500+ luxury properties</p>
+                        <p className="text-sm font-semibold text-white">Master Craftsmen</p>
+                        <p className="text-xs text-yellow-400">Trusted by 500+ luxury properties</p>
                       </div>
                     </div>
                   </div>
@@ -117,40 +117,40 @@ const About = () => {
       </section>
 
       {/* Our Premium Values */}
-      <section className="py-20 md:py-24 luxe-bg-primary relative overflow-hidden">
+      <section className="py-12 md:py-16 luxe-bg-primary relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-16 right-16 w-64 h-64 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeIn>
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-6">
-                <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                <span className="text-yellow-400 text-sm font-medium tracking-wider uppercase">Our Premium Values</span>
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-4">
+                <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></div>
+                <span className="text-yellow-400 text-xs font-medium tracking-wider uppercase">Our Premium Values</span>
               </div>
-              <h2 className="luxe-heading-lg text-white mb-6">What Drives Our <span className="text-yellow-400 luxe-shimmer">Excellence</span></h2>
-              <p className="luxe-body-lg text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display' }}>What Drives Our <span className="text-yellow-400 luxe-shimmer">Excellence</span></h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
                 These core values guide every luxury furniture restoration project we undertake across Mumbai's finest properties
               </p>
             </div>
           </FadeIn>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <FadeIn key={index} delay={index * 100}>
-                <div className="group relative luxe-glass-card p-8 rounded-3xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="group relative luxe-glass-card p-6 rounded-3xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
                   {/* Decorative Corner */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-yellow-500/10 to-yellow-600/5 rounded-bl-full"></div>
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-500/10 to-yellow-600/5 rounded-bl-full"></div>
                   
                   <div className="relative">
-                    <div className="w-20 h-20 luxe-gold-gradient rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <div className="w-16 h-16 luxe-gold-gradient rounded-3xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                       {value.icon}
                     </div>
-                    <h3 className="luxe-heading-sm text-white mb-4 group-hover:text-yellow-400 transition-colors">{value.title}</h3>
-                    <p className="luxe-body-md text-gray-300 leading-relaxed">{value.description}</p>
+                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-yellow-400 transition-colors">{value.title}</h3>
+                    <p className="text-sm text-gray-300 leading-relaxed">{value.description}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -160,96 +160,96 @@ const About = () => {
       </section>
 
       {/* Why Choose LUXE */}
-      <section className="py-20 md:py-24 luxe-bg-secondary relative overflow-hidden">
+      <section className="py-12 md:py-16 luxe-bg-secondary relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-16 right-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-16 left-16 w-64 h-64 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeIn>
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600/20 to-green-700/20 border border-green-600/30 rounded-full mb-6">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                <span className="text-green-400 text-sm font-medium tracking-wider uppercase">Why Choose LUXE</span>
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-green-600/20 to-green-700/20 border border-green-600/30 rounded-full mb-4">
+                <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
+                <span className="text-green-400 text-xs font-medium tracking-wider uppercase">Why Choose LUXE</span>
               </div>
-              <h2 className="luxe-heading-lg text-white mb-6">What Makes Us <span className="text-yellow-400 luxe-shimmer">Extraordinary</span></h2>
-              <p className="luxe-body-lg text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display' }}>What Makes Us <span className="text-yellow-400 luxe-shimmer">Extraordinary</span></h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
                 We don't just polish furniture - we restore memories and bring back the magnificence of your cherished luxury pieces
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FadeIn delay={100}>
-              <div className="flex items-start space-x-4 p-8 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-14 h-14 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Target className="w-7 h-7 text-black" />
+              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Target className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="luxe-heading-sm text-white mb-3">Precision Mastery</h3>
-                  <p className="luxe-body-md text-gray-300">Meticulous attention to detail in every luxury project, ensuring flawless results that exceed expectations.</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Precision Mastery</h3>
+                  <p className="text-sm text-gray-300">Meticulous attention to detail in every luxury project, ensuring flawless results that exceed expectations.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn delay={200}>
-              <div className="flex items-start space-x-4 p-8 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-14 h-14 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Heart className="w-7 h-7 text-black" />
+              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Heart className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="luxe-heading-sm text-white mb-3">Premium Client Care</h3>
-                  <p className="luxe-body-md text-gray-300">Your satisfaction is our priority. We go above and beyond for every distinguished client.</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Premium Client Care</h3>
+                  <p className="text-sm text-gray-300">Your satisfaction is our priority. We go above and beyond for every distinguished client.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn delay={300}>
-              <div className="flex items-start space-x-4 p-8 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-14 h-14 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Zap className="w-7 h-7 text-black" />
+              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Zap className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="luxe-heading-sm text-white mb-3">Express Luxury Service</h3>
-                  <p className="luxe-body-md text-gray-300">Same-day premium service available in select Mumbai luxury areas without compromising quality.</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Express Luxury Service</h3>
+                  <p className="text-sm text-gray-300">Same-day premium service available in select Mumbai luxury areas without compromising quality.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn delay={400}>
-              <div className="flex items-start space-x-4 p-8 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-14 h-14 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <CheckCircle2 className="w-7 h-7 text-black" />
+              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <CheckCircle2 className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="luxe-heading-sm text-white mb-3">Luxury Guarantee</h3>
-                  <p className="luxe-body-md text-gray-300">100% satisfaction guaranteed or we'll make it perfect at no extra cost to our premium clients.</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Luxury Guarantee</h3>
+                  <p className="text-sm text-gray-300">100% satisfaction guaranteed or we'll make it perfect at no extra cost to our premium clients.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn delay={500}>
-              <div className="flex items-start space-x-4 p-8 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-14 h-14 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Shield className="w-7 h-7 text-black" />
+              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Shield className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="luxe-heading-sm text-white mb-3">Trusted Excellence</h3>
-                  <p className="luxe-body-md text-gray-300">Verified master craftsmen with background checks and comprehensive insurance coverage.</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Trusted Excellence</h3>
+                  <p className="text-sm text-gray-300">Verified master craftsmen with background checks and comprehensive insurance coverage.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn delay={600}>
-              <div className="flex items-start space-x-4 p-8 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-14 h-14 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Leaf className="w-7 h-7 text-black" />
+              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Leaf className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="luxe-heading-sm text-white mb-3">Premium Eco-Conscious</h3>
-                  <p className="luxe-body-md text-gray-300">Finest, non-toxic products that protect luxury families and the environment.</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Premium Eco-Conscious</h3>
+                  <p className="text-sm text-gray-300">Finest, non-toxic products that protect luxury families and the environment.</p>
                 </div>
               </div>
             </FadeIn>
@@ -258,59 +258,59 @@ const About = () => {
       </section>
 
       {/* Premium CTA Section */}
-      <section className="relative py-20 md:py-24 luxe-bg-primary overflow-hidden">
+      <section className="relative py-12 md:py-16 luxe-bg-primary overflow-hidden">
         {/* Luxury Decorative Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-yellow-600/15 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full translate-x-1/2 translate-y-1/2 blur-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-gradient-to-br from-yellow-600/15 to-transparent rounded-full blur-2xl"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <FadeIn>
-            <div className="luxe-glass-card p-12 md:p-16 rounded-3xl border border-yellow-500/30 shadow-2xl">
-              <h2 className="luxe-heading-xl text-white mb-6 leading-tight">
+            <div className="luxe-glass-card p-8 md:p-10 rounded-3xl border border-yellow-500/30 shadow-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: 'Playfair Display' }}>
                 Experience the <span className="text-yellow-400 luxe-shimmer">LUXE Difference</span> Today
               </h2>
-              <p className="luxe-body-lg text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm md:text-base text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Join hundreds of distinguished clients across Mumbai who trust LUXE Premium Furniture Services for their luxury furniture care needs. Get an exclusive consultation and personalized quote today!
               </p>
               
               {/* Premium Features */}
-              <div className="grid md:grid-cols-3 gap-6 mb-10">
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-400 text-lg">⭐</span>
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-yellow-400 text-sm">⭐</span>
                   </div>
-                  <div className="text-left">
-                    <div className="text-white font-semibold">5-Star Rated</div>
-                    <div className="text-gray-400 text-sm">Premium Service</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-400 text-lg">🏆</span>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-white font-semibold">Award Winning</div>
-                    <div className="text-gray-400 text-sm">Excellence</div>
+                  <div className="text-center">
+                    <div className="text-white font-semibold text-sm">5-Star Rated</div>
+                    <div className="text-gray-400 text-xs">Premium Service</div>
                   </div>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-400 text-lg">✓</span>
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-yellow-400 text-sm">🏆</span>
                   </div>
-                  <div className="text-left">
-                    <div className="text-white font-semibold">6 Months</div>
-                    <div className="text-gray-400 text-sm">Warranty</div>
+                  <div className="text-center">
+                    <div className="text-white font-semibold text-sm">Award Winning</div>
+                    <div className="text-gray-400 text-xs">Excellence</div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-yellow-400 text-sm">✓</span>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-white font-semibold text-sm">6 Months</div>
+                    <div className="text-gray-400 text-xs">Warranty</div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="tel:+918828709945"
-                  className="luxe-btn-primary py-4 px-8 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="luxe-btn-primary py-3 px-6 rounded-2xl font-semibold text-sm shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                 >
                   Call Premium: +91 8828709945
                 </a>
@@ -318,7 +318,7 @@ const About = () => {
                   href="https://wa.me/918828709945"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 text-white py-4 px-8 rounded-2xl hover:bg-green-700 transition-all duration-300 font-bold shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 text-lg flex items-center justify-center gap-2"
+                  className="bg-green-600 text-white py-3 px-6 rounded-2xl hover:bg-green-700 transition-all duration-300 font-semibold shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 text-sm flex items-center justify-center gap-2"
                 >
                   WhatsApp LUXE
                 </a>

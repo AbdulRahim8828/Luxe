@@ -285,28 +285,28 @@ const Services = () => {
       />
       
       <div className="min-h-screen luxe-bg-primary">
-        {/* Header - Enhanced UI with Cart Icon */}
-        <header className="luxe-glass-card border-b border-yellow-500/20 shadow-2xl relative overflow-hidden">
+        {/* Header - Compact UI with Cart Icon */}
+        <header className="luxe-glass-card border-b border-yellow-500/20 shadow-xl relative overflow-hidden">
           {/* Luxury Background Elements */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full blur-2xl"></div>
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full blur-2xl"></div>
+            <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full blur-xl"></div>
+            <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full blur-xl"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 py-6 md:py-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 py-4 md:py-5 relative z-10">
             <div className="flex items-center justify-between gap-4">
               {/* Left - Back/Home Button (Optional) */}
               <div className="flex items-center">
-                <div className="w-10 md:w-12 flex items-center justify-center">
+                <div className="w-8 md:w-10 flex items-center justify-center">
                   {/* Placeholder for future back button */}
                 </div>
               </div>
               
               {/* Center - Title with Icon */}
               <div className="flex-1 text-center">
-                <div className="flex items-center justify-center gap-3 mb-2">
+                <div className="flex items-center justify-center gap-2 mb-1">
                   <svg 
-                    className="w-7 h-7 md:w-8 md:h-8 text-yellow-400 hidden sm:block drop-shadow-lg" 
+                    className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 hidden sm:block drop-shadow-lg" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -314,11 +314,11 @@ const Services = () => {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
-                  <h1 className="luxe-heading-lg text-white tracking-tight">
+                  <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight">
                     <span className="text-yellow-400 luxe-shimmer">LUXE</span> Premium Services
                   </h1>
                 </div>
-                <p className="text-gray-300 text-sm sm:text-base md:text-lg font-medium">
+                <p className="text-gray-300 text-xs sm:text-sm md:text-base font-medium">
                   Elite Polishing • Lifetime Warranty • Master Craftsmen
                 </p>
               </div>
@@ -334,25 +334,25 @@ const Services = () => {
           </div>
         </header>
 
-      {/* Category Grid Section - Extra Compact */}
-      <section className="luxe-bg-primary py-4 sm:py-6 relative overflow-hidden">
+      {/* Category Grid Section - Compact */}
+      <section className="luxe-bg-primary py-3 sm:py-4 relative overflow-hidden">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 left-10 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-64 h-64 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-8 left-8 w-32 h-32 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-8 right-8 w-40 h-40 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-2xl"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-2 sm:px-4 relative z-10">
-          <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-2 sm:gap-3">
+          <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1.5 sm:gap-2">
             {polishServices.map((service) => (
               <button
                 key={service.id}
                 onClick={() => handleViewDetails(service.id)}
-                className="flex flex-col items-center gap-2 p-2 sm:p-3 luxe-glass-card rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 hover:-translate-y-1 active:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 group border border-yellow-500/20 hover:border-yellow-500/40"
+                className="flex flex-col items-center gap-1.5 p-1.5 sm:p-2 luxe-glass-card rounded-lg hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-0.5 active:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 group border border-yellow-500/20 hover:border-yellow-500/40"
                 aria-label={`View ${service.name} options`}
                 type="button"
               >
-                <div className="w-full aspect-square bg-gradient-to-br from-yellow-600/5 to-yellow-500/5 rounded-lg overflow-hidden flex items-center justify-center p-2 sm:p-2.5 group-hover:bg-gradient-to-br group-hover:from-yellow-600/10 group-hover:to-yellow-500/10 transition-all duration-300 border border-yellow-500/10">
+                <div className="w-full aspect-square bg-gradient-to-br from-yellow-600/5 to-yellow-500/5 rounded-md overflow-hidden flex items-center justify-center p-1.5 sm:p-2 group-hover:bg-gradient-to-br group-hover:from-yellow-600/10 group-hover:to-yellow-500/10 transition-all duration-300 border border-yellow-500/10">
                   <img
                     src={service.image}
                     alt={service.name}
@@ -360,7 +360,7 @@ const Services = () => {
                     loading="lazy"
                   />
                 </div>
-                <span className="text-[10px] sm:text-xs font-medium text-gray-300 group-hover:text-yellow-400 text-center line-clamp-2 w-full leading-tight transition-colors duration-300">
+                <span className="text-[9px] sm:text-[10px] font-medium text-gray-300 group-hover:text-yellow-400 text-center line-clamp-2 w-full leading-tight transition-colors duration-300">
                   {service.name}
                 </span>
               </button>
@@ -369,13 +369,13 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Section-wise Service Cards - Urban Company Style */}
-      <main className="max-w-7xl mx-auto px-4 py-8 space-y-8 relative">
+      {/* Section-wise Service Cards - Compact Urban Company Style */}
+      <main className="max-w-7xl mx-auto px-4 py-4 space-y-4 relative">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-16 right-16 w-56 h-56 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-2xl"></div>
         </div>
         
         {polishServices.map((service) => {
@@ -385,25 +385,25 @@ const Services = () => {
           const isPerSqft = ['floor-polishing', 'pu-polish', 'deco-polish', 'metal-almirah-paint', 'metal-bed-powder-coating', 'steel-bed-buffing', 'kitchen-trolley-buffing'].includes(service.id);
           
           return (
-            <section key={service.id} className="space-y-4 relative z-10">
+            <section key={service.id} className="space-y-2 relative z-10">
               {/* Section Heading */}
-              <h2 className="luxe-heading-md text-white">
+              <h2 className="text-lg md:text-xl font-bold text-white">
                 {service.name.replace(' Wood Polish', '').replace(' Polish', '')}
               </h2>
 
               {/* Service Card */}
-              <div className="luxe-glass-card rounded-2xl border border-yellow-500/20 p-6 sm:p-8 hover:shadow-2xl hover:shadow-yellow-500/20 hover:-translate-y-2 transition-all duration-300 hover:border-yellow-500/40">
-                <div className="flex gap-6">
+              <div className="luxe-glass-card rounded-xl border border-yellow-500/20 p-4 sm:p-5 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-1 transition-all duration-300 hover:border-yellow-500/40">
+                <div className="flex gap-4">
                   {/* Left Side - Service Details */}
-                  <div className="flex-1 space-y-3 sm:space-y-4">
+                  <div className="flex-1 space-y-2 sm:space-y-3">
                     {/* Service Name */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-white">
+                    <h3 className="text-lg sm:text-xl font-bold text-white">
                       {service.name}
                     </h3>
 
                     {/* Rating */}
                     <div className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-yellow-400 fill-current drop-shadow-sm" viewBox="0 0 20 20" aria-hidden="true">
+                      <svg className="w-4 h-4 text-yellow-400 fill-current drop-shadow-sm" viewBox="0 0 20 20" aria-hidden="true">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                       <span className="text-sm font-semibold text-yellow-400">{service.rating}</span>
@@ -413,7 +413,7 @@ const Services = () => {
                     </div>
 
                     {/* Starting Price */}
-                    <p className="text-lg sm:text-xl font-bold text-white">
+                    <p className="text-base sm:text-lg font-bold text-white">
                       Starts at <span className="text-yellow-400">₹{minPrice.toLocaleString()}</span>{isPerSqft && '/sqft'}
                     </p>
 
@@ -421,10 +421,10 @@ const Services = () => {
                     <div className="border-t border-yellow-500/20"></div>
 
                     {/* Features */}
-                    <ul className="space-y-2">
+                    <ul className="space-y-1">
                       {service.features.slice(0, 2).map((feature, index) => (
-                        <li key={index} className="flex items-start gap-3 text-sm sm:text-base text-gray-300">
-                          <span className="text-yellow-400 mt-1">•</span>
+                        <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
+                          <span className="text-yellow-400 mt-0.5">•</span>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -441,9 +441,9 @@ const Services = () => {
                   </div>
 
                   {/* Right Side - Image and Add Button (Compact) */}
-                  <div className="flex flex-col items-center gap-3 w-36 sm:w-44 flex-shrink-0">
+                  <div className="flex flex-col items-center gap-2 w-28 sm:w-32 flex-shrink-0">
                     {/* Service Image */}
-                    <div className="w-full aspect-square bg-gradient-to-br from-yellow-600/10 to-yellow-500/5 rounded-xl overflow-hidden flex items-center justify-center p-4 border border-yellow-500/20">
+                    <div className="w-full aspect-square bg-gradient-to-br from-yellow-600/10 to-yellow-500/5 rounded-lg overflow-hidden flex items-center justify-center p-3 border border-yellow-500/20">
                       <img
                         src={service.image}
                         alt={service.name}
@@ -455,7 +455,7 @@ const Services = () => {
                     {/* Add Button */}
                     <button
                       onClick={() => handleViewDetails(service.id)}
-                      className="w-full px-4 py-3 luxe-gold-gradient text-black font-semibold text-sm rounded-xl hover:shadow-lg hover:shadow-yellow-500/25 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                      className="w-full px-3 py-2 luxe-gold-gradient text-black font-semibold text-xs rounded-lg hover:shadow-lg hover:shadow-yellow-500/25 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                       type="button"
                       aria-label={`Add ${service.name} to booking`}
                     >
@@ -505,18 +505,18 @@ const Services = () => {
           <div className="min-h-screen md:min-h-auto">
             {/* Header */}
             <header className="luxe-glass-card border-b border-yellow-500/20 sticky top-0 z-10">
-              <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
+              <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
                   <button
                     onClick={() => setShowCart(false)}
-                    className="p-2 hover:bg-yellow-500/10 rounded-full transition-colors text-gray-300 hover:text-yellow-400"
+                    className="p-1.5 hover:bg-yellow-500/10 rounded-full transition-colors text-gray-300 hover:text-yellow-400"
                     aria-label="Go back"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
-                  <h1 className="text-xl font-bold text-white">Your Premium Cart</h1>
+                  <h1 className="text-lg font-bold text-white">Your Premium Cart</h1>
                 </div>
                 {selectedServices.length > 0 && (
                   <button
@@ -535,21 +535,21 @@ const Services = () => {
               </div>
             </header>
 
-            <main className="max-w-3xl mx-auto px-4 py-6 space-y-6 pb-40 md:pb-32">
+            <main className="max-w-3xl mx-auto px-4 py-4 space-y-4 pb-32 md:pb-24">
               {/* Empty Cart Message */}
               {selectedServices.length === 0 ? (
-                <section className="luxe-glass-card rounded-2xl p-8 shadow-2xl text-center border border-yellow-500/20">
+                <section className="luxe-glass-card rounded-xl p-6 shadow-xl text-center border border-yellow-500/20">
                   <div className="max-w-sm mx-auto">
-                    <div className="w-24 h-24 bg-gradient-to-br from-yellow-600/20 to-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-yellow-500/20">
-                      <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-600/20 to-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-3 border border-yellow-500/20">
+                      <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                       </svg>
                     </div>
-                    <h2 className="text-xl font-bold text-white mb-2">Your cart is empty</h2>
-                    <p className="text-gray-300 mb-6">Add premium services to get started with your luxury booking</p>
+                    <h2 className="text-lg font-bold text-white mb-2">Your cart is empty</h2>
+                    <p className="text-gray-300 mb-4 text-sm">Add premium services to get started with your luxury booking</p>
                     <button
                       onClick={() => setShowCart(false)}
-                      className="px-6 py-3 luxe-gold-gradient text-black font-semibold rounded-xl hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300"
+                      className="px-5 py-2.5 luxe-gold-gradient text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300"
                       type="button"
                     >
                       Browse Premium Services
@@ -559,11 +559,11 @@ const Services = () => {
               ) : (
                 <>
                   {/* Checkout Section */}
-                  <section className="luxe-glass-card rounded-2xl p-6 shadow-2xl border border-yellow-500/20">
-                    <h2 className="text-lg font-bold mb-4 text-white">Premium Checkout</h2>
+                  <section className="luxe-glass-card rounded-xl p-4 shadow-xl border border-yellow-500/20">
+                    <h2 className="text-base font-bold mb-3 text-white">Premium Checkout</h2>
                     
                     {/* Services List */}
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                   {selectedServices.map((service) => {
                     // Capture service details in closure to avoid stale references
                     const currentServiceId = service.serviceId;
@@ -571,15 +571,15 @@ const Services = () => {
                     const currentQuantity = service.quantity;
                     
                     return (
-                      <div key={`${currentServiceId}-${currentOptionId}`} className="space-y-3 p-4 bg-gradient-to-r from-yellow-600/5 to-yellow-500/5 rounded-xl border border-yellow-500/10">
-                        <h3 className="font-semibold text-white">{service.serviceName}</h3>
+                      <div key={`${currentServiceId}-${currentOptionId}`} className="space-y-2 p-3 bg-gradient-to-r from-yellow-600/5 to-yellow-500/5 rounded-lg border border-yellow-500/10">
+                        <h3 className="font-semibold text-white text-sm">{service.serviceName}</h3>
                         
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-300">{service.optionName}</span>
                           
-                          <div className="flex items-center gap-4">
+                          <div className="flex items-center gap-3">
                             {/* Quantity Selector */}
-                            <div className="flex items-center gap-3 border-2 border-yellow-500/30 rounded-lg px-3 py-1 bg-gradient-to-r from-yellow-600/10 to-yellow-500/10">
+                            <div className="flex items-center gap-2 border-2 border-yellow-500/30 rounded-md px-2 py-1 bg-gradient-to-r from-yellow-600/10 to-yellow-500/10">
                               <button
                                 onClick={(e) => {
                                   e.stopPropagation();
@@ -589,13 +589,13 @@ const Services = () => {
                                     removeService(currentServiceId, currentOptionId);
                                   }
                                 }}
-                                className="text-yellow-400 font-bold text-lg w-6 h-6 flex items-center justify-center hover:bg-yellow-500/20 rounded transition-colors"
+                                className="text-yellow-400 font-bold text-base w-5 h-5 flex items-center justify-center hover:bg-yellow-500/20 rounded transition-colors"
                                 aria-label="Decrease quantity"
                                 type="button"
                               >
                                 −
                               </button>
-                              <span className="font-semibold text-yellow-400 min-w-[20px] text-center">
+                              <span className="font-semibold text-yellow-400 min-w-[16px] text-center text-sm">
                                 {currentQuantity}
                               </span>
                               <button
@@ -603,7 +603,7 @@ const Services = () => {
                                   e.stopPropagation();
                                   updateQuantity(currentServiceId, currentOptionId, currentQuantity + 1);
                                 }}
-                                className="text-yellow-400 font-bold text-lg w-6 h-6 flex items-center justify-center hover:bg-yellow-500/20 rounded transition-colors"
+                                className="text-yellow-400 font-bold text-base w-5 h-5 flex items-center justify-center hover:bg-yellow-500/20 rounded transition-colors"
                                 aria-label="Increase quantity"
                                 type="button"
                               >
@@ -612,7 +612,7 @@ const Services = () => {
                             </div>
                           
                             {/* Price */}
-                            <span className="font-semibold text-white min-w-[80px] text-right">
+                            <span className="font-semibold text-white min-w-[70px] text-right text-sm">
                               ₹{(service.price * currentQuantity).toLocaleString()}
                             </span>
                           </div>
@@ -642,11 +642,11 @@ const Services = () => {
 
             {/* Bottom CTA - Above bottom nav on mobile - Only show if cart has items */}
             {selectedServices.length > 0 && (
-              <div className="fixed bottom-0 left-0 right-0 luxe-glass-card border-t border-yellow-500/20 p-4 shadow-2xl mb-20 md:mb-0 z-40">
+              <div className="fixed bottom-0 left-0 right-0 luxe-glass-card border-t border-yellow-500/20 p-3 shadow-xl mb-20 md:mb-0 z-40">
               <div className="max-w-3xl mx-auto">
                 <button
                   onClick={handleBookNow}
-                  className="w-full luxe-gold-gradient text-black font-semibold py-4 rounded-xl hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300 active:scale-95"
+                  className="w-full luxe-gold-gradient text-black font-semibold py-3 rounded-lg hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300 active:scale-95"
                 >
                   Book Premium Services Now
                 </button>
@@ -719,12 +719,12 @@ const Services = () => {
         />
       )}
 
-      {/* Loading Indicator - Mobile Friendly */}
+      {/* Loading Indicator - Compact Mobile Friendly */}
       {isAddingToCart && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 w-full max-w-sm">
-          <div className="luxe-glass-card px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-2xl flex items-center gap-2 sm:gap-3 mx-auto border border-yellow-500/20">
-            <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-yellow-400 flex-shrink-0"></div>
-            <span className="font-medium text-white text-sm sm:text-base">Adding to cart...</span>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 w-full max-w-xs">
+          <div className="luxe-glass-card px-3 sm:px-4 py-2 rounded-lg shadow-xl flex items-center gap-2 mx-auto border border-yellow-500/20">
+            <div className="animate-spin rounded-full h-3 w-3 sm:h-4 sm:w-4 border-b-2 border-yellow-400 flex-shrink-0"></div>
+            <span className="font-medium text-white text-xs sm:text-sm">Adding to cart...</span>
           </div>
         </div>
       )}

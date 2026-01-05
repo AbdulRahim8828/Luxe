@@ -17,9 +17,7 @@ import QuickQuoteCalculator from '../components/QuickQuoteCalculator.tsx';
 import FAQSection from '../components/FAQSection.tsx';
 import WhyBookOnline from '../components/WhyBookOnline.tsx';
 import FinalCTA from '../components/FinalCTA';
-import ContactCTA from '../components/ContactCTA';
 import OptimizedImage from '../../src/components/OptimizedImage';
-import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 // Lazy load heavy components
 const OurProcess = lazy(() => import('../components/OurProcess'));
@@ -226,9 +224,6 @@ const Home = () => {
 
       {/* Final CTA - Join 50,000+ Happy Customers */}
       <FinalCTA />
-
-      {/* Contact CTA - Still have questions */}
-      <ContactCTA />
     </>
   );
 };
