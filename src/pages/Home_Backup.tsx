@@ -64,7 +64,7 @@ const Home = () => {
       name: 'Priya Sharma',
       location: 'Bandra, Mumbai',
       rating: 5,
-      text: 'Excellent service! My dining table looks brand new after A1 Furniture Polish treatment. Highly recommended for anyone in Mumbai.'
+      text: 'Excellent service! My dining table looks brand new after Luxe Wooden Furniture Polishing treatment. Highly recommended for anyone in Mumbai seeking premium quality.'
     },
     {
       name: 'Rajesh Patel',
@@ -83,12 +83,12 @@ const Home = () => {
   return (
     <>
       <SEOHead
-        title="A1 Furniture Polish — Professional Wooden Furniture Polishing in Mumbai"
-        description="Leading furniture polishing services in Mumbai. We restore and polish your wooden furniture to perfection with eco-friendly products and skilled craftsmen. Expert sofa, bed, door, table, wardrobe polish. 6 months warranty. Book now!"
-        keywords="furniture polish Mumbai, wood polishing services, sofa polish, bed polish, door polish, table polish, wardrobe polish, furniture restoration Mumbai, A1 furniture polish"
-        ogUrl="https://a1furniturepolish.com/"
+        title="LUXE Premium Furniture Polish — Elite Wooden Furniture Polishing in Mumbai"
+        description="Mumbai's most exclusive furniture polishing services. We restore and polish your luxury wooden furniture to perfection with premium materials and master craftsmen. Expert sofa, bed, door, table, wardrobe polish. 6 months warranty. Book now!"
+        keywords="luxury furniture polish Mumbai, premium wood polishing services, elite sofa polish, luxury bed polish, premium door polish, luxury wardrobe polish, exclusive furniture restoration Mumbai, LUXE furniture polish"
+        ogUrl="https://luxewoodenfurniturepolishing.com/"
         ogImage="/assets/Sofa And chair.jpg"
-        canonical="https://a1furniturepolish.com/"
+        canonical="https://luxewoodenfurniturepolishing.com/"
       />
       <JsonLd data={localBusiness} />
       <JsonLd data={servicesSchema} />
@@ -200,7 +200,7 @@ const Home = () => {
                 Why Choose Us
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose A1 Furniture Polish in Mumbai?
+                Why Choose Luxe Wooden Furniture Polishing in Mumbai?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 We are Mumbai's most trusted furniture polishing service with years of experience in restoring and maintaining wooden furniture.
@@ -356,7 +356,7 @@ const Home = () => {
             Ready to Restore Your Furniture's Beauty?
           </h2>
           <p className="text-lg md:text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
-            Contact A1 Furniture Polish today for professional furniture polishing services in Mumbai. Free quotes available!
+            Contact Luxe Wooden Furniture Polishing today for premium furniture polishing services in Mumbai. Free quotes available!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

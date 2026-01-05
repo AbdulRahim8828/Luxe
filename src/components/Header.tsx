@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { brandConfig } from '../config/brand';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,103 +18,128 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="luxe-glass-card shadow-2xl sticky top-0 z-50 border-b border-yellow-500/20">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-2 sm:py-4">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-1.5 sm:space-x-2">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-600 to-amber-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-base sm:text-xl">A1</span>
+        <div className="flex justify-between items-center py-3 sm:py-4">
+          {/* Luxe Logo */}
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group transition-all duration-300 hover:scale-105">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 luxe-gold-gradient rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-yellow-500/25 transition-all duration-300">
+              <span className="text-black font-bold text-lg sm:text-xl" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.1em' }}>L</span>
             </div>
             <div>
-              <h1 className="text-sm sm:text-xl font-bold text-gray-900">A1 Furniture Polish</h1>
-              <p className="text-[10px] sm:text-xs text-amber-600">Professional Polishing Services</p>
+              <h1 className="text-base sm:text-xl font-bold text-white" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.05em' }}>
+                {brandConfig.name}
+              </h1>
+              <p className="text-xs sm:text-sm text-yellow-400 font-medium">
+                Luxury Finish for Timeless Furniture
+              </p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Luxury Desktop Navigation */}
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 ${
+                className={`relative text-sm lg:text-base font-medium transition-all duration-300 group ${
                   isActive(item.href)
-                    ? 'text-amber-600 border-b-2 border-amber-600'
-                    : 'text-gray-700 hover:text-amber-600'
+                    ? 'text-yellow-400'
+                    : 'text-gray-300 hover:text-yellow-400'
                 }`}
               >
                 {item.name}
+                <span 
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-yellow-400 transition-all duration-300 ${
+                    isActive(item.href) 
+                      ? 'w-full' 
+                      : 'w-0 group-hover:w-full'
+                  }`}
+                />
               </Link>
             ))}
           </nav>
 
-          {/* Contact Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Luxury Contact Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
             <a
-              href="tel:+918828709945"
-              className="flex items-center space-x-2 bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors duration-200"
+              href={`tel:${brandConfig.contactInfo.phone}`}
+              className="flex items-center space-x-2 luxe-gold-gradient text-black px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25"
             >
               <Phone size={16} />
-              <span className="text-sm font-medium">Call Now</span>
+              <span>Call Now</span>
             </a>
             <a
-              href="https://wa.me/918828709945"
+              href={`https://wa.me/${brandConfig.contactInfo.phone.replace(/[^0-9]/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200"
+              className="flex items-center space-x-2 bg-transparent border-2 border-yellow-500 text-yellow-400 px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 hover:bg-yellow-500 hover:text-black"
             >
               <MessageCircle size={16} />
-              <span className="text-sm font-medium">WhatsApp</span>
+              <span>WhatsApp</span>
             </a>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Luxury Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-amber-600 transition-colors duration-200"
+            className="md:hidden p-2 rounded-xl text-gray-300 hover:text-yellow-400 hover:bg-yellow-500/10 transition-all duration-300 group"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <div className="relative">
+              {isMenuOpen ? (
+                <X size={24} className="transition-transform duration-300 group-hover:rotate-90" />
+              ) : (
+                <Menu size={24} className="transition-transform duration-300 group-hover:scale-110" />
+              )}
+            </div>
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Elegant Luxury Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4">
-            <nav className="flex flex-col space-y-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive(item.href)
-                      ? 'text-amber-600 bg-amber-50'
-                      : 'text-gray-700 hover:text-amber-600 hover:bg-gray-50'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="flex space-x-2 pt-2">
+          <div className="md:hidden animate-slide-up">
+            <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-gray-900/50 to-gray-800/30 border-t border-yellow-500/20 rounded-b-2xl backdrop-blur-sm">
+              <nav className="flex flex-col space-y-1">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`group relative px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 ${
+                      isActive(item.href)
+                        ? 'text-yellow-400 bg-yellow-500/20 shadow-lg'
+                        : 'text-gray-300 hover:text-yellow-400 hover:bg-yellow-500/10'
+                    }`}
+                  >
+                    <span className="relative z-10">{item.name}</span>
+                    {isActive(item.href) && (
+                      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-yellow-400 rounded-r-full" />
+                    )}
+                    <div className="absolute inset-0 bg-yellow-500/5 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300" />
+                  </Link>
+                ))}
+              </nav>
+              
+              {/* Luxury Mobile Contact Buttons */}
+              <div className="flex space-x-3 pt-4 px-2">
                 <a
-                  href="tel:+918828709945"
-                  className="flex-1 flex items-center justify-center space-x-2 bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors duration-200"
+                  href={`tel:${brandConfig.contactInfo.phone}`}
+                  className="flex-1 flex items-center justify-center space-x-2 luxe-gold-gradient text-black px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25"
                 >
                   <Phone size={16} />
-                  <span className="text-sm font-medium">Call</span>
+                  <span>Call</span>
                 </a>
                 <a
-                  href="https://wa.me/918828709945"
+                  href={`https://wa.me/${brandConfig.contactInfo.phone.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-transparent border-2 border-yellow-500 text-yellow-400 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 hover:bg-yellow-500 hover:text-black"
                 >
                   <MessageCircle size={16} />
-                  <span className="text-sm font-medium">WhatsApp</span>
+                  <span>WhatsApp</span>
                 </a>
               </div>
-            </nav>
+            </div>
           </div>
         )}
       </div>

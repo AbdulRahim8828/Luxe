@@ -23,34 +23,43 @@ const BlogListPage = () => {
   // Featured posts
   const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 2);
 
-
-
   return (
     <>
       <SEOHead
-        title="Blog | A1 Furniture Polish"
-        description="Read our latest articles on furniture care, polishing tips, and restoration guides to keep your wooden furniture looking its best."
+        title="LUXE Premium Blog | Luxury Furniture Care & Restoration Insights"
+        description="Discover expert insights on luxury furniture care, premium polishing techniques, and restoration guides from LUXE's master craftsmen to keep your premium furniture looking magnificent."
         canonical={getCanonicalURL('/blog')}
       />
-      <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen py-8 sm:py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="luxe-bg-primary min-h-screen py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+        {/* Luxury Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
 
-          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4">
-              Furniture Care <span className="text-amber-600">Blog</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-8">
+              <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+              <span className="text-yellow-400 text-sm font-medium tracking-wider uppercase">Premium Insights</span>
+            </div>
+            <h1 className="luxe-heading-xl text-white mb-6 leading-tight">
+              Luxury Furniture Care <span className="text-yellow-400 luxe-shimmer">Insights</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Expert advice, tips, and guides on furniture care, polishing, and restoration from the A1 Furniture Polish team.
+            <p className="luxe-body-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Expert advice, premium techniques, and exclusive guides on luxury furniture care, restoration, and preservation from LUXE's master craftsmen.
             </p>
           </div>
 
           {/* Featured Posts */}
           {featuredPosts.length > 0 && (
-            <div className="mb-8 sm:mb-12 lg:mb-16">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center lg:text-left">
-                ⭐ Featured Articles
+            <div className="mb-12 sm:mb-16 lg:mb-20">
+              <h2 className="luxe-heading-lg text-white mb-8 sm:mb-10 text-center lg:text-left">
+                <span className="text-yellow-400">⭐</span> Featured Premium Articles
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
                 {featuredPosts.map((post) => (
                   <BlogCard 
                     key={post.slug} 
@@ -64,16 +73,14 @@ const BlogListPage = () => {
             </div>
           )}
 
-
-
           {/* Results Summary */}
-          <div className="mb-6 sm:mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-              <p className="text-gray-600 text-sm sm:text-base">
-                Showing <span className="font-semibold text-gray-900">{paginatedPosts.length}</span> of <span className="font-semibold text-gray-900">{filteredPosts.length}</span> articles
+          <div className="mb-8 sm:mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 luxe-glass-card p-6 rounded-2xl border border-yellow-500/20">
+              <p className="luxe-body-md text-gray-300">
+                Showing <span className="font-semibold text-yellow-400">{paginatedPosts.length}</span> of <span className="font-semibold text-yellow-400">{filteredPosts.length}</span> premium articles
               </p>
               {totalPages > 1 && (
-                <p className="text-gray-500 text-sm">
+                <p className="luxe-body-sm text-gray-400">
                   Page {currentPage} of {totalPages}
                 </p>
               )}
@@ -82,7 +89,7 @@ const BlogListPage = () => {
 
           {/* Blog Posts Grid */}
           {paginatedPosts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16 sm:mb-20">
               {paginatedPosts.map((post) => (
                 <BlogCard 
                   key={post.slug} 
@@ -93,46 +100,46 @@ const BlogListPage = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16 sm:py-20">
-              <div className="max-w-md mx-auto">
-                <div className="text-6xl mb-4">📝</div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">No articles available</h3>
-                <p className="text-gray-500">
-                  We're working on adding more helpful articles about furniture care and polishing.
+            <div className="text-center py-20 sm:py-24">
+              <div className="max-w-md mx-auto luxe-glass-card p-12 rounded-3xl border border-yellow-500/20">
+                <div className="text-6xl mb-6">📝</div>
+                <h3 className="luxe-heading-md text-white mb-4">No Premium Articles Available</h3>
+                <p className="luxe-body-md text-gray-300">
+                  We're crafting exclusive articles about luxury furniture care and premium restoration techniques.
                 </p>
               </div>
             </div>
           )}
 
-          {/* Pagination */}
+          {/* Luxury Pagination */}
           {totalPages > 1 && (
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
-              <div className="flex flex-col items-center gap-6">
+            <div className="luxe-glass-card rounded-3xl border border-yellow-500/20 p-8 sm:p-10 shadow-2xl">
+              <div className="flex flex-col items-center gap-8">
                 
                 {/* Page Info */}
                 <div className="text-center">
-                  <p className="text-sm text-gray-600 mb-2">
-                    Showing page <span className="font-semibold text-gray-900">{currentPage}</span> of <span className="font-semibold text-gray-900">{totalPages}</span>
+                  <p className="luxe-body-md text-gray-300 mb-4">
+                    Showing page <span className="font-semibold text-yellow-400">{currentPage}</span> of <span className="font-semibold text-yellow-400">{totalPages}</span>
                   </p>
-                  <div className="w-full bg-gray-200 rounded-full h-2 max-w-xs mx-auto">
+                  <div className="w-full bg-gray-700 rounded-full h-3 max-w-xs mx-auto">
                     <div 
-                      className="bg-gradient-to-r from-amber-500 to-orange-500 h-2 rounded-full transition-all duration-300"
+                      className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-3 rounded-full transition-all duration-300 shadow-lg"
                       style={{ width: `${(currentPage / totalPages) * 100}%` }}
                     ></div>
                   </div>
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex flex-wrap justify-center items-center gap-2">
+                <div className="flex flex-wrap justify-center items-center gap-3">
                   
                   {/* Previous Button */}
                   <button
                     onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                     disabled={currentPage === 1}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-200 ${
+                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                       currentPage === 1
-                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md active:scale-95'
+                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                        : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-yellow-400 hover:shadow-lg active:scale-95 border border-gray-600/50 hover:border-yellow-500/30'
                     }`}
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +149,7 @@ const BlogListPage = () => {
                   </button>
 
                   {/* Page Numbers */}
-                  <div className="flex items-center gap-1 sm:gap-2">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
                       let page;
                       if (totalPages <= 5) {
@@ -159,10 +166,10 @@ const BlogListPage = () => {
                         <button
                           key={page}
                           onClick={() => setCurrentPage(page)}
-                          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl font-semibold transition-all duration-200 ${
+                          className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl font-semibold transition-all duration-300 ${
                             currentPage === page
-                              ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg transform scale-110'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md active:scale-95'
+                              ? 'luxe-gold-gradient text-black shadow-2xl transform scale-110 hover:shadow-yellow-500/25'
+                              : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-yellow-400 hover:shadow-lg active:scale-95 border border-gray-600/50 hover:border-yellow-500/30'
                           }`}
                         >
                           {page}
@@ -173,10 +180,10 @@ const BlogListPage = () => {
                     {/* Show ellipsis and last page if needed */}
                     {totalPages > 5 && currentPage < totalPages - 2 && (
                       <>
-                        <span className="px-2 text-gray-400">...</span>
+                        <span className="px-2 text-gray-500">...</span>
                         <button
                           onClick={() => setCurrentPage(totalPages)}
-                          className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md transition-all duration-200 active:scale-95"
+                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl font-semibold bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-yellow-400 hover:shadow-lg transition-all duration-300 active:scale-95 border border-gray-600/50 hover:border-yellow-500/30"
                         >
                           {totalPages}
                         </button>
@@ -188,10 +195,10 @@ const BlogListPage = () => {
                   <button
                     onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                     disabled={currentPage === totalPages}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium transition-all duration-200 ${
+                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                       currentPage === totalPages
-                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md active:scale-95'
+                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                        : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-yellow-400 hover:shadow-lg active:scale-95 border border-gray-600/50 hover:border-yellow-500/30'
                     }`}
                   >
                     <span className="hidden sm:inline">Next</span>
@@ -203,15 +210,15 @@ const BlogListPage = () => {
 
                 {/* Quick Jump (for many pages) */}
                 {totalPages > 10 && (
-                  <div className="flex items-center gap-3 text-sm">
-                    <span className="text-gray-600">Jump to page:</span>
+                  <div className="flex items-center gap-4 luxe-body-md">
+                    <span className="text-gray-300">Jump to page:</span>
                     <select
                       value={currentPage}
                       onChange={(e) => setCurrentPage(Number(e.target.value))}
-                      className="px-3 py-1.5 border border-gray-300 rounded-lg text-gray-700 bg-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                      className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-xl text-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 backdrop-blur-sm transition-all duration-300"
                     >
                       {Array.from({ length: totalPages }, (_, i) => (
-                        <option key={i + 1} value={i + 1}>
+                        <option key={i + 1} value={i + 1} className="bg-gray-800">
                           {i + 1}
                         </option>
                       ))}

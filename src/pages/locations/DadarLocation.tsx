@@ -62,7 +62,7 @@ const DadarLocation = () => {
       name: 'Rajesh Patil',
       area: 'Dadar West',
       rating: 5,
-      text: 'A1 Furniture Polish did an amazing job on my teak wood dining set near Cosmos Plaza. The team was professional and the results exceeded my expectations. Highly recommend for anyone in Dadar!'
+      text: 'Luxe Wooden Furniture Polishing did an amazing job on my teak wood dining set near Cosmos Plaza. The team was professional and the results exceeded my expectations. Highly recommend for anyone in Dadar seeking premium quality!'
     },
     {
       name: 'Priya Kulkarni',
@@ -104,9 +104,9 @@ const DadarLocation = () => {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'A1 Furniture Polish Service - Dadar to Colaba',
-    'image': 'https://a1furniturepolish.in/assets/Sofa And chair.webp',
-    'description': 'Professional furniture polishing and restoration services covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba, and South Mumbai. Expert wooden furniture polish, sofa restoration, and antique furniture restoration. Located at Shop No.13 near Cosmos Plaza, Bhavani Shankar Road, Dadar West.',
+    'name': 'Luxe Wooden Furniture Polishing Service - Dadar to Colaba',
+    'image': 'https://luxewoodenfurniturepolishing.com/assets/Sofa And chair.webp',
+    'description': 'Premium furniture polishing and restoration services covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba, and South Mumbai. Expert luxury wooden furniture polish, sofa restoration, and antique furniture restoration. Located at Shop No.13 near Cosmos Plaza, Bhavani Shankar Road, Dadar West.',
     'priceRange': '₹249-₹999',
     'address': {
       '@type': 'PostalAddress',
@@ -211,7 +211,7 @@ const DadarLocation = () => {
     'serviceType': 'Furniture Polishing and Restoration',
     'provider': {
       '@type': 'LocalBusiness',
-      'name': 'A1 Furniture Polish Service'
+      'name': 'Luxe Wooden Furniture Polishing Service'
     },
     'areaServed': {
       '@type': 'City',
@@ -731,7 +731,7 @@ const DadarLocation = () => {
           <FadeIn>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose A1 Furniture Polish in Dadar?
+                Why Choose Luxe Wooden Furniture Polishing in Dadar?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 We are Dadar's most trusted furniture polishing and restoration service with a proven track record of excellence. Specializing in wooden furniture polish, sofa polishing, table & bed polishing, cabinet refinishing, and antique restoration for homes and offices.
@@ -1033,7 +1033,7 @@ const DadarLocation = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="A1 Furniture Polish Dadar Location"
+                    title="Luxe Wooden Furniture Polishing Dadar Location"
                     className="rounded-r-2xl"
                   ></iframe>
                 </div>
@@ -1050,7 +1050,7 @@ const DadarLocation = () => {
             Ready to Transform Your Furniture in Dadar?
           </h2>
           <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
-            Contact A1 Furniture Polish today for professional furniture polishing services in Dadar. Available 24/7 with free quotes and same-day service!
+            Contact Luxe Wooden Furniture Polishing today for premium furniture polishing services in Dadar. Available 24/7 with free quotes and same-day service!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

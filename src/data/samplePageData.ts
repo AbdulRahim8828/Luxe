@@ -6,20 +6,20 @@ import { PageData } from '../types';
  */
 export const samplePageData: PageData = {
   // SEO Fields
-  title: 'Affordable Furniture Polishing in Mumbai | A1 Furniture Polish',
-  metaDescription: 'Get affordable furniture polishing services in Mumbai. Expert wooden furniture polish, sofa restoration, and complete refinishing. 24/7 service. Call +91 8828709945',
-  h1: 'Affordable Furniture Polishing Services in Mumbai',
-  url: '/services/affordable-furniture-polishing-mumbai',
-  canonicalUrl: 'https://a1furniturepolish.com/services/affordable-furniture-polishing-mumbai',
+  title: 'Premium Furniture Polishing in Mumbai | Luxe Wooden Furniture Polishing',
+  metaDescription: 'Get premium luxury furniture polishing services in Mumbai. Expert wooden furniture polish, sofa restoration, and complete refinishing. 24/7 service. Call +91 8828709945',
+  h1: 'Premium Luxury Furniture Polishing Services in Mumbai',
+  url: '/services/premium-furniture-polishing-mumbai',
+  canonicalUrl: 'https://luxewoodenfurniturepolishing.com/services/premium-furniture-polishing-mumbai',
   
   // Service Information
   serviceCategory: 'furniture-polishing',
   serviceName: 'Furniture Polishing',
   location: 'Mumbai',
-  titleVariation: 'affordable',
+  titleVariation: 'premium',
   
   // Content Sections
-  introduction: 'Transform your furniture with A1 Furniture Polish - Mumbai\'s most trusted experts in affordable wooden furniture polishing, sofa restoration, table polishing, and complete furniture refinishing. We specialize in teak wood polish, PU polish, melamine polish, and antique restoration. Serving all areas of Mumbai with 24/7 emergency service and same-day availability.',
+  introduction: 'Transform your furniture with Luxe Wooden Furniture Polishing - Mumbai\'s most trusted experts in premium luxury wooden furniture polishing, sofa restoration, table polishing, and complete furniture refinishing. We specialize in teak wood polish, PU polish, melamine polish, and antique restoration. Serving all areas of Mumbai with 24/7 emergency service and same-day availability.',
   
   services: [
     {
@@ -101,75 +101,75 @@ export const samplePageData: PageData = {
   serviceAreaDescription: 'We proudly serve all areas across Mumbai, including Western suburbs, Central Mumbai, Eastern suburbs, and Navi Mumbai. Our team of expert polishers is available throughout the city, ensuring convenient service no matter where you\'re located. We understand Mumbai\'s unique climate challenges and use appropriate materials and techniques that withstand humidity and temperature variations.',
   
   pricing: {
-    startingPrice: 499,
-    priceRange: '₹499 - ₹5,000',
+    startingPrice: 1999,
+    priceRange: '₹1,999 - ₹15,000',
     factors: [
       'Type and size of furniture',
       'Current condition and damage level',
-      'Type of polish required (PU, Melamine, Duco)',
+      'Type of premium polish required (PU, Melamine, Duco)',
       'Number of coats needed',
-      'Additional services like scratch repair or restoration',
+      'Additional luxury services like scratch repair or restoration',
     ],
   },
   
   whyChooseUs: [
     {
-      title: 'Expert Craftsmen',
-      description: 'Skilled professionals with 10+ years of experience in furniture polishing',
+      title: 'Master Craftsmen',
+      description: 'Skilled luxury artisans with 10+ years of experience in premium furniture polishing',
     },
     {
-      title: '24/7 Service',
-      description: 'Available round the clock for urgent requirements across Mumbai',
+      title: '24/7 Premium Service',
+      description: 'Available round the clock for urgent luxury requirements across Mumbai',
     },
     {
       title: 'Quality Guaranteed',
-      description: '100% satisfaction guarantee with 6 months warranty on all work',
+      description: '100% satisfaction guarantee with 12 months warranty on all luxury work',
     },
     {
-      title: 'Local Experts',
-      description: 'Deep understanding of Mumbai area and customer needs',
+      title: 'Luxury Specialists',
+      description: 'Deep understanding of Mumbai luxury market and discerning customer needs',
     },
   ],
   
   faqs: [
     {
-      question: 'How quickly can you start the furniture polishing work?',
-      answer: 'We offer same-day service for most areas in Mumbai. Book before 2 PM and we can start the same day. Emergency services available within 2-4 hours.',
+      question: 'How quickly can you start the luxury furniture polishing work?',
+      answer: 'We offer same-day premium service for most areas in Mumbai. Book before 2 PM and we can start the same day. Emergency luxury services available within 2-4 hours.',
     },
     {
-      question: 'What type of polish do you use? Is it safe?',
-      answer: 'We use premium quality PU (Polyurethane) polish, melamine polish, and duco paint. All materials are eco-friendly, non-toxic, and safe for homes with children and pets.',
+      question: 'What type of premium polish do you use? Is it safe?',
+      answer: 'We use only the finest quality PU (Polyurethane) polish, melamine polish, and duco paint. All materials are eco-friendly, non-toxic, and safe for luxury homes with children and pets.',
     },
     {
-      question: 'Do I need to empty my furniture before polishing?',
-      answer: 'Yes, please empty all items from the furniture. Our team will handle the furniture carefully, but we recommend removing all contents for safety and better results.',
+      question: 'Do I need to empty my furniture before luxury polishing?',
+      answer: 'Yes, please empty all items from the furniture. Our luxury team will handle the furniture with utmost care, but we recommend removing all contents for safety and optimal results.',
     },
     {
-      question: 'How long does the polishing work take?',
-      answer: 'Small items (1-2 shelves): 2-3 hours | Medium furniture (bookshelf, TV unit): 4-6 hours | Large items (wardrobes): 1-2 days. Drying time is additional 24-48 hours.',
+      question: 'How long does the luxury polishing work take?',
+      answer: 'Small items (1-2 shelves): 3-4 hours | Medium furniture (bookshelf, TV unit): 6-8 hours | Large luxury items (wardrobes): 2-3 days. Premium drying time is additional 48-72 hours.',
     },
     {
-      question: 'What is included in the price?',
-      answer: 'Our price includes material cost (polish, sandpaper, primer), labor charges, transportation of materials, and 6 months service warranty. No hidden charges.',
+      question: 'What is included in the luxury service price?',
+      answer: 'Our premium price includes high-end material cost (luxury polish, sandpaper, primer), expert labor charges, transportation of materials, and 12 months luxury service warranty. No hidden charges.',
     },
   ],
   
   relatedServices: [
     {
-      name: 'Wood Polishing in Mumbai',
-      url: '/services/affordable-wood-polishing-mumbai',
+      name: 'Luxury Wood Polishing in Mumbai',
+      url: '/services/premium-wood-polishing-mumbai',
     },
     {
-      name: 'PU Polish in Mumbai',
-      url: '/services/affordable-pu-polish-mumbai',
+      name: 'Premium PU Polish in Mumbai',
+      url: '/services/premium-pu-polish-mumbai',
     },
     {
-      name: 'Door Polishing in Mumbai',
-      url: '/services/affordable-door-polishing-mumbai',
+      name: 'Luxury Door Polishing in Mumbai',
+      url: '/services/premium-door-polishing-mumbai',
     },
     {
-      name: 'Wardrobe Polishing in Mumbai',
-      url: '/services/affordable-wardrobe-polishing-mumbai',
+      name: 'Premium Wardrobe Polishing in Mumbai',
+      url: '/services/premium-wardrobe-polishing-mumbai',
     },
   ],
   
@@ -178,18 +178,18 @@ export const samplePageData: PageData = {
     localBusiness: {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      name: 'A1 Furniture Polish - Mumbai',
-      image: 'https://a1furniturepolish.com/assets/wooden furniture .webp',
-      '@id': 'https://a1furniturepolish.com',
-      url: 'https://a1furniturepolish.com/services/affordable-furniture-polishing-mumbai',
+      name: 'Luxe Wooden Furniture Polishing - Mumbai',
+      image: 'https://luxewoodenfurniturepolishing.com/assets/wooden furniture .webp',
+      '@id': 'https://luxewoodenfurniturepolishing.com',
+      url: 'https://luxewoodenfurniturepolishing.com/services/premium-furniture-polishing-mumbai',
       telephone: '+918828709945',
-      priceRange: '₹₹',
+      priceRange: '₹₹₹',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Shop No 18, Akbar Ali Compound, Relief Road',
-        addressLocality: 'Jogeshwari West, Mumbai',
+        streetAddress: 'Mumbai Metropolitan Region',
+        addressLocality: 'Mumbai',
         addressRegion: 'Maharashtra',
-        postalCode: '400102',
+        postalCode: '400001',
         addressCountry: 'IN',
       },
       geo: {
@@ -204,8 +204,8 @@ export const samplePageData: PageData = {
         closes: '23:59',
       },
       sameAs: [
-        'https://www.facebook.com/a1furniturepolish',
-        'https://www.instagram.com/a1furniturepolish',
+        'https://www.facebook.com/luxewoodenfurniturepolishing',
+        'https://www.instagram.com/luxewoodenfurniturepolishing',
       ],
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -218,10 +218,10 @@ export const samplePageData: PageData = {
     service: {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      serviceType: 'Furniture Polishing',
+      serviceType: 'Premium Furniture Polishing',
       provider: {
         '@type': 'LocalBusiness',
-        name: 'A1 Furniture Polish',
+        name: 'Luxe Wooden Furniture Polishing',
       },
       areaServed: {
         '@type': 'City',
@@ -229,20 +229,20 @@ export const samplePageData: PageData = {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Furniture Polishing Services',
+        name: 'Luxury Furniture Polishing Services',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Wooden Furniture Polish',
+              name: 'Premium Wooden Furniture Polish',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Sofa & Chair Polishing',
+              name: 'Luxury Sofa & Chair Polishing',
             },
           },
         ],
@@ -251,14 +251,14 @@ export const samplePageData: PageData = {
   },
   
   // Keywords
-  primaryKeyword: 'affordable furniture polishing mumbai',
+  primaryKeyword: 'premium furniture polishing mumbai',
   secondaryKeywords: [
-    'furniture polish mumbai',
-    'wooden furniture polishing',
-    'sofa polishing mumbai',
-    'table polishing service',
-    'furniture restoration mumbai',
-    'cheap furniture polish',
-    'budget furniture polishing',
+    'luxury furniture polish mumbai',
+    'premium wooden furniture polishing',
+    'luxury sofa polishing mumbai',
+    'premium table polishing service',
+    'luxury furniture restoration mumbai',
+    'high-end furniture polish',
+    'premium furniture polishing',
   ],
 };

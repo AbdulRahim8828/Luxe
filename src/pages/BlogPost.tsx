@@ -72,7 +72,7 @@ const BlogPost = () => {
         title={post.title} 
         description={post.description} 
         keywords={post.keywords} 
-        ogUrl={`https://a1furniturepolish.com/blog/${slug}`}
+        ogUrl={`https://luxewoodenfurniturepolishing.com/blog/${slug}`}
       />
       <div className="bg-white py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

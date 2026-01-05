@@ -4,21 +4,60 @@ import { ArrowRight } from 'lucide-react';
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 text-center text-white shadow-2xl">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight px-2">
-            Join 50,000+ Happy Customers
+    <section className="py-16 md:py-20 luxe-bg-primary relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/20 to-yellow-900/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-yellow-600/15 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="luxe-glass-card p-12 md:p-16 text-center border border-yellow-500/30 shadow-2xl">
+          <h2 className="luxe-heading-xl text-white mb-6 leading-tight">
+            Join <span className="text-yellow-400 luxe-shimmer">500+ Premium Clients</span>
           </h2>
-          <p className="text-amber-100 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 max-w-2xl mx-auto px-2 leading-relaxed">
-            Trusted by thousands of homes and offices across Mumbai for quality furniture polishing services
+          <p className="luxe-body-lg text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Trusted by luxury homes, villas, and premium offices across Mumbai for exceptional furniture restoration and polishing services
           </p>
+          
+          {/* Premium Features */}
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <div className="flex items-center justify-center space-x-3">
+              <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                <span className="text-yellow-400 text-lg">⭐</span>
+              </div>
+              <div className="text-left">
+                <div className="text-white font-semibold">5-Star Rated</div>
+                <div className="text-gray-400 text-sm">Premium Service</div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                <span className="text-yellow-400 text-lg">🏆</span>
+              </div>
+              <div className="text-left">
+                <div className="text-white font-semibold">Award Winning</div>
+                <div className="text-gray-400 text-sm">Excellence</div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                <span className="text-yellow-400 text-lg">✓</span>
+              </div>
+              <div className="text-left">
+                <div className="text-white font-semibold">6 Months</div>
+                <div className="text-gray-400 text-sm">Warranty</div>
+              </div>
+            </div>
+          </div>
+
           <Link
             to="/services"
-            className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-3.5 md:py-4 rounded-lg font-bold hover:bg-orange-50 active:bg-orange-100 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 min-h-[44px] text-sm sm:text-base md:text-lg w-full sm:w-auto max-w-xs mx-auto"
+            className="inline-flex items-center justify-center gap-3 luxe-btn-primary px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105"
           >
-            Book Your Service Now
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            Book Premium Service Now
+            <ArrowRight className="w-6 h-6" />
           </Link>
         </div>
       </div>

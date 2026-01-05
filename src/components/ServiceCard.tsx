@@ -1,6 +1,7 @@
 import React from 'react';
 import { ServiceData } from '../types';
 import OptimizedImage from '../../src/components/OptimizedImage';
+import { brandSystem, serviceCardConfig } from '../config/brand';
 
 interface ServiceCardProps {
   service: ServiceData;
@@ -32,9 +33,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
   return (
     <article 
-      className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 ease-out overflow-hidden group hover:-translate-y-2 hover:scale-[1.02] border border-gray-100"
+      className="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 ease-out overflow-hidden group hover:-translate-y-3 border border-gray-100 hover:border-[#C9A24D]/30 relative transform hover:scale-[1.02]"
       role="listitem"
+      style={{
+        background: 'linear-gradient(135deg, #ffffff 0%, #fafafa 100%)',
+        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+      }}
     >
+      {/* Luxury Gold Accent Line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C9A24D] via-[#E6D3A3] to-[#C9A24D] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+      {/* Gold Gradient Overlay - Appears on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#C9A24D]/10 via-[#E6D3A3]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10"></div>
+
       {/* Service Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <OptimizedImage
@@ -42,90 +53,116 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           alt={`${service.name} service`}
           width={400}
           height={300}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ease-out"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
           loading="lazy"
         />
+        {/* Luxury Image Overlay with Gold Tint */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-[#C9A24D]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Subtle Gold Shimmer Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#C9A24D]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
       </div>
 
-      {/* Service Content - Responsive padding */}
-      <div className="p-2 sm:p-3 md:p-4">
-        {/* Service Name - Responsive text size */}
-        <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-1 sm:mb-2 line-clamp-2">
+      {/* Service Content - Generous white space and luxury styling */}
+      <div className="p-6 sm:p-8 space-y-6">
+        {/* Service Name - Luxury typography with hover animation */}
+        <h3 
+          className="text-lg sm:text-xl md:text-2xl font-bold text-[#0E0E0E] mb-3 line-clamp-2 tracking-wide group-hover:text-[#C9A24D] transition-colors duration-300"
+          style={{ 
+            fontFamily: 'Playfair Display, serif',
+            letterSpacing: '0.02em'
+          }}
+        >
           {service.name}
         </h3>
 
-        {/* Rating and Reviews - Responsive sizing */}
-        <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2" role="group" aria-label={`Rating ${service.rating} out of 5 stars with ${service.reviewCount} reviews`}>
-          <div className="flex items-center gap-0.5 sm:gap-1">
+        {/* Rating and Reviews - High contrast styling */}
+        <div className="flex items-center gap-3 mb-4" role="group" aria-label={`Rating ${service.rating} out of 5 stars with ${service.reviewCount} reviews`}>
+          <div className="flex items-center gap-2">
             <svg
-              className="w-3 h-3 sm:w-4 sm:h-4 text-amber-400 fill-current"
+              className="w-5 h-5 text-[#C9A24D] fill-current"
               viewBox="0 0 20 20"
               aria-hidden="true"
             >
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
-            <span className="text-xs sm:text-sm font-medium text-gray-900" aria-hidden="true">
+            <span className="text-base font-semibold text-[#0E0E0E]" aria-hidden="true">
               {service.rating}
             </span>
           </div>
-          <span className="text-xs sm:text-sm text-gray-500 truncate" aria-hidden="true">
-            ({service.reviewCount >= 1000 ? `${(service.reviewCount / 1000).toFixed(1)}K` : service.reviewCount})
+          <span className="text-sm text-[#9A9A9A] font-medium" aria-hidden="true">
+            ({service.reviewCount >= 1000 ? `${(service.reviewCount / 1000).toFixed(1)}K` : service.reviewCount} reviews)
           </span>
         </div>
 
-        {/* Starting Price - Responsive sizing */}
-        <div className="mb-2 sm:mb-3">
-          <p className="text-xs sm:text-sm text-gray-600">Starts at</p>
-          <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900" aria-label={`Starting price ${startingPrice} rupees`}>
+        {/* Starting Price - Premium formatting */}
+        <div className="mb-6">
+          <p className="text-sm text-[#9A9A9A] font-medium mb-1" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            Starting from
+          </p>
+          <p 
+            className="text-2xl sm:text-3xl font-bold text-[#0E0E0E]" 
+            aria-label={`Starting price ${startingPrice} rupees`}
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
             ₹{startingPrice.toLocaleString()}
           </p>
         </div>
 
-        {/* Features - Hide on smallest screens, show 2-3 based on size */}
-        <ul className="hidden sm:flex sm:flex-col space-y-1 sm:space-y-1.5 mb-2 sm:mb-4" aria-label="Service features">
-          {service.features.slice(0, 2).map((feature, index) => (
-            <li key={index} className="flex items-start gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+        {/* Features - Luxury list styling */}
+        <ul className="space-y-3 mb-6" aria-label="Service features">
+          {service.features.slice(0, 3).map((feature, index) => (
+            <li key={index} className="flex items-start gap-3 text-sm text-[#0E0E0E]">
               <svg
-                className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0 mt-0.5"
+                className="w-5 h-5 text-[#C9A24D] flex-shrink-0 mt-0.5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                strokeWidth={2.5}
                 aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span className="line-clamp-1">{feature}</span>
+              <span className="font-medium leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                {feature}
+              </span>
             </li>
           ))}
         </ul>
 
-        {/* Options Count - Responsive text */}
-        <p className="text-xs sm:text-sm text-gray-500 mb-2 sm:mb-3" aria-label={`${optionsCount} pricing ${optionsCount === 1 ? 'option' : 'options'} available`}>
-          {optionsCount} {optionsCount === 1 ? 'option' : 'options'}
-        </p>
+        {/* Options Count - Subtle luxury styling */}
+        <div className="flex items-center gap-2 mb-6">
+          <div className="w-2 h-2 bg-[#C9A24D] rounded-full"></div>
+          <p className="text-sm text-[#9A9A9A] font-medium" aria-label={`${optionsCount} pricing ${optionsCount === 1 ? 'option' : 'options'} available`}>
+            {optionsCount} {optionsCount === 1 ? 'option' : 'options'} available
+          </p>
+        </div>
 
-        {/* Action Buttons - Touch-friendly sizes (min 44x44px) */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
+        {/* Action Buttons - Luxury gold styling with enhanced hover animations */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
           <button
             onClick={handleViewDetails}
-            className="flex-1 text-amber-600 font-medium text-xs sm:text-sm hover:text-amber-700 hover:underline transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 rounded-lg py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center justify-center active:scale-95"
+            className="flex-1 text-[#C9A24D] font-semibold text-sm hover:text-[#0E0E0E] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C9A24D] focus:ring-offset-2 rounded-lg py-3 sm:py-2 min-h-[48px] sm:min-h-0 flex items-center justify-center border border-[#C9A24D] hover:border-[#0E0E0E] hover:bg-gradient-to-r hover:from-[#C9A24D]/10 hover:to-[#E6D3A3]/10 transform hover:scale-105 active:scale-95"
             aria-label={`View details for ${service.name}`}
             type="button"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
           >
-            View details
+            View Details
           </button>
           <button
             onClick={handleQuickAdd}
-            className="px-4 sm:px-6 py-2.5 sm:py-2 bg-amber-600 text-white font-medium text-xs sm:text-sm rounded-lg hover:bg-amber-700 hover:shadow-md active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 min-h-[44px] flex items-center justify-center shadow-sm"
+            className="px-8 py-3 bg-gradient-to-r from-[#C9A24D] to-[#E6D3A3] text-white font-semibold text-sm rounded-lg hover:from-[#B8914A] hover:to-[#D4C299] hover:shadow-xl hover:shadow-[#C9A24D]/30 transform hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C9A24D] focus:ring-offset-2 min-h-[48px] flex items-center justify-center shadow-md relative overflow-hidden"
             aria-label={`Add ${service.name} to booking`}
             type="button"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
           >
-            Add
+            {/* Button shimmer effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700"></div>
+            <span className="relative z-10">Add Service</span>
           </button>
         </div>
       </div>

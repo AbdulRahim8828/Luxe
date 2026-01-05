@@ -7,26 +7,31 @@ import OptimizedImage from '../../src/components/OptimizedImage';
 import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const CommercialPolishing = () => {
-  const pageUrl = "https://a1furniturepolish.com/commercial-polishing";
+  const pageUrl = "https://luxewoodenfurniturepolishing.com/commercial-polishing";
   const a1Tel = "+918828709945";
   const a1Whatsapp = "https://wa.me/918828709945";
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'A1 Furniture Polish',
-    image: 'https://a1furniturepolish.com/logo.png',
+    name: 'Luxe Wooden Furniture Polishing',
+    alternateName: 'Luxe Furniture Polishing',
+    description: 'Premium commercial furniture polishing services in Mumbai. Specializing in luxury offices, hotels, restaurants, and corporate environments.',
+    image: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
     telephone: a1Tel,
+    email: 'info@luxewoodenfurniturepolishing.com',
+    priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jogeshwari West',
+      streetAddress: 'Mumbai Metropolitan Region',
       addressLocality: 'Mumbai',
-      addressRegion: 'MH',
-      postalCode: '400102',
+      addressRegion: 'Maharashtra',
+      postalCode: '400001',
       addressCountry: 'IN',
     },
     url: pageUrl,
-    serviceType: 'Commercial Furniture Polishing',
+    serviceType: 'Commercial Luxury Furniture Polishing',
     areaServed: [
       { '@type': 'City', name: 'Mumbai' },
       { '@type': 'City', name: 'Bandra Kurla Complex' },
@@ -34,6 +39,13 @@ const CommercialPolishing = () => {
       { '@type': 'City', name: 'Lower Parel' },
       { '@type': 'City', name: 'Goregaon' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '500',
+    },
   };
 
   const faqSchema = {

@@ -74,34 +74,42 @@ const CustomerPhotos: React.FC = () => {
   };
 
   return (
-    <section className="py-8 md:py-12 bg-gradient-to-br from-amber-50 to-orange-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Join 50,000+ Happy Customers
+    <section className="py-16 md:py-20 luxe-bg-primary relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="luxe-heading-lg text-white mb-4">
+            Join <span className="text-yellow-400 luxe-shimmer">500+ Premium Clients</span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600">Trusted by thousands of homes and offices across Mumbai for quality furniture polishing services</p>
+          <p className="luxe-body-lg text-gray-300 max-w-2xl mx-auto">
+            Trusted by luxury homes, villas, and premium offices across Mumbai for exceptional furniture restoration
+          </p>
         </div>
 
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-4xl mx-auto">
           {/* Main Carousel */}
-          <div className="relative overflow-hidden rounded-lg shadow-xl">
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {customerReviews.map((review, index) => (
                 <div key={index} className="min-w-full">
-                  <div className="bg-white p-4 md:p-6">
-                    <div className="grid md:grid-cols-2 gap-4 items-center">
+                  <div className="luxe-glass-card p-6 md:p-8 border border-yellow-500/20">
+                    <div className="grid md:grid-cols-2 gap-6 items-center">
                       {/* Image */}
-                      <div className="relative h-48 md:h-56 rounded-lg overflow-hidden bg-gray-100">
+                      <div className="relative h-64 md:h-72 rounded-xl overflow-hidden bg-gray-800/50">
                         <img
                           src={review.image}
                           alt={review.service}
                           className="w-full h-full object-contain"
                         />
-                        <div className="absolute top-2 left-2 bg-amber-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-3 py-1.5 rounded-full text-sm font-bold">
                           {review.service}
                         </div>
                       </div>
@@ -109,21 +117,21 @@ const CustomerPhotos: React.FC = () => {
                       {/* Review Content */}
                       <div className="text-center md:text-left">
                         {/* Rating */}
-                        <div className="flex justify-center md:justify-start gap-0.5 mb-3">
+                        <div className="flex justify-center md:justify-start gap-1 mb-4">
                           {[...Array(review.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                           ))}
                         </div>
 
                         {/* Review Text */}
-                        <p className="text-sm md:text-base text-gray-700 mb-4 italic">
+                        <p className="luxe-body-lg text-gray-300 mb-6 italic leading-relaxed">
                           "{review.review}"
                         </p>
 
                         {/* Customer Info */}
                         <div>
-                          <p className="font-bold text-gray-900 text-sm md:text-base">{review.name}</p>
-                          <p className="text-xs text-gray-600">{review.location}</p>
+                          <p className="luxe-heading-sm text-white mb-1">{review.name}</p>
+                          <p className="text-yellow-400 text-sm font-medium">{review.location}</p>
                         </div>
                       </div>
                     </div>
@@ -135,28 +143,28 @@ const CustomerPhotos: React.FC = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 luxe-glass-card rounded-full flex items-center justify-center hover:border-yellow-500/40 transition-all duration-300 shadow-lg z-10 group"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-800" />
+              <ChevronLeft className="w-6 h-6 text-yellow-400 group-hover:scale-110 transition-transform" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 luxe-glass-card rounded-full flex items-center justify-center hover:border-yellow-500/40 transition-all duration-300 shadow-lg z-10 group"
             >
-              <ChevronRight className="w-5 h-5 text-gray-800" />
+              <ChevronRight className="w-6 h-6 text-yellow-400 group-hover:scale-110 transition-transform" />
             </button>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-1.5 mt-4">
+          <div className="flex justify-center gap-2 mt-8">
             {customerReviews.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`transition-all ${
+                className={`transition-all duration-300 ${
                   index === currentIndex
-                    ? 'w-8 h-2 bg-amber-600'
-                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+                    ? 'w-10 h-3 bg-gradient-to-r from-yellow-500 to-yellow-600'
+                    : 'w-3 h-3 bg-gray-600 hover:bg-gray-500'
                 } rounded-full`}
               />
             ))}

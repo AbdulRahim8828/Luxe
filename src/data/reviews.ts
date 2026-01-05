@@ -1,19 +1,18 @@
-
 export const reviews = [
   {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "A1 Furniture Polish",
-      "image": "https://a1furniturepolish.com/logo.png", 
-      "priceRange": "$$",
+      "name": "Luxe Wooden Furniture Polishing",
+      "image": "https://luxewoodenfurniturepolishing.com/logo.png", 
+      "priceRange": "₹₹₹",
       "telephone": "+91 99203 97636",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123, Furniture Lane",
+        "streetAddress": "Mumbai Metropolitan Region",
         "addressLocality": "Mumbai",
-        "postalCode": "400058",
+        "postalCode": "400001",
         "addressRegion": "MH",
         "addressCountry": "IN"
       }
@@ -27,14 +26,14 @@ export const reviews = [
       "@type": "Rating",
       "ratingValue": "5"
     },
-    "reviewBody": "Excellent service! My dining table looks brand new after A1 Furniture Polish treatment. Highly recommended for anyone in Mumbai."
+    "reviewBody": "Exceptional luxury service! My dining table looks absolutely stunning after Luxe Wooden Furniture Polishing treatment. The premium quality and attention to detail is unmatched in Mumbai."
   },
   {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "A1 Furniture Polish"
+      "name": "Luxe Wooden Furniture Polishing"
     },
     "author": {
       "@type": "Person",
@@ -45,14 +44,14 @@ export const reviews = [
       "@type": "Rating",
       "ratingValue": "5"
     },
-    "reviewBody": "Professional team and amazing results. They polished all my wooden furniture and the quality is outstanding. Best furniture polish service in Mumbai!"
+    "reviewBody": "Professional luxury team with outstanding results. They polished all my wooden furniture with premium materials and the quality is extraordinary. Best luxury furniture polish service in Mumbai!"
   },
   {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "A1 Furniture Polish"
+      "name": "Luxe Wooden Furniture Polishing"
     },
     "author": {
       "@type": "Person",
@@ -63,14 +62,14 @@ export const reviews = [
       "@type": "Rating",
       "ratingValue": "5"
     },
-    "reviewBody": "Very satisfied with their antique furniture restoration work. They brought my grandmother's cabinet back to life. Great craftsmanship!"
+    "reviewBody": "Extremely satisfied with their luxury antique furniture restoration work. They brought my grandmother's cabinet back to life with exquisite craftsmanship and premium finishes!"
   },
   {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "A1 Furniture Polish"
+      "name": "Luxe Wooden Furniture Polishing"
     },
     "author": {
       "@type": "Person",
@@ -81,14 +80,14 @@ export const reviews = [
       "@type": "Rating",
       "ratingValue": "4"
     },
-    "reviewBody": "Good work and timely service. My furniture looks much better now."
+    "reviewBody": "Excellent luxury service and timely delivery. My furniture looks magnificent now with their premium polishing techniques."
   },
   {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "A1 Furniture Polish"
+      "name": "Luxe Wooden Furniture Polishing"
     },
     "author": {
       "@type": "Person",
@@ -99,7 +98,7 @@ export const reviews = [
       "@type": "Rating",
       "ratingValue": "5"
     },
-    "reviewBody": "I am very happy with the polishing work done on my old furniture. It looks fresh and new. I would definitely recommend A1 Furniture Polish."
+    "reviewBody": "I am absolutely delighted with the luxury polishing work done on my antique furniture. It looks fresh, elegant and sophisticated. I would definitely recommend Luxe Wooden Furniture Polishing for their premium service."
   }
 ];
 
@@ -110,15 +109,15 @@ export const aggregateRating = {
   "reviewCount": "120",
   "itemReviewed": {
     "@type": "LocalBusiness",
-    "name": "A1 Furniture Polish",
-    "image": "https://a1furniturepolish.com/logo.png",
-    "priceRange": "$$",
+    "name": "Luxe Wooden Furniture Polishing",
+    "image": "https://luxewoodenfurniturepolishing.com/logo.png",
+    "priceRange": "₹₹₹",
     "telephone": "+91 99203 97636",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123, Furniture Lane",
+      "streetAddress": "Mumbai Metropolitan Region",
       "addressLocality": "Mumbai",
-      "postalCode": "400058",
+      "postalCode": "400001",
       "addressRegion": "MH",
       "addressCountry": "IN"
     }

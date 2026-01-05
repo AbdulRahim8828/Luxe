@@ -1,4 +1,9 @@
 import { getCanonicalURL, getCurrentCanonicalURL } from '../utils/canonicalURL';
+import { 
+  luxurySEOConfig, 
+  generateLuxuryOpenGraphTags, 
+  generateLuxuryTwitterCardTags 
+} from '../seo/config/luxurySEOConfig';
 
 interface SEOHeadProps {
   title: string;
@@ -40,51 +45,41 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   // Use canonical URL for OG URL if not provided
   const openGraphUrl = ogUrl || canonicalUrl;
   
+  // Generate luxury Open Graph and Twitter Card tags if not provided
+  const luxuryOpenGraphTags = openGraphTags || generateLuxuryOpenGraphTags(
+    ogTitle || title,
+    ogDescription || description,
+    openGraphUrl,
+    ogImage
+  );
+  
+  const luxuryTwitterCardTags = twitterCardTags || generateLuxuryTwitterCardTags(
+    ogTitle || title,
+    ogDescription || description,
+    ogImage
+  );
+  
   return (
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-      <meta name="author" content="A1 Furniture Polish" />
+      <meta name="author" content={luxurySEOConfig.brandName} />
       <meta name="language" content="English" />
       
       {/* Canonical URL - Always included */}
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
-      {openGraphTags ? (
-        // Use enhanced Open Graph tags from SEO system
-        Object.entries(openGraphTags).map(([property, content]) => (
-          <meta key={property} property={property} content={content} />
-        ))
-      ) : (
-        // Fallback to basic Open Graph tags
-        <>
-          <meta property="og:title" content={ogTitle || title} />
-          <meta property="og:description" content={ogDescription || description} />
-          <meta property="og:type" content={ogType || 'website'} />
-          {ogImage && <meta property="og:image" content={ogImage} />}
-          <meta property="og:url" content={openGraphUrl} />
-          <meta property="og:site_name" content="A1 Furniture Polish" />
-        </>
-      )}
+      {Object.entries(luxuryOpenGraphTags).map(([property, content]) => (
+        <meta key={property} property={property} content={content} />
+      ))}
       
       {/* Twitter */}
-      {twitterCardTags ? (
-        // Use enhanced Twitter Card tags from SEO system
-        Object.entries(twitterCardTags).map(([name, content]) => (
-          <meta key={name} name={name} content={content} />
-        ))
-      ) : (
-        // Fallback to basic Twitter Card tags
-        <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={ogTitle || title} />
-          <meta name="twitter:description" content={ogDescription || description} />
-          {ogImage && <meta name="twitter:image" content={ogImage} />}
-        </>
-      )}
+      {Object.entries(luxuryTwitterCardTags).map(([name, content]) => (
+        <meta key={name} name={name} content={content} />
+      ))}
       
       {/* Cache Headers (for performance optimization) */}
       {cacheHeaders && Object.entries(cacheHeaders).map(([name, value]) => (

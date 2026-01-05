@@ -7,26 +7,31 @@ import OptimizedImage from '../../src/components/OptimizedImage';
 import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const TableAndBedPolishing = () => {
-  const pageUrl = "https://a1furniturepolish.com/table-bed-polishing";
-  const a1Tel = "+918828709945";
-  const a1Whatsapp = "https://wa.me/918828709945";
+  const pageUrl = "https://luxewoodenfurniturepolishing.com/table-bed-polishing";
+  const luxePhone = "+918828709945";
+  const luxeWhatsapp = "https://wa.me/918828709945";
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'A1 Furniture Polish',
-    image: 'https://a1furniturepolish.com/logo.png',
-    telephone: a1Tel,
+    name: 'Luxe Wooden Furniture Polishing',
+    alternateName: 'Luxe Furniture Polishing',
+    description: 'Premium table and bed polishing services in Mumbai. Specializing in luxury dining tables, coffee tables, and bedroom furniture restoration.',
+    image: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    telephone: luxePhone,
+    email: 'info@luxewoodenfurniturepolishing.com',
+    priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jogeshwari West',
+      streetAddress: 'Mumbai Metropolitan Region',
       addressLocality: 'Mumbai',
-      addressRegion: 'MH',
-      postalCode: '400102',
+      addressRegion: 'Maharashtra',
+      postalCode: '400001',
       addressCountry: 'IN',
     },
     url: pageUrl,
-    serviceType: 'Table & Bed Polishing',
+    serviceType: 'Premium Table & Bed Polishing',
     areaServed: [
       { '@type': 'City', name: 'Mumbai' },
       { '@type': 'City', name: 'Jogeshwari' },
@@ -34,6 +39,13 @@ const TableAndBedPolishing = () => {
       { '@type': 'City', name: 'Goregaon' },
       { '@type': 'City', name: 'Oshiwara' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '500',
+    },
   };
 
   const faqSchema = {
@@ -86,8 +98,8 @@ const TableAndBedPolishing = () => {
   return (
     <>
       <SEOHead
-        title="Table & Bed Polishing in Mumbai | A1 Furniture Polish"
-        description="Professional table and bed polishing in Mumbai. We restore dining tables, coffee tables, and wooden beds in Jogeshwari, Andheri & Goregaon. Contact us!"
+        title="Premium Table & Bed Polishing in Mumbai | Luxe Wooden Furniture Polishing"
+        description="Luxury table and bed polishing services in Mumbai. We restore dining tables, coffee tables, and wooden beds in Jogeshwari, Andheri & Goregaon with premium finishes. Expert craftsmanship for discerning homeowners."
         canonical={getCanonicalURL('/table-bed-polishing')}
       />
       <JsonLd data={localBusinessSchema} />
@@ -104,8 +116,8 @@ const TableAndBedPolishing = () => {
             Restore the centerpiece of your dining room and the comfort of your bedroom.
           </p>
           <div className="mt-8 flex justify-center space-x-4">
-            <a href={a1Whatsapp} className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">WhatsApp Us</a>
-            <a href={`tel:${a1Tel}`} className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">Call Now</a>
+            <a href={luxeWhatsapp} className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">WhatsApp Us</a>
+            <a href={`tel:${luxePhone}`} className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">Call Now</a>
           </div>
         </div>
       </section>
@@ -119,7 +131,7 @@ const TableAndBedPolishing = () => {
               Restore Your Dining Tables and Beds
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-4xl mx-auto">
-             Your dining table and bed are more than just furniture; they are central to your daily life. At A1 Furniture Polish, we offer expert <a href={pageUrl} className="text-amber-600 hover:underline">table and bed polishing in Mumbai</a>. We erase signs of daily use, from water marks on your coffee table to scuffs on your bed frame, bringing back a flawless and durable finish.
+             Your dining table and bed are more than just furniture; they are central to your daily life. At Luxe Wooden Furniture Polishing, we offer expert <a href={pageUrl} className="text-amber-600 hover:underline">luxury table and bed polishing in Mumbai</a>. We eliminate signs of daily use, from water marks on your coffee table to scuffs on your bed frame, restoring them to pristine condition with our premium finishing techniques.
             </p>
           </div>
 
@@ -209,14 +221,14 @@ const TableAndBedPolishing = () => {
                 <div className="flex items-center mb-4">
                   <div className="flex text-amber-500"><Star /><Star /><Star /><Star /><Star /></div>
                 </div>
-                <p className="text-gray-600 mb-4">"They completely removed the white stains from my coffee table. It looks incredible. Very professional and clean work from the A1 team in my Goregaon apartment."</p>
+                <p className="text-gray-600 mb-4">"They completely removed the white stains from my coffee table. It looks incredible. Very professional and clean work from the Luxe team in my Goregaon apartment."</p>
                 <p className="font-semibold text-gray-800">- Neha V.</p>
               </div>
               <div className="bg-gray-100 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
                     <div className="flex text-amber-500"><Star /><Star /><Star /><Star /><Star /></div>
                 </div>
-                <p className="text-gray-600 mb-4">"I was ready to throw away my old dining table, but A1 Furniture Polish restored it beautifully. Saved me a lot of money. Great on-site service in Jogeshwari."</p>
+                <p className="text-gray-600 mb-4">"I was ready to throw away my old dining table, but Luxe Wooden Furniture Polishing restored it beautifully. Saved me a lot of money. Exceptional on-site service in Jogeshwari."</p>
                 <p className="font-semibold text-gray-800">- Sanjay P.</p>
               </div>
             </div>
@@ -242,8 +254,8 @@ const TableAndBedPolishing = () => {
              Contact us for a free estimate on our expert table and bed polishing services in Mumbai.
             </p>
             <div className="flex justify-center space-x-4">
-              <a href={a1Whatsapp} className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">WhatsApp Us</a>
-              <a href={`tel:${a1Tel}`} className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">Call Now</a>
+              <a href={luxeWhatsapp} className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">WhatsApp Us</a>
+              <a href={`tel:${luxePhone}`} className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">Call Now</a>
             </div>
           </div>
           

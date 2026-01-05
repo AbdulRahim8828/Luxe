@@ -1,23 +1,27 @@
 
 export const localBusiness = {
   '@context': 'https://schema.org',
-  '@type': 'FurnitureStore',
-  name: 'A1 Furniture Polish',
-  image: 'https://a1furniturepolish.com/logo.png', // Replace with your actual logo URL
-  url: 'https://a1furniturepolish.com',
+  '@type': 'LocalBusiness',
+  name: 'Luxe Wooden Furniture Polishing',
+  alternateName: 'Luxe Furniture Polishing',
+  description: 'Premium wooden furniture polishing and restoration services in Mumbai. Specializing in luxury homes, villas, offices, and interior design projects with expert craftsmanship and attention to detail.',
+  image: 'https://luxewoodenfurniturepolishing.com/logo.png',
+  logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
+  url: 'https://luxewoodenfurniturepolishing.com',
   telephone: '+918828709945',
+  email: 'info@luxewoodenfurniturepolishing.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '123, Furniture Lane',
+    streetAddress: 'Mumbai Metropolitan Region',
     addressLocality: 'Mumbai',
-    postalCode: '400058',
-    addressRegion: 'MH',
+    postalCode: '400001',
+    addressRegion: 'Maharashtra',
     addressCountry: 'IN',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 19.0760, // Replace with your actual latitude
-    longitude: 72.8777, // Replace with your actual longitude
+    latitude: 19.0760,
+    longitude: 72.8777,
   },
   openingHoursSpecification: [
     {
@@ -36,10 +40,49 @@ export const localBusiness = {
     },
   ],
   sameAs: [
-    'https://www.facebook.com/a1furniturepolish', // Replace with your actual Facebook URL
-    'https://www.instagram.com/a1furniturepolish', // Replace with your actual Instagram URL
+    'https://www.facebook.com/luxewoodenfurniturepolishing',
+    'https://www.instagram.com/luxewoodenfurniturepolishing',
   ],
-  priceRange: '$$',
+  priceRange: '₹₹₹',
+  paymentAccepted: ['Cash', 'Credit Card', 'UPI', 'Bank Transfer'],
+  currenciesAccepted: 'INR',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    bestRating: '5',
+    worstRating: '1',
+    ratingCount: '500',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Luxury Furniture Polishing Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Premium Wooden Furniture Polishing',
+          description: 'Expert polishing for dining tables, chairs, beds, and cabinets',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Antique & Heritage Restoration',
+          description: 'Specialized care for vintage and antique furniture pieces',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Executive Office Polishing',
+          description: 'Premium furniture polishing for luxury offices and businesses',
+        },
+      },
+    ],
+  },
   areaServed: [
     {
       '@type': 'GeoCircle',

@@ -7,13 +7,14 @@ import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop';
 import BottomNav from './components/BottomNav';
 import ErrorBoundary from './components/ErrorBoundary';
+import LuxuryRedirectManager from './components/LuxuryRedirectManager';
 
 // Lazy load pages for better performance
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
-const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
-const BlogListPage = lazy(() => import('./pages/BlogListPage'));
+const BlogPostPage = lazy(() => import('../blog/pages/BlogPostPage'));
+const BlogListPage = lazy(() => import('../blog/pages/BlogListPage'));
 const WoodenFurniturePolish = lazy(() => import('./pages/WoodenFurniturePolish'));
 const SofaAndChairPolishing = lazy(() => import('./pages/SofaAndChairPolishing'));
 const TableAndBedPolishing = lazy(() => import('./pages/TableAndBedPolishing'));
@@ -22,8 +23,10 @@ const CommercialPolishing = lazy(() => import('./pages/CommercialPolishing'));
 const SofaServices = lazy(() => import('./pages/SofaServices'));
 const SofaFabricChange = lazy(() => import('./pages/SofaFabricChange'));
 const OfficeChairRepair = lazy(() => import('./pages/OfficeChairRepair'));
+const IkeaAssembly = lazy(() => import('./pages/IkeaAssembly'));
 const GoregaonFurniturePolish = lazy(() => import('./pages/GoregaonFurniturePolish'));
 const PowaiFurniturePolish = lazy(() => import('./pages/PowaiFurniturePolish'));
+const DadarLocation = lazy(() => import('./pages/locations/DadarLocation.tsx'));
 const Products = lazy(() => import('./pages/Products'));
 
 // Auto-generated page imports
@@ -188,32 +191,6 @@ const ProfessionalAntiqueFurniturePolishJuhu = lazy(() => import('./pages/genera
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -226,11 +203,12 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-          <ScrollToTop />
-          <div className="flex flex-col min-h-screen font-sans bg-white">
-            <Header />
-            <main className="flex-grow pb-20 md:pb-0 bg-white">
-              <Suspense fallback={<PageLoader />}>
+          <LuxuryRedirectManager>
+            <ScrollToTop />
+            <div className="flex flex-col min-h-screen font-sans bg-white">
+              <Header />
+              <main className="flex-grow pb-24 md:pb-0 bg-white">
+                <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -247,11 +225,13 @@ function App() {
               <Route path="/services/commercial-polishing" element={<CommercialPolishing />} />
               <Route path="/sofa-fabric-change" element={<SofaServices />} />
               <Route path="/sofa-services" element={<SofaServices />} />
+              <Route path="/ikea-assembly" element={<IkeaAssembly />} />
               <Route path="/office-chair-repair" element={<OfficeChairRepair />} />
               
               {/* Location Pages */}
               <Route path="/goregaon-furniture-polish" element={<GoregaonFurniturePolish />} />
               <Route path="/powai-furniture-polish" element={<PowaiFurniturePolish />} />
+              <Route path="/dadar" element={<DadarLocation />} />
               
               {/* Products Page */}
               <Route path="/products" element={<Products />} />
@@ -260,45 +240,6 @@ function App() {
               <Route path="/furniture-polish-services" element={<Navigate to="/services" replace />} />
 
               
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
-
-              
-            
 
               
             
@@ -472,9 +413,10 @@ function App() {
           <Footer />
           <BottomNav />
         </div>
-      </Router>
-    </ErrorBoundary>
-  </HelmetProvider>
+      </LuxuryRedirectManager>
+    </Router>
+  </ErrorBoundary>
+</HelmetProvider>
   );
 }
 

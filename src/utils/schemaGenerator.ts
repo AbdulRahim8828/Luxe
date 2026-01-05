@@ -21,15 +21,19 @@ export function generateLocalBusinessSchema(
   const schema: LocalBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'A1 Furniture Polish',
-    image: 'https://a1furniturepolish.com/logo.png',
-    '@id': 'https://a1furniturepolish.com',
+    name: 'Luxe Wooden Furniture Polishing',
+    alternateName: 'Luxe Furniture Polishing',
+    description: 'Premium wooden furniture polishing and restoration services specializing in luxury homes, villas, offices, and interior design projects.',
+    image: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    '@id': 'https://luxewoodenfurniturepolishing.com',
     url: url,
-    telephone: '+91-9819519345',
-    priceRange: '₹₹',
+    telephone: '+918828709945',
+    email: 'info@luxewoodenfurniturepolishing.com',
+    priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Mumbai',
+      streetAddress: 'Mumbai Metropolitan Region',
       addressLocality: location,
       addressRegion: 'Maharashtra',
       postalCode: '400001',
@@ -51,12 +55,12 @@ export function generateLocalBusinessSchema(
         'Saturday',
         'Sunday',
       ],
-      opens: '08:00',
-      closes: '20:00',
+      opens: '09:00',
+      closes: '18:00',
     },
     sameAs: [
-      'https://www.facebook.com/a1furniturepolish',
-      'https://www.instagram.com/a1furniturepolish',
+      'https://www.facebook.com/luxewoodenfurniturepolishing',
+      'https://www.instagram.com/luxewoodenfurniturepolishing',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -88,14 +92,27 @@ export function generateServiceSchema(
   const schema: ServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: serviceName,
+    name: serviceName,
+    serviceType: serviceCategory,
+    description: `Premium ${serviceName.toLowerCase()} services in ${location}. Specializing in luxury furniture care for discerning homeowners and interior designers.`,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'A1 Furniture Polish',
+      name: 'Luxe Wooden Furniture Polishing',
+      url: 'https://luxewoodenfurniturepolishing.com',
+    },
+    brand: {
+      '@type': 'Brand',
+      name: 'Luxe Wooden Furniture Polishing',
     },
     areaServed: {
       '@type': 'City',
       name: location,
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'INR',
+      priceRange: '₹₹₹',
+      availability: 'https://schema.org/InStock',
     },
   };
   
@@ -138,13 +155,13 @@ export function generateBreadcrumbSchema(
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://a1furniturepolish.com',
+        item: 'https://luxewoodenfurniturepolishing.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://a1furniturepolish.com/services',
+        item: 'https://luxewoodenfurniturepolishing.com/services',
       },
       {
         '@type': 'ListItem',

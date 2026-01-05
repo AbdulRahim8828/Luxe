@@ -5,23 +5,23 @@
 
 // Common business information
 export const businessInfo = {
-  name: 'A1 Furniture Polish',
+  name: 'Luxe Wooden Furniture Polishing',
   phone: '+91-9819519345',
   whatsapp: '+918828709945',
-  email: 'info@a1furniturepolish.com',
-  website: 'https://a1furniturepolish.com',
-  logo: 'https://a1furniturepolish.com/logo.png',
+  email: 'info@luxewoodenfurniturepolishing.com',
+  website: 'https://luxewoodenfurniturepolishing.com',
+  logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
   rating: '4.9',
   reviewCount: '500',
-  priceRange: '₹₹',
+  priceRange: '₹₹₹',
   openingHours: {
     opens: '08:00',
     closes: '20:00',
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
   },
   socialMedia: {
-    facebook: 'https://www.facebook.com/a1furniturepolish',
-    instagram: 'https://www.instagram.com/a1furniturepolish'
+    facebook: 'https://www.facebook.com/luxewoodenfurniturepolishing',
+    instagram: 'https://www.instagram.com/luxewoodenfurniturepolishing'
   }
 };
 

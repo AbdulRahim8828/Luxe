@@ -7,26 +7,31 @@ import OptimizedImage from '../../src/components/OptimizedImage';
 import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const WoodenFurniturePolish = () => {
-  const pageUrl = "https://a1furniturepolish.com/wooden-furniture-polish";
+  const pageUrl = "https://luxewoodenfurniturepolishing.com/wooden-furniture-polish";
   const a1Tel = "+918828709945";
   const a1Whatsapp = "https://wa.me/918828709945";
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'A1 Furniture Polish',
-    image: 'https://a1furniturepolish.com/logo.png',
+    name: 'Luxe Wooden Furniture Polishing',
+    alternateName: 'Luxe Furniture Polishing',
+    description: 'Premium wooden furniture polishing services in Mumbai. Specializing in luxury furniture restoration for discerning homeowners and interior designers.',
+    image: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
     telephone: a1Tel,
+    email: 'info@luxewoodenfurniturepolishing.com',
+    priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jogeshwari West',
+      streetAddress: 'Mumbai Metropolitan Region',
       addressLocality: 'Mumbai',
-      addressRegion: 'MH',
-      postalCode: '400102',
+      addressRegion: 'Maharashtra',
+      postalCode: '400001',
       addressCountry: 'IN',
     },
     url: pageUrl,
-    serviceType: 'Wooden Furniture Polish',
+    serviceType: 'Premium Wooden Furniture Polishing',
     areaServed: [
       { '@type': 'City', name: 'Mumbai' },
       { '@type': 'City', name: 'Bandra' },
@@ -34,6 +39,13 @@ const WoodenFurniturePolish = () => {
       { '@type': 'City', name: 'Juhu' },
       { '@type': 'City', name: 'South Mumbai' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '500',
+    },
   };
 
   const faqSchema = {
@@ -86,8 +98,8 @@ const WoodenFurniturePolish = () => {
   return (
     <>
       <SEOHead
-        title="Wooden Furniture Polish in Mumbai | A1 Furniture Polish"
-        description="Expert wooden furniture polishing in Mumbai. We restore sofas, chairs, tables, beds, and more. Get a free quote for services in Bandra, Andheri, Juhu, and South Mumbai."
+        title="Premium Wooden Furniture Polish in Mumbai | Luxe Wooden Furniture Polishing"
+        description="Expert luxury wooden furniture polishing in Mumbai. We restore sofas, chairs, tables, beds, and more with premium finishes. Get a free quote for services in Bandra, Andheri, Juhu, and South Mumbai."
         canonical={getCanonicalURL('/wooden-furniture-polish')}
       />
       <JsonLd data={localBusinessSchema} />
@@ -119,7 +131,7 @@ const WoodenFurniturePolish = () => {
               Your One-Stop Solution for All Wood Polishing Needs
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-4xl mx-auto">
-             From your cherished dining table and comfortable bed to your elegant sofas and chairs, every piece of wooden furniture deserves to look its best. A1 Furniture Polish provides comprehensive <a href={pageUrl} className="text-amber-600 hover:underline">wooden furniture polishing services in Mumbai</a>, tailored to restore and protect your valuable items.
+             From your cherished dining table and comfortable bed to your elegant sofas and chairs, every piece of wooden furniture deserves to look its best. Luxe Wooden Furniture Polishing provides comprehensive <a href={pageUrl} className="text-amber-600 hover:underline">luxury wooden furniture polishing services in Mumbai</a>, tailored to restore and protect your valuable pieces with premium craftsmanship.
             </p>
           </div>
 

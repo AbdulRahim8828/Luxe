@@ -1,7 +1,10 @@
 /**
  * Canonical URL Configuration and Utilities
  * Ensures consistent URL structure across the site for SEO
+ * Updated for Luxe Wooden Furniture Polishing rebrand
  */
+
+import { luxuryURLConfig } from '../seo/config/luxuryURLConfig';
 
 export interface CanonicalURLConfig {
   baseURL: string;
@@ -10,11 +13,11 @@ export interface CanonicalURLConfig {
   trailingSlash: boolean;
 }
 
-// Configuration for canonical URLs
+// Configuration for canonical URLs - Updated for Luxe brand
 export const canonicalConfig: CanonicalURLConfig = {
-  baseURL: 'https://a1furniturepolish.com',
+  baseURL: luxuryURLConfig.baseUrl,
   preferredProtocol: 'https',
-  preferredDomain: 'a1furniturepolish.com', // without www
+  preferredDomain: 'luxewoodenfurniturepolishing.com', // Updated domain
   trailingSlash: false,
 };
 
@@ -41,7 +44,7 @@ export function normalizePath(path: string): string {
 
 /**
  * Generates the canonical URL for a given path
- * @param path - The relative path (e.g., '/about', '/services/furniture-polish')
+ * @param path - The relative path (e.g., '/about', '/services/luxury-furniture-polishing')
  * @returns Full canonical URL
  */
 export function getCanonicalURL(path: string): string {
@@ -110,4 +113,47 @@ export function getCurrentCanonicalURL(): string {
   }
   
   return getCanonicalURL(window.location.pathname);
+}
+
+/**
+ * Checks if a URL contains old brand references that need redirecting
+ * @param url - URL to check
+ * @returns True if URL contains old brand references
+ */
+export function hasOldBrandReferences(url: string): boolean {
+  const oldBrandPatterns = [
+    'a1-furniture-polish',
+    'a1-polish',
+    'a1furniturepolish',
+    'affordable-',
+    'best-furniture-polishing',
+    'professional-furniture-polishing'
+  ];
+  
+  return oldBrandPatterns.some(pattern => url.toLowerCase().includes(pattern));
+}
+
+/**
+ * Converts old brand URL to luxury equivalent
+ * @param url - Old URL to convert
+ * @returns Luxury equivalent URL
+ */
+export function convertToLuxuryURL(url: string): string {
+  let luxuryUrl = url;
+  
+  // Replace old domain if present
+  luxuryUrl = luxuryUrl.replace(/a1furniturepolish\.com/gi, 'luxewoodenfurniturepolishing.com');
+  
+  // Replace old brand references
+  luxuryUrl = luxuryUrl.replace(/a1-furniture-polish/gi, 'luxe-wooden-furniture-polishing');
+  luxuryUrl = luxuryUrl.replace(/a1-polish/gi, 'luxe-polish');
+  luxuryUrl = luxuryUrl.replace(/a1-/gi, 'luxe-');
+  
+  // Replace quality indicators with luxury terms
+  luxuryUrl = luxuryUrl.replace(/affordable-/gi, 'luxury-');
+  luxuryUrl = luxuryUrl.replace(/best-/gi, 'premium-');
+  luxuryUrl = luxuryUrl.replace(/professional-/gi, 'luxury-');
+  luxuryUrl = luxuryUrl.replace(/top-rated-/gi, 'premium-');
+  
+  return luxuryUrl;
 }

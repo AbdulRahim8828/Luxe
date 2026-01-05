@@ -1,5 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { getCurrentCanonicalURL } from '../utils/canonicalURL';
+import { 
+  luxurySEOConfig, 
+  generateLuxuryOpenGraphTags, 
+  generateLuxuryTwitterCardTags 
+} from '../seo/config/luxurySEOConfig';
 
 interface SEOProps {
   title?: string;
@@ -11,9 +16,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Furniture Polish Services - A1 Polish',
-  description = 'Professional furniture polishing services in Mumbai. 15+ services including sofa, bed, door, table, wardrobe polish with 1-year warranty. Book now!',
-  keywords = 'furniture polish, wood polish, sofa polish, bed polish, door polish, Mumbai furniture services, A1 polish',
+  title = luxurySEOConfig.defaultTitle,
+  description = luxurySEOConfig.defaultDescription,
+  keywords = luxurySEOConfig.defaultKeywords.join(', '),
   image = '/assets/og-image.jpg',
   url,
   canonical,
@@ -21,6 +26,11 @@ const SEO: React.FC<SEOProps> = ({
   // Generate canonical URL if not provided
   const canonicalUrl = canonical || url || getCurrentCanonicalURL();
   const ogUrl = url || canonicalUrl;
+  
+  // Generate luxury Open Graph and Twitter Card tags
+  const openGraphTags = generateLuxuryOpenGraphTags(title, description, ogUrl, image);
+  const twitterCardTags = generateLuxuryTwitterCardTags(title, description, image);
+  
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -30,23 +40,19 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords} />
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={ogUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      {Object.entries(openGraphTags).map(([property, content]) => (
+        <meta key={property} property={property} content={content} />
+      ))}
 
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={ogUrl} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
+      {Object.entries(twitterCardTags).map(([name, content]) => (
+        <meta key={name} name={name} content={content} />
+      ))}
 
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
-      <meta name="author" content="A1 Polish" />
+      <meta name="author" content={luxurySEOConfig.brandName} />
       
       {/* Canonical URL - Always included */}
       <link rel="canonical" href={canonicalUrl} />

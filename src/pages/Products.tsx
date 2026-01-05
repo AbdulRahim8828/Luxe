@@ -7,8 +7,8 @@ const Products: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Products | A1 Furniture Polish"
-        description="Browse our range of furniture care products and accessories"
+        title="Premium Products | Luxe Wooden Furniture Polishing"
+        description="Browse our range of premium furniture care products and luxury accessories for discerning homeowners"
         canonical={getCanonicalURL('/products')}
       />
       

@@ -7,26 +7,31 @@ import OptimizedImage from '../../src/components/OptimizedImage';
 import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 const SofaAndChairPolishing = () => {
-  const pageUrl = "https://a1furniturepolish.com/sofa-chair-polishing";
+  const pageUrl = "https://luxewoodenfurniturepolishing.com/sofa-chair-polishing";
   const a1Tel = "+918828709945";
   const a1Whatsapp = "https://wa.me/918828709945";
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'A1 Furniture Polish',
-    image: 'https://a1furniturepolish.com/logo.png',
+    name: 'Luxe Wooden Furniture Polishing',
+    alternateName: 'Luxe Furniture Polishing',
+    description: 'Premium sofa and chair polishing services in Mumbai. Specializing in luxury wooden seating furniture restoration.',
+    image: 'https://luxewoodenfurniturepolishing.com/logo.png',
+    logo: 'https://luxewoodenfurniturepolishing.com/logo.png',
     telephone: a1Tel,
+    email: 'info@luxewoodenfurniturepolishing.com',
+    priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jogeshwari West',
+      streetAddress: 'Mumbai Metropolitan Region',
       addressLocality: 'Mumbai',
-      addressRegion: 'MH',
-      postalCode: '400102',
+      addressRegion: 'Maharashtra',
+      postalCode: '400001',
       addressCountry: 'IN',
     },
     url: pageUrl,
-    serviceType: 'Sofa & Chair Polishing',
+    serviceType: 'Premium Sofa & Chair Polishing',
     areaServed: [
       { '@type': 'City', name: 'Mumbai' },
       { '@type': 'City', name: 'Bandra' },
@@ -34,6 +39,13 @@ const SofaAndChairPolishing = () => {
       { '@type': 'City', name: 'Juhu' },
       { '@type': 'City', name: 'South Mumbai' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '500',
+    },
   };
 
   const faqSchema = {

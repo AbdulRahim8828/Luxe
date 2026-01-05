@@ -5,75 +5,81 @@ const WhyBookOnline: React.FC = () => {
   const benefits = [
     {
       icon: Clock,
-      title: 'Instant Booking',
-      description: 'Book in 30 seconds. No calls, no waiting. Get confirmation immediately.',
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
+      title: 'Instant Premium Booking',
+      description: 'Book luxury services in 30 seconds. No calls, no waiting. Get instant confirmation for premium appointments.',
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
     },
     {
       icon: IndianRupee,
-      title: 'Transparent Pricing',
-      description: 'See exact prices upfront. No hidden charges. What you see is what you pay.',
-      color: 'text-amber-600',
-      bgColor: 'bg-amber-50',
+      title: 'Transparent Premium Pricing',
+      description: 'See exact luxury pricing upfront. No hidden charges. Premium quality at transparent rates.',
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-600/10',
     },
     {
       icon: Calendar,
-      title: 'Flexible Scheduling',
-      description: 'Choose your preferred date and time. Reschedule anytime for free.',
-      color: 'text-orange-700',
-      bgColor: 'bg-orange-50',
+      title: 'Flexible Premium Scheduling',
+      description: 'Choose your preferred date and time for luxury service. Reschedule anytime for free with priority support.',
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
     },
     {
       icon: Shield,
-      title: '6-Month Warranty',
-      description: 'All work comes with 6-month warranty. 100% satisfaction guaranteed.',
-      color: 'text-amber-700',
-      bgColor: 'bg-amber-50',
+      title: '6-Month Premium Warranty',
+      description: 'All luxury work comes with 6-month warranty. 100% satisfaction guaranteed on premium services.',
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-600/10',
     },
     {
       icon: Award,
-      title: 'Verified Professionals',
-      description: 'All workers are background verified, trained, and experienced.',
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
+      title: 'Master Craftsmen',
+      description: 'All workers are background verified, extensively trained, and experienced in luxury furniture restoration.',
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
     },
     {
       icon: Headphones,
-      title: '24/7 Support',
-      description: 'Customer support available round the clock via call, WhatsApp, or chat.',
-      color: 'text-amber-600',
-      bgColor: 'bg-amber-50',
+      title: '24/7 Premium Support',
+      description: 'Dedicated customer support available round the clock via call, WhatsApp, or chat for premium clients.',
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-600/10',
     },
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-br from-amber-50 to-orange-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-20 luxe-bg-secondary relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Why Book Online with Us?
+          <h2 className="luxe-heading-lg text-white mb-4">
+            Why Choose <span className="text-yellow-400 luxe-shimmer">LUXE Premium</span>?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Experience hassle-free booking with complete transparency and guaranteed quality
+          <p className="luxe-body-lg text-gray-300 max-w-2xl mx-auto">
+            Experience hassle-free luxury booking with complete transparency and guaranteed premium quality
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 text-center md:text-left"
+                className="luxe-glass-card p-8 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300 text-center group luxe-hover-lift"
               >
-                <div className={`w-12 h-12 rounded-lg ${benefit.bgColor} flex items-center justify-center mb-4 mx-auto md:mx-0`}>
-                  <IconComponent className={`w-6 h-6 ${benefit.color}`} />
+                <div className={`w-16 h-16 rounded-2xl ${benefit.bgColor} border border-yellow-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  <IconComponent className={`w-8 h-8 ${benefit.color}`} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="luxe-heading-sm text-white mb-4 group-hover:text-yellow-400 transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="luxe-body-md text-gray-300 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

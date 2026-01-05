@@ -1,5 +1,118 @@
 import { ComponentType } from 'react';
 
+// Luxe Brand System Types
+export interface BrandColors {
+  primary: string;      // Jet Black
+  accent: string;       // Royal Gold
+  secondary: string;    // Champagne Gold
+  textPrimary: string;  // Ivory White
+  textSecondary: string; // Warm Grey
+}
+
+export interface TypographyConfig {
+  headings: string;
+  body: string;
+  letterSpacing: {
+    headings: string;
+    luxury: string;
+  };
+}
+
+export interface SpacingConfig {
+  section: string;
+  component: string;
+  element: string;
+}
+
+export interface BrandSystem {
+  colors: BrandColors;
+  typography: TypographyConfig;
+  spacing: SpacingConfig;
+}
+
+export interface BrandConfig {
+  name: string;
+  positioning: string;
+  targetAudience: string[];
+  serviceAreas: string[];
+  contactInfo: {
+    phone: string;
+    email: string;
+    address: string;
+  };
+}
+
+export interface HeroSectionConfig {
+  title: {
+    primary: string;
+    secondary: string;
+    tagline: string;
+  };
+  cta: {
+    primary: {
+      text: string;
+      style: string;
+    };
+    secondary: {
+      text: string;
+      style: string;
+    };
+  };
+  background: {
+    type: string;
+    image: string;
+  };
+}
+
+export interface NavigationConfig {
+  logo: {
+    text: string;
+    style: string;
+  };
+  menu: {
+    style: string;
+    animations: string;
+  };
+  mobile: {
+    type: string;
+    trigger: string;
+  };
+}
+
+export interface ServiceCardConfig {
+  hover: {
+    animation: string;
+    overlay: string;
+  };
+  pricing: {
+    display: string;
+    cta: string;
+  };
+  image: {
+    style: string;
+  };
+}
+
+export interface ContentManagerConfig {
+  brandName: string;
+  tone: {
+    style: string;
+    sentenceLength: string;
+    vocabulary: string;
+  };
+  seo: {
+    keywords: string[];
+    metaTemplates: string[];
+  };
+}
+
+export interface DesignTokens {
+  colors: Record<string, string>;
+  typography: Record<string, string>;
+  spacing: Record<string, string>;
+}
+
+// Existing Blog Types
 export interface BlogPostData {
   slug: string;
   title: string;

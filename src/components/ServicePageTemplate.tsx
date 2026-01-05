@@ -62,6 +62,28 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ pageData }) =
 
       <StickyWhatsApp />
 
+      {/* Sticky Mobile CTA - Fixed bottom for mobile only */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-gray-200 shadow-lg safe-area-inset-bottom">
+        <div className="flex gap-2 p-3">
+          <a
+            href="tel:+918828709945"
+            className="flex-1 flex items-center justify-center space-x-2 bg-amber-600 text-white px-4 py-3 rounded-lg hover:bg-amber-700 transition-all duration-200 font-semibold min-h-[44px]"
+          >
+            <Phone size={18} />
+            <span>Call Now</span>
+          </a>
+          <a
+            href={`https://wa.me/918828709945?text=Hi, I need ${serviceName} service in ${location}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 transition-all duration-200 font-semibold min-h-[44px]"
+          >
+            <MessageCircle size={18} />
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
       {/* Content without Header/Footer as they're in App.tsx layout */}
         {/* Breadcrumb Navigation */}
         <section className="bg-gray-50 py-3 border-b border-gray-200">

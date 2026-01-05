@@ -71,23 +71,40 @@ const OfficeChairRepair: React.FC = () => {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: repairService.name,
+    name: repairService.name,
+    serviceType: 'Premium Office Chair Repair',
+    description: 'Expert office chair repair services in Mumbai. Specializing in luxury office furniture restoration and maintenance.',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'A1 Furniture Polish',
+      name: 'Luxe Wooden Furniture Polishing',
+      alternateName: 'Luxe Furniture Polishing',
+      url: 'https://luxewoodenfurniturepolishing.com',
       telephone: '+918828709945',
+      email: 'info@luxewoodenfurniturepolishing.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Jogeshwari West',
+        streetAddress: 'Mumbai Metropolitan Region',
         addressLocality: 'Mumbai',
-        addressRegion: 'MH',
-        postalCode: '400102',
+        addressRegion: 'Maharashtra',
+        postalCode: '400001',
         addressCountry: 'IN',
       },
+      priceRange: '₹₹₹',
+    },
+    brand: {
+      '@type': 'Brand',
+      name: 'Luxe Wooden Furniture Polishing',
     },
     areaServed: {
       '@type': 'City',
       name: 'Mumbai',
+      sameAs: 'https://en.wikipedia.org/wiki/Mumbai',
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'INR',
+      priceRange: '₹₹₹',
+      availability: 'https://schema.org/InStock',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -111,8 +128,8 @@ const OfficeChairRepair: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Office Chair Repair Services in Mumbai | A1 Furniture Polish"
-        description="Expert office chair repair in Mumbai. We offer base, wheel, and hydraulic replacement with on-site service at competitive prices."
+        title="Executive Office Chair Repair Services in Mumbai | Luxe Wooden Furniture Polishing"
+        description="Premium office chair repair in Mumbai. We offer base, wheel, and hydraulic replacement with on-site service at competitive prices. Trusted by luxury offices and executives."
         keywords="office chair repair, chair repair mumbai, chair base replacement, chair wheel replacement, hydraulic replacement, furniture repair"
         canonical={getCanonicalURL('/office-chair-repair')}
       />
