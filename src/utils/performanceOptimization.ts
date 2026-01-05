@@ -117,13 +117,13 @@ const initWebVitals = async (): Promise<void> => {
   if (typeof window === 'undefined') return;
   
   try {
-    // Dynamic import at runtime only - using destructuring for proper imports
-    const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-    getCLS(reportWebVitals);
-    getFID(reportWebVitals);
-    getFCP(reportWebVitals);
-    getLCP(reportWebVitals);
-    getTTFB(reportWebVitals);
+    // Dynamic import at runtime only - using correct web-vitals v3+ API
+    const { onCLS, onFID, onFCP, onLCP, onTTFB } = await import('web-vitals');
+    onCLS(reportWebVitals);
+    onFID(reportWebVitals);
+    onFCP(reportWebVitals);
+    onLCP(reportWebVitals);
+    onTTFB(reportWebVitals);
   } catch (error) {
     // web-vitals not available, continue without it
     console.log('Web Vitals monitoring not available - continuing without performance metrics');
