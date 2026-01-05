@@ -40,25 +40,25 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 luxe-bg-primary relative overflow-hidden">
+    <section className="py-10 md:py-12 luxe-bg-primary relative overflow-hidden">
       {/* Luxury Background Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-16 right-16 w-64 h-64 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <HelpCircle className="w-8 h-8 text-yellow-400" />
-            <h2 className="luxe-heading-lg text-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <HelpCircle className="w-6 h-6 text-yellow-400" />
+            <h2 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: 'Playfair Display' }}>
               Frequently Asked <span className="text-yellow-400 luxe-shimmer">Questions</span>
             </h2>
           </div>
-          <p className="luxe-body-lg text-gray-300">Quick answers to common questions about our premium services</p>
+          <p className="text-sm md:text-base text-gray-300">Quick answers to common questions about our premium services</p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -66,20 +66,20 @@ const FAQSection: React.FC = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 flex items-center justify-between bg-transparent hover:bg-yellow-500/5 transition-all duration-300 text-left group"
+                className="w-full px-4 py-4 flex items-center justify-between bg-transparent hover:bg-yellow-500/5 transition-all duration-300 text-left group"
               >
-                <span className="luxe-heading-sm text-white pr-4 group-hover:text-yellow-400 transition-colors">
+                <span className="text-sm md:text-base font-semibold text-white pr-4 group-hover:text-yellow-400 transition-colors">
                   {faq.question}
                 </span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-6 h-6 text-yellow-400 flex-shrink-0 transition-transform duration-300" />
+                  <ChevronUp className="w-5 h-5 text-yellow-400 flex-shrink-0 transition-transform duration-300" />
                 ) : (
-                  <ChevronDown className="w-6 h-6 text-gray-400 flex-shrink-0 group-hover:text-yellow-400 transition-colors duration-300" />
+                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-yellow-400 transition-colors duration-300" />
                 )}
               </button>
               {openIndex === index && (
-                <div className="px-6 py-5 bg-yellow-500/5 border-t border-yellow-500/20">
-                  <p className="luxe-body-md text-gray-300 leading-relaxed">{faq.answer}</p>
+                <div className="px-4 py-4 bg-yellow-500/5 border-t border-yellow-500/20">
+                  <p className="text-sm text-gray-300 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
