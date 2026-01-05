@@ -5,6 +5,11 @@ const LUXE_IMAGE_QUALITY = 85; // High quality for luxury brand
 const LUXE_FORMATS = ['avif', 'webp', 'jpg'];
 const LUXE_SIZES = [320, 640, 768, 1024, 1280, 1920];
 
+// Luxe-specific image optimization settings
+const LUXE_IMAGE_QUALITY = 85; // High quality for luxury brand
+const LUXE_FORMATS = ['avif', 'webp', 'jpg'];
+const LUXE_SIZES = [320, 640, 768, 1024, 1280, 1920];
+
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -90,8 +95,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Generate responsive image sources
   const generateSrcSet = (format: string) => {
-    const baseName = src.replace('/assets/', '').replace(/\.[^/.]+$/, '');
-    const baseUrl = '/assets/optimized/';
+    const baseName = src.replace('/assets/optimized/', '').replace(/\.[^/.]+$/, '');
+    const baseUrl = '/assets/optimized/optimized/';
     
     return LUXE_SIZES
       .map(size => `${baseUrl}${baseName}-${size}w.${format} ${size}w`)

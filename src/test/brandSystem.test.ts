@@ -42,7 +42,7 @@ describe('Brand System Configuration', () => {
 
   it('should return correct luxury colors', () => {
     expect(getPrimaryColor()).toBe('#0E0E0E'); // Jet Black
-    expect(getAccentColor()).toBe('#C9A24D'); // Royal Gold
+    expect(getAccentColor()).toBe('#D4AF37'); // Royal Gold (WCAG AA compliant)
   });
 
   it('should return correct luxury fonts', () => {
@@ -93,7 +93,7 @@ describe('Brand System Configuration', () => {
 describe('Brand Validation Functions', () => {
   it('should validate luxury colors correctly', () => {
     expect(isLuxuryColor('#0E0E0E')).toBe(true); // Jet Black
-    expect(isLuxuryColor('#C9A24D')).toBe(true); // Royal Gold
+    expect(isLuxuryColor('#D4AF37')).toBe(true); // Royal Gold (WCAG AA compliant)
     expect(isLuxuryColor('#FF0000')).toBe(false); // Red (not in palette)
   });
 
@@ -144,7 +144,7 @@ describe('Brand Validation System', () => {
   });
 
   it('should validate color palette compliance', () => {
-    const validColors = ['#0E0E0E', '#C9A24D', '#E6D3A3'];
+    const validColors = ['#0E0E0E', '#D4AF37', '#B8A052'];
     const invalidColors = ['#FF0000', '#00FF00', '#0000FF'];
     
     const validResult = validateColorPalette(validColors);

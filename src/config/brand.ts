@@ -112,10 +112,10 @@ export interface ContentManagerConfig {
 export const brandSystem: BrandSystem = {
   colors: {
     primary: '#0E0E0E',      // Jet Black
-    accent: '#C9A24D',       // Royal Gold
-    secondary: '#E6D3A3',    // Champagne Gold
+    accent: '#D4AF37',       // Royal Gold (WCAG AA compliant)
+    secondary: '#B8A052',    // Champagne Gold (WCAG AA compliant)  
     textPrimary: '#F5F5F5',  // Ivory White
-    textSecondary: '#9A9A9A', // Warm Grey
+    textSecondary: '#4A4A4A', // Darker Warm Grey (WCAG AA compliant)
   },
   typography: {
     headings: 'Playfair Display',

@@ -242,7 +242,9 @@ export const isLuxuryURL = (url: string): boolean => {
  */
 export const generateLuxuryURL = (path: string): string => {
   // Remove any old brand references and create clean luxury URL
+  // Order matters - replace longer patterns first
   const cleanPath = path
+    .replace(/a1-furniture-polishing/g, 'luxe-furniture-polishing')
     .replace(/a1-furniture-polish/g, 'luxe-furniture-polishing')
     .replace(/a1furniture/g, 'luxe')
     .replace(/a1_furniture/g, 'luxe-furniture');
