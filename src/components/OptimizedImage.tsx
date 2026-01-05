@@ -5,11 +5,6 @@ const LUXE_IMAGE_QUALITY = 85; // High quality for luxury brand
 const LUXE_FORMATS = ['avif', 'webp', 'jpg'];
 const LUXE_SIZES = [320, 640, 768, 1024, 1280, 1920];
 
-// Luxe-specific image optimization settings
-const LUXE_IMAGE_QUALITY = 85; // High quality for luxury brand
-const LUXE_FORMATS = ['avif', 'webp', 'jpg'];
-const LUXE_SIZES = [320, 640, 768, 1024, 1280, 1920];
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
