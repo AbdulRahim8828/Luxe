@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star } from 'lucide-react';
-import SEOHead from '../../src/components/SEOHead';
+import SEO from '../components/SEO';
 import JsonLd from '../components/JsonLd';
 import { getCanonicalURL } from '../utils/canonicalURL';
 import { localBusiness } from '../data/localBusiness.ts';
@@ -17,7 +17,7 @@ import QuickQuoteCalculator from '../components/QuickQuoteCalculator.tsx';
 import FAQSection from '../components/FAQSection.tsx';
 import WhyBookOnline from '../components/WhyBookOnline.tsx';
 import FinalCTA from '../components/FinalCTA';
-import OptimizedImage from '../../src/components/OptimizedImage';
+import OptimizedImage from '../components/OptimizedImage';
 
 // Lazy load heavy components
 const OurProcess = lazy(() => import('../components/OurProcess'));
@@ -29,11 +29,11 @@ const Home = () => {
   
   return (
     <>
-      <SEOHead
+      <SEO
         title={homeSEO.title}
         description={homeSEO.description}
         keywords={homeSEO.keywords}
-        ogImage="/assets/Sofa And chair.webp"
+        image="/assets/Sofa And chair.webp"
         canonical={getCanonicalURL('/')}
       />
       <JsonLd data={localBusiness} />
