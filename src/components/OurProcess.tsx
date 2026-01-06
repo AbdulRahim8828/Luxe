@@ -48,7 +48,7 @@ const OurProcess = () => {
   ];
 
   return (
-    <section className="py-20 md:py-24 luxe-bg-secondary relative overflow-hidden">
+    <section className="py-14 md:py-18 luxe-bg-secondary relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-yellow-700/10 to-transparent rounded-full blur-3xl"></div>
@@ -75,7 +75,7 @@ const OurProcess = () => {
             {steps.map((item, index) => (
               <div 
                 key={item.step} 
-                className="luxe-glass-card group animate-slideInUp"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 md:p-6 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Step Number Badge */}
@@ -123,7 +123,7 @@ const OurProcess = () => {
               {steps.map((item, index) => (
                 <div 
                   key={item.step} 
-                  className="luxe-glass-card group animate-slideInUp"
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 relative"
                   style={{ width: '320px', animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Step Number Badge */}

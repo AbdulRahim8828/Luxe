@@ -48,7 +48,7 @@ const WhyBookOnline: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 luxe-bg-secondary relative overflow-hidden">
+    <section className="py-12 md:py-16 luxe-bg-secondary relative overflow-hidden">
       {/* Luxury Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
@@ -71,7 +71,7 @@ const WhyBookOnline: React.FC = () => {
             return (
               <div
                 key={index}
-                className="luxe-glass-card p-8 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300 text-center group luxe-hover-lift"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 md:p-8 hover:border-yellow-500/30 transition-all duration-300 text-center group luxe-hover-lift"
               >
                 <div className={`w-16 h-16 rounded-2xl ${benefit.bgColor} border border-yellow-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   <IconComponent className={`w-8 h-8 ${benefit.color}`} />

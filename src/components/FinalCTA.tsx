@@ -12,7 +12,7 @@ const FinalCTA: React.FC = () => {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="luxe-glass-card p-6 md:p-8 text-center border border-yellow-500/30 shadow-2xl">
+        <div className="bg-gray-800/50 backdrop-blur-sm border border-yellow-500/30 rounded-2xl p-6 md:p-8 text-center shadow-2xl hover:border-yellow-500/50 transition-all duration-300">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: 'Playfair Display' }}>
             Join <span className="text-yellow-400 luxe-shimmer">500+ Premium Clients</span>
           </h2>

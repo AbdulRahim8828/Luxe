@@ -31,7 +31,7 @@ const TrustBadges: React.FC = () => {
   ];
 
   return (
-    <section className="py-10 md:py-12 luxe-bg-secondary relative overflow-hidden">
+    <section className="py-8 md:py-10 luxe-bg-secondary relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-8 left-8 w-24 h-24 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-xl"></div>
       <div className="absolute bottom-8 right-8 w-32 h-32 bg-gradient-to-br from-yellow-700/10 to-transparent rounded-full blur-xl"></div>
@@ -58,7 +58,7 @@ const TrustBadges: React.FC = () => {
             return (
               <div
                 key={index}
-                className="luxe-glass-card text-center group animate-slideInUp"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 md:p-6 text-center group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-yellow-500/30">

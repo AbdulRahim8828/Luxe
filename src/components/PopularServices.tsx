@@ -16,7 +16,7 @@ const PopularServices: React.FC = () => {
 
   return (
     <>
-      <section className="py-12 md:py-16 luxe-bg-primary relative overflow-hidden">
+      <section className="py-10 md:py-14 luxe-bg-primary relative overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-2xl"></div>
         <div className="absolute bottom-16 right-16 w-64 h-64 bg-gradient-to-br from-yellow-700/10 to-transparent rounded-full blur-2xl"></div>
@@ -51,7 +51,7 @@ const PopularServices: React.FC = () => {
               return (
                 <div
                   key={service.id}
-                  className="luxe-glass-card group animate-slideInUp"
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 md:p-6 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Service Image */}

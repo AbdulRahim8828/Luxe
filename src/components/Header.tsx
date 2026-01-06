@@ -18,7 +18,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="luxe-glass-card shadow-2xl sticky top-0 z-50 border-b border-yellow-500/20">
+    <header className="luxe-glass-card-square shadow-2xl sticky top-0 z-50 border-b border-yellow-500/20">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Luxe Logo */}
@@ -84,6 +84,8 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-xl text-gray-300 hover:text-yellow-400 hover:bg-yellow-500/10 transition-all duration-300 group"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
           >
             <div className="relative">
               {isMenuOpen ? (
@@ -98,7 +100,7 @@ const Header = () => {
         {/* Elegant Luxury Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden animate-slide-up">
-            <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-gray-900/50 to-gray-800/30 border-t border-yellow-500/20 rounded-b-2xl backdrop-blur-sm">
+            <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-gray-900/50 to-gray-800/30 border-t border-yellow-500/20 backdrop-blur-sm">
               <nav className="flex flex-col space-y-1">
                 {navigation.map((item) => (
                   <Link

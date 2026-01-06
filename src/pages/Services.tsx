@@ -286,7 +286,7 @@ const Services = () => {
       
       <div className="min-h-screen luxe-bg-primary">
         {/* Header - Compact UI with Cart Icon */}
-        <header className="luxe-glass-card border-b border-yellow-500/20 shadow-xl relative overflow-hidden">
+        <header className="bg-gray-800/50 backdrop-blur-sm border-b border-yellow-500/20 shadow-xl relative overflow-hidden">
           {/* Luxury Background Elements */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full blur-xl"></div>
@@ -335,7 +335,7 @@ const Services = () => {
         </header>
 
       {/* Category Grid Section - Compact */}
-      <section className="luxe-bg-primary py-3 sm:py-4 relative overflow-hidden">
+      <section className="luxe-bg-primary py-2 sm:py-3 relative overflow-hidden">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-8 left-8 w-32 h-32 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
@@ -348,7 +348,7 @@ const Services = () => {
               <button
                 key={service.id}
                 onClick={() => handleViewDetails(service.id)}
-                className="flex flex-col items-center gap-1.5 p-1.5 sm:p-2 luxe-glass-card rounded-lg hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-0.5 active:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 group border border-yellow-500/20 hover:border-yellow-500/40"
+                className="flex flex-col items-center gap-1.5 p-1.5 sm:p-2 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-0.5 active:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 group hover:border-yellow-500/40"
                 aria-label={`View ${service.name} options`}
                 type="button"
               >
@@ -370,7 +370,7 @@ const Services = () => {
       </section>
 
       {/* Section-wise Service Cards - Compact Urban Company Style */}
-      <main className="max-w-7xl mx-auto px-4 py-4 space-y-4 relative">
+      <main className="max-w-7xl mx-auto px-4 py-3 space-y-3 relative">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
@@ -392,7 +392,7 @@ const Services = () => {
               </h2>
 
               {/* Service Card */}
-              <div className="luxe-glass-card rounded-xl border border-yellow-500/20 p-4 sm:p-5 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-1 transition-all duration-300 hover:border-yellow-500/40">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 sm:p-5 hover:shadow-xl hover:shadow-yellow-500/20 hover:-translate-y-1 transition-all duration-300 hover:border-yellow-500/40">
                 <div className="flex gap-4">
                   {/* Left Side - Service Details */}
                   <div className="flex-1 space-y-2 sm:space-y-3">
@@ -504,7 +504,7 @@ const Services = () => {
         <div className="fixed inset-0 luxe-bg-primary z-50 overflow-y-auto md:pb-0 pb-20">
           <div className="min-h-screen md:min-h-auto">
             {/* Header */}
-            <header className="luxe-glass-card border-b border-yellow-500/20 sticky top-0 z-10">
+            <header className="bg-gray-800/50 backdrop-blur-sm border-b border-yellow-500/20 sticky top-0 z-10">
               <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <button
@@ -538,7 +538,7 @@ const Services = () => {
             <main className="max-w-3xl mx-auto px-4 py-4 space-y-4 pb-32 md:pb-24">
               {/* Empty Cart Message */}
               {selectedServices.length === 0 ? (
-                <section className="luxe-glass-card rounded-xl p-6 shadow-xl text-center border border-yellow-500/20">
+                <section className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 shadow-xl text-center hover:border-yellow-500/30 transition-all duration-300">
                   <div className="max-w-sm mx-auto">
                     <div className="w-16 h-16 bg-gradient-to-br from-yellow-600/20 to-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-3 border border-yellow-500/20">
                       <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -559,7 +559,7 @@ const Services = () => {
               ) : (
                 <>
                   {/* Checkout Section */}
-                  <section className="luxe-glass-card rounded-xl p-4 shadow-xl border border-yellow-500/20">
+                  <section className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 shadow-xl hover:border-yellow-500/30 transition-all duration-300">
                     <h2 className="text-base font-bold mb-3 text-white">Premium Checkout</h2>
                     
                     {/* Services List */}
@@ -642,7 +642,7 @@ const Services = () => {
 
             {/* Bottom CTA - Above bottom nav on mobile - Only show if cart has items */}
             {selectedServices.length > 0 && (
-              <div className="fixed bottom-0 left-0 right-0 luxe-glass-card border-t border-yellow-500/20 p-3 shadow-xl mb-20 md:mb-0 z-40">
+              <div className="fixed bottom-0 left-0 right-0 bg-gray-800/50 backdrop-blur-sm border-t border-yellow-500/20 p-3 shadow-xl mb-20 md:mb-0 z-40">
               <div className="max-w-3xl mx-auto">
                 <button
                   onClick={handleBookNow}
@@ -696,7 +696,7 @@ const Services = () => {
       {/* Loading Overlay */}
       {isLoading && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="luxe-glass-card rounded-2xl p-8 border border-yellow-500/20">
+          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300">
             <LoadingSpinner size="lg" text="Opening WhatsApp..." />
           </div>
         </div>
@@ -722,7 +722,7 @@ const Services = () => {
       {/* Loading Indicator - Compact Mobile Friendly */}
       {isAddingToCart && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 w-full max-w-xs">
-          <div className="luxe-glass-card px-3 sm:px-4 py-2 rounded-lg shadow-xl flex items-center gap-2 mx-auto border border-yellow-500/20">
+          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 px-3 sm:px-4 py-2 rounded-lg shadow-xl flex items-center gap-2 mx-auto hover:border-yellow-500/30 transition-all duration-300">
             <div className="animate-spin rounded-full h-3 w-3 sm:h-4 sm:w-4 border-b-2 border-yellow-400 flex-shrink-0"></div>
             <span className="font-medium text-white text-xs sm:text-sm">Adding to cart...</span>
           </div>

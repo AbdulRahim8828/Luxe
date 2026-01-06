@@ -40,7 +40,7 @@ const QuickQuoteCalculator: React.FC = () => {
           <p className="text-sm md:text-base text-gray-300">Select your furniture type and get premium pricing in seconds</p>
         </div>
 
-        <div className="luxe-glass-card p-6 md:p-8 border border-yellow-500/20 shadow-2xl">
+        <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 md:p-8 hover:border-yellow-500/30 transition-all duration-300 shadow-2xl">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Service Selection */}
             <div>

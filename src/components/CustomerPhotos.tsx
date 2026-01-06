@@ -74,7 +74,7 @@ const CustomerPhotos: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 luxe-bg-primary relative overflow-hidden">
+    <section className="py-12 md:py-16 luxe-bg-primary relative overflow-hidden">
       {/* Luxury Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-3xl"></div>
@@ -100,7 +100,7 @@ const CustomerPhotos: React.FC = () => {
             >
               {customerReviews.map((review, index) => (
                 <div key={index} className="min-w-full">
-                  <div className="luxe-glass-card p-6 md:p-8 border border-yellow-500/20">
+                  <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 md:p-8 hover:border-yellow-500/30 transition-all duration-300">
                     <div className="grid md:grid-cols-2 gap-6 items-center">
                       {/* Image */}
                       <div className="relative h-64 md:h-72 rounded-xl overflow-hidden bg-gray-800/50">
@@ -143,13 +143,13 @@ const CustomerPhotos: React.FC = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 luxe-glass-card rounded-full flex items-center justify-center hover:border-yellow-500/40 transition-all duration-300 shadow-lg z-10 group"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full flex items-center justify-center hover:border-yellow-500/40 transition-all duration-300 shadow-lg z-10 group"
             >
               <ChevronLeft className="w-6 h-6 text-yellow-400 group-hover:scale-110 transition-transform" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 luxe-glass-card rounded-full flex items-center justify-center hover:border-yellow-500/40 transition-all duration-300 shadow-lg z-10 group"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full flex items-center justify-center hover:border-yellow-500/40 transition-all duration-300 shadow-lg z-10 group"
             >
               <ChevronRight className="w-6 h-6 text-yellow-400 group-hover:scale-110 transition-transform" />
             </button>

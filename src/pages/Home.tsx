@@ -50,7 +50,7 @@ const Home = () => {
       <StickyBookButton />
 
       {/* Hero Section - Luxury Design */}
-      <section className="relative luxe-bg-primary py-8 md:py-12 lg:py-16 overflow-hidden min-h-[70vh] md:min-h-[65vh] lg:min-h-[70vh] flex items-center">
+      <section className="relative luxe-bg-primary py-6 md:py-10 lg:py-12 overflow-hidden min-h-[65vh] md:min-h-[60vh] lg:min-h-[65vh] flex items-center">
         {/* Decorative Background Circles - Optimized for mobile */}
         <div className="absolute top-8 left-8 md:top-16 md:left-16 w-24 h-24 md:w-48 md:h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-xl md:blur-2xl"></div>
         <div className="absolute bottom-8 right-8 md:bottom-16 md:right-16 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-yellow-700/15 to-yellow-900/5 rounded-full blur-xl md:blur-2xl"></div>
@@ -157,8 +157,8 @@ const Home = () => {
             </div>
 
             {/* Right Content - Image Card - Mobile Optimized */}
-            <div className="relative mt-6 lg:mt-0">
-              <div className="luxe-glass-card border border-yellow-500/20 rounded-2xl p-3 md:p-4 max-w-sm mx-auto hover:shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300">
+            <div className="relative mt-4 lg:mt-0">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-3 md:p-4 max-w-sm mx-auto hover:border-yellow-500/30 transition-all duration-300 shadow-xl">
                 <OptimizedImage
                   src="/assets/Sofa And chair.webp"
                   alt="Luxury furniture polishing services"
@@ -202,12 +202,12 @@ const Home = () => {
       <PopularServices />
 
       {/* Our Process */}
-      <Suspense fallback={<div className="py-16 bg-white"></div>}>
+      <Suspense fallback={<div className="py-8 bg-gray-900"></div>}>
         <OurProcess />
       </Suspense>
 
       {/* Stats Counter */}
-      <Suspense fallback={<div className="py-16"></div>}>
+      <Suspense fallback={<div className="py-8 bg-gray-800"></div>}>
         <StatsCounter />
       </Suspense>
 

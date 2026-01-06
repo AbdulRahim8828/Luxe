@@ -63,7 +63,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon, end, label, suffix = '+', dur
 
   return (
     <div ref={ref} className="text-center p-4 md:p-6">
-      <div className="w-16 h-16 md:w-20 md:h-20 luxe-glass-card rounded-xl flex items-center justify-center mx-auto mb-4 border border-yellow-500/20">
+      <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl flex items-center justify-center mx-auto mb-4 hover:border-yellow-500/30 transition-all duration-300">
         {icon}
       </div>
       <div className="text-2xl md:text-4xl font-bold text-white mb-2 luxe-heading">
@@ -78,7 +78,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon, end, label, suffix = '+', dur
 
 const StatsCounter = () => {
   return (
-    <section className="py-16 md:py-20 luxe-bg-secondary relative overflow-hidden">
+    <section className="py-12 md:py-16 luxe-bg-secondary relative overflow-hidden">
       {/* Luxury Decorative Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
