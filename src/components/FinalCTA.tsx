@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star, Award, CheckCircle } from 'lucide-react';
 
 const FinalCTA: React.FC = () => {
   return (
@@ -23,8 +23,8 @@ const FinalCTA: React.FC = () => {
           {/* Premium Features */}
           <div className="grid grid-cols-3 gap-4 mb-6">
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                <span className="text-yellow-400 text-sm">⭐</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+                <Star className="w-6 h-6 text-yellow-400 fill-current" />
               </div>
               <div className="text-center">
                 <div className="text-white font-semibold text-xs">5-Star Rated</div>
@@ -32,8 +32,8 @@ const FinalCTA: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                <span className="text-yellow-400 text-sm">🏆</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+                <Award className="w-6 h-6 text-yellow-400" />
               </div>
               <div className="text-center">
                 <div className="text-white font-semibold text-xs">Award Winning</div>
@@ -41,8 +41,8 @@ const FinalCTA: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                <span className="text-yellow-400 text-sm">✓</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+                <CheckCircle className="w-6 h-6 text-yellow-400" />
               </div>
               <div className="text-center">
                 <div className="text-white font-semibold text-xs">6 Months</div>

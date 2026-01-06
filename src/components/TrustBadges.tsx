@@ -61,8 +61,8 @@ const TrustBadges: React.FC = () => {
                 className="luxe-glass-card text-center group animate-slideInUp"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="w-6 h-6 text-yellow-400" />
+                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-yellow-500/30">
+                  <IconComponent className="w-8 h-8 md:w-10 md:h-10 text-yellow-400" />
                 </div>
                 
                 <div className="mb-2">

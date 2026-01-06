@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ArrowRight, Settings, Sparkles } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Settings, Sparkles, Home, Palette, Wrench, Zap, Target, Shield, Clock, User } from 'lucide-react';
 
 const OurProcess = () => {
   const steps = [
@@ -8,42 +8,42 @@ const OurProcess = () => {
       title: 'Premium Consultation',
       description: 'Detailed assessment of your luxury furniture needs with expert recommendations',
       image: '/assets/consultation-booking.webp',
-      icon: '🏠',
+      icon: Home,
     },
     {
       step: 2,
       title: 'Shade Selection',
       description: 'Choose from 100+ premium polish shades to match your aesthetic vision',
       image: '/assets/select-wood-polish-shade.webp',
-      icon: '🎨',
+      icon: Palette,
     },
     {
       step: 3,
       title: 'Expert Preparation',
       description: 'Meticulous cleaning and surface preparation using professional-grade tools',
       image: '/assets/Cleaning & Sanding.webp',
-      icon: '🔧',
+      icon: Wrench,
     },
     {
       step: 4,
       title: 'Premium Application',
       description: 'Precision gap filling and application of luxury-grade polish materials',
       image: '/assets/filling-gaps-polish-application.webp',
-      icon: '✨',
+      icon: Zap,
     },
     {
       step: 5,
       title: 'Perfect Finishing',
       description: 'Complete drying process with final luxury touches and detailing',
       image: '/assets/drying-finishing.webp',
-      icon: '🎯',
+      icon: Target,
     },
     {
       step: 6,
       title: 'Quality Assurance',
       description: 'Comprehensive inspection ensuring premium standards and client satisfaction',
       image: 'https://images.pexels.com/photos/7792815/pexels-photo-7792815.jpeg',
-      icon: '✅',
+      icon: CheckCircle2,
     }
   ];
 
@@ -84,7 +84,11 @@ const OurProcess = () => {
                 </div>
                 
                 {/* Icon */}
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+                    <item.icon className="w-8 h-8 text-yellow-400" />
+                  </div>
+                </div>
                 
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden rounded-xl mb-6 bg-gradient-to-br from-gray-800 to-gray-900">
@@ -128,7 +132,11 @@ const OurProcess = () => {
                   </div>
                   
                   {/* Icon */}
-                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <div className="mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+                      <item.icon className="w-6 h-6 text-yellow-400" />
+                    </div>
+                  </div>
                   
                   {/* Image */}
                   <div className="relative h-40 overflow-hidden rounded-xl mb-4 bg-gradient-to-br from-gray-800 to-gray-900">
@@ -184,22 +192,22 @@ const OurProcess = () => {
         {/* Bottom Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center">
-              <span className="text-2xl">⏱️</span>
+            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+              <Clock className="w-8 h-8 text-yellow-400" />
             </div>
             <div className="text-2xl font-bold text-yellow-400 mb-2">2-4 Hours</div>
             <div className="text-gray-300">Average Completion Time</div>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center">
-              <span className="text-2xl">🛡️</span>
+            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+              <Shield className="w-8 h-8 text-yellow-400" />
             </div>
             <div className="text-2xl font-bold text-yellow-400 mb-2">6 Months</div>
             <div className="text-gray-300">Warranty Coverage</div>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center">
-              <span className="text-2xl">👨‍🔧</span>
+            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+              <User className="w-8 h-8 text-yellow-400" />
             </div>
             <div className="text-2xl font-bold text-yellow-400 mb-2">Expert</div>
             <div className="text-gray-300">Certified Artisans</div>
