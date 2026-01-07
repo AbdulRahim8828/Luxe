@@ -160,7 +160,7 @@ const About = () => {
       </section>
 
       {/* Why Choose LUXE */}
-      <section className="py-8 md:py-10 bg-gray-800 relative overflow-hidden">
+      <section className="py-8 md:py-10 bg-black relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-16 right-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
