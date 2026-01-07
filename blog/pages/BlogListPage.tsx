@@ -30,7 +30,7 @@ const BlogListPage = () => {
         description="Discover expert insights on luxury furniture care, premium polishing techniques, and restoration guides from LUXE's master craftsmen to keep your premium furniture looking magnificent."
         canonical={getCanonicalURL('/blog')}
       />
-      <div className="bg-gray-900 min-h-screen py-8 md:py-10 relative overflow-hidden">
+      <div className="bg-black min-h-screen py-8 md:py-10 relative overflow-hidden">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>

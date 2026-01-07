@@ -42,7 +42,7 @@ const About = () => {
       />
 
       {/* Luxury Hero Section */}
-      <section className="relative py-8 md:py-10 bg-gray-900 overflow-hidden">
+      <section className="relative py-8 md:py-10 bg-black overflow-hidden">
         {/* Luxury Decorative Elements */}
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
@@ -117,7 +117,7 @@ const About = () => {
       </section>
 
       {/* Our Premium Values */}
-      <section className="py-8 md:py-10 bg-gray-900 relative overflow-hidden">
+      <section className="py-8 md:py-10 bg-black relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
@@ -258,7 +258,7 @@ const About = () => {
       </section>
 
       {/* Premium CTA Section */}
-      <section className="relative py-8 md:py-10 bg-gray-900 overflow-hidden">
+      <section className="relative py-8 md:py-10 bg-black overflow-hidden">
         {/* Luxury Decorative Background */}
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
