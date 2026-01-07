@@ -6,7 +6,7 @@ import OptimizedImage from '../../src/components/OptimizedImage';
 import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 
 interface BlogCardProps {
-  post: BlogPostData;
+  post: Omit<BlogPostData, 'content'> & { content?: string };
   variant?: 'default' | 'featured' | 'compact';
   showExcerpt?: boolean;
   showTags?: boolean;
@@ -19,9 +19,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
   showTags = false 
 }) => {
   const cardClasses = {
-    default: 'luxe-glass-card rounded-2xl overflow-hidden group transform hover:-translate-y-3 hover:shadow-2xl transition-all duration-300 border border-yellow-500/20 hover:border-yellow-500/40 shadow-xl hover:shadow-yellow-500/20',
-    featured: 'luxe-glass-card rounded-3xl overflow-hidden group transform hover:-translate-y-4 hover:shadow-2xl transition-all duration-300 border-2 border-yellow-500/40 hover:border-yellow-500/60 relative shadow-2xl hover:shadow-yellow-500/30',
-    compact: 'luxe-glass-card rounded-xl overflow-hidden group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-yellow-500/20 hover:border-yellow-500/40 shadow-lg hover:shadow-yellow-500/15'
+    default: 'bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden group transform hover:-translate-y-3 hover:shadow-2xl transition-all duration-300 hover:border-yellow-500/40 shadow-xl hover:shadow-yellow-500/20',
+    featured: 'bg-gray-800/50 backdrop-blur-sm border-2 border-yellow-500/40 rounded-3xl overflow-hidden group transform hover:-translate-y-4 hover:shadow-2xl transition-all duration-300 hover:border-yellow-500/60 relative shadow-2xl hover:shadow-yellow-500/30',
+    compact: 'bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover:border-yellow-500/40 shadow-lg hover:shadow-yellow-500/15'
   };
 
   const imageClasses = {
