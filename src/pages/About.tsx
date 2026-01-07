@@ -1,9 +1,9 @@
-import { Award, Users, Shield, Leaf, Target, Heart, Zap, CheckCircle2 } from 'lucide-react';
-import SEOHead from '../../src/components/SEOHead';
+import { Award, Users, Shield, Leaf, Target, Heart, Zap, CheckCircle2, Phone, MessageCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 import { FadeIn } from '../components/ScrollAnimations';
 import { getCanonicalURL } from '../utils/canonicalURL';
 import { getAboutSEO } from '../seo/config/luxurySEOConfig';
-import OptimizedImage from '../../src/components/OptimizedImage';
+import OptimizedImage from '../components/OptimizedImage';
 
 const About = () => {
   // Get luxury SEO configuration for about page
@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <>
-      <SEOHead
+      <SEO
         title={aboutSEO.title}
         description={aboutSEO.description}
         keywords={aboutSEO.keywords}
@@ -42,7 +42,7 @@ const About = () => {
       />
 
       {/* Luxury Hero Section */}
-      <section className="relative py-12 md:py-16 luxe-bg-secondary overflow-hidden">
+      <section className="relative py-8 md:py-10 bg-gray-900 overflow-hidden">
         {/* Luxury Decorative Elements */}
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
@@ -70,15 +70,15 @@ const About = () => {
                 
                 {/* Premium Stats */}
                 <div className="grid grid-cols-3 gap-3 md:gap-4 mt-6">
-                  <div className="text-center p-4 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                  <div className="text-center p-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
                     <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">10+</p>
                     <p className="text-xs text-gray-300 font-medium">Years Excellence</p>
                   </div>
-                  <div className="text-center p-4 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                  <div className="text-center p-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
                     <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">500+</p>
                     <p className="text-xs text-gray-300 font-medium">Premium Clients</p>
                   </div>
-                  <div className="text-center p-4 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                  <div className="text-center p-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
                     <p className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">100%</p>
                     <p className="text-xs text-gray-300 font-medium">Luxury Standard</p>
                   </div>
@@ -98,9 +98,9 @@ const About = () => {
                     loading="lazy"
                   />
                   {/* Luxury Overlay Badge */}
-                  <div className="absolute bottom-4 left-4 right-4 luxe-glass-card p-4 rounded-2xl shadow-2xl border border-yellow-500/30">
+                  <div className="absolute bottom-4 left-4 right-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-4 rounded-2xl shadow-2xl">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                         <Award className="w-6 h-6 text-black" />
                       </div>
                       <div>
@@ -117,7 +117,7 @@ const About = () => {
       </section>
 
       {/* Our Premium Values */}
-      <section className="py-12 md:py-16 luxe-bg-primary relative overflow-hidden">
+      <section className="py-8 md:py-10 bg-gray-900 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-16 left-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
@@ -141,12 +141,12 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <FadeIn key={index} delay={index * 100}>
-                <div className="group relative luxe-glass-card p-6 rounded-3xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-3xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
                   {/* Decorative Corner */}
                   <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-500/10 to-yellow-600/5 rounded-bl-full"></div>
                   
                   <div className="relative">
-                    <div className="w-16 h-16 luxe-gold-gradient rounded-3xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                       {value.icon}
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-yellow-400 transition-colors">{value.title}</h3>
@@ -160,7 +160,7 @@ const About = () => {
       </section>
 
       {/* Why Choose LUXE */}
-      <section className="py-12 md:py-16 luxe-bg-secondary relative overflow-hidden">
+      <section className="py-8 md:py-10 bg-gray-800 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-16 right-16 w-48 h-48 bg-gradient-to-br from-yellow-600/20 to-yellow-800/10 rounded-full blur-2xl"></div>
@@ -183,8 +183,8 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FadeIn delay={100}>
-              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="flex items-start space-x-3 p-6 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <Target className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -195,8 +195,8 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="flex items-start space-x-3 p-6 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <Heart className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -207,8 +207,8 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={300}>
-              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="flex items-start space-x-3 p-6 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <Zap className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -219,8 +219,8 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={400}>
-              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="flex items-start space-x-3 p-6 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <CheckCircle2 className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -231,8 +231,8 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={500}>
-              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="flex items-start space-x-3 p-6 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <Shield className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -243,8 +243,8 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={600}>
-              <div className="flex items-start space-x-3 p-6 luxe-glass-card rounded-2xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
-                <div className="w-12 h-12 luxe-gold-gradient rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div className="flex items-start space-x-3 p-6 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-yellow-500/40 transition-all duration-300 luxe-hover-lift">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <Leaf className="w-6 h-6 text-black" />
                 </div>
                 <div>
@@ -258,7 +258,7 @@ const About = () => {
       </section>
 
       {/* Premium CTA Section */}
-      <section className="relative py-12 md:py-16 luxe-bg-primary overflow-hidden">
+      <section className="relative py-8 md:py-10 bg-gray-900 overflow-hidden">
         {/* Luxury Decorative Background */}
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
@@ -268,7 +268,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <FadeIn>
-            <div className="luxe-glass-card p-8 md:p-10 rounded-3xl border border-yellow-500/30 shadow-2xl">
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-8 md:p-10 rounded-3xl shadow-2xl hover:border-yellow-500/30 transition-all duration-300">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: 'Playfair Display' }}>
                 Experience the <span className="text-yellow-400 luxe-shimmer">LUXE Difference</span> Today
               </h2>
@@ -279,7 +279,7 @@ const About = () => {
               {/* Premium Features */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="flex flex-col items-center space-y-2">
-                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <span className="text-yellow-400 text-sm">⭐</span>
                   </div>
                   <div className="text-center">
@@ -288,7 +288,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
-                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <span className="text-yellow-400 text-sm">🏆</span>
                   </div>
                   <div className="text-center">
@@ -297,7 +297,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
-                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <span className="text-yellow-400 text-sm">✓</span>
                   </div>
                   <div className="text-center">
@@ -310,17 +310,19 @@ const About = () => {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="tel:+918828709945"
-                  className="luxe-btn-primary py-3 px-6 rounded-2xl font-semibold text-sm shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                 >
-                  Call Premium: +91 8828709945
+                  <Phone className="w-4 h-4" />
+                  <span>Call Premium: +91 8828709945</span>
                 </a>
                 <a
                   href="https://wa.me/918828709945"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 text-white py-3 px-6 rounded-2xl hover:bg-green-700 transition-all duration-300 font-semibold shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 text-sm flex items-center justify-center gap-2"
+                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                 >
-                  WhatsApp LUXE
+                  <MessageCircle className="w-4 h-4" />
+                  <span>WhatsApp LUXE</span>
                 </a>
               </div>
             </div>
