@@ -836,7 +836,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 542,
     duration: 'Varies by size',
     features: ['Multi-color available', 'Durable paint', 'Professional finish', 'Travelling cost extra'],
-    image: '/assets/luxe-furniture-cupboard-metal.webp',
+    image: '/assets/Luxe assets/Metal Almirah .webp',
     options: [
       { id: 'almirah-paint', name: 'Metal Almirah Paint (per sqft)', price: 249, rating: 4.6, reviewCount: 542, estimatedTime: 'Varies' }
     ],
@@ -854,102 +854,6 @@ export const servicePageData: ServiceData[] = [
     faqs: [
       { question: 'What colors are available?', answer: 'Multiple colors are available. You can choose during consultation.' },
       { question: 'Is travelling cost included?', answer: 'No, travelling cost is charged separately based on location.' }
-    ],
-    trustBadges: [
-      { icon: 'shield-check', text: 'Background verified professionals' },
-      { icon: 'wrench', text: '300+ hours of training' }
-    ]
-  },
-  {
-    id: 'metal-bed-powder-coating',
-    name: 'Metal Bed Powder Coating',
-    category: 'metal-services',
-    rating: 4.7,
-    reviewCount: 634,
-    duration: 'Varies by size',
-    features: ['Powder coating finish', 'Durable protection', 'Fitting charge extra', 'Travelling cost extra'],
-    image: '/assets/luxe-furniture-bed-metal.webp',
-    options: [
-      { id: 'bed-powder-coating', name: 'Metal Bed Powder Coating (per sqft)', price: 160, rating: 4.7, reviewCount: 634, estimatedTime: 'Varies' }
-    ],
-    selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Powder coating application', 'Surface preparation'],
-    materials: ['/assets/luxe-process-shade-selection.webp', '/assets/luxe-process-cleaning-sanding.webp'],
-    processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the metal bed surface thoroughly.', image: '/assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Color Selection', description: 'Choose from multiple powder coating colors.', image: '/assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Powder Coating Application', description: 'Apply powder coating evenly for durable finish.', image: '/assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Curing & Finishing', description: 'Cure the coating at proper temperature for long-lasting finish.', image: '/assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your bed.', image: '/assets/luxe-furniture-wooden-collection.webp' }
-    ],
-    faqs: [
-      { question: 'What is powder coating?', answer: 'Powder coating is a durable finish applied to metal surfaces for long-lasting protection.' },
-      { question: 'Are fitting and travelling charges included?', answer: 'No, fitting and travelling charges are extra and charged separately.' }
-    ],
-    trustBadges: [
-      { icon: 'shield-check', text: 'Background verified professionals' },
-      { icon: 'wrench', text: '300+ hours of training' }
-    ]
-  },
-  {
-    id: 'steel-bed-buffing',
-    name: 'Steel Bed Buffing Polish',
-    category: 'metal-services',
-    rating: 4.8,
-    reviewCount: 478,
-    duration: 'Varies by size',
-    features: ['Buffing polish', 'Junk removal included', 'Fitting charge extra', 'Travelling cost extra'],
-    image: '/assets/luxe-furniture-bed-steel.webp',
-    options: [
-      { id: 'steel-bed-buffing', name: 'Steel Bed Buffing (per sqft)', price: 189, rating: 4.8, reviewCount: 478, estimatedTime: 'Varies' }
-    ],
-    selectedOption: -1,
-    priceIncludes: ['Material & labour cost', 'Buffing polish', 'Junk removal', 'Surface preparation'],
-    materials: ['/assets/luxe-process-shade-selection.webp', '/assets/luxe-process-cleaning-sanding.webp'],
-    processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Cleaning', description: 'Our professionals clean the steel bed surface thoroughly.', image: '/assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Rust Removal', description: 'Remove any rust or oxidation from the surface.', image: '/assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Buffing Application', description: 'Apply buffing compound and polish the surface.', image: '/assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Polishing & Shine', description: 'Buff the surface to restore shine and luster.', image: '/assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect shine. We clean up and hand over your bed.', image: '/assets/luxe-furniture-wooden-collection.webp' }
-    ],
-    faqs: [
-      { question: 'What is buffing polish?', answer: 'Buffing polish restores shine to steel surfaces by removing oxidation and scratches.' },
-      { question: 'Are fitting and travelling charges included?', answer: 'No, fitting and travelling charges are extra and charged separately.' }
-    ],
-    trustBadges: [
-      { icon: 'shield-check', text: 'Background verified professionals' },
-      { icon: 'wrench', text: '300+ hours of training' }
-    ]
-  },
-  {
-    id: 'kitchen-trolley-buffing',
-    name: 'Kitchen Steel Trolley Buffing',
-    category: 'metal-services',
-    rating: 4.7,
-    reviewCount: 392,
-    duration: 'Varies by size',
-    features: ['Buffing polish only', 'Junk removal included', 'Labour cost extra', 'Travelling cost extra'],
-    image: '/assets/luxe-furniture-kitchen-steel.webp',
-    options: [
-      { id: 'trolley-buffing', name: 'Kitchen Trolley Buffing (per sqft)', price: 189, rating: 4.7, reviewCount: 392, estimatedTime: 'Varies' }
-    ],
-    selectedOption: -1,
-    priceIncludes: ['Buffing polish', 'Junk removal', 'Surface preparation'],
-    materials: ['/assets/luxe-process-shade-selection.webp', '/assets/luxe-process-cleaning-sanding.webp'],
-    processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Cleaning', description: 'Our professionals clean the kitchen trolley surface thoroughly.', image: '/assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Rust Removal', description: 'Remove any rust or oxidation from the surface.', image: '/assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Buffing Application', description: 'Apply buffing compound and polish the surface.', image: '/assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Polishing & Shine', description: 'Buff the surface to restore shine and luster.', image: '/assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect shine. We clean up and hand over your trolley.', image: '/assets/luxe-furniture-wooden-collection.webp' }
-    ],
-    faqs: [
-      { question: 'What is included in the price?', answer: 'The price includes only buffing polish. Labour and travelling costs are charged separately.' },
-      { question: 'Is junk removal included?', answer: 'Yes, junk removal is included in the buffing service.' }
     ],
     trustBadges: [
       { icon: 'shield-check', text: 'Background verified professionals' },
