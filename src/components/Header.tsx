@@ -22,17 +22,27 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Luxe Logo */}
-          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group transition-all duration-300 hover:scale-105">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 luxe-gold-gradient rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-yellow-500/25 transition-all duration-300">
-              <span className="text-black font-bold text-lg sm:text-xl" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.1em' }}>L</span>
+          <Link to="/" className="flex items-center space-x-3 sm:space-x-4 group transition-all duration-300 hover:scale-105">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-2xl group-hover:shadow-yellow-500/25 transition-all duration-300 border-2 border-yellow-500/20 group-hover:border-yellow-500/40">
+              <img 
+                src="/assets/Luxe assets/Logo-Website.jpg" 
+                alt="LUXE Wooden Furniture Polishing - Wooden Furniture" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div>
-              <h1 className="text-base sm:text-xl font-bold text-white" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.05em' }}>
-                {brandConfig.name}
+            <div className="hidden sm:block">
+              <h1 className="text-lg sm:text-xl font-bold text-white leading-tight" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.02em' }}>
+                LUXE
               </h1>
-              <p className="text-xs sm:text-sm text-yellow-400 font-medium">
-                Luxury Finish for Timeless Furniture
+              <p className="text-xs sm:text-sm text-yellow-400 font-medium leading-tight">
+                Wooden Furniture Polishing
               </p>
+            </div>
+            {/* Mobile - Show only on small screens */}
+            <div className="block sm:hidden">
+              <h1 className="text-base font-bold text-white" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.02em' }}>
+                LUXE
+              </h1>
             </div>
           </Link>
 
