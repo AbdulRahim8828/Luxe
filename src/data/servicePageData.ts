@@ -25,7 +25,8 @@ export const servicePageData: ServiceData[] = [
         price: 1449,
         rating: 4.9,
         reviewCount: 356,
-        estimatedTime: '1.5 hrs'
+        estimatedTime: '1.5 hrs',
+        image: '/assets/Luxe assets/Single seater sofa.webp'
       },
       { 
         id: 'sofa-2seater',
@@ -33,7 +34,8 @@ export const servicePageData: ServiceData[] = [
         price: 1999,
         rating: 4.9,
         reviewCount: 456,
-        estimatedTime: '2 hrs'
+        estimatedTime: '2 hrs',
+        image: '/assets/Luxe assets/Two seater sofa.webp'
       },
       { 
         id: 'sofa-3seater',
@@ -41,7 +43,8 @@ export const servicePageData: ServiceData[] = [
         price: 2949,
         rating: 4.8,
         reviewCount: 678,
-        estimatedTime: '2.5 hrs'
+        estimatedTime: '2.5 hrs',
+        image: '/assets/Luxe assets/Three seater sofa.webp'
       },
       { 
         id: 'sofa-lshape',
@@ -49,7 +52,8 @@ export const servicePageData: ServiceData[] = [
         price: 6449,
         rating: 4.8,
         reviewCount: 234,
-        estimatedTime: '4.5 hrs'
+        estimatedTime: '4.5 hrs',
+        image: '/assets/Luxe assets/1,1 3 Seater sofa.webp'
       },
     ],
     selectedOption: -1,
@@ -158,7 +162,8 @@ export const servicePageData: ServiceData[] = [
         price: 2449,
         rating: 4.8,
         reviewCount: 342,
-        estimatedTime: '3 hrs'
+        estimatedTime: '3 hrs',
+        image: '/assets/Luxe assets/Single Bed.webp'
       },
       { 
         id: 'bed-diwan',
@@ -166,7 +171,8 @@ export const servicePageData: ServiceData[] = [
         price: 2999,
         rating: 4.8,
         reviewCount: 156,
-        estimatedTime: '2.5 hrs'
+        estimatedTime: '2.5 hrs',
+        image: '/assets/Luxe assets/Divan.webp'
       },
       { 
         id: 'bed-queen',
@@ -174,7 +180,8 @@ export const servicePageData: ServiceData[] = [
         price: 3449,
         rating: 4.9,
         reviewCount: 521,
-        estimatedTime: '3.5 hrs'
+        estimatedTime: '3.5 hrs',
+        image: '/assets/Luxe assets/Queen size Bed.webp'
       },
       { 
         id: 'bed-king',
@@ -182,7 +189,8 @@ export const servicePageData: ServiceData[] = [
         price: 3799,
         rating: 4.8,
         reviewCount: 284,
-        estimatedTime: '4 hrs'
+        estimatedTime: '4 hrs',
+        image: '/assets/Luxe assets/King size Bed.webp'
       },
       { 
         id: 'bed-sofacumbed',
@@ -190,7 +198,8 @@ export const servicePageData: ServiceData[] = [
         price: 4799,
         rating: 4.7,
         reviewCount: 89,
-        estimatedTime: '4 hrs'
+        estimatedTime: '4 hrs',
+        image: '/assets/Luxe assets/Single Bed.webp'
       },
       { 
         id: 'bed-bunk',
@@ -198,7 +207,8 @@ export const servicePageData: ServiceData[] = [
         price: 5799,
         rating: 4.7,
         reviewCount: 100,
-        estimatedTime: '5 hrs'
+        estimatedTime: '5 hrs',
+        image: '/assets/Luxe assets/Single Bed.webp'
       },
     ],
     selectedOption: -1,
@@ -301,10 +311,11 @@ export const servicePageData: ServiceData[] = [
     ],
     image: '/assets/luxe-polishing-door.webp',
     options: [
-      { id: 'door-single', name: 'Single Door', price: 2449, rating: 4.7, reviewCount: 523, estimatedTime: '2 hrs' },
-      { id: 'door-2door', name: '2 Door', price: 3899, rating: 4.8, reviewCount: 789, estimatedTime: '3 hrs' },
-      { id: 'door-3door', name: '3 Door', price: 4899, rating: 4.7, reviewCount: 345, estimatedTime: '3.5 hrs' },
-      { id: 'door-4door', name: '4 Door', price: 5899, rating: 4.8, reviewCount: 277, estimatedTime: '4 hrs' },
+      { id: 'door-single', name: 'Single Door', price: 2449, rating: 4.7, reviewCount: 523, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Single Door.webp' },
+      { id: 'door-2door', name: '2 Door', price: 3899, rating: 4.8, reviewCount: 789, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Single Door.webp' },
+      { id: 'door-3door', name: '3 Door', price: 4899, rating: 4.7, reviewCount: 345, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Single Door.webp' },
+      { id: 'door-4door', name: '4 Door', price: 5899, rating: 4.8, reviewCount: 277, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Single Door.webp' },
+      { id: 'door-frame', name: 'Door Frame', price: 1999, rating: 4.7, reviewCount: 234, estimatedTime: '1.5 hrs', image: '/assets/Luxe assets/Door frame.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Both sides polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
@@ -339,10 +350,10 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Scratch-resistant finish', 'Food-safe polish options'],
     image: '/assets/luxe-polishing-side-table.webp',
     options: [
-      { id: 'table-coffee', name: 'Coffee Table', price: 1549, rating: 4.8, reviewCount: 234, estimatedTime: '1.5 hrs', image: '/assets/luxe-polishing-coffee-table.webp' },
-      { id: 'table-center', name: 'Center Table', price: 2899, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/luxe-polishing-center-table.webp' },
-      { id: 'table-side', name: 'Side Table', price: 1999, rating: 4.8, reviewCount: 456, estimatedTime: '2 hrs', image: '/assets/luxe-polishing-side-table.webp' },
-      { id: 'table-study', name: 'Study Table', price: 3899, rating: 4.7, reviewCount: 310, estimatedTime: '3 hrs', image: '/assets/luxe-polishing-study-table.webp' },
+      { id: 'table-coffee', name: 'Coffee Table', price: 1549, rating: 4.8, reviewCount: 234, estimatedTime: '1.5 hrs', image: '/assets/Luxe assets/Coffee Table.webp' },
+      { id: 'table-center', name: 'Center Table', price: 2899, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Center table.webp' },
+      { id: 'table-side', name: 'Side Table', price: 1999, rating: 4.8, reviewCount: 456, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Side Table.webp' },
+      { id: 'table-study', name: 'Study Table', price: 3899, rating: 4.7, reviewCount: 310, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Study Table.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Scratch removal & surface preparation', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
@@ -377,10 +388,11 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Inside & outside polishing', 'Handles & fittings care'],
     image: '/assets/luxe-polishing-wardrobe.webp',
     options: [
-      { id: 'wardrobe-2door', name: '2 Door Wardrobe', price: 3499, rating: 4.9, reviewCount: 678, estimatedTime: '3.5 hrs', image: '/assets/luxe-polishing-wardrobe.webp' },
-      { id: 'wardrobe-3door', name: '3 Door Wardrobe', price: 4449, rating: 4.8, reviewCount: 892, estimatedTime: '4.5 hrs', image: '/assets/luxe-furniture-wardrobe-3-door.webp' },
-      { id: 'wardrobe-4door', name: '4 Door Wardrobe', price: 5849, rating: 4.9, reviewCount: 456, estimatedTime: '5 hrs', image: '/assets/luxe-furniture-wardrobe-4-door.webp' },
-      { id: 'wardrobe-sliding', name: 'Sliding Door Wardrobe', price: 6799, rating: 4.8, reviewCount: 319, estimatedTime: '4 hrs', image: '/assets/luxe-furniture-wardrobe-sliding.webp' },
+      { id: 'wardrobe-2door', name: '2 Door Wardrobe', price: 3499, rating: 4.9, reviewCount: 678, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Two Door wardrobe.webp' },
+      { id: 'wardrobe-3door', name: '3 Door Wardrobe', price: 4449, rating: 4.8, reviewCount: 892, estimatedTime: '4.5 hrs', image: '/assets/Luxe assets/Three Doors wardrobe.webp' },
+      { id: 'wardrobe-4door', name: '4 Door Wardrobe', price: 5849, rating: 4.9, reviewCount: 456, estimatedTime: '5 hrs', image: '/assets/Luxe assets/Four Door wardrobe.webp' },
+      { id: 'wardrobe-sliding', name: 'Sliding Door Wardrobe', price: 6799, rating: 4.8, reviewCount: 319, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Sliding Door wardrobe.webp' },
+      { id: 'wardrobe-single', name: 'Single Door Wardrobe', price: 2999, rating: 4.8, reviewCount: 245, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Single Door Wardrobe.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
@@ -415,9 +427,12 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Complete polish for table and chairs', 'Heat and water-resistant finish', 'All Materials & Labour Cost'],
     image: '/assets/luxe-polishing-dining.webp',
     options: [
-      { id: 'dining-2seater', name: '2 Seater + Bench', price: 4449, rating: 4.9, reviewCount: 467, estimatedTime: '3.5 hrs' },
-      { id: 'dining-4seater', name: '4 Seater Dining Set', price: 3849, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs' },
-      { id: 'dining-6seater', name: '6 Seater Dining Set', price: 5099, rating: 4.9, reviewCount: 789, estimatedTime: '5 hrs' }
+      { id: 'dining-2seater', name: '2 Seater + Bench', price: 4449, rating: 4.9, reviewCount: 467, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Dining Table with 2 chair+bench.webp' },
+      { id: 'dining-4seater', name: '4 Seater Dining Set', price: 3849, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Dining Table with 4 chair.webp' },
+      { id: 'dining-5seater', name: '5 Seater Dining Set', price: 4599, rating: 4.9, reviewCount: 456, estimatedTime: '4.5 hrs', image: '/assets/Luxe assets/Dining Table with 5 chair.webp' },
+      { id: 'dining-6seater', name: '6 Seater Dining Set', price: 5099, rating: 4.9, reviewCount: 789, estimatedTime: '5 hrs', image: '/assets/Luxe assets/Dining Table with 6 chair.webp' },
+      { id: 'dining-table-only', name: 'Dining Table Only', price: 2999, rating: 4.8, reviewCount: 345, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Dining Table.webp' },
+      { id: 'dining-chair-single', name: 'Single Chair', price: 899, rating: 4.8, reviewCount: 234, estimatedTime: '1 hr', image: '/assets/Luxe assets/Single chair.webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Complete polish for table and chairs', 'Heat and water-resistant finish', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
@@ -452,10 +467,10 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Inside & outside polishing', 'Handles & hinges care'],
     image: '/assets/luxe-polishing-cabinet.webp',
     options: [
-      { id: 'cabinet-single', name: 'Single Door Cabinet', price: 2449, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/assets/luxe-furniture-cabinet-single-door.webp' },
-      { id: 'cabinet-double', name: 'Double Door Cabinet', price: 2999, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/luxe-furniture-cabinet-3-door.webp' },
-      { id: 'cabinet-3door', name: '3 Door Cabinet', price: 3899, rating: 4.7, reviewCount: 234, estimatedTime: '3 hrs', image: '/assets/luxe-furniture-cabinet-3-door.webp' },
-      { id: 'cabinet-crockery', name: 'Crockery Self', price: 3999, rating: 4.8, reviewCount: 310, estimatedTime: '3.5 hrs', image: '/assets/luxe-furniture-crockery-unit.webp' },
+      { id: 'cabinet-single', name: 'Single Door Cabinet', price: 2449, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Single Door cabinet.webp' },
+      { id: 'cabinet-double', name: 'Two Door Cabinet', price: 2999, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Two Door cabinet.webp' },
+      { id: 'cabinet-3door', name: '3 Door Cabinet', price: 3899, rating: 4.7, reviewCount: 234, estimatedTime: '3 hrs', image: '/assets/Luxe assets/3 Door cabinet.webp' },
+      { id: 'cabinet-crockery', name: 'Kitchen Crockery Rack', price: 3999, rating: 4.8, reviewCount: 310, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Kitchen crockery Rack.webp' },
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
@@ -554,7 +569,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 987,
     duration: '~3 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/luxe-polishing-mandir.webp',
+    image: '/assets/Luxe assets/Mandir.webp',
     options: [
       { id: 'mandir-standard', name: 'Mandir', price: 2999, rating: 4.9, reviewCount: 987, estimatedTime: '3 hrs' }
     ],
@@ -585,7 +600,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 765,
     duration: '~4 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/luxe-polishing-jhula.webp',
+    image: '/assets/Luxe assets/Jhula.webp',
     options: [
       { id: 'jhula-1seater', name: '1 Seater Jhula', price: 1999, rating: 4.8, reviewCount: 465, estimatedTime: '3 hrs' },
       { id: 'jhula-2seater', name: '2 Seater Jhula', price: 2799, rating: 4.8, reviewCount: 765, estimatedTime: '4 hrs' },
@@ -655,9 +670,9 @@ export const servicePageData: ServiceData[] = [
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
     image: '/assets/luxe-polishing-tv-unit.webp',
     options: [
-      { id: 'tv-small', name: 'Small', price: 2899, rating: 4.8, reviewCount: 345, estimatedTime: '3 hrs' },
-      { id: 'tv-medium', name: 'Medium', price: 3899, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs' },
-      { id: 'tv-large', name: 'Large', price: 4899, rating: 4.8, reviewCount: 211, estimatedTime: '5 hrs' }
+      { id: 'tv-small', name: 'Small TV Unit', price: 2899, rating: 4.8, reviewCount: 345, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Tv Unit (small).webp' },
+      { id: 'tv-medium', name: 'Medium TV Unit', price: 3899, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Tv unit (Medium).webp' },
+      { id: 'tv-large', name: 'Large TV Unit', price: 4899, rating: 4.8, reviewCount: 211, estimatedTime: '5 hrs', image: '/assets/Luxe assets/Tv unit (large).webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
@@ -1202,6 +1217,39 @@ export const servicePageData: ServiceData[] = [
       { question: 'Do I need to provide tools?', answer: 'No, our professionals bring all necessary tools and equipment.' },
       { question: 'Is it safe for children?', answer: 'Yes, we ensure all safety standards are met during assembly.' },
       { question: 'Is there a warranty?', answer: 'Yes, we provide 60 days warranty on all assembly services.' }
+    ],
+    trustBadges: [
+      { icon: 'shield-check', text: 'Background verified professionals' },
+      { icon: 'wrench', text: '300+ hours of training' }
+    ]
+  },
+  {
+    id: 'shoe-rack-polish',
+    name: 'Shoe Rack Polish',
+    category: 'furniture-polish',
+    rating: 4.7,
+    reviewCount: 456,
+    duration: '~2 hrs',
+    features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
+    image: '/assets/Luxe assets/Shoe rack medium.webp',
+    options: [
+      { id: 'shoe-rack-small', name: 'Small Shoe Rack', price: 1299, rating: 4.7, reviewCount: 156, estimatedTime: '1.5 hrs', image: '/assets/Luxe assets/Shoe rack small.webp' },
+      { id: 'shoe-rack-medium', name: 'Medium Shoe Rack', price: 1799, rating: 4.8, reviewCount: 189, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Shoe rack medium.webp' },
+      { id: 'shoe-rack-large', name: 'Large Shoe Rack', price: 2299, rating: 4.7, reviewCount: 111, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Shoe rack large.webp' }
+    ],
+    selectedOption: -1,
+    priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
+    materials: ['/assets/luxe-process-shade-selection.webp', '/assets/luxe-process-cleaning-sanding.webp'],
+    processSteps: [
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/assets/luxe-process-consultation-booking.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the shoe rack surface to remove old polish and scratches.', image: '/assets/luxe-process-cleaning-sanding.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/assets/luxe-process-shade-selection.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/assets/luxe-process-gap-filling-application.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/assets/luxe-process-drying-finishing.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed shoe rack.', image: '/assets/luxe-furniture-wooden-collection.webp' }
+    ],
+    faqs: [
+      { question: 'How long does shoe rack polishing take?', answer: 'Typically 1.5-2.5 hours depending on size.' }
     ],
     trustBadges: [
       { icon: 'shield-check', text: 'Background verified professionals' },
