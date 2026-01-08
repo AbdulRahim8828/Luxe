@@ -633,13 +633,13 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 543,
     duration: '~3 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/luxe-furniture-chester-drawer-3.webp',
+    image: '/assets/Luxe assets/Three Drawer Chester.webp',
     options: [
-      { id: 'drawer-2', name: '2 Drawer', price: 1449, rating: 4.7, reviewCount: 234, estimatedTime: '2 hrs', image: '/assets/luxe-furniture-chester-drawer-2.webp' },
-      { id: 'drawer-3', name: '3 Drawer', price: 2199, rating: 4.8, reviewCount: 189, estimatedTime: '2.5 hrs', image: '/assets/luxe-furniture-chester-drawer-3.webp' },
-      { id: 'drawer-4', name: '4 Drawer', price: 2799, rating: 4.7, reviewCount: 120, estimatedTime: '3 hrs', image: '/assets/luxe-furniture-chester-drawer-4.webp' },
-      { id: 'drawer-5', name: '5 Drawer', price: 3449, rating: 4.8, reviewCount: 95, estimatedTime: '3.5 hrs', image: '/assets/luxe-furniture-chester-drawer-5.webp' },
-      { id: 'drawer-6', name: '6 Drawer', price: 3999, rating: 4.7, reviewCount: 78, estimatedTime: '4 hrs', image: '/assets/luxe-furniture-chester-drawer-6.webp' }
+      { id: 'drawer-2', name: '2 Drawer', price: 1449, rating: 4.7, reviewCount: 234, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Two Drawer Chester.webp' },
+      { id: 'drawer-3', name: '3 Drawer', price: 2199, rating: 4.8, reviewCount: 189, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Three Drawer Chester.webp' },
+      { id: 'drawer-4', name: '4 Drawer', price: 2799, rating: 4.7, reviewCount: 120, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Four Drawer Chester.webp' },
+      { id: 'drawer-5', name: '5 Drawer', price: 3449, rating: 4.8, reviewCount: 95, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Five Drawer Chester.webp' },
+      { id: 'drawer-6', name: '6 Drawer', price: 3999, rating: 4.7, reviewCount: 78, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Six drawer Chester.webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
