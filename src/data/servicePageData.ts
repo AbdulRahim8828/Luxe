@@ -17,7 +17,7 @@ export const servicePageData: ServiceData[] = [
       'Premium wood finish',
       'Scratch removal included',
     ],
-    image: '/assets/luxe-polishing-sofa.webp',
+    image: '/assets/Luxe assets/Three seater sofa.webp',
     options: [
       { 
         id: 'sofa-1seater',
@@ -154,7 +154,7 @@ export const servicePageData: ServiceData[] = [
       'Choice of clear or coloured finishes',
       'Removes scratches and enhances natural look',
     ],
-    image: '/assets/luxe-polishing-bed.webp',
+    image: '/assets/Luxe assets/Queen size Bed.webp',
     options: [
       { 
         id: 'bed-single',
@@ -309,7 +309,7 @@ export const servicePageData: ServiceData[] = [
       'Both sides polishing',
       'Frame polishing included',
     ],
-    image: '/assets/luxe-polishing-door.webp',
+    image: '/assets/Luxe assets/Single Door.webp',
     options: [
       { id: 'door-single', name: 'Single Door', price: 2449, rating: 4.7, reviewCount: 523, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Single Door.webp' },
       { id: 'door-2door', name: '2 Door', price: 3899, rating: 4.8, reviewCount: 789, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Single Door.webp' },
@@ -348,7 +348,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1767,
     duration: '~2.5 hrs',
     features: ['6 Months Polished Warranty', 'Scratch-resistant finish', 'Food-safe polish options'],
-    image: '/assets/luxe-polishing-side-table.webp',
+    image: '/assets/Luxe assets/Center table.webp',
     options: [
       { id: 'table-coffee', name: 'Coffee Table', price: 1549, rating: 4.8, reviewCount: 234, estimatedTime: '1.5 hrs', image: '/assets/Luxe assets/Coffee Table.webp' },
       { id: 'table-center', name: 'Center Table', price: 2899, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Center table.webp' },
@@ -386,7 +386,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 2345,
     duration: '~4 hrs',
     features: ['6 Months Polished Warranty', 'Inside & outside polishing', 'Handles & fittings care'],
-    image: '/assets/luxe-polishing-wardrobe.webp',
+    image: '/assets/Luxe assets/Three Doors wardrobe.webp',
     options: [
       { id: 'wardrobe-2door', name: '2 Door Wardrobe', price: 3499, rating: 4.9, reviewCount: 678, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Two Door wardrobe.webp' },
       { id: 'wardrobe-3door', name: '3 Door Wardrobe', price: 4449, rating: 4.8, reviewCount: 892, estimatedTime: '4.5 hrs', image: '/assets/Luxe assets/Three Doors wardrobe.webp' },
@@ -425,7 +425,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1876,
     duration: '~5 hrs',
     features: ['6 Months Polished Warranty', 'Complete polish for table and chairs', 'Heat and water-resistant finish', 'All Materials & Labour Cost'],
-    image: '/assets/luxe-polishing-dining.webp',
+    image: '/assets/Luxe assets/Dining Table with 6 chair.webp',
     options: [
       { id: 'dining-2seater', name: '2 Seater + Bench', price: 4449, rating: 4.9, reviewCount: 467, estimatedTime: '3.5 hrs', image: '/assets/Luxe assets/Dining Table with 2 chair+bench.webp' },
       { id: 'dining-4seater', name: '4 Seater Dining Set', price: 3849, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Dining Table with 4 chair.webp' },
@@ -465,7 +465,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1456,
     duration: '~2.5 hrs',
     features: ['6 Months Polished Warranty', 'Inside & outside polishing', 'Handles & hinges care'],
-    image: '/assets/luxe-polishing-cabinet.webp',
+    image: '/assets/Luxe assets/3 Door cabinet.webp',
     options: [
       { id: 'cabinet-single', name: 'Single Door Cabinet', price: 2449, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/assets/Luxe assets/Single Door cabinet.webp' },
       { id: 'cabinet-double', name: 'Two Door Cabinet', price: 2999, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/assets/Luxe assets/Two Door cabinet.webp' },
@@ -668,7 +668,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1123,
     duration: '~4 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/assets/luxe-polishing-tv-unit.webp',
+    image: '/assets/Luxe assets/Tv unit (Medium).webp',
     options: [
       { id: 'tv-small', name: 'Small TV Unit', price: 2899, rating: 4.8, reviewCount: 345, estimatedTime: '3 hrs', image: '/assets/Luxe assets/Tv Unit (small).webp' },
       { id: 'tv-medium', name: 'Medium TV Unit', price: 3899, rating: 4.9, reviewCount: 567, estimatedTime: '4 hrs', image: '/assets/Luxe assets/Tv unit (Medium).webp' },
