@@ -8,7 +8,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, 10, powerful, reasons",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "7 min read",
     "image": "/assets/Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon.webp"
   },
@@ -19,7 +19,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, a1, furniture, polish",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "5 min read",
     "image": "/assets/A1 Furniture Polishing Price And Service In Bandra.webp"
   },
@@ -30,7 +30,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, best, wood, polishing",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "6 min read",
     "image": "/assets/Best Wood Polishing In Andheri.webp"
   },
@@ -41,7 +41,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, professional, furniture, polishing",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "4 min read",
     "image": "/assets/Furniture Polishing Services In Jogeshwari.webp"
   },
@@ -52,7 +52,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, step, by, step",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "5 min read",
     "image": "/assets/Furntiure Polishing Guide For Mumbai.webp"
   },
@@ -63,7 +63,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, top, furniture, polish",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "6 min read",
     "image": "/assets/Top Furniture Polish Services in Mumbai.webp"
   },
@@ -74,7 +74,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, wood, polishing, cost",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "8 min read",
     "image": "/assets/Wood Polishing Cost in Mumbai.webp"
   },
@@ -85,7 +85,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, choosing, the, right",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "3 min read",
     "image": "/assets/Ultimate Guide to choose.webp"
   },
@@ -96,7 +96,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, common, polishing, mistakes",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "4 min read",
     "image": "/assets/5 Common Mistakes To Avoid.webp"
   },
@@ -107,7 +107,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "keywords": "furniture polish, wood polish, mumbai, how, to, maintain",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
-    "date": "07/01/2026",
+    "date": "09/01/2026",
     "readTime": "5 min read",
     "image": "/assets/How To Maintain Wooden Furniture At Home.webp"
   }
