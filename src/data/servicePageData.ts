@@ -701,10 +701,10 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 2345,
     duration: 'Varies by area',
     features: ['Professional floor polishing service', 'Restores shine and protects wooden floors', 'Eco-friendly polishing materials', 'Hand Polish: ₹219/sqft | Machine Polish: ₹249/sqft'],
-    image: '/Luxe assets/luxe-service-floor-polishing.jpeg',
+    image: '/Luxe assets/Machine Floor Polish.webp',
     options: [
-      { id: 'floor-hand', name: 'Hand Polish (per sqft)', price: 219, rating: 4.9, reviewCount: 1234, estimatedTime: 'Varies' },
-      { id: 'floor-machine', name: 'Machine Polish (per sqft)', price: 249, rating: 4.9, reviewCount: 1111, estimatedTime: 'Varies' }
+      { id: 'floor-hand', name: 'Hand Polish (per sqft)', price: 219, rating: 4.9, reviewCount: 1234, estimatedTime: 'Varies', image: '/Luxe assets/Hand floor polish.webp' },
+      { id: 'floor-machine', name: 'Machine Polish (per sqft)', price: 249, rating: 4.9, reviewCount: 1111, estimatedTime: 'Varies', image: '/Luxe assets/Machine Floor Polish.webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', 'Floor protection'],
