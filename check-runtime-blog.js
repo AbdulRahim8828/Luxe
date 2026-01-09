@@ -1,5 +1,5 @@
 // Check blog data at runtime
-import { blogPosts } from './blog/data/blogPosts.js';
+import { blogPosts } from './src/blog/data.js';
 
 console.log('🔍 Runtime Blog Image Check');
 console.log('===========================');

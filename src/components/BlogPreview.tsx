@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { blogPosts } from '../src/blog/data';
+import { blogPosts } from '../blog/data';
 import OptimizedImage from './OptimizedImage';
 
 const BlogPreview = () => {
