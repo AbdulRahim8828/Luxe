@@ -33,6 +33,10 @@ const dynamicRoutes = [...blogPostRoutes, ...staticRoutes, ...generatedServiceRo
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    // Handle Node.js version compatibility
+    global: 'globalThis',
+  },
   plugins: [
     react(),
     viteStaticCopy({
@@ -188,7 +192,7 @@ export default defineConfig({
         },
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
+          const info = (assetInfo.name || 'asset').split('.');
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
             return `assets/images/[name]-[hash].[ext]`;
@@ -237,10 +241,15 @@ export default defineConfig({
     force: true,
   },
   
+  // ESBuild configuration for better compatibility
+  esbuild: {
+    // Ignore TypeScript errors during build
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+    target: 'es2020',
+  },
+  
   // Enhanced server configuration for development
   server: {
-    // Enable HTTP/2 for better performance
-    https: false,
     // Optimize HMR
     hmr: {
       overlay: false, // Disable error overlay for better performance

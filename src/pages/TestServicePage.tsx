@@ -7,7 +7,7 @@ import { samplePageData } from '../data/samplePageData';
  * This page uses sample data to render the template
  */
 const TestServicePage: React.FC = () => {
-  return <ServicePageTemplate pageData={pageData} />;
+  return <ServicePageTemplate pageData={samplePageData} />;
 };
 
 export default TestServicePage;

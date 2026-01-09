@@ -35,15 +35,15 @@ describe('SEO Migration Validation Tests', () => {
       serviceCategory: 'luxury-furniture-polishing',
       serviceName: 'Premium Furniture Polishing',
       location: 'Mumbai',
-      titleVariation: 'luxury',
+      titleVariation: 'professional',
       introduction: 'Professional luxury furniture polishing services in Mumbai with expert craftsmen and premium materials.',
       services: [
         { name: 'Premium Wood Polish', description: 'Luxury wood polishing service with premium materials' },
         { name: 'High-End PU Polish', description: 'Premium PU polish application for luxury furniture' }
       ],
       process: [
-        { step: 1, title: 'Luxury Assessment', description: 'Comprehensive evaluation of luxury furniture' },
-        { step: 2, title: 'Premium Preparation', description: 'Meticulous surface preparation with luxury care' }
+        { step: 1, title: 'Luxury Assessment', description: 'Comprehensive evaluation of luxury furniture', image: '/luxury-assessment.jpg' },
+        { step: 2, title: 'Premium Preparation', description: 'Meticulous surface preparation with luxury care', image: '/premium-preparation.jpg' }
       ],
       locationAreas: ['Bandra', 'Juhu', 'Powai', 'Worli'],
       serviceAreaDescription: 'We serve premium locations across Mumbai with luxury furniture polishing services.',
@@ -80,10 +80,15 @@ describe('SEO Migration Validation Tests', () => {
           },
           'geo': {
             '@type': 'GeoCoordinates',
-            'latitude': '19.0760',
-            'longitude': '72.8777'
+            'latitude': 19.0760,
+            'longitude': 72.8777
           },
-          'openingHours': 'Mo-Su 09:00-18:00',
+          'openingHoursSpecification': {
+            '@type': 'OpeningHoursSpecification',
+            'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            'opens': '09:00',
+            'closes': '18:00'
+          },
           'priceRange': '₹₹₹'
         },
         service: {
@@ -244,7 +249,7 @@ describe('SEO Migration Validation Tests', () => {
       expect(localBusiness.geo.latitude).toBeDefined();
       expect(localBusiness.geo.longitude).toBeDefined();
       
-      expect(localBusiness.openingHours).toBeDefined();
+      expect(localBusiness.openingHoursSpecification).toBeDefined();
       expect(localBusiness.telephone).toBeDefined();
       
       // Test Service schema structure
@@ -430,13 +435,13 @@ describe('SEO Migration Validation Tests', () => {
       // Required LocalBusiness fields
       const requiredLocalBusinessFields = ['@context', '@type', 'name', 'description', 'url', 'telephone', 'address', 'geo'];
       requiredLocalBusinessFields.forEach(field => {
-        expect(localBusiness[field]).toBeDefined();
+        expect((localBusiness as any)[field]).toBeDefined();
       });
       
       // Required Service fields
       const requiredServiceFields = ['@context', '@type', 'name', 'description', 'provider', 'areaServed'];
       requiredServiceFields.forEach(field => {
-        expect(service[field]).toBeDefined();
+        expect((service as any)[field]).toBeDefined();
       });
     });
   });

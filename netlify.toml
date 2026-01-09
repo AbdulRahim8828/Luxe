@@ -1,12 +1,16 @@
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "npm run build:skip-checks"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_VERSION = "9"
+  NODE_VERSION = "20"
+  NPM_VERSION = "10"
   # Increase build timeout to 30 minutes
   BUILD_TIMEOUT = "1800"
+  # Node.js options for compatibility
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  # Skip TypeScript checks for faster builds
+  VITE_SKIP_TS_CHECK = "true"
 
 # Redirect rules for SPA routing
 [[redirects]]

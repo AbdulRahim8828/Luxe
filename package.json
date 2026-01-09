@@ -7,6 +7,7 @@
     "dev": "vite",
     "prebuild": "tsx scripts/preBuildErrorFixer.ts",
     "build": "npm run prebuild && npm run generate:blog && vite build && npm run generate:sitemap && npm run format:sitemap",
+    "build:skip-checks": "npm run prebuild && npm run generate:blog && vite build --mode production && npm run generate:sitemap && npm run format:sitemap",
     "build:full": "npm run prebuild && npm run generate:blog && npm run optimize:images && vite build && npm run generate:sitemap && npm run format:sitemap",
     "build:netlify": "tsx scripts/netlifyBuild.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

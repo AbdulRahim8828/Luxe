@@ -25,7 +25,7 @@ const ExitIntentPopup = lazy(() => import('../components/ExitIntentPopup'));
 const ComparisonTable = lazy(() => import('../components/ComparisonTable'));
 const StatsCounter = lazy(() => import('../components/StatsCounter'));
 
-const Home = () => {
+const Home_Backup = () => {
   const services = [
     {
       title: 'Wooden Furniture Polish',

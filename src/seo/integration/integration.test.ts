@@ -29,8 +29,8 @@ describe('SEO Integration System', () => {
         { name: 'PU Polish', description: 'High-quality PU polish application' }
       ],
       process: [
-        { step: 1, title: 'Assessment', description: 'Evaluate furniture condition' },
-        { step: 2, title: 'Preparation', description: 'Clean and prepare surface' }
+        { step: 1, title: 'Assessment', description: 'Evaluate furniture condition', image: '/test-image-1.jpg' },
+        { step: 2, title: 'Preparation', description: 'Clean and prepare surface', image: '/test-image-2.jpg' }
       ],
       locationAreas: ['Andheri', 'Bandra', 'Goregaon'],
       serviceAreaDescription: 'We serve all areas in Mumbai with professional furniture polishing services.',

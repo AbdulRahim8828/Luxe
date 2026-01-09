@@ -54,7 +54,7 @@ const Services = () => {
           serviceName: service.name,
           optionName: option.name,
           price: option.price,
-          categoryId: service.categoryId,
+          categoryId: service.category,
           serviceId: service.id,
         });
 
@@ -62,12 +62,11 @@ const Services = () => {
         setToastMessage(`${option.name} added to cart!`);
         
         // Track analytics
-        analytics.track('service_added_to_cart', {
-          service_id: serviceId,
-          service_name: service.name,
-          option_name: option.name,
-          price: option.price,
-          quantity: quantity
+        analytics.trackEvent({
+          action: 'service_added_to_cart',
+          category: 'Ecommerce',
+          label: `${serviceId} - ${service.name} - ${option.name}`,
+          value: option.price
         });
 
       } catch (error) {
@@ -91,9 +90,10 @@ const Services = () => {
     const service = servicePageData.find(s => s.id === serviceId);
     if (service) {
       setSelectedServiceId(serviceId);
-      analytics.track('service_modal_opened', {
-        service_id: serviceId,
-        service_name: service.name
+      analytics.trackEvent({
+        action: 'service_modal_opened',
+        category: 'Services',
+        label: `${serviceId} - ${service.name}`
       });
     }
   };
@@ -162,7 +162,7 @@ const Services = () => {
                   {service.name}
                 </h3>
                 <p className="text-gray-400 text-xs md:text-sm mb-2 md:mb-4 line-clamp-2 leading-relaxed hidden md:block">
-                  {service.description}
+                  {service.features?.[0] || 'Professional furniture polishing service'}
                 </p>
 
                 {/* Price Range */}
@@ -202,7 +202,7 @@ const Services = () => {
 
         {/* Service Detail Modal */}
         <ServiceDetailModal
-          service={selectedServiceId ? servicePageData.find(s => s.id === selectedServiceId) : null}
+          service={selectedServiceId ? servicePageData.find(s => s.id === selectedServiceId) || null : null}
           isOpen={!!selectedServiceId}
           onClose={handleCloseModal}
           onAddService={handleAddService}

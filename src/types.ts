@@ -270,10 +270,14 @@ export interface LocalBusinessSchema {
   '@context': string;
   '@type': string;
   name: string;
+  alternateName?: string;
+  description?: string;
   image: string;
+  logo?: string;
   '@id': string;
   url: string;
   telephone: string;
+  email?: string;
   priceRange: string;
   address: {
     '@type': string;
@@ -307,14 +311,27 @@ export interface LocalBusinessSchema {
 export interface ServiceSchema {
   '@context': string;
   '@type': string;
+  name?: string;
   serviceType: string;
+  description?: string;
   provider: {
+    '@type': string;
+    name: string;
+    url?: string;
+  };
+  brand?: {
     '@type': string;
     name: string;
   };
   areaServed: {
     '@type': string;
     name: string;
+  };
+  offers?: {
+    '@type': string;
+    priceCurrency: string;
+    priceRange: string;
+    availability: string;
   };
   hasOfferCatalog?: {
     '@type': string;

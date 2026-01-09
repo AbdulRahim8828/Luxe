@@ -118,9 +118,9 @@ const initWebVitals = async (): Promise<void> => {
   
   try {
     // Dynamic import at runtime only - using correct web-vitals v3+ API
-    const { onCLS, onFID, onFCP, onLCP, onTTFB } = await import('web-vitals');
+    const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
     onCLS(reportWebVitals);
-    onFID(reportWebVitals);
+    onINP(reportWebVitals);
     onFCP(reportWebVitals);
     onLCP(reportWebVitals);
     onTTFB(reportWebVitals);

@@ -13,7 +13,7 @@ import { CartProvider } from './context/CartContext';
 // Lazy load pages for better performance
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
+const Contact = lazy(() => import('./pages/contact'));
 const Cart = lazy(() => import('./pages/Cart'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const BlogList = lazy(() => import('./pages/BlogList'));

@@ -16,7 +16,7 @@ export const samplePageData: PageData = {
   serviceCategory: 'furniture-polishing',
   serviceName: 'Furniture Polishing',
   location: 'Mumbai',
-  titleVariation: 'premium',
+  titleVariation: 'affordable',
   
   // Content Sections
   introduction: 'Transform your furniture with Luxe Wooden Furniture Polishing - Mumbai\'s most trusted experts in premium luxury wooden furniture polishing, sofa restoration, table polishing, and complete furniture refinishing. We specialize in teak wood polish, PU polish, melamine polish, and antique restoration. Serving all areas of Mumbai with 24/7 emergency service and same-day availability.',
