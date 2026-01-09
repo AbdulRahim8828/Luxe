@@ -21,7 +21,7 @@ const StickyWhatsApp = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-16 md:bottom-6 right-4 md:right-6 z-40 flex flex-col gap-3">
+    <div className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-40 flex flex-col gap-3">
       {/* Tooltip */}
       {showTooltip && (
         <div className="absolute bottom-full right-0 mb-3 animate-slideInUp">
