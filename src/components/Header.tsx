@@ -25,7 +25,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 sm:space-x-4 group transition-all duration-300 hover:scale-105">
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-2xl group-hover:shadow-yellow-500/25 transition-all duration-300 border-2 border-yellow-500/20 group-hover:border-yellow-500/40">
               <img 
-                src="/assets/Luxe assets/Logo-Website.jpg" 
+                src="/assets/Luxe assets/logo.png" 
                 alt="LUXE Wooden Furniture Polishing - Wooden Furniture" 
                 className="w-full h-full object-cover"
               />
