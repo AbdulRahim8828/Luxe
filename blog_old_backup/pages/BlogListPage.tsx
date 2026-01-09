@@ -3,7 +3,7 @@ import { blogPosts } from '../data/blogPosts';
 import SEO from '../../src/components/SEO';
 import BlogCard from '../components/BlogCard';
 import { getCanonicalURL } from '../../src/utils/canonicalURL';
-import { BlogPostData } from '../types';
+import { BlogPostData } from '../types/index';
 
 
 const BlogListPage = () => {

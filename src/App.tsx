@@ -15,8 +15,8 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Cart = lazy(() => import('./pages/Cart'));
-const BlogPostPage = lazy(() => import('../blog/pages/BlogPostPage'));
-const BlogListPage = lazy(() => import('../blog/pages/BlogListPage'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const BlogList = lazy(() => import('./pages/BlogList'));
 const WoodenFurniturePolish = lazy(() => import('./pages/WoodenFurniturePolish'));
 const SofaAndChairPolishing = lazy(() => import('./pages/SofaAndChairPolishing'));
 const TableAndBedPolishing = lazy(() => import('./pages/TableAndBedPolishing'));
@@ -219,8 +219,8 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/blog" element={<BlogListPage />} />
-              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               
               {/* Service Pages */}
               <Route path="/services/wooden-furniture-polish" element={<WoodenFurniturePolish />} />

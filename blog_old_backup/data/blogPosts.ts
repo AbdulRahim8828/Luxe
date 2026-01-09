@@ -10,7 +10,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "7 min read",
-    "image": "/Luxe assets/Hero Image.webp"
+    "image": "/Luxe assets/Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon.webp"
   },
   {
     "slug": "a1-furniture-polish-pricing-services-in-bandra-complete-guide-2025",
@@ -21,7 +21,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "5 min read",
-    "image": "/Luxe assets/Three seater sofa.webp"
+    "image": "/Luxe assets/A1 Furniture Polishing Price And Service In Bandra.webp"
   },
   {
     "slug": "best-wood-polishing-in-andheri-restore-shine-with-a1-furniture-polish",
@@ -32,18 +32,18 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "6 min read",
-    "image": "/Luxe assets/Dining Table with 4 chair.webp"
+    "image": "/Luxe assets/Best Wood Polishing In Andheri.webp"
   },
   {
     "slug": "professional-furniture-polishing-services-in-jogeshwari-a1-furniture-polish",
     "title": "Professional Furniture Polishing Services In Jogeshwari A1 Furniture Polish",
-    "description": "### **Introduction**\nFurniture isn't just wood and polish—it's a part of your home's personality. Over time, dust, scratches, and dullness take away the charm. ...",
+    "description": "### **Introduction**\nFurniture isn’t just wood and polish—it’s a part of your home’s personality. Over time, dust, scratches, and dullness take away the charm. ...",
     "keywords": "furniture polish, wood polish, mumbai, professional, furniture, polishing",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "4 min read",
-    "image": "/Luxe assets/Four Door wardrobe.webp"
+    "image": "/Luxe assets/Furniture Polishing Services In Jogeshwari.webp"
   },
   {
     "slug": "step-by-step-furniture-polishing-guide-for-mumbai-homes",
@@ -54,7 +54,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "5 min read",
-    "image": "/Luxe assets/Step 1.webp"
+    "image": "/Luxe assets/Furntiure Polishing Guide For Mumbai.webp"
   },
   {
     "slug": "top-furniture-polish-services-in-mumbai-enhance-your-home-d-cor",
@@ -65,7 +65,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "6 min read",
-    "image": "/Luxe assets/King size Bed.webp"
+    "image": "/Luxe assets/Top Furniture Polish Services in Mumbai.webp"
   },
   {
     "slug": "wood-polishing-cost-in-mumbai",
@@ -76,7 +76,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "8 min read",
-    "image": "/Luxe assets/Coffee Table.webp"
+    "image": "/Luxe assets/Wood Polishing Cost in Mumbai.webp"
   },
   {
     "slug": "choosing-the-right-wood-polish",
@@ -87,7 +87,7 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "3 min read",
-    "image": "/Luxe assets/Study Table.webp"
+    "image": "/Luxe assets/Ultimate Guide to choose.webp"
   },
   {
     "slug": "common-polishing-mistakes",
@@ -98,18 +98,18 @@ export const blogPosts: Omit<BlogPostData, 'content'>[] = [
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "4 min read",
-    "image": "/Luxe assets/Single chair.webp"
+    "image": "/Luxe assets/5 Common Mistakes To Avoid.webp"
   },
   {
     "slug": "how-to-maintain-wooden-furniture",
     "title": "How To Maintain Wooden Furniture",
-    "description": "Your wooden furniture brings timeless elegance to your Mumbai home. But the city's unique climate—with its high humidity and persistent dust—can be tough on its...",
+    "description": "Your wooden furniture brings timeless elegance to your Mumbai home. But the city’s unique climate—with its high humidity and persistent dust—can be tough on its...",
     "keywords": "furniture polish, wood polish, mumbai, how, to, maintain",
     "category": "Furniture Care",
     "author": "A1 Furniture Polish Team",
     "date": "09/01/2026",
     "readTime": "5 min read",
-    "image": "/Luxe assets/Two seater sofa.webp"
+    "image": "/Luxe assets/How To Maintain Wooden Furniture At Home.webp"
   }
 ];
 

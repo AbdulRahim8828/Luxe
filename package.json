@@ -20,7 +20,7 @@
     "generate:pages": "tsx scripts/generatePages.ts",
     "generate:seo-pages": "tsx scripts/generateSEOPages.ts",
     "generate:favicons": "tsx scripts/generateLuxeFavicons.ts",
-    "generate:blog": "tsx blog/scripts/generateBlogContent.ts",
+    "generate:blog": "echo 'Blog content is now integrated in src/blog - no separate generation needed'",
     "blog:new": "tsx blog/scripts/createBlogPost.ts",
     "blog:validate": "tsx blog/scripts/validateBlogContent.ts",
     "fix": "tsx scripts/quickFix.ts",

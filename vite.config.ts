@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 // import sitemap from 'vite-plugin-sitemap'; // Replaced with custom sitemap generation
-import { blogPosts } from './blog/data/blogPosts';
+import { blogPosts } from './src/blog/data';
 import { pagesData } from './src/data/generatedPagesData';
 
 const blogPostRoutes = blogPosts.map(post => `/blog/${post.slug}`);
@@ -38,7 +38,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'assets',
+          src: 'Luxe assets',
           dest: '.'
         },
         {

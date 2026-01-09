@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { SitemapGenerator } from '../src/seo/managers/SitemapGenerator';
 import { SEOPage } from '../src/seo/types';
-import { blogPosts } from '../blog/data/blogPosts';
+import { blogPosts } from '../src/blog/data';
 import { pagesData } from '../src/data/generatedPagesData';
 
 interface PageConfig {

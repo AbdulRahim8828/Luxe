@@ -79,7 +79,7 @@ class BlogContentGenerator {
 
       return {
         meta,
-        importStatement: `    case '${slug}':\n      return (await import('../Luxe assets/${slug}.js')).default;`
+        importStatement: `    case '${slug}':\n      return (await import('../assets/${slug}.js')).default;`
       };
     } catch (error) {
       console.error(`Error processing ${filePath}:`, error);
