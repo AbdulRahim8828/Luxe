@@ -10,7 +10,6 @@ export interface BlogPost {
   readTime: string;
   keywords: string;
   content?: string;
-  featured?: boolean;
 }
 
 export interface BlogConfig {

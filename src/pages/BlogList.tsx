@@ -6,7 +6,7 @@ import { getCanonicalURL } from '../utils/canonicalURL';
 
 const BlogList = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const { postsPerPage, featuredPostsLimit } = blogConfig;
+  const { postsPerPage } = blogConfig;
 
   // Pagination
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
@@ -14,9 +14,6 @@ const BlogList = () => {
     (currentPage - 1) * postsPerPage,
     currentPage * postsPerPage
   );
-
-  // Featured posts
-  const featuredPosts = blogPosts.filter(post => post.featured).slice(0, featuredPostsLimit);
 
   return (
     <>
@@ -46,26 +43,6 @@ const BlogList = () => {
               Expert advice, premium techniques, and exclusive guides on luxury furniture care, restoration, and preservation from LUXE's master craftsmen.
             </p>
           </div>
-
-          {/* Featured Posts */}
-          {featuredPosts.length > 0 && (
-            <div className="mb-12 sm:mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-left" style={{ fontFamily: 'Playfair Display' }}>
-                <span className="text-yellow-400">⭐</span> Featured Premium Articles
-              </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
-                {featuredPosts.map((post) => (
-                  <BlogCard 
-                    key={post.slug} 
-                    post={post} 
-                    variant="featured"
-                    showTags={true}
-                    showExcerpt={true}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Results Summary */}
           <div className="mb-8 sm:mb-10">
