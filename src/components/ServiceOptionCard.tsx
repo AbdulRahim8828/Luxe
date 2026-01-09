@@ -28,16 +28,16 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
     <article
       className={`relative rounded-xl p-3 sm:p-4 transition-all duration-300 ease-out border h-full flex flex-col
                   ${isSelected 
-                    ? 'bg-gray-50 ring-2 ring-amber-500 border-amber-500 shadow-lg shadow-amber-100' 
-                    : 'bg-white border-gray-200 hover:border-gray-300 hover:shadow-md'}`}
+                    ? 'bg-gray-800/80 ring-2 ring-yellow-500 border-yellow-500 shadow-lg shadow-yellow-500/20' 
+                    : 'bg-gray-800/50 border-gray-700/50 hover:border-gray-600 hover:shadow-md hover:bg-gray-800/70'}`}
       aria-label={`${option.name} pricing option${isSelected ? ', selected' : ''}`}
     >
       {/* Selected Indicator */}
       {isSelected && (
         <div className="absolute top-2 left-2 z-10" aria-label="Selected">
-          <div className="flex items-center justify-center w-6 h-6 bg-green-500 rounded-full shadow-md">
+          <div className="flex items-center justify-center w-6 h-6 bg-yellow-500 rounded-full shadow-md">
             <svg
-              className="w-4 h-4 text-white"
+              className="w-4 h-4 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -55,7 +55,7 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
       )}
 
       {/* Option Image - Top */}
-      <div className="w-full mb-2 bg-gray-50 rounded-lg overflow-hidden aspect-square flex items-center justify-center p-1.5 sm:p-2">
+      <div className="w-full mb-2 bg-gray-700/50 rounded-lg overflow-hidden aspect-square flex items-center justify-center p-1.5 sm:p-2">
         <OptimizedImage
           src={optionImage}
           alt={`${option.name} service option`}
@@ -70,21 +70,21 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
       {/* Option Details - Bottom */}
       <div className="flex-1 flex flex-col">
         {/* Option Name */}
-        <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-0.5 line-clamp-2">
+        <h4 className="text-xs sm:text-sm font-semibold text-white mb-0.5 line-clamp-2">
           {option.name}
         </h4>
 
         {/* Estimated Time */}
         {option.estimatedTime && (
           <div className="flex items-center gap-0.5 mb-1" aria-label={`Estimated time ${option.estimatedTime}`}>
-            <Clock className="w-2.5 h-2.5 text-gray-500" aria-hidden="true" />
-            <span className="text-[10px] sm:text-xs text-gray-600">{option.estimatedTime}</span>
+            <Clock className="w-2.5 h-2.5 text-gray-400" aria-hidden="true" />
+            <span className="text-[10px] sm:text-xs text-gray-400">{option.estimatedTime}</span>
           </div>
         )}
 
         {/* Price */}
         <div className="mb-1.5">
-          <p className="text-sm sm:text-base font-bold text-gray-900" aria-label={`Price ${option.price} rupees`}>
+          <p className="text-sm sm:text-base font-bold text-yellow-400" aria-label={`Price ${option.price} rupees`}>
             ₹{option.price.toLocaleString()}
           </p>
         </div>
@@ -95,9 +95,9 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
             <button
               onClick={onAdd}
               className="w-full px-2 py-1 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-200 ease-out
-                         focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-1
+                         focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-1 focus:ring-offset-gray-800
                          active:scale-95 flex items-center justify-center shadow-sm hover:shadow-md
-                         bg-white text-amber-600 border-2 border-amber-600 hover:bg-amber-50
+                         bg-gray-700/50 text-yellow-400 border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black
                          min-h-[32px] sm:min-h-[36px]"
               aria-label={`Add ${option.name} to booking for ${option.price} rupees`}
               type="button"
@@ -105,21 +105,21 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
               Add
             </button>
           ) : (
-            <div className="flex items-center justify-center gap-1 sm:gap-2 border-2 border-amber-600 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 bg-white relative z-10">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 border-2 border-yellow-500 rounded-lg px-1.5 sm:px-2 py-1 sm:py-1.5 bg-gray-700/50 relative z-10">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   onDecrease();
                 }}
-                className="text-amber-600 font-bold text-lg sm:text-xl min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px] 
-                           flex items-center justify-center hover:bg-amber-50 rounded transition-colors
-                           active:bg-amber-100 touch-manipulation cursor-pointer"
+                className="text-yellow-400 font-bold text-lg sm:text-xl min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px] 
+                           flex items-center justify-center hover:bg-yellow-500/20 rounded transition-colors
+                           active:bg-yellow-500/30 touch-manipulation cursor-pointer"
                 aria-label="Decrease quantity"
                 type="button"
               >
                 −
               </button>
-              <span className="font-semibold text-amber-600 min-w-[24px] text-center text-base sm:text-lg pointer-events-none">
+              <span className="font-semibold text-yellow-400 min-w-[24px] text-center text-base sm:text-lg pointer-events-none">
                 {quantity}
               </span>
               <button
@@ -127,9 +127,9 @@ const ServiceOptionCard: React.FC<ServiceOptionCardProps> = ({
                   e.stopPropagation();
                   onIncrease();
                 }}
-                className="text-amber-600 font-bold text-lg sm:text-xl min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px]
-                           flex items-center justify-center hover:bg-amber-50 rounded transition-colors
-                           active:bg-amber-100 touch-manipulation cursor-pointer"
+                className="text-yellow-400 font-bold text-lg sm:text-xl min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px]
+                           flex items-center justify-center hover:bg-yellow-500/20 rounded transition-colors
+                           active:bg-yellow-500/30 touch-manipulation cursor-pointer"
                 aria-label="Increase quantity"
                 type="button"
               >

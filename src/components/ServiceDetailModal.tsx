@@ -158,7 +158,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
       {/* Backdrop */}
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 animate-fade-in"
+        className="fixed inset-0 bg-black bg-opacity-75 animate-fade-in"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -169,29 +169,29 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         <div
           ref={modalRef}
           tabIndex={-1}
-          className="relative w-full h-full md:h-auto md:max-h-[90vh] md:max-w-2xl md:w-auto bg-white 
-                     md:rounded-2xl shadow-2xl flex flex-col z-50
+          className="relative w-full h-full md:h-auto md:max-h-[90vh] md:max-w-2xl md:w-auto bg-gray-900 
+                     md:rounded-2xl shadow-2xl flex flex-col z-50 border border-gray-800
                      animate-slide-up md:animate-scale-in"
         >
           {/* Header - Sticky, touch-friendly buttons (min 44x44px) */}
-          <div className="sticky top-0 z-10 bg-white border-b border-gray-200 shadow-sm">
+          <div className="sticky top-0 z-10 bg-gray-900 border-b border-gray-800 shadow-sm">
             <div className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
               {/* Back Button - Touch-friendly 44x44px minimum */}
               <button
                 onClick={onClose}
                 className="flex items-center justify-center min-w-[44px] min-h-[44px] w-11 h-11 rounded-full 
-                         hover:bg-gray-100 active:scale-90 transition-all duration-150 ease-out
-                         focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+                         hover:bg-gray-800 active:scale-90 transition-all duration-150 ease-out
+                         focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Go back to service list"
                 type="button"
               >
-                <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700" aria-hidden="true" />
+                <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-300" aria-hidden="true" />
               </button>
 
               {/* Service Name - Responsive text size */}
               <h2
                 id="modal-title"
-                className="flex-1 text-center text-base md:text-lg lg:text-xl font-semibold text-gray-900 px-2 md:px-4 truncate"
+                className="flex-1 text-center text-base md:text-lg lg:text-xl font-semibold text-white px-2 md:px-4 truncate"
               >
                 {service.name}
               </h2>
@@ -200,22 +200,22 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               <button
                 onClick={onClose}
                 className="flex items-center justify-center min-w-[44px] min-h-[44px] w-11 h-11 rounded-full 
-                         hover:bg-gray-100 active:scale-90 transition-all duration-150 ease-out
-                         focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+                         hover:bg-gray-800 active:scale-90 transition-all duration-150 ease-out
+                         focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Close service details"
                 type="button"
               >
-                <X className="w-5 h-5 md:w-6 md:h-6 text-gray-700" aria-hidden="true" />
+                <X className="w-5 h-5 md:w-6 md:h-6 text-gray-300" aria-hidden="true" />
               </button>
             </div>
           </div>
 
           {/* Scrollable Content - Responsive padding and spacing */}
-          <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth webkit-overflow-scrolling-touch">
+          <div className="flex-1 overflow-y-auto overscroll-contain scroll-smooth webkit-overflow-scrolling-touch bg-gray-900">
             <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-5 md:space-y-6 pb-4">
               {/* Service Options Section - Responsive text and spacing */}
-              <section aria-labelledby="service-options-heading" className="bg-gray-50 -mx-3 sm:-mx-4 md:mx-0 px-3 sm:px-4 md:px-0 py-3 sm:py-4 md:py-0 md:bg-transparent rounded-lg md:rounded-none">
-                <h3 id="service-options-heading" className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
+              <section aria-labelledby="service-options-heading" className="bg-gray-800/50 -mx-3 sm:-mx-4 md:mx-0 px-3 sm:px-4 md:px-0 py-3 sm:py-4 md:py-0 md:bg-transparent rounded-lg md:rounded-none border border-gray-700/50 md:border-none">
+                <h3 id="service-options-heading" className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2 sm:mb-3">
                   Select Service Option
                 </h3>
                 {/* Mobile & Desktop: Horizontal scroll with cards */}
@@ -239,8 +239,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
 
               {/* Your Total Price Includes Section - Responsive padding and text */}
-              <section className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-4 md:p-5" aria-labelledby="price-includes-heading">
-                <h3 id="price-includes-heading" className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
+              <section className="bg-gray-800/50 rounded-lg sm:rounded-xl border border-gray-700/50 p-3 sm:p-4 md:p-5" aria-labelledby="price-includes-heading">
+                <h3 id="price-includes-heading" className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">
                   Your total price includes
                 </h3>
                 <ul className="space-y-2 sm:space-y-3" aria-label="Included features">
@@ -262,7 +262,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                           />
                         </svg>
                       </div>
-                      <span className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                      <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                         {item}
                       </span>
                     </li>
@@ -271,8 +271,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
 
               {/* Top Professionals Section - Light & Compact UI */}
-              <section className="bg-amber-50 rounded-lg p-4 border border-amber-200" aria-labelledby="professionals-heading">
-                <h3 id="professionals-heading" className="text-base font-bold text-gray-900 mb-3">
+              <section className="bg-yellow-500/10 rounded-lg p-4 border border-yellow-500/30" aria-labelledby="professionals-heading">
+                <h3 id="professionals-heading" className="text-base font-bold text-white mb-3">
                   Why Choose Our Professionals?
                 </h3>
                 <div className="space-y-2">
@@ -286,11 +286,11 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                         : Award;
 
                     return (
-                      <div key={index} className="flex items-center gap-3 bg-white rounded-lg p-3 shadow-sm">
+                      <div key={index} className="flex items-center gap-3 bg-gray-800/50 rounded-lg p-3 shadow-sm border border-gray-700/50">
                         <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <IconComponent className="w-5 h-5 text-yellow-400" />
                         </div>
-                        <p className="text-sm font-medium text-gray-700 leading-snug flex-1">
+                        <p className="text-sm font-medium text-gray-300 leading-snug flex-1">
                           {badge.text}
                         </p>
                       </div>
@@ -313,10 +313,10 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs sm:text-sm font-medium text-gray-900">
+                      <p className="text-xs sm:text-sm font-medium text-white">
                         6 months warranty
                       </p>
-                      <p className="text-xs text-gray-600 mt-0.5">
+                      <p className="text-xs text-gray-400 mt-0.5">
                         On all polishing work against peeling or fading
                       </p>
                     </div>
@@ -345,10 +345,10 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs sm:text-sm font-medium text-gray-900">
+                      <p className="text-xs sm:text-sm font-medium text-white">
                         Up to ₹10,000 damage cover
                       </p>
-                      <p className="text-xs text-gray-600 mt-0.5">
+                      <p className="text-xs text-gray-400 mt-0.5">
                         Protection against accidental damage during service
                       </p>
                     </div>
@@ -377,10 +377,10 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs sm:text-sm font-medium text-gray-900">
+                      <p className="text-xs sm:text-sm font-medium text-white">
                         Verified quotes
                       </p>
-                      <p className="text-xs text-gray-600 mt-0.5">
+                      <p className="text-xs text-gray-400 mt-0.5">
                         Transparent pricing with no hidden charges
                       </p>
                     </div>
@@ -404,12 +404,12 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
 
               {/* Our Process Section - Responsive layout */}
-              <section className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-amber-100" aria-labelledby="process-heading">
+              <section className="bg-gradient-to-br from-gray-800/50 to-gray-700/30 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-gray-700/50" aria-labelledby="process-heading">
                 <div className="text-center mb-3 sm:mb-4 md:mb-5">
-                  <h3 id="process-heading" className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
+                  <h3 id="process-heading" className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">
                     Our Process
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
+                  <p className="text-xs sm:text-sm text-gray-400">
                     Step-by-step professional furniture polishing
                   </p>
                 </div>
@@ -417,13 +417,13 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                   {service.processSteps.map((step) => (
                     <li
                       key={step.step}
-                      className="bg-white rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md transition-all duration-300 ease-out border border-gray-100 hover:scale-[1.01]"
+                      className="bg-gray-800/50 rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md transition-all duration-300 ease-out border border-gray-700/50 hover:scale-[1.01] hover:border-yellow-500/30"
                     >
                       <div className="flex gap-2 sm:gap-3 md:gap-4">
                         {/* Step Number */}
                         <div className="flex-shrink-0">
                           <div 
-                            className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white text-sm sm:text-base font-bold shadow-md"
+                            className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-black text-sm sm:text-base font-bold shadow-md"
                             aria-label={`Step ${step.step}`}
                           >
                             {step.step}
@@ -432,15 +432,15 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
 
                         {/* Step Content */}
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">
+                          <h4 className="text-sm sm:text-base font-semibold text-white mb-1">
                             {step.title}
                           </h4>
-                          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2 sm:mb-3">
+                          <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-2 sm:mb-3">
                             {step.description}
                           </p>
 
                           {/* Step Image */}
-                          <div className="rounded-lg overflow-hidden bg-gray-100">
+                          <div className="rounded-lg overflow-hidden bg-gray-700/50">
                             <OptimizedImage
                               src={step.image}
                               alt={`${step.title} - ${step.description}`}
@@ -459,28 +459,28 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
 
               {/* FAQ Section - Mobile friendly */}
-              <section className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-4 md:p-5 mb-8" aria-labelledby="faq-heading">
-                <h3 id="faq-heading" className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
+              <section className="bg-gray-800/50 rounded-lg sm:rounded-xl border border-gray-700/50 p-3 sm:p-4 md:p-5 mb-8" aria-labelledby="faq-heading">
+                <h3 id="faq-heading" className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">
                   Frequently Asked Questions
                 </h3>
                 <div className="space-y-2 sm:space-y-3 pb-4">
                   {service.faqs.map((faq, index) => (
                     <div
                       key={index}
-                      className="border border-gray-200 rounded-md sm:rounded-lg overflow-hidden"
+                      className="border border-gray-700/50 rounded-md sm:rounded-lg overflow-hidden"
                     >
                       {/* Question Button - Touch-friendly min 44px height */}
                       <button
                         onClick={() => toggleFAQ(index)}
                         className="w-full flex items-center justify-between gap-2 sm:gap-3 p-3 sm:p-4 text-left 
-                                 hover:bg-gray-50 active:bg-gray-100 transition-all duration-200 ease-out
-                                 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-inset
+                                 hover:bg-gray-700/50 active:bg-gray-600/50 transition-all duration-200 ease-out
+                                 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-inset
                                  min-h-[44px]"
                         aria-expanded={expandedFAQ === index}
                         aria-controls={`faq-answer-${index}`}
                         type="button"
                       >
-                        <span className="text-xs sm:text-sm font-semibold text-gray-900 flex-1 pr-2">
+                        <span className="text-xs sm:text-sm font-semibold text-white flex-1 pr-2">
                           {faq.question}
                         </span>
                         <ChevronDown
@@ -496,7 +496,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                         className={`overflow-hidden transition-all duration-300 ease-in-out
                                   ${expandedFAQ === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                       >
-                        <div className="p-3 sm:p-4 pt-0 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        <div className="p-3 sm:p-4 pt-0 text-xs sm:text-sm text-gray-400 leading-relaxed">
                           {faq.answer}
                         </div>
                       </div>

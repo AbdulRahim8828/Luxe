@@ -30,14 +30,14 @@ const ServiceSelectionSummary: React.FC<ServiceSelectionSummaryProps> = ({
   }
 
   return (
-    <div className="sticky bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 shadow-2xl z-50 flex-shrink-0 safe-area-bottom">
+    <div className="sticky bottom-0 left-0 right-0 bg-gray-900 border-t-2 border-gray-700 shadow-2xl z-50 flex-shrink-0 safe-area-bottom">
       <div className="px-4 py-3 md:py-4 flex items-center justify-between gap-3 max-w-7xl mx-auto">
         {/* Left Side - Summary */}
         <div className="flex flex-col flex-1 min-w-0">
-          <p className="text-xs sm:text-sm text-gray-600">
+          <p className="text-xs sm:text-sm text-gray-400">
             {selectedCount} item{selectedCount > 1 ? 's' : ''} added
           </p>
-          <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900">
+          <p className="text-base sm:text-lg md:text-xl font-bold text-white">
             Total: ₹{totalPrice.toLocaleString()}
           </p>
         </div>
@@ -46,7 +46,7 @@ const ServiceSelectionSummary: React.FC<ServiceSelectionSummaryProps> = ({
         <button
           onClick={onDone}
           disabled={isLoading}
-          className="px-8 py-3 md:py-3.5 bg-amber-600 text-white text-base md:text-lg font-semibold rounded-lg hover:bg-amber-700 disabled:bg-amber-400 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl active:scale-95 whitespace-nowrap min-w-[100px]"
+          className="px-8 py-3 md:py-3.5 bg-yellow-500 text-black text-base md:text-lg font-semibold rounded-lg hover:bg-yellow-400 disabled:bg-yellow-600 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl active:scale-95 whitespace-nowrap min-w-[100px]"
           type="button"
           aria-label="Proceed to cart"
         >
