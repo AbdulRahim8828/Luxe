@@ -49,11 +49,11 @@ const BlogList = () => {
 
           {/* Featured Posts */}
           {featuredPosts.length > 0 && (
-            <div className="mb-8 sm:mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center lg:text-left" style={{ fontFamily: 'Playfair Display' }}>
+            <div className="mb-12 sm:mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-left" style={{ fontFamily: 'Playfair Display' }}>
                 <span className="text-yellow-400">⭐</span> Featured Premium Articles
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
                 {featuredPosts.map((post) => (
                   <BlogCard 
                     key={post.slug} 
@@ -68,22 +68,30 @@ const BlogList = () => {
           )}
 
           {/* Results Summary */}
-          <div className="mb-6 sm:mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-4 rounded-2xl hover:border-yellow-500/30 transition-all duration-300">
-              <p className="text-sm text-gray-300">
-                Showing <span className="font-semibold text-yellow-400">{paginatedPosts.length}</span> of <span className="font-semibold text-yellow-400">{blogPosts.length}</span> premium articles
-              </p>
-              {totalPages > 1 && (
-                <p className="text-xs text-gray-400">
-                  Page {currentPage} of {totalPages}
+          <div className="mb-8 sm:mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-2xl hover:border-yellow-500/30 transition-all duration-300">
+              <div>
+                <p className="text-sm text-gray-300 mb-1">
+                  Showing <span className="font-semibold text-yellow-400">{paginatedPosts.length}</span> of <span className="font-semibold text-yellow-400">{blogPosts.length}</span> premium articles
                 </p>
-              )}
+                {totalPages > 1 && (
+                  <p className="text-xs text-gray-400">
+                    Page {currentPage} of {totalPages}
+                  </p>
+                )}
+              </div>
+              <div className="flex items-center text-xs text-gray-400">
+                <span className="inline-flex items-center px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full">
+                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-1.5"></span>
+                  Premium Content
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Blog Posts Grid */}
           {paginatedPosts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-12 sm:mb-16">
               {paginatedPosts.map((post) => (
                 <BlogCard 
                   key={post.slug} 
