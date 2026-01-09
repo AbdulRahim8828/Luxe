@@ -8,11 +8,13 @@ import ScrollToTop from './components/ScrollToTop';
 import BottomNav from './components/BottomNav';
 import ErrorBoundary from './components/ErrorBoundary';
 import LuxuryRedirectManager from './components/LuxuryRedirectManager';
+import { CartProvider } from './context/CartContext';
 
 // Lazy load pages for better performance
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Cart = lazy(() => import('./pages/Cart'));
 const BlogPostPage = lazy(() => import('../blog/pages/BlogPostPage'));
 const BlogListPage = lazy(() => import('../blog/pages/BlogListPage'));
 const WoodenFurniturePolish = lazy(() => import('./pages/WoodenFurniturePolish'));
@@ -203,19 +205,21 @@ const PageLoader = () => (
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <LuxuryRedirectManager>
-            <ScrollToTop />
-            <div className="flex flex-col min-h-screen font-sans bg-white">
-              <Header />
-              <main className="flex-grow pb-24 md:pb-0 bg-white">
-                <Suspense fallback={<PageLoader />}>
+      <CartProvider>
+        <ErrorBoundary>
+          <Router>
+            <LuxuryRedirectManager>
+              <ScrollToTop />
+              <div className="flex flex-col min-h-screen font-sans bg-white">
+                <Header />
+                <main className="flex-grow pb-24 md:pb-0 bg-white">
+                  <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="/blog" element={<BlogListPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               
@@ -421,6 +425,7 @@ function App() {
       </LuxuryRedirectManager>
     </Router>
   </ErrorBoundary>
+</CartProvider>
 </HelmetProvider>
   );
 }

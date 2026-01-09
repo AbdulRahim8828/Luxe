@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Luxe Logo */}
           <Link to="/" className="flex items-center space-x-3 sm:space-x-4 group transition-all duration-300 hover:scale-105">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-2xl group-hover:shadow-yellow-500/25 transition-all duration-300 border-2 border-yellow-500/20 group-hover:border-yellow-500/40">
+            <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-2xl group-hover:shadow-yellow-500/25 transition-all duration-300 border-2 border-yellow-500/20 group-hover:border-yellow-500/40">
               <img 
                 src="/assets/Luxe assets/logo.png" 
                 alt="LUXE Wooden Furniture Polishing - Wooden Furniture" 
@@ -40,9 +40,12 @@ const Header = () => {
             </div>
             {/* Mobile - Show only on small screens */}
             <div className="block sm:hidden">
-              <h1 className="text-base font-bold text-white" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.02em' }}>
+              <h1 className="text-base font-bold text-white leading-tight" style={{ fontFamily: 'Playfair Display', letterSpacing: '0.02em' }}>
                 LUXE
               </h1>
+              <p className="text-xs text-yellow-400 font-medium leading-tight">
+                Wooden Furniture Polishing
+              </p>
             </div>
           </Link>
 

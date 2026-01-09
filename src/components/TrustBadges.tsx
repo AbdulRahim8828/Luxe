@@ -58,11 +58,11 @@ const TrustBadges: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5 md:p-6 text-center group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 min-h-[160px] md:min-h-[180px]"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5 md:p-6 text-center group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 min-h-[140px] md:min-h-[180px]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-20 h-20 md:w-20 md:h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-yellow-500/30">
-                  <IconComponent className="w-12 h-12 md:w-10 md:h-10 text-yellow-400" />
+                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-yellow-500/30">
+                  <IconComponent className="w-7 h-7 md:w-10 md:h-10 text-yellow-400" />
                 </div>
                 
                 <div className="mb-3">
