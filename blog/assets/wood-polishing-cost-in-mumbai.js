@@ -1,5 +1,5 @@
 export default `<h1>Wood Polishing Cost in Mumbai (2025 Updated Guide) – PU, Melamine, Door &amp; Furniture Polish Price List</h1>
-<p><img src="../assets/Wood%20Polishing%20Cost%20in%20Mumbai.webp" alt="Wood Polishing Cost in Mumbai"></p>
+<p>![Wood Polishing Cost in Mumbai](../Luxe assets/Wood%20Polishing%20Cost%20in%20Mumbai.webp)</p>
 <p><em>Complete pricing guide for wood polishing services in Mumbai - Updated January 2025</em></p>
 <p>Are you looking to restore the shine and beauty of your wooden furniture in Mumbai? You&#39;re not alone! Wooden furniture polishing has become one of the most sought-after home improvement services in the city. </p>
 <p>Whether you own a dining table, wardrobe, sofa, bed, or wooden doors, you&#39;ve probably wondered:</p>

@@ -57,7 +57,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ pageData }) =
         structuredData={[schema.localBusiness, schema.service]}
         ogTitle={title}
         ogDescription={metaDescription}
-        ogImage="/assets/wooden furniture .webp"
+        ogImage="/Luxe assets/wooden furniture .webp"
       />
 
       <StickyWhatsApp />
@@ -160,7 +160,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ pageData }) =
               <FadeIn delay={200}>
                 <div className="relative">
                   <OptimizedImage
-                    src="/assets/wooden furniture .webp"
+                    src="/Luxe assets/wooden furniture .webp"
                     alt={`${serviceName} service in ${location}`}
                     width={1920}
                     height={1080}

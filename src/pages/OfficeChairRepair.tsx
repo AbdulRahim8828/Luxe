@@ -11,7 +11,7 @@ import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 const repairService = {
   id: 'office-chair-repair',
   name: 'Office Chair Repair',
-  image: '/assets/Chair Repair.jpg',
+  image: '/Luxe assets/Chair Repair.jpg',
   categories: [
     {
       name: 'Chair Base Replacement',

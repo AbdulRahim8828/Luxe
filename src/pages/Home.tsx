@@ -33,7 +33,7 @@ const Home = () => {
         title={homeSEO.title}
         description={homeSEO.description}
         keywords={homeSEO.keywords}
-        image="/assets/Sofa And chair.webp"
+        image="/Luxe assets/Sofa And chair.webp"
         canonical={getCanonicalURL('/')}
       />
       <JsonLd data={localBusiness} />
@@ -159,14 +159,15 @@ const Home = () => {
             {/* Right Content - Image Card - Mobile Optimized */}
             <div className="relative mt-4 lg:mt-0">
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-3 md:p-4 max-w-sm mx-auto hover:border-yellow-500/30 transition-all duration-300 shadow-xl">
-                <OptimizedImage
-                  src="/assets/Sofa And chair.webp"
-                  alt="Luxury furniture polishing services"
-                  width={400}
-                  height={300}
+                <img
+                  src="/Luxe assets/Hero%20Image.webp"
+                  alt="LUXE Premium Wooden Furniture Polishing Services"
                   className="w-full h-40 md:h-48 object-cover rounded-xl mb-3"
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  loading="eager"
+                  onError={(e) => {
+                    console.log('Hero image failed to load, trying fallback');
+                    e.currentTarget.src = '/Luxe assets/Sofa And chair.webp';
+                  }}
                 />
                 
                 {/* Rating Badge */}

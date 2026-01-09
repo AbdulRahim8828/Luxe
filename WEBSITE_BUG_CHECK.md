@@ -4,8 +4,8 @@
 
 ### 1. Cleaning & Sanding Image Not Showing ✅
 **Issue**: Step 3 in "Our Wood Polishing Process" was showing broken image
-**Cause**: Image path was `/assets/Cleaning & Sanding.jpg` but file was converted to `.webp`
-**Fix**: Updated path to `/assets/Cleaning & Sanding.webp` in `src/components/OurProcess.tsx`
+**Cause**: Image path was `/Luxe assets/Cleaning & Sanding.jpg` but file was converted to `.webp`
+**Fix**: Updated path to `/Luxe assets/Cleaning & Sanding.webp` in `src/components/OurProcess.tsx`
 **Status**: ✅ FIXED
 
 ### 2. Goregaon Areas Section Mobile UI ✅

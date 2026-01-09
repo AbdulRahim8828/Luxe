@@ -1,6 +1,6 @@
 # Wood Polishing Cost in Mumbai (2025 Updated Guide) – PU, Melamine, Door & Furniture Polish Price List
 
-![Wood Polishing Cost in Mumbai](../assets/Wood%20Polishing%20Cost%20in%20Mumbai.webp)
+![Wood Polishing Cost in Mumbai](../Luxe assets/Wood%20Polishing%20Cost%20in%20Mumbai.webp)
 
 *Complete pricing guide for wood polishing services in Mumbai - Updated January 2025*
 

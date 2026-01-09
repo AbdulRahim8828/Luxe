@@ -25,7 +25,7 @@ When it comes to polishing services in Goregaon, **A1 Furniture Polish** is trus
 
 💡 **Fact:** A1 Furniture Polish is **20% cheaper than competitors** like [Urban Company](https://www.urbancompany.com/) while delivering premium results.  
 
-![Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon](/assets/Why%20Choose%20A1%20Furniture%20Polish%20for%20Wooden%20Furniture%20in%20Goregaon.png)
+![Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon](/Luxe assets/Why%20Choose%20A1%20Furniture%20Polish%20for%20Wooden%20Furniture%20in%20Goregaon.png)
 *Alt text: Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon*
 
 ---

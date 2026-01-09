@@ -19,7 +19,7 @@
     "optimize:images": "tsx scripts/optimizeImages.ts",
     "generate:pages": "tsx scripts/generatePages.ts",
     "generate:seo-pages": "tsx scripts/generateSEOPages.ts",
-    "generate:favicons": "tsx scripts/generateFavicons.ts",
+    "generate:favicons": "tsx scripts/generateLuxeFavicons.ts",
     "generate:blog": "tsx blog/scripts/generateBlogContent.ts",
     "blog:new": "tsx blog/scripts/createBlogPost.ts",
     "blog:validate": "tsx blog/scripts/validateBlogContent.ts",

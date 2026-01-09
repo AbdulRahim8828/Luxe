@@ -51,7 +51,7 @@ When it comes to Mumbai, the market offers several options for furniture polishi
 
 If you value durability and finish, A1 Furniture Polish remains the top recommendation.  
 
-![Top Furniture Polish Services in Mumbai](/assets/Top%20Furniture%20Polish%20Services%20in%20Mumbai.png)
+![Top Furniture Polish Services in Mumbai](/Luxe assets/Top%20Furniture%20Polish%20Services%20in%20Mumbai.png)
 
 ---
 

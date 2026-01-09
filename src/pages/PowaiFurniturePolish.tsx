@@ -93,7 +93,7 @@ const PowaiFurniturePolish = () => {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'Luxe Wooden Furniture Polishing - Powai',
-    'image': '/assets/Sofa And chair.webp',
+    'image': '/Luxe assets/Sofa And chair.webp',
     'description': 'Premium furniture polishing and restoration services in Powai, Mumbai. Expert luxury wooden furniture polish, sofa polishing, and antique restoration.',
     'address': {
       '@type': 'PostalAddress',
@@ -128,7 +128,7 @@ const PowaiFurniturePolish = () => {
         title="Premium Furniture Polish in Powai | Best Luxury Furniture Polishing Services Near Me | Luxe Wooden Furniture Polishing"
         description="Premium furniture polishing services in Powai, Chandivali & Hiranandani Gardens. Expert luxury wooden furniture polish, sofa restoration, table polishing, bed polishing, scratch repair, antique restoration. 24/7 service available. Call +91 9702209513"
         keywords="furniture polish powai, furniture polishing powai, furniture polishing chandivali, furniture polishing hiranandani gardens, wooden furniture polish powai, sofa polishing powai, furniture restoration powai mumbai, table polishing powai, bed polishing powai, chair polishing powai, cabinet polishing powai, wardrobe polishing powai, door polishing powai, antique furniture restoration powai, furniture repair powai, scratch repair powai, furniture refinishing powai, teak wood polishing powai, sheesham wood polishing powai, furniture polish near me powai, best furniture polish powai, affordable furniture polishing powai, furniture polishing service powai, home furniture polish powai, office furniture polish powai, commercial furniture polishing powai, furniture polish chandivali mumbai, furniture polishing yadav nagar, furniture polishing vikhroli link road, furniture polishing iit bombay area, 24 hour furniture polish powai, emergency furniture polishing powai, same day furniture polish powai, quick furniture polishing powai"
-        ogImage="/assets/Sofa And chair.webp"
+        ogImage="/Luxe assets/Sofa And chair.webp"
         canonical={getCanonicalURL('/powai-furniture-polish')}
       />
       <JsonLd data={localBusinessSchema} />
@@ -194,7 +194,7 @@ const PowaiFurniturePolish = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <OptimizedImage
-                  src="/assets/wooden furniture .webp"
+                  src="/Luxe assets/wooden furniture .webp"
                   alt="Furniture polishing service in Powai"
                   width={1920}
                   height={1080}

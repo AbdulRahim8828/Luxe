@@ -231,7 +231,7 @@ function generateTwitterCardTags(pageData: any): TwitterCardData {
  * Generates appropriate image URL based on page content
  */
 function generateImageUrl(pageData: any): string {
-  const baseUrl = '/assets/optimized/';
+  const baseUrl = '/Luxe assets/optimized/';
   const serviceName = (pageData.serviceName || pageData.title || '').toLowerCase();
   
   // Map service types to appropriate images

@@ -19,7 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   title = luxurySEOConfig.defaultTitle,
   description = luxurySEOConfig.defaultDescription,
   keywords = luxurySEOConfig.defaultKeywords.join(', '),
-  image = '/assets/og-image.jpg',
+  image = '/Luxe assets/og-image.jpg',
   url,
   canonical,
 }) => {

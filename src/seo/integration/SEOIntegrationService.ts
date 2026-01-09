@@ -50,7 +50,7 @@ export class SEOIntegrationService {
       openGraphTags: {
         title: pageData.title,
         description: pageData.metaDescription,
-        image: '/assets/wooden furniture .webp',
+        image: '/Luxe assets/wooden furniture .webp',
         url: pageData.canonicalUrl,
         type: 'website',
         siteName: 'A1 Furniture Polish'
@@ -59,7 +59,7 @@ export class SEOIntegrationService {
         card: 'summary_large_image',
         title: pageData.title,
         description: pageData.metaDescription,
-        image: '/assets/wooden furniture .webp'
+        image: '/Luxe assets/wooden furniture .webp'
       },
       structuredData: pageData.schema,
       lastModified: new Date(),
@@ -130,7 +130,7 @@ export class SEOIntegrationService {
       seoPage.openGraphTags = {
         title: ogTags['og:title'] || seoPage.title,
         description: ogTags['og:description'] || seoPage.metaDescription,
-        image: ogTags['og:image'] || '/assets/wooden furniture .webp',
+        image: ogTags['og:image'] || '/Luxe assets/wooden furniture .webp',
         url: ogTags['og:url'] || seoPage.url,
         type: ogTags['og:type'] || 'website',
         siteName: ogTags['og:site_name'] || 'A1 Furniture Polish'
@@ -140,7 +140,7 @@ export class SEOIntegrationService {
         card: (twitterTags['twitter:card'] as any) || 'summary_large_image',
         title: twitterTags['twitter:title'] || seoPage.title,
         description: twitterTags['twitter:description'] || seoPage.metaDescription,
-        image: twitterTags['twitter:image'] || '/assets/wooden furniture .webp'
+        image: twitterTags['twitter:image'] || '/Luxe assets/wooden furniture .webp'
       };
 
       // Set canonical URL if not present

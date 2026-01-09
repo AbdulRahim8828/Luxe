@@ -31,7 +31,7 @@ export function checkImageExists(src: string): Promise<boolean> {
  * Get fallback image path
  */
 export function getFallbackImage(): string {
-  return '/assets/wooden furniture .webp'; // A reliable fallback image
+  return '/Luxe assets/wooden furniture .webp'; // A reliable fallback image
 }
 
 /**

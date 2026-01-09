@@ -90,8 +90,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Generate responsive image sources
   const generateSrcSet = (format: string) => {
-    const baseName = src.replace('/assets/optimized/', '').replace(/\.[^/.]+$/, '');
-    const baseUrl = '/assets/optimized/optimized/';
+    const baseName = src.replace('/Luxe assets/optimized/', '').replace(/\.[^/.]+$/, '');
+    const baseUrl = '/Luxe assets/optimized/optimized/';
     
     return LUXE_SIZES
       .map(size => `${baseUrl}${baseName}-${size}w.${format} ${size}w`)

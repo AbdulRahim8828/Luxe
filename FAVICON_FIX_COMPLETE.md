@@ -29,7 +29,7 @@ Removed all outdated/incorrect favicon files:
 - ❌ apple-touch-icon.png (old)
 
 ### **2. Installed New Proper Favicon Files**
-✅ **New Files from `public/assets/favicon/`:**
+✅ **New Files from `public/Luxe assets/favicon/`:**
 ```
 favicon.ico                      15K (Proper MS Windows icon format - 48x48 & 32x32)
 favicon-96x96.png               1.4K (PNG format for modern browsers)

@@ -11,7 +11,7 @@ import { COMMON_SIZES } from '../../src/utils/imageHelpers';
 const sofaService = {
   id: 'sofa-fabric-change',
   name: 'Sofa Fabric Change',
-  image: '../assets/Sofa_Fabric_Change_20.webp',
+  image: '../Luxe assets/Sofa_Fabric_Change_20.webp',
   categories: [
     {
       name: 'Sofa & Miscellaneous',

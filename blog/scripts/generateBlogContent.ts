@@ -79,7 +79,7 @@ class BlogContentGenerator {
 
       return {
         meta,
-        importStatement: `    case '${slug}':\n      return (await import('../assets/${slug}.js')).default;`
+        importStatement: `    case '${slug}':\n      return (await import('../Luxe assets/${slug}.js')).default;`
       };
     } catch (error) {
       console.error(`Error processing ${filePath}:`, error);
@@ -122,19 +122,19 @@ class BlogContentGenerator {
   private getCorrectImagePath(slug: string): string {
     // Map slugs to actual WebP file names in assets folder
     const imageMap: Record<string, string> = {
-      '10-powerful-reasons-why-choose-a1-furniture-polish-for-wooden-furniture-in-goregaon': '/assets/Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon.webp',
-      'a1-furniture-polish-pricing-services-in-bandra-complete-guide-2025': '/assets/A1 Furniture Polishing Price And Service In Bandra.webp',
-      'best-wood-polishing-in-andheri-restore-shine-with-a1-furniture-polish': '/assets/Best Wood Polishing In Andheri.webp',
-      'professional-furniture-polishing-services-in-jogeshwari-a1-furniture-polish': '/assets/Furniture Polishing Services In Jogeshwari.webp',
-      'step-by-step-furniture-polishing-guide-for-mumbai-homes': '/assets/Furntiure Polishing Guide For Mumbai.webp',
-      'top-furniture-polish-services-in-mumbai-enhance-your-home-d-cor': '/assets/Top Furniture Polish Services in Mumbai.webp',
-      'wood-polishing-cost-in-mumbai': '/assets/Wood Polishing Cost in Mumbai.webp',
-      'choosing-the-right-wood-polish': '/assets/Ultimate Guide to choose.webp',
-      'common-polishing-mistakes': '/assets/5 Common Mistakes To Avoid.webp',
-      'how-to-maintain-wooden-furniture': '/assets/How To Maintain Wooden Furniture At Home.webp'
+      '10-powerful-reasons-why-choose-a1-furniture-polish-for-wooden-furniture-in-goregaon': '/Luxe assets/Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon.webp',
+      'a1-furniture-polish-pricing-services-in-bandra-complete-guide-2025': '/Luxe assets/A1 Furniture Polishing Price And Service In Bandra.webp',
+      'best-wood-polishing-in-andheri-restore-shine-with-a1-furniture-polish': '/Luxe assets/Best Wood Polishing In Andheri.webp',
+      'professional-furniture-polishing-services-in-jogeshwari-a1-furniture-polish': '/Luxe assets/Furniture Polishing Services In Jogeshwari.webp',
+      'step-by-step-furniture-polishing-guide-for-mumbai-homes': '/Luxe assets/Furntiure Polishing Guide For Mumbai.webp',
+      'top-furniture-polish-services-in-mumbai-enhance-your-home-d-cor': '/Luxe assets/Top Furniture Polish Services in Mumbai.webp',
+      'wood-polishing-cost-in-mumbai': '/Luxe assets/Wood Polishing Cost in Mumbai.webp',
+      'choosing-the-right-wood-polish': '/Luxe assets/Ultimate Guide to choose.webp',
+      'common-polishing-mistakes': '/Luxe assets/5 Common Mistakes To Avoid.webp',
+      'how-to-maintain-wooden-furniture': '/Luxe assets/How To Maintain Wooden Furniture At Home.webp'
     };
 
-    return imageMap[slug] || `/assets/${slug}.webp`;
+    return imageMap[slug] || `/Luxe assets/${slug}.webp`;
   }
 
   private escapeTemplate(content: string): string {

@@ -23,7 +23,7 @@ const sofaServicesData = [
       'High-quality fabric options',
       'Professional installation',
     ],
-    image: '/assets/Sofa_Fabric_Change_20.webp',
+    image: '/Luxe assets/Sofa_Fabric_Change_20.webp',
     options: [
       { id: 'sofa-1seater', name: '1 Seater Sofa', price: 3499, rating: 4.8, reviewCount: 234, estimatedTime: '3 hrs' },
       { id: 'sofa-2seater', name: '2 Seater Sofa', price: 4499, rating: 4.9, reviewCount: 345, estimatedTime: '4 hrs' },
@@ -38,43 +38,43 @@ const sofaServicesData = [
     ],
     selectedOption: -1,
     priceIncludes: ['Labor cost', 'Professional installation', 'Old fabric removal', 'Free consultation'],
-    materials: ['/assets/Sofa_Fabric_Change_20.webp'],
+    materials: ['/Luxe assets/Sofa_Fabric_Change_20.webp'],
     processSteps: [
       {
         step: 1,
         title: 'Consultation & Booking',
         description: 'Book your service online or via WhatsApp. Our team will confirm your appointment and discuss fabric options.',
-        image: '/assets/consultation-booking.webp'
+        image: '/Luxe assets/consultation-booking.webp'
       },
       {
         step: 2,
         title: 'Fabric Selection',
         description: 'Choose from a wide range of high-quality fabrics. Our expert will help you select the perfect fabric for your sofa.',
-        image: '/assets/Sofa_Fabric_Change_20.webp'
+        image: '/Luxe assets/Sofa_Fabric_Change_20.webp'
       },
       {
         step: 3,
         title: 'Old Fabric Removal',
         description: 'Our professionals carefully remove the old fabric without damaging the sofa frame or cushions.',
-        image: '/assets/Cleaning & Sanding.webp'
+        image: '/Luxe assets/Cleaning & Sanding.webp'
       },
       {
         step: 4,
         title: 'Frame Inspection & Repair',
         description: 'We inspect the sofa frame and cushions, making any necessary repairs before installing new fabric.',
-        image: '/assets/filling-gaps-polish-application.webp'
+        image: '/Luxe assets/filling-gaps-polish-application.webp'
       },
       {
         step: 5,
         title: 'New Fabric Installation',
         description: 'Professional installation of your chosen fabric with precise stitching and finishing.',
-        image: '/assets/drying-finishing.webp'
+        image: '/Luxe assets/drying-finishing.webp'
       },
       {
         step: 6,
         title: 'Quality Check & Handover',
         description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed sofa.',
-        image: '/assets/wooden furniture .webp'
+        image: '/Luxe assets/wooden furniture .webp'
       }
     ],
     faqs: [
@@ -116,7 +116,7 @@ const sofaServicesData = [
       'High-quality spare parts',
       'Warranty on replaced parts',
     ],
-    image: '/assets/Chair Repair.jpg',
+    image: '/Luxe assets/Chair Repair.jpg',
     options: [
       { id: 'chair-steel-base', name: 'Steel Finish Base', price: 749, rating: 4.8, reviewCount: 345, estimatedTime: '1 hr' },
       { id: 'chair-black-base', name: 'Black Finish Base', price: 619, rating: 4.8, reviewCount: 289, estimatedTime: '1 hr' },
@@ -127,43 +127,43 @@ const sofaServicesData = [
     ],
     selectedOption: -1,
     priceIncludes: ['Labour charge (₹249 included)', 'High-quality spare parts', 'On-site repair', 'Warranty on parts'],
-    materials: ['/assets/Chair Repair.jpg'],
+    materials: ['/Luxe assets/Chair Repair.jpg'],
     processSteps: [
       {
         step: 1,
         title: 'Consultation & Booking',
         description: 'Book your service online or via WhatsApp. Our team will confirm your appointment and discuss the repair needed.',
-        image: '/assets/consultation-booking.webp'
+        image: '/Luxe assets/consultation-booking.webp'
       },
       {
         step: 2,
         title: 'Chair Inspection',
         description: 'Our technician inspects your office chair to identify the exact issue and required parts.',
-        image: '/assets/Chair Repair.jpg'
+        image: '/Luxe assets/Chair Repair.jpg'
       },
       {
         step: 3,
         title: 'Part Removal',
         description: 'Carefully remove the damaged or worn-out part (base, wheels, or hydraulic) from your chair.',
-        image: '/assets/Cleaning & Sanding.webp'
+        image: '/Luxe assets/Cleaning & Sanding.webp'
       },
       {
         step: 4,
         title: 'New Part Installation',
         description: 'Install the new high-quality replacement part with proper tools and techniques.',
-        image: '/assets/filling-gaps-polish-application.webp'
+        image: '/Luxe assets/filling-gaps-polish-application.webp'
       },
       {
         step: 5,
         title: 'Testing & Adjustment',
         description: 'Test the chair for proper functionality and make necessary adjustments for comfort.',
-        image: '/assets/drying-finishing.webp'
+        image: '/Luxe assets/drying-finishing.webp'
       },
       {
         step: 6,
         title: 'Quality Check & Handover',
         description: 'Final inspection to ensure everything works perfectly. We clean up and hand over your repaired chair.',
-        image: '/assets/wooden furniture .webp'
+        image: '/Luxe assets/wooden furniture .webp'
       }
     ],
     faqs: [
@@ -315,7 +315,7 @@ const SofaServices = () => {
         description="Professional sofa fabric change and office chair repair services in Mumbai. Expert service with warranty."
         keywords="sofa fabric change, office chair repair, furniture repair Mumbai"
         canonical={getCanonicalURL('/sofa-fabric-change')}
-        image="/assets/Sofa_Fabric_Change_20.webp"
+        image="/Luxe assets/Sofa_Fabric_Change_20.webp"
       />
       
       <div className="min-h-screen bg-gray-50">

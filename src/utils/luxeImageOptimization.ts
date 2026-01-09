@@ -23,7 +23,7 @@ export function getLuxeImageUrl(
   size?: number, 
   format: LuxeImageFormat = 'webp'
 ): string {
-  const baseUrl = '/assets/optimized/';
+  const baseUrl = '/Luxe assets/optimized/';
   const sizeStr = size ? `-${size}w` : '';
   return `${baseUrl}${baseName}${sizeStr}.${format}`;
 }

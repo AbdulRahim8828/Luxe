@@ -12,9 +12,9 @@ const IMAGE_CACHE = 'luxe-images-v1';
 const STATIC_ASSETS = [
   '/',
   '/src/index.css',
-  '/assets/optimized/luxe-furniture-wooden-collection-640w.webp',
-  '/assets/optimized/luxe-polishing-sofa-640w.webp',
-  '/assets/optimized/luxe-process-consultation-booking-640w.webp',
+  '/Luxe assets/optimized/luxe-furniture-wooden-collection-640w.webp',
+  '/Luxe assets/optimized/luxe-polishing-sofa-640w.webp',
+  '/Luxe assets/optimized/luxe-process-consultation-booking-640w.webp',
 ];
 
 // Install event - cache static assets
@@ -71,7 +71,7 @@ self.addEventListener('fetch', (event) => {
   // Handle different types of requests
   if (request.destination === 'image') {
     event.respondWith(handleImageRequest(request));
-  } else if (url.pathname.includes('/assets/')) {
+  } else if (url.pathname.includes('/Luxe assets/')) {
     event.respondWith(handleAssetRequest(request));
   } else if (url.pathname.includes('fonts.googleapis.com') || 
              url.pathname.includes('fonts.gstatic.com')) {
@@ -249,8 +249,8 @@ self.addEventListener('push', (event) => {
     const data = event.data.json();
     const options = {
       body: data.body,
-      icon: '/assets/optimized/luxe-brand-favicon.svg',
-      badge: '/assets/optimized/luxe-brand-favicon.svg',
+      icon: '/Luxe assets/optimized/luxe-brand-favicon.svg',
+      badge: '/Luxe assets/optimized/luxe-brand-favicon.svg',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
@@ -260,12 +260,12 @@ self.addEventListener('push', (event) => {
         {
           action: 'explore',
           title: 'View Services',
-          icon: '/assets/optimized/luxe-brand-favicon.svg'
+          icon: '/Luxe assets/optimized/luxe-brand-favicon.svg'
         },
         {
           action: 'close',
           title: 'Close',
-          icon: '/assets/optimized/luxe-brand-favicon.svg'
+          icon: '/Luxe assets/optimized/luxe-brand-favicon.svg'
         }
       ]
     };

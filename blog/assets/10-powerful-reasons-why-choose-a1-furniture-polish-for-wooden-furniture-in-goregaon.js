@@ -21,7 +21,7 @@ export default `<h2><strong>Introduction</strong></h2>
 <li>✅ Same-day doorstep service across Goregaon East &amp; West</li>
 </ul>
 <p>💡 <strong>Fact:</strong> A1 Furniture Polish is <strong>20% cheaper than competitors</strong> like <a href="https://www.urbancompany.com/">Urban Company</a> while delivering premium results.  </p>
-<p><img src="/assets/Why%20Choose%20A1%20Furniture%20Polish%20for%20Wooden%20Furniture%20in%20Goregaon.png" alt="Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon">
+<p>![Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon](/Luxe assets/Why%20Choose%20A1%20Furniture%20Polish%20for%20Wooden%20Furniture%20in%20Goregaon.png)
 <em>Alt text: Why Choose A1 Furniture Polish for Wooden Furniture in Goregaon</em></p>
 <hr>
 <h2><strong>Types of Wooden Furniture Polishing Services Offered</strong></h2>

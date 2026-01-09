@@ -23,7 +23,7 @@ const luxeOptimizationConfig: OptimizationConfig = {
   quality: 85, // High quality for luxury brand
   formats: ['webp', 'avif', 'jpg'], // Modern formats with fallback
   sizes: [320, 640, 768, 1024, 1280, 1920], // Responsive breakpoints
-  outputDir: 'public/assets/optimized'
+  outputDir: 'public/Luxe assets/optimized'
 };
 
 // Function to get file size in bytes
@@ -160,8 +160,8 @@ export const LuxeResponsiveImage: React.FC<ResponsiveImageProps> = ({
   priority = false
 }) => {
   // Extract base name from src
-  const baseName = src.replace('/assets/', '').replace(/\\.[^/.]+$/, '');
-  const baseUrl = '/assets/optimized/';
+  const baseName = src.replace('/Luxe assets/', '').replace(/\\.[^/.]+$/, '');
+  const baseUrl = '/Luxe assets/optimized/';
   
   // Generate srcSet for different formats and sizes
   const generateSrcSet = (format: string) => {
@@ -242,7 +242,7 @@ export function getLuxeImageUrl(
   size?: number, 
   format: LuxeImageFormat = 'webp'
 ): string {
-  const baseUrl = '/assets/optimized/';
+  const baseUrl = '/Luxe assets/optimized/';
   const sizeStr = size ? \`-\${size}w\` : '';
   return \`\${baseUrl}\${baseName}\${sizeStr}.\${format}\`;
 }
@@ -314,7 +314,7 @@ async function updateComponentsForOptimization(): Promise<void> {
     // Update to use luxe asset paths
     content = content.replace(
       /\/assets\//g,
-      '/assets/optimized/'
+      '/Luxe assets/optimized/'
     );
     
     // Add luxury-specific optimizations

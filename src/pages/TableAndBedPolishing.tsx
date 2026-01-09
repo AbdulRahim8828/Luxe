@@ -138,7 +138,7 @@ const TableAndBedPolishing = () => {
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <OptimizedImage
-                src="/assets/Table & Bed Polishing.jpg"
+                src="/Luxe assets/Table & Bed Polishing.jpg"
                 alt="Craftsman polishing a dining table in Mumbai"
                 width={1920}
                 height={1280}

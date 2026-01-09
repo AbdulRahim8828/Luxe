@@ -7,42 +7,42 @@ const OurProcess = () => {
       step: 1,
       title: 'Premium Consultation',
       description: 'Detailed assessment of your luxury furniture needs with expert recommendations',
-      image: '/assets/consultation-booking.webp',
+      image: '/Luxe assets/Step 1.webp',
       icon: Home,
     },
     {
       step: 2,
       title: 'Shade Selection',
       description: 'Choose from 100+ premium polish shades to match your aesthetic vision',
-      image: '/assets/select-wood-polish-shade.webp',
+      image: '/Luxe assets/step 2.webp',
       icon: Palette,
     },
     {
       step: 3,
       title: 'Expert Preparation',
       description: 'Meticulous cleaning and surface preparation using professional-grade tools',
-      image: '/assets/Cleaning & Sanding.webp',
+      image: '/Luxe assets/step 3.webp',
       icon: Wrench,
     },
     {
       step: 4,
       title: 'Premium Application',
       description: 'Precision gap filling and application of luxury-grade polish materials',
-      image: '/assets/filling-gaps-polish-application.webp',
+      image: '/Luxe assets/step 4.webp',
       icon: Zap,
     },
     {
       step: 5,
       title: 'Perfect Finishing',
       description: 'Complete drying process with final luxury touches and detailing',
-      image: '/assets/drying-finishing.webp',
+      image: '/Luxe assets/step 5.webp',
       icon: Target,
     },
     {
       step: 6,
       title: 'Quality Assurance',
       description: 'Comprehensive inspection ensuring premium standards and client satisfaction',
-      image: 'https://images.pexels.com/photos/7792815/pexels-photo-7792815.jpeg',
+      image: '/Luxe assets/step 6.webp',
       icon: CheckCircle2,
     }
   ];
@@ -123,11 +123,11 @@ const OurProcess = () => {
               {steps.map((item, index) => (
                 <div 
                   key={item.step} 
-                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 relative"
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 pt-8 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 relative mt-6"
                   style={{ width: '320px', animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Step Number Badge */}
-                  <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-lg shadow-xl border-2 border-gray-800">
+                  <div className="absolute -top-4 right-4 w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-sm shadow-xl border-2 border-gray-800">
                     {item.step}
                   </div>
                   

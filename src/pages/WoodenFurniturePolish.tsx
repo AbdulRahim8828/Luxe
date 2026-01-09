@@ -138,7 +138,7 @@ const WoodenFurniturePolish = () => {
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <OptimizedImage
-                src="/assets/wooden furniture .webp"
+                src="/Luxe assets/wooden furniture .webp"
                 alt="A polished living room set including a sofa and coffee table"
                 width={1920}
                 height={1080}

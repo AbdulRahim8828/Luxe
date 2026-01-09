@@ -7,7 +7,7 @@ import { useCart } from '../context/CartContext';
 const navigation = [
   { name: 'Home', href: '/', icon: HiHome },
   { name: 'Services', href: '/services', icon: MdBrush },
-  { name: 'IKEA', href: '/ikea-assembly', icon: FaTools },
+  { name: 'Products', href: '/products', icon: FaTools },
   { name: 'Cart', href: '/cart', icon: FaShoppingCart },
 ];
 

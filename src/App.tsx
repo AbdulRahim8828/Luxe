@@ -25,7 +25,6 @@ const CommercialPolishing = lazy(() => import('./pages/CommercialPolishing'));
 const SofaServices = lazy(() => import('./pages/SofaServices'));
 const SofaFabricChange = lazy(() => import('./pages/SofaFabricChange'));
 const OfficeChairRepair = lazy(() => import('./pages/OfficeChairRepair'));
-const IkeaAssembly = lazy(() => import('./pages/IkeaAssembly'));
 const GoregaonFurniturePolish = lazy(() => import('./pages/GoregaonFurniturePolish'));
 const PowaiFurniturePolish = lazy(() => import('./pages/PowaiFurniturePolish'));
 const DadarLocation = lazy(() => import('./pages/locations/DadarLocation.tsx'));
@@ -231,7 +230,6 @@ function App() {
               <Route path="/services/commercial-polishing" element={<CommercialPolishing />} />
               <Route path="/sofa-fabric-change" element={<SofaServices />} />
               <Route path="/sofa-services" element={<SofaServices />} />
-              <Route path="/ikea-assembly" element={<IkeaAssembly />} />
               <Route path="/office-chair-repair" element={<OfficeChairRepair />} />
               
               {/* Location Pages */}

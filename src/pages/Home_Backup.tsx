@@ -30,31 +30,31 @@ const Home = () => {
     {
       title: 'Wooden Furniture Polish',
       description: 'Professional polishing for all types of wooden furniture',
-      image: '/assets/wooden furniture .webp',
+      image: '/Luxe assets/wooden furniture .webp',
       link: '/services/wooden-furniture-polish'
     },
     {
       title: 'Sofa & Chair Polishing',
       description: 'Restore the shine and beauty of your upholstered furniture',
-      image: '/assets/Sofa And chair.jpg',
+      image: '/Luxe assets/Sofa And chair.jpg',
       link: '/sofa-chair-polishing'
     },
     {
       title: 'Table & Bed Polishing',
       description: 'Specialized care for dining tables, beds, and more',
-      image: '/assets/Table & Bed Polishing.jpg',
+      image: '/Luxe assets/Table & Bed Polishing.jpg',
       link: '/services/table-and-bed-polishing'
     },
     {
       title: 'Antique Restoration',
       description: 'Specialized care for vintage and antique furniture pieces',
-      image: '/assets/Antique Restoration.jpg',
+      image: '/Luxe assets/Antique Restoration.jpg',
       link: '/services/antique-restoration'
     },
     {
       title: 'Commercial Polishing',
       description: 'Professional furniture polishing for offices and businesses',
-      image: '/assets/drying-finishing.webp',
+      image: '/Luxe assets/drying-finishing.webp',
       link: '/services/commercial-polishing'
     }
   ];
@@ -87,7 +87,7 @@ const Home = () => {
         description="Mumbai's most exclusive furniture polishing services. We restore and polish your luxury wooden furniture to perfection with premium materials and master craftsmen. Expert sofa, bed, door, table, wardrobe polish. 6 months warranty. Book now!"
         keywords="luxury furniture polish Mumbai, premium wood polishing services, elite sofa polish, luxury bed polish, premium door polish, luxury wardrobe polish, exclusive furniture restoration Mumbai, LUXE furniture polish"
         ogUrl="https://luxewoodenfurniturepolishing.com/"
-        ogImage="/assets/Sofa And chair.jpg"
+        ogImage="/Luxe assets/Sofa And chair.jpg"
         canonical="https://luxewoodenfurniturepolishing.com/"
       />
       <JsonLd data={localBusiness} />
@@ -152,7 +152,7 @@ const Home = () => {
             </div>
             <div className="relative mt-8 lg:mt-0">
               <img
-                src="/assets/Sofa And chair.jpg"
+                src="/Luxe assets/Sofa And chair.jpg"
                 alt="Professional furniture polishing in Mumbai"
                 className="rounded-lg shadow-2xl w-full h-80 md:h-96 object-cover"
                 loading="lazy"

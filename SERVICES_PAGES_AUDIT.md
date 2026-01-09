@@ -156,15 +156,15 @@ All images properly linked:
 
 | Service | Image Path | Exists |
 |---------|-----------|--------|
-| Sofa | `/assets/Sofa.jpeg` | ✅ |
-| Bed | `/assets/Bed.jpeg` | ✅ |
-| Door | `/assets/Door Wood Polish.webp` | ✅ |
-| Table | `/assets/Table Wood Polish.jpeg` | ✅ |
-| Wardrobe | `/assets/Wardrobe.jpg` | ✅ |
-| Chair | `/assets/Chair Repair.jpg` | ✅ |
-| Cabinet | `/assets/Cabinet Wood Polish.jpeg` | ✅ |
-| Window | `/assets/Door Wood Polish.webp` | ✅ |
-| Dining | `/assets/Dining set polish.jpg` | ✅ |
+| Sofa | `/Luxe assets/Sofa.jpeg` | ✅ |
+| Bed | `/Luxe assets/Bed.jpeg` | ✅ |
+| Door | `/Luxe assets/Door Wood Polish.webp` | ✅ |
+| Table | `/Luxe assets/Table Wood Polish.jpeg` | ✅ |
+| Wardrobe | `/Luxe assets/Wardrobe.jpg` | ✅ |
+| Chair | `/Luxe assets/Chair Repair.jpg` | ✅ |
+| Cabinet | `/Luxe assets/Cabinet Wood Polish.jpeg` | ✅ |
+| Window | `/Luxe assets/Door Wood Polish.webp` | ✅ |
+| Dining | `/Luxe assets/Dining set polish.jpg` | ✅ |
 
 ## ✅ Testing Checklist
 

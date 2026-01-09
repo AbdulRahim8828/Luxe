@@ -1,6 +1,6 @@
 {
-  "name": "A1 Furniture Polish",
-  "short_name": "A1 Polish",
+  "name": "LUXE Wooden Furniture Polishing",
+  "short_name": "LUXE",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#D97706",
-  "background_color": "#D97706",
-  "display": "standalone"
+  "theme_color": "#eab308",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/"
 }

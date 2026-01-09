@@ -135,7 +135,7 @@ export async function applySEOImprovements(pages: PageData[]): Promise<PageData[
       openGraphTags: {
         title: page.title,
         description: page.metaDescription,
-        image: '/assets/wooden furniture .webp',
+        image: '/Luxe assets/wooden furniture .webp',
         url: page.canonicalUrl,
         type: 'website',
         siteName: 'A1 Furniture Polish'
@@ -144,7 +144,7 @@ export async function applySEOImprovements(pages: PageData[]): Promise<PageData[
         card: 'summary_large_image' as const,
         title: page.title,
         description: page.metaDescription,
-        image: '/assets/wooden furniture .webp'
+        image: '/Luxe assets/wooden furniture .webp'
       },
       structuredData: page.schema,
       lastModified: new Date(),
@@ -232,7 +232,7 @@ export async function generatePerformanceOptimizedPages(): Promise<PageData[]> {
       openGraphTags: {
         title: page.title,
         description: page.metaDescription,
-        image: '/assets/wooden furniture .webp',
+        image: '/Luxe assets/wooden furniture .webp',
         url: page.canonicalUrl,
         type: 'website',
         siteName: 'A1 Furniture Polish'
@@ -241,7 +241,7 @@ export async function generatePerformanceOptimizedPages(): Promise<PageData[]> {
         card: 'summary_large_image' as const,
         title: page.title,
         description: page.metaDescription,
-        image: '/assets/wooden furniture .webp'
+        image: '/Luxe assets/wooden furniture .webp'
       },
       structuredData: page.schema,
       lastModified: new Date(),

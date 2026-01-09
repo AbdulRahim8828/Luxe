@@ -105,7 +105,7 @@ const DadarLocation = () => {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'Luxe Wooden Furniture Polishing Service - Dadar to Colaba',
-    'image': 'https://luxewoodenfurniturepolishing.com/assets/Sofa And chair.webp',
+    'image': 'https://luxewoodenfurniturepolishing.com/Luxe assets/Sofa And chair.webp',
     'description': 'Premium furniture polishing and restoration services covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba, and South Mumbai. Expert luxury wooden furniture polish, sofa restoration, and antique furniture restoration. Located at Shop No.13 near Cosmos Plaza, Bhavani Shankar Road, Dadar West.',
     'priceRange': '₹249-₹999',
     'address': {
@@ -261,7 +261,7 @@ const DadarLocation = () => {
         title="⭐ Best Furniture Polish Dadar to Colaba | 24/7 Near Cosmos Plaza | ₹249 Starting - Shop No.13"
         description="Professional furniture polishing services from Dadar to Colaba. Expert wooden furniture polish, sofa restoration covering Dadar, Parel, Lower Parel, Worli, Byculla, Fort, Colaba. Shop No.13 Cosmos Plaza - Starting ₹249. Call +91 8828709945"
         keywords="furniture polish dadar to colaba, furniture polishing dadar parel worli, furniture polishing south mumbai, wooden furniture polish dadar, sofa polishing dadar to fort, furniture restoration dadar mumbai, table polishing dadar parel, bed polishing dadar, furniture polish near cosmos plaza, best furniture polish dadar, furniture polishing lower parel, furniture polishing worli, furniture polishing byculla, furniture polishing fort mumbai, furniture polishing colaba, antique furniture restoration south mumbai, furniture repair dadar, scratch repair dadar to colaba, furniture refinishing mumbai, teak wood polishing dadar, sheesham wood polishing south mumbai, furniture polish bhavani shankar road, furniture polish shivaji park, furniture polishing mahim, furniture polishing matunga, 24 hour furniture polish dadar, emergency furniture polishing south mumbai, same day furniture polish dadar to colaba, furniture polish dadar station, furniture polish near dadar, affordable furniture polishing mumbai, home furniture polish dadar, office furniture polish south mumbai, commercial furniture polishing mumbai central"
-        ogImage="/assets/Sofa And chair.webp"
+        ogImage="/Luxe assets/Sofa And chair.webp"
         canonical={getCanonicalURL('/dadar')}
       />
       <JsonLd data={localBusinessSchema} />
@@ -337,7 +337,7 @@ const DadarLocation = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <OptimizedImage
-                  src="/assets/wooden furniture .webp"
+                  src="/Luxe assets/wooden furniture .webp"
                   alt="Furniture polishing service in Dadar"
                   width={1920}
                   height={1080}
@@ -383,7 +383,7 @@ const DadarLocation = () => {
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
                 <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
-                    src="/assets/Sofa And chair.webp"
+                    src="/Luxe assets/Sofa And chair.webp"
                     alt="Sofa Polishing Service in Dadar"
                     width={600}
                     height={400}
@@ -438,7 +438,7 @@ const DadarLocation = () => {
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
                 <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
-                    src="/assets/Dining-polish.webp"
+                    src="/Luxe assets/Dining-polish.webp"
                     alt="Dining Table Polish Service in Dadar"
                     width={400}
                     height={300}
@@ -493,7 +493,7 @@ const DadarLocation = () => {
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
                 <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
-                    src="/assets/Bed-polish.webp"
+                    src="/Luxe assets/Bed-polish.webp"
                     alt="Bed Polishing Service in Dadar"
                     width={400}
                     height={300}
@@ -543,7 +543,7 @@ const DadarLocation = () => {
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
                 <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
-                    src="/assets/4-Door-Wardrobe.webp"
+                    src="/Luxe assets/4-Door-Wardrobe.webp"
                     alt="Wardrobe Polishing Service in Dadar"
                     width={400}
                     height={300}
@@ -596,7 +596,7 @@ const DadarLocation = () => {
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-amber-100">
                 <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
-                    src="/assets/Door-polish.webp"
+                    src="/Luxe assets/Door-polish.webp"
                     alt="Door Polishing Service in Dadar"
                     width={400}
                     height={300}
@@ -646,7 +646,7 @@ const DadarLocation = () => {
               <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-2 border-amber-300">
                 <div className="relative h-56 md:h-60 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
                   <OptimizedImage
-                    src="/assets/consultation-booking.webp"
+                    src="/Luxe assets/consultation-booking.webp"
                     alt="Complete Home Furniture Polish in Dadar"
                     width={400}
                     height={300}

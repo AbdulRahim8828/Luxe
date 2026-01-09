@@ -138,7 +138,7 @@ const AntiqueRestoration = () => {
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <OptimizedImage
-                src="/assets/Antique Restoration.jpg"
+                src="/Luxe assets/Antique Restoration.jpg"
                 alt="Restored antique furniture"
                 width={1920}
                 height={1280}

@@ -47,7 +47,7 @@ export default `<h2><strong>Table of Contents</strong></h2>
 <li><strong>Luxury Service Providers</strong> – High-end services focused on antique and imported furniture.</li>
 </ul>
 <p>If you value durability and finish, A1 Furniture Polish remains the top recommendation.  </p>
-<p><img src="/assets/Top%20Furniture%20Polish%20Services%20in%20Mumbai.png" alt="Top Furniture Polish Services in Mumbai"></p>
+<p>![Top Furniture Polish Services in Mumbai](/Luxe assets/Top%20Furniture%20Polish%20Services%20in%20Mumbai.png)</p>
 <hr>
 <h2><strong>Types of Furniture Polish Services</strong></h2>
 <h3><strong>Wood Polish</strong></h3>

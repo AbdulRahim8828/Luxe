@@ -258,7 +258,7 @@ function addSocialMediaTags(filePath: string, pageData: any): void {
   const ogTagsJson = JSON.stringify({
     title: ogTags['og:title'],
     description: ogTags['og:description'],
-    image: ogTags['og:image'] || '/assets/optimized/wooden furniture -640w.webp',
+    image: ogTags['og:image'] || '/Luxe assets/optimized/wooden furniture -640w.webp',
     url: ogTags['og:url'],
     type: ogTags['og:type'],
     siteName: ogTags['og:site_name']
@@ -269,7 +269,7 @@ function addSocialMediaTags(filePath: string, pageData: any): void {
     card: twitterTags['twitter:card'],
     title: twitterTags['twitter:title'],
     description: twitterTags['twitter:description'],
-    image: twitterTags['twitter:image'] || '/assets/optimized/wooden furniture -640w.webp'
+    image: twitterTags['twitter:image'] || '/Luxe assets/optimized/wooden furniture -640w.webp'
   }, null, 4);
   
   // Insert social media tags into pageData

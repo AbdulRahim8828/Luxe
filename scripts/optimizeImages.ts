@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 
 // Configuration
 const config = {
-  inputDir: path.join(__dirname, '../assets'),
-  outputDir: path.join(__dirname, '../public/assets/optimized'),
+  inputDir: path.join(__dirname, '../Luxe assets'),
+  outputDir: path.join(__dirname, '../public/Luxe assets/optimized'),
   formats: ['avif', 'webp', 'jpg'] as const,
   quality: {
     avif: 80,

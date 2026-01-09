@@ -18,7 +18,7 @@ async function checkBlogImages() {
     $('img').each((i, elem) => {
       const src = $(elem).attr('src');
       const alt = $(elem).attr('alt');
-      if (src && src.includes('/assets/') && src.includes('.webp')) {
+      if (src && src.includes('/Luxe assets/') && src.includes('.webp')) {
         images.push({ src, alt });
       }
     });

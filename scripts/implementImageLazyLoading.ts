@@ -87,7 +87,7 @@ function analyzeImages(filePath: string): ImageAnalysis {
  * Checks if an image path is already optimized
  */
 function isOptimizedImagePath(src: string): boolean {
-  return src.includes('/assets/optimized/') || 
+  return src.includes('/Luxe assets/optimized/') || 
          src.includes('.webp') || 
          src.includes('.avif') ||
          src.startsWith('data:') ||
@@ -99,15 +99,15 @@ function isOptimizedImagePath(src: string): boolean {
  */
 function getOptimizedImagePath(src: string): string {
   // If it's already in assets, convert to optimized path
-  if (src.startsWith('/assets/') && !src.includes('/optimized/')) {
+  if (src.startsWith('/Luxe assets/') && !src.includes('/optimized/')) {
     const fileName = path.basename(src, path.extname(src));
-    return `/assets/optimized/${fileName}-640w.webp`;
+    return `/Luxe assets/optimized/${fileName}-640w.webp`;
   }
   
   // If it's a relative path, assume it should be in optimized assets
   if (!src.startsWith('http') && !src.startsWith('/')) {
     const fileName = path.basename(src, path.extname(src));
-    return `/assets/optimized/${fileName}-640w.webp`;
+    return `/Luxe assets/optimized/${fileName}-640w.webp`;
   }
   
   return src; // Return as-is for external URLs

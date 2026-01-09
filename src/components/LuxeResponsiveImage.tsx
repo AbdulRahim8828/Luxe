@@ -16,8 +16,8 @@ export const LuxeResponsiveImage: React.FC<ResponsiveImageProps> = ({
   priority = false
 }) => {
   // Extract base name from src
-  const baseName = src.replace('/assets/', '').replace(/\.[^/.]+$/, '');
-  const baseUrl = '/assets/optimized/';
+  const baseName = src.replace('/Luxe assets/', '').replace(/\.[^/.]+$/, '');
+  const baseUrl = '/Luxe assets/optimized/';
   
   // Generate srcSet for different formats and sizes
   const generateSrcSet = (format: string) => {

@@ -242,14 +242,14 @@ class ComprehensiveSEOAuditor {
           description: metaDescMatch?.[1] || '',
           url: urlMatch[1],
           type: 'website',
-          image: '/assets/og-image.jpg',
+          image: '/Luxe assets/og-image.jpg',
           siteName: 'A1 Furniture Polish'
         },
         twitterCardTags: {
           card: 'summary_large_image',
           title: titleMatch[1],
           description: metaDescMatch?.[1] || '',
-          image: '/assets/twitter-image.jpg'
+          image: '/Luxe assets/twitter-image.jpg'
         },
         structuredData: {
           '@context': 'https://schema.org',
@@ -287,14 +287,14 @@ class ComprehensiveSEOAuditor {
           description: 'Professional furniture polishing services in Mumbai',
           url: '/',
           type: 'website',
-          image: '/assets/og-image.jpg',
+          image: '/Luxe assets/og-image.jpg',
           siteName: 'A1 Furniture Polish'
         },
         twitterCardTags: {
           card: 'summary_large_image',
           title: 'A1 Furniture Polish',
           description: 'Professional furniture polishing services',
-          image: '/assets/twitter-image.jpg'
+          image: '/Luxe assets/twitter-image.jpg'
         },
         structuredData: {
           '@context': 'https://schema.org',
@@ -590,7 +590,7 @@ class ComprehensiveSEOAuditor {
     // Check for performance optimization implementations
     const hasLazyLoading = fs.existsSync('src/components/OptimizedImage.tsx');
     const hasCacheHeaders = fs.existsSync('public/_headers');
-    const hasImageOptimization = fs.existsSync('public/assets/optimized');
+    const hasImageOptimization = fs.existsSync('public/Luxe assets/optimized');
 
     let score = 100;
 

@@ -3,18 +3,18 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const beforeAfterImages = [
   {
-    before: '/assets/Sofa.jpeg',
-    after: '/assets/sofa-polish.webp',
+    before: '/Luxe assets/Sofa.jpeg',
+    after: '/Luxe assets/sofa-polish.webp',
     title: 'Sofa Restoration',
   },
   {
-    before: '/assets/Bed.jpeg',
-    after: '/assets/Bed-polish.webp',
+    before: '/Luxe assets/Bed.jpeg',
+    after: '/Luxe assets/Bed-polish.webp',
     title: 'Bed Polish',
   },
   {
-    before: '/assets/Wardrobe.jpg',
-    after: '/assets/Wardrobe-polish.webp',
+    before: '/Luxe assets/Wardrobe.jpg',
+    after: '/Luxe assets/Wardrobe-polish.webp',
     title: 'Wardrobe Refinishing',
   },
 ];

@@ -138,7 +138,7 @@ const CommercialPolishing = () => {
           <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <OptimizedImage
-                src="/assets/drying-finishing.webp"
+                src="/Luxe assets/drying-finishing.webp"
                 alt="Polished furniture in a commercial space"
                 width={1920}
                 height={1280}

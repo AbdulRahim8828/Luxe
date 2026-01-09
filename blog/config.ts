@@ -50,7 +50,7 @@ export const blogConfig: BlogConfig = {
       id: 'a1-team',
       name: 'A1 Furniture Polish Team',
       bio: 'Professional furniture polishing experts with 10+ years of experience in Mumbai',
-      avatar: '/assets/team-avatar.webp',
+      avatar: '/Luxe assets/team-avatar.webp',
       social: {
         website: 'https://a1furniturepolish.com',
         linkedin: 'https://linkedin.com/company/a1-furniture-polish'

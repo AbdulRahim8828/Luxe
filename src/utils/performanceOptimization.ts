@@ -64,9 +64,9 @@ export const preloadLuxuryFonts = (): void => {
 // Preload critical luxury images
 export const preloadCriticalImages = (): void => {
   const criticalImages = [
-    '/assets/optimized/luxe-polishing-sofa-640w.webp',
-    '/assets/optimized/luxe-furniture-wooden-collection-640w.webp',
-    '/assets/optimized/luxe-process-consultation-booking-640w.webp',
+    '/Luxe assets/optimized/luxe-polishing-sofa-640w.webp',
+    '/Luxe assets/optimized/luxe-furniture-wooden-collection-640w.webp',
+    '/Luxe assets/optimized/luxe-process-consultation-booking-640w.webp',
   ];
   
   criticalImages.forEach(src => {
@@ -167,7 +167,7 @@ export const getOptimizedImageSrc = (
   width: number,
   format: 'avif' | 'webp' | 'jpg' = 'webp'
 ): string => {
-  const baseUrl = '/assets/optimized/';
+  const baseUrl = '/Luxe assets/optimized/';
   return `${baseUrl}${baseName}-${width}w.${format}`;
 };
 

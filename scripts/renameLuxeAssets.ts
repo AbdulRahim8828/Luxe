@@ -156,8 +156,8 @@ async function updateFileReferences(): Promise<void> {
         let updatedCount = 0;
 
         for (const mapping of assetMappings) {
-          const oldRef = `/assets/${mapping.oldName}`;
-          const newRef = `/assets/${mapping.newName}`;
+          const oldRef = `/Luxe assets/${mapping.oldName}`;
+          const newRef = `/Luxe assets/${mapping.newName}`;
           
           if (content.includes(oldRef)) {
             content = content.replace(new RegExp(oldRef.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), newRef);
