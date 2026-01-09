@@ -44,18 +44,18 @@ const PopularServices: React.FC = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {popularServices.map((service, index) => {
               const minPrice = Math.min(...service.options.map(opt => opt.price));
               
               return (
                 <div
                   key={service.id}
-                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 md:p-6 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300"
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl md:rounded-2xl p-3 md:p-6 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Service Image */}
-                  <div className="relative h-40 overflow-hidden rounded-xl mb-4 bg-gradient-to-br from-gray-800 to-gray-900">
+                  <div className="relative h-32 md:h-40 overflow-hidden rounded-lg md:rounded-xl mb-3 md:mb-4 bg-gradient-to-br from-gray-800 to-gray-900">
                     <img
                       src={service.image}
                       alt={service.name}
@@ -64,51 +64,52 @@ const PopularServices: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     
                     {service.options[0]?.badge && (
-                      <div className="absolute top-3 right-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black text-xs font-bold px-2 py-1 rounded-full">
+                      <div className="absolute top-2 md:top-3 right-2 md:right-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black text-xs font-bold px-1.5 md:px-2 py-0.5 md:py-1 rounded-full">
                         {service.options[0].badge}
                       </div>
                     )}
                     
                     {/* Premium Badge */}
-                    <div className="absolute top-3 left-3 bg-black/50 backdrop-blur-sm text-yellow-400 text-xs font-medium px-2 py-1 rounded-full border border-yellow-500/30">
+                    <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-black/50 backdrop-blur-sm text-yellow-400 text-xs font-medium px-1.5 md:px-2 py-0.5 md:py-1 rounded-full border border-yellow-500/30">
                       Premium
                     </div>
                   </div>
 
                   {/* Service Info */}
-                  <div className="space-y-3">
+                  <div className="space-y-2 md:space-y-3">
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                      <h3 className="text-sm md:text-lg font-bold text-white mb-1 md:mb-2 group-hover:text-yellow-400 transition-colors leading-tight">
                         {service.name}
                       </h3>
                       
                       {/* Rating */}
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-3">
+                        <div className="flex items-center gap-0.5 md:gap-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                            <Star key={i} className="w-2.5 h-2.5 md:w-3 md:h-3 text-yellow-400 fill-yellow-400" />
                           ))}
                         </div>
                         <span className="text-xs font-semibold text-white">{service.rating}</span>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-400 hidden md:inline">
                           ({service.reviewCount >= 1000 ? `${(service.reviewCount / 1000).toFixed(1)}K` : service.reviewCount} reviews)
                         </span>
                       </div>
                     </div>
 
                     {/* Price & CTA */}
-                    <div className="flex items-center justify-between pt-3 border-t border-gray-700">
+                    <div className="flex items-center justify-between pt-2 md:pt-3 border-t border-gray-700">
                       <div>
-                        <p className="text-xs text-gray-400 mb-1">Starting from</p>
-                        <p className="text-lg font-bold text-yellow-400">
+                        <p className="text-xs text-gray-400 mb-0.5 md:mb-1 hidden md:block">Starting from</p>
+                        <p className="text-sm md:text-lg font-bold text-yellow-400">
                           ₹{minPrice.toLocaleString()}
                         </p>
                       </div>
                       <button
                         onClick={() => handleQuickBook(service.id)}
-                        className="luxe-btn-primary px-4 py-2 rounded-lg font-semibold flex items-center gap-2 group-hover:scale-105 transition-transform text-sm"
+                        className="luxe-btn-primary px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold flex items-center gap-1 md:gap-2 group-hover:scale-105 transition-transform text-xs md:text-sm"
                       >
-                        Book Now
+                        <span className="hidden md:inline">Book Now</span>
+                        <span className="md:hidden">Book</span>
                         <ArrowRight className="w-3 h-3" />
                       </button>
                     </div>

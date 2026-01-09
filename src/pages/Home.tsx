@@ -195,24 +195,24 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <TrustBadges />
-
       {/* Popular Services with Quick Book */}
       <PopularServices />
+
+      {/* Trust Badges */}
+      <TrustBadges />
 
       {/* Our Process */}
       <Suspense fallback={<div className="py-8 bg-gray-900"></div>}>
         <OurProcess />
       </Suspense>
 
+      {/* Customer Photos Carousel - Join 50,000+ Happy Customers */}
+      <CustomerPhotos />
+
       {/* Stats Counter */}
       <Suspense fallback={<div className="py-8 bg-gray-800"></div>}>
         <StatsCounter />
       </Suspense>
-
-      {/* Customer Photos Carousel - Join 50,000+ Happy Customers */}
-      <CustomerPhotos />
 
       {/* Quick Quote Calculator - Get Instant Quote */}
       <QuickQuoteCalculator />
