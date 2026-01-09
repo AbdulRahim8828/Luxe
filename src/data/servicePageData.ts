@@ -503,11 +503,11 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 1234,
     duration: '~3 hrs',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/Luxe assets/luxe-furniture-shelves-5.webp',
+    image: '/Luxe assets/5 bookshelf.webp',
     options: [
-      { id: 'shelf-3', name: '3 Shelf', price: 1999, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/Luxe assets/luxe-furniture-shelves-3.webp' },
-      { id: 'shelf-5', name: '5 Shelf', price: 2799, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/Luxe assets/luxe-furniture-shelves-5.webp' },
-      { id: 'shelf-7', name: '7 Shelf', price: 3499, rating: 4.8, reviewCount: 322, estimatedTime: '3.5 hrs', image: '/Luxe assets/luxe-furniture-shelves-7.webp' }
+      { id: 'shelf-3', name: '3 Shelf', price: 1999, rating: 4.8, reviewCount: 345, estimatedTime: '2 hrs', image: '/Luxe assets/3 bookshelf.webp' },
+      { id: 'shelf-5', name: '5 Shelf', price: 2799, rating: 4.9, reviewCount: 567, estimatedTime: '2.5 hrs', image: '/Luxe assets/5 bookshelf.webp' },
+      { id: 'shelf-7', name: '7 Shelf', price: 3499, rating: 4.8, reviewCount: 322, estimatedTime: '3.5 hrs', image: '/Luxe assets/7 bookshelf.webp' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
@@ -536,7 +536,7 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 654,
     duration: '~1 hr',
     features: ['6 Months Polished Warranty', 'Choice of clear or coloured finishes', 'All Materials & Labour Cost'],
-    image: '/Luxe assets/luxe-furniture-shelves-wooden.webp',
+    image: '/Luxe assets/3 bookshelf.webp',
     options: [
       { id: 'shelf-small', name: 'Small', price: 999, rating: 4.7, reviewCount: 234, estimatedTime: '1 hr' },
       { id: 'shelf-medium', name: 'Medium', price: 1449, rating: 4.8, reviewCount: 245, estimatedTime: '1.5 hrs' },
