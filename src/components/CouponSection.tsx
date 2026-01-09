@@ -24,8 +24,8 @@ const CouponSection: React.FC<CouponSectionProps> = ({
         type="button"
         aria-label={appliedCoupon ? 'Change coupon' : 'Apply coupon'}
       >
-        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-          <span className="text-green-600 text-xl" aria-hidden="true">%</span>
+        <div className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+          <span className="text-yellow-400 text-xl" aria-hidden="true">%</span>
         </div>
         <div className="flex-1 text-left">
           <h3 className="font-semibold text-gray-900">

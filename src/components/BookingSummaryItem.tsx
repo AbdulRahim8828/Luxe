@@ -44,7 +44,7 @@ const BookingSummaryItem: React.FC<BookingSummaryItemProps> = ({
           {service.serviceName}
         </h3>
         <p className="text-xs text-gray-600 truncate">{service.optionName}</p>
-        <p className="text-xs sm:text-sm font-bold text-amber-600 mt-0.5 sm:mt-1" aria-label={`Price ${service.price} rupees`}>
+        <p className="text-xs sm:text-sm font-bold text-yellow-400 mt-0.5 sm:mt-1" aria-label={`Price ${service.price} rupees`}>
           ₹{service.price.toLocaleString()}
         </p>
       </div>

@@ -46,7 +46,7 @@ const ExitIntentPopup = () => {
           </h2>
           
           <p className="text-lg text-gray-600 mb-2">
-            Get <span className="text-amber-600 font-bold text-2xl">10% OFF</span> on your first service!
+            Get <span className="text-yellow-400 font-bold text-2xl">10% OFF</span> on your first service!
           </p>
           
           <p className="text-sm text-gray-500 mb-6">
@@ -76,7 +76,7 @@ const ExitIntentPopup = () => {
           </div>
 
           <p className="text-xs text-gray-400 mt-4">
-            Use code: <span className="font-mono font-bold text-amber-600">FIRST10</span> when booking
+            Use code: <span className="font-mono font-bold text-yellow-400">FIRST10</span> when booking
           </p>
         </div>
       </div>

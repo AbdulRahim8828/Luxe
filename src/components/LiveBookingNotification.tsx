@@ -39,7 +39,7 @@ const LiveBookingNotification: React.FC = () => {
     >
       <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 flex items-center gap-3 max-w-xs">
         <div className="flex-shrink-0">
-          <CheckCircle className="w-8 h-8 text-green-500" />
+          <CheckCircle className="w-8 h-8 text-yellow-400" />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-gray-900 truncate">

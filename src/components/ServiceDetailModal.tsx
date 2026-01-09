@@ -248,7 +248,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                     <li key={index} className="flex items-start gap-2 sm:gap-3">
                       <div className="flex-shrink-0 mt-0.5">
                         <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
+                          className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -287,8 +287,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
 
                     return (
                       <div key={index} className="flex items-center gap-3 bg-white rounded-lg p-3 shadow-sm">
-                        <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <IconComponent className="w-5 h-5 text-amber-600" />
+                        <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="w-5 h-5 text-yellow-400" />
                         </div>
                         <p className="text-sm font-medium text-gray-700 leading-snug flex-1">
                           {badge.text}
@@ -300,16 +300,16 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </section>
 
               {/* A1 Cover Promise Section - Responsive sizing */}
-              <section className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-green-100" aria-labelledby="promise-heading">
-                <h3 id="promise-heading" className="text-base sm:text-lg font-semibold text-green-700 mb-3 sm:mb-4">
+              <section className="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-yellow-500/30" aria-labelledby="promise-heading">
+                <h3 id="promise-heading" className="text-base sm:text-lg font-semibold text-yellow-400 mb-3 sm:mb-4">
                   A1 Cover Promise
                 </h3>
                 <div className="space-y-3 sm:space-y-4">
                   {/* 6 months warranty */}
                   <div className="flex items-start gap-2 sm:gap-3">
                     <div className="flex-shrink-0">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-                        <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800/50 rounded-full flex items-center justify-center shadow-sm">
+                        <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -322,7 +322,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                     </div>
                     <div className="flex-shrink-0">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -340,8 +340,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                   {/* Damage cover */}
                   <div className="flex items-start gap-2 sm:gap-3">
                     <div className="flex-shrink-0">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-                        <Umbrella className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800/50 rounded-full flex items-center justify-center shadow-sm">
+                        <Umbrella className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -354,7 +354,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                     </div>
                     <div className="flex-shrink-0">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -372,8 +372,8 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                   {/* Verified quotes */}
                   <div className="flex items-start gap-2 sm:gap-3">
                     <div className="flex-shrink-0">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-                        <FileCheck className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800/50 rounded-full flex items-center justify-center shadow-sm">
+                        <FileCheck className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -386,7 +386,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                     </div>
                     <div className="flex-shrink-0">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -484,7 +484,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                           {faq.question}
                         </span>
                         <ChevronDown
-                          className={`w-4 h-4 sm:w-5 sm:h-5 text-amber-600 flex-shrink-0 transition-transform duration-300 ease-out
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 flex-shrink-0 transition-transform duration-300 ease-out
                                     ${expandedFAQ === index ? 'rotate-180' : 'rotate-0'}`}
                           aria-hidden="true"
                         />

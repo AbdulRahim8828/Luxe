@@ -124,32 +124,32 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* Trust Badges - Enhanced Icons */}
-              <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 md:gap-6">
-                <div className="flex items-center space-x-3">
+              {/* Trust Badges - Enhanced Mobile Layout */}
+              <div className="grid grid-cols-3 gap-2 md:gap-6 lg:flex lg:flex-wrap lg:justify-start lg:items-center">
+                <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-start space-y-2 lg:space-y-0 lg:space-x-3 bg-gray-800/30 p-2 rounded-xl lg:bg-transparent lg:p-0">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <Star className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 fill-current" />
                   </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm md:text-base">5-Star Rated</div>
+                  <div className="text-center lg:text-left">
+                    <div className="text-white font-semibold text-xs md:text-base">5-Star Rated</div>
                     <div className="text-gray-400 text-xs md:text-sm">Service</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-start space-y-2 lg:space-y-0 lg:space-x-3 bg-gray-800/30 p-2 rounded-xl lg:bg-transparent lg:p-0">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <Award className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
                   </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm md:text-base">Award</div>
+                  <div className="text-center lg:text-left">
+                    <div className="text-white font-semibold text-xs md:text-base">Award</div>
                     <div className="text-gray-400 text-xs md:text-sm">Winning</div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-start space-y-2 lg:space-y-0 lg:space-x-3 bg-gray-800/30 p-2 rounded-xl lg:bg-transparent lg:p-0">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <Shield className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
                   </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm md:text-base">100%</div>
+                  <div className="text-center lg:text-left">
+                    <div className="text-white font-semibold text-xs md:text-base">100%</div>
                     <div className="text-gray-400 text-xs md:text-sm">Guaranteed</div>
                   </div>
                 </div>

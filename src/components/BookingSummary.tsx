@@ -116,7 +116,7 @@ const BookingSummary: React.FC<BookingSummaryProps> = ({
                 </div>
                 {!isExpanded && (
                   <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600 flex-shrink-0 transition-transform duration-300 ease-out"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 flex-shrink-0 transition-transform duration-300 ease-out"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

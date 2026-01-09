@@ -170,9 +170,9 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeIn>
             <div className="text-center mb-10">
-              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-green-600/20 to-green-700/20 border border-green-600/30 rounded-full mb-4">
-                <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
-                <span className="text-green-400 text-xs font-medium tracking-wider uppercase">Why Choose LUXE</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-4">
+                <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></div>
+                <span className="text-yellow-400 text-xs font-medium tracking-wider uppercase">Why Choose LUXE</span>
               </div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display' }}>What Makes Us <span className="text-yellow-400 luxe-shimmer">Extraordinary</span></h2>
               <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">

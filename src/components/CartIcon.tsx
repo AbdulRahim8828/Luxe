@@ -14,7 +14,7 @@ const CartIcon: React.FC<CartIconProps> = ({ itemCount, onClick }) => {
       type="button"
     >
       <svg
-        className="w-6 h-6 md:w-7 md:h-7 text-gray-900 group-hover:text-amber-600 transition-colors"
+        className="w-6 h-6 md:w-7 md:h-7 text-gray-900 group-hover:text-yellow-400 transition-colors"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Shield, Star, Clock, Users, Award, CheckCircle } from 'lucide-react';
+import { Shield, Star, Clock, Users, Award, CheckCircle, Sparkles, Crown } from 'lucide-react';
 
 const TrustBadges: React.FC = () => {
   const badges = [
     {
-      icon: Users,
+      icon: Crown,
       number: '500+',
       text: 'Premium Clients',
       subtitle: 'Luxury Homes & Offices',
@@ -17,13 +17,13 @@ const TrustBadges: React.FC = () => {
       showStar: true,
     },
     {
-      icon: Award,
+      icon: Sparkles,
       number: '10+',
       text: 'Years Excellence',
       subtitle: 'Industry Experience',
     },
     {
-      icon: CheckCircle,
+      icon: Shield,
       number: '100%',
       text: 'Satisfaction',
       subtitle: 'Guaranteed',
@@ -58,25 +58,25 @@ const TrustBadges: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 md:p-6 text-center group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5 md:p-6 text-center group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 min-h-[160px] md:min-h-[180px]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-yellow-500/30">
-                  <IconComponent className="w-8 h-8 md:w-10 md:h-10 text-yellow-400" />
+                <div className="w-20 h-20 md:w-20 md:h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-yellow-500/30">
+                  <IconComponent className="w-12 h-12 md:w-10 md:h-10 text-yellow-400" />
                 </div>
                 
-                <div className="mb-2">
-                  <span className="text-2xl md:text-3xl font-bold text-white">
+                <div className="mb-3">
+                  <span className="text-3xl md:text-3xl font-bold text-white">
                     {badge.number}
                   </span>
-                  {badge.showStar && <span className="text-yellow-400 ml-1">★</span>}
+                  {badge.showStar && <span className="text-yellow-400 ml-1 text-2xl">★</span>}
                 </div>
                 
-                <h3 className="text-sm font-semibold text-white mb-1">
+                <h3 className="text-base md:text-sm font-semibold text-white mb-2">
                   {badge.text}
                 </h3>
                 
-                <p className="text-xs text-gray-400">
+                <p className="text-sm md:text-xs text-gray-400">
                   {badge.subtitle}
                 </p>
               </div>
@@ -86,20 +86,20 @@ const TrustBadges: React.FC = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-10">
-          <div className="inline-flex items-center space-x-6">
+          <div className="flex flex-row items-center justify-center space-x-4 sm:space-x-6">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-white font-medium text-sm">Live Service</span>
+              <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+              <span className="text-white font-medium text-xs sm:text-sm">Live Service</span>
             </div>
             <div className="h-3 w-px bg-gray-600"></div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-              <span className="text-white font-medium text-sm">24/7 Support</span>
+              <span className="text-white font-medium text-xs sm:text-sm">24/7 Support</span>
             </div>
             <div className="h-3 w-px bg-gray-600"></div>
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-white font-medium text-sm">Always Available</span>
+              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+              <span className="text-white font-medium text-xs sm:text-sm">Always Available</span>
             </div>
           </div>
         </div>

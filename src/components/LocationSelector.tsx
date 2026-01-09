@@ -14,9 +14,9 @@ const LocationSelector: React.FC = () => {
     <div className="relative inline-block">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-amber-500 transition-colors shadow-sm"
+        className="flex items-center gap-2 px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-yellow-500 transition-colors shadow-sm"
       >
-        <MapPin className="w-4 h-4 text-amber-600 flex-shrink-0" />
+        <MapPin className="w-4 h-4 text-yellow-400 flex-shrink-0" />
         <span className="text-sm font-medium text-gray-700 whitespace-nowrap">{selectedLocation}</span>
         <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
