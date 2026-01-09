@@ -47,8 +47,11 @@
   "exclude": [
     "node_modules",
     "dist",
-    "blog_old_backup",
+    "blog_old_backup", 
     "blog",
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/.git/**"
   ]
 }

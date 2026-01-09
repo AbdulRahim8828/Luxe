@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "tsx scripts/preBuildErrorFixer.ts",
-    "build": "npm run prebuild && npm run generate:blog && npm run optimize:images && vite build && npm run generate:sitemap && npm run format:sitemap",
+    "build": "npm run prebuild && npm run generate:blog && vite build && npm run generate:sitemap && npm run format:sitemap",
+    "build:full": "npm run prebuild && npm run generate:blog && npm run optimize:images && vite build && npm run generate:sitemap && npm run format:sitemap",
     "build:netlify": "tsx scripts/netlifyBuild.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -20,7 +21,7 @@
     "generate:pages": "tsx scripts/generatePages.ts",
     "generate:seo-pages": "tsx scripts/generateSEOPages.ts",
     "generate:favicons": "tsx scripts/generateLuxeFavicons.ts",
-    "generate:blog": "echo 'Blog content is now integrated in src/blog - no separate generation needed'",
+    "generate:blog": "echo 'Blog content is integrated in src/blog - skipping generation for faster builds'",
     "blog:check": "node check-runtime-blog.js",
     "fix": "tsx scripts/quickFix.ts",
     "fix:comprehensive": "tsx scripts/buildErrorHandler.ts",

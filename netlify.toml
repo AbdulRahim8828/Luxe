@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
+  # Increase build timeout to 30 minutes
+  BUILD_TIMEOUT = "1800"
 
 # Redirect rules for SPA routing
 [[redirects]]
