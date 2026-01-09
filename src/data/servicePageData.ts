@@ -66,47 +66,47 @@ export const servicePageData: ServiceData[] = [
       'Machine Polish: Extra ₹1,499/-'
     ],
     materials: [
-      '/Luxe assets/luxe-process-shade-selection.webp',
-      '/Luxe assets/luxe-process-cleaning-sanding.webp',
-      '/Luxe assets/luxe-process-gap-filling-application.webp',
-      '/Luxe assets/luxe-process-drying-finishing.webp'
+      '/Luxe assets/step 2.webp',
+      '/Luxe assets/step 3.webp',
+      '/Luxe assets/step 4.webp',
+      '/Luxe assets/step 5.webp'
     ],
     processSteps: [
       {
         step: 1,
         title: 'Consultation & Booking',
         description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.',
-        image: '/Luxe assets/luxe-process-consultation-booking.webp'
+        image: '/Luxe assets/Step 1.webp'
       },
       {
         step: 2,
         title: 'Surface Preparation',
         description: 'Our professionals clean and sand the furniture surface to remove old polish and scratches.',
-        image: '/Luxe assets/luxe-process-cleaning-sanding.webp'
+        image: '/Luxe assets/step 3.webp'
       },
       {
         step: 3,
         title: 'Polish Shade Selection',
         description: 'Choose from clear or colored finishes that match your furniture and home décor.',
-        image: '/Luxe assets/luxe-process-shade-selection.webp'
+        image: '/Luxe assets/step 2.webp'
       },
       {
         step: 4,
         title: 'Gap Filling & Polish Application',
         description: 'We fill any gaps or cracks, then apply premium quality polish evenly.',
-        image: '/Luxe assets/luxe-process-gap-filling-application.webp'
+        image: '/Luxe assets/step 4.webp'
       },
       {
         step: 5,
         title: 'Drying & Finishing',
         description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.',
-        image: '/Luxe assets/luxe-process-drying-finishing.webp'
+        image: '/Luxe assets/step 5.webp'
       },
       {
         step: 6,
         title: 'Quality Check & Handover',
         description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed furniture.',
-        image: '/Luxe assets/luxe-furniture-wooden-collection.webp'
+        image: '/Luxe assets/step 6.webp'
       }
     ],
     faqs: [
@@ -221,47 +221,47 @@ export const servicePageData: ServiceData[] = [
       'Machine Polish: Extra ₹1,499/-'
     ],
     materials: [
-      '/Luxe assets/luxe-process-shade-selection.webp',
-      '/Luxe assets/luxe-process-cleaning-sanding.webp',
-      '/Luxe assets/luxe-process-gap-filling-application.webp',
-      '/Luxe assets/luxe-process-drying-finishing.webp'
+      '/Luxe assets/step 2.webp',
+      '/Luxe assets/step 3.webp',
+      '/Luxe assets/step 4.webp',
+      '/Luxe assets/step 5.webp'
     ],
     processSteps: [
       {
         step: 1,
         title: 'Consultation & Booking',
         description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.',
-        image: '/Luxe assets/luxe-process-consultation-booking.webp'
+        image: '/Luxe assets/Step 1.webp'
       },
       {
         step: 2,
         title: 'Surface Preparation',
         description: 'Our professionals clean and sand the furniture surface to remove old polish and scratches.',
-        image: '/Luxe assets/luxe-process-cleaning-sanding.webp'
+        image: '/Luxe assets/step 3.webp'
       },
       {
         step: 3,
         title: 'Polish Shade Selection',
         description: 'Choose from clear or colored finishes that match your furniture and home décor.',
-        image: '/Luxe assets/luxe-process-shade-selection.webp'
+        image: '/Luxe assets/step 2.webp'
       },
       {
         step: 4,
         title: 'Gap Filling & Polish Application',
         description: 'We fill any gaps or cracks, then apply premium quality polish evenly.',
-        image: '/Luxe assets/luxe-process-gap-filling-application.webp'
+        image: '/Luxe assets/step 4.webp'
       },
       {
         step: 5,
         title: 'Drying & Finishing',
         description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.',
-        image: '/Luxe assets/luxe-process-drying-finishing.webp'
+        image: '/Luxe assets/step 5.webp'
       },
       {
         step: 6,
         title: 'Quality Check & Handover',
         description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed furniture.',
-        image: '/Luxe assets/luxe-furniture-wooden-collection.webp'
+        image: '/Luxe assets/step 6.webp'
       }
     ],
     faqs: [
@@ -319,14 +319,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Both sides polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp', '/Luxe assets/luxe-process-gap-filling-application.webp', '/Luxe assets/luxe-process-drying-finishing.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp', '/Luxe assets/step 4.webp', '/Luxe assets/step 5.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the door surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your door and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly on both sides.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed door.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the door surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your door and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly on both sides.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed door.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does door polishing take?', answer: 'Typically, door polishing takes 2-3 hours depending on the size and type. We ensure thorough work without rushing.' },
@@ -357,14 +357,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Scratch removal & surface preparation', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp', '/Luxe assets/luxe-process-gap-filling-application.webp', '/Luxe assets/luxe-process-drying-finishing.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp', '/Luxe assets/step 4.webp', '/Luxe assets/step 5.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the table surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your table and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed table.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the table surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your table and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed table.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does table polishing take?', answer: 'Typically, table polishing takes 2-3 hours depending on the size. We ensure thorough work without rushing.' },
@@ -396,14 +396,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp', '/Luxe assets/luxe-process-gap-filling-application.webp', '/Luxe assets/luxe-process-drying-finishing.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp', '/Luxe assets/step 4.webp', '/Luxe assets/step 5.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the wardrobe surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your wardrobe and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly inside and outside.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed wardrobe.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the wardrobe surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your wardrobe and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly inside and outside.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed wardrobe.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does wardrobe polishing take?', answer: 'Typically, wardrobe polishing takes 3-5 hours depending on the size and number of doors. We ensure thorough work without rushing.' },
@@ -436,14 +436,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Complete polish for table and chairs', 'Heat and water-resistant finish', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp', '/Luxe assets/luxe-process-gap-filling-application.webp', '/Luxe assets/luxe-process-drying-finishing.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp', '/Luxe assets/step 4.webp', '/Luxe assets/step 5.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the dining set surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your dining set and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly on table and chairs.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed dining set.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the dining set surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your dining set and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly on table and chairs.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed dining set.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does dining set polishing take?', answer: 'Typically, dining set polishing takes 4-6 hours depending on the size. We ensure thorough work without rushing.' },
@@ -474,14 +474,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand (Melamine/PU)', 'Post-service cleaning', 'Inside & outside polishing', '6 months warranty on polish', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp', '/Luxe assets/luxe-process-gap-filling-application.webp', '/Luxe assets/luxe-process-drying-finishing.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp', '/Luxe assets/step 4.webp', '/Luxe assets/step 5.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the cabinet surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your cabinet and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed cabinet.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the cabinet surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your cabinet and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed cabinet.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does cabinet polishing take?', answer: 'Typically, cabinet polishing takes 2-3 hours depending on the size. We ensure thorough work without rushing.' },
@@ -511,14 +511,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the bookshelf surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed bookshelf.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the bookshelf surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed bookshelf.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does bookshelf polishing take?', answer: 'Typically 2-3.5 hours depending on size.' }
@@ -544,14 +544,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the shelf surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed shelf.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the shelf surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed shelf.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does shelf polishing take?', answer: 'Typically 1-2 hours depending on size.' }
@@ -575,14 +575,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the mandir surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your mandir and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed mandir.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the mandir surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your mandir and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed mandir.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does mandir polishing take?', answer: 'Typically 3 hours.' }
@@ -608,14 +608,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the jhula surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your jhula and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed jhula.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the jhula surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your jhula and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed jhula.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does jhula polishing take?', answer: 'Typically 4 hours.' }
@@ -643,14 +643,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the drawer surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed drawer.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the drawer surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed drawer.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does drawer polishing take?', answer: 'Typically 2-3 hours depending on size.' }
@@ -676,14 +676,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the TV unit surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed TV unit.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the TV unit surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed TV unit.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does TV unit polishing take?', answer: 'Typically 3-5 hours depending on size.' }
@@ -708,14 +708,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium polish brand', 'Post-service cleaning', 'Floor protection'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the floor surface thoroughly.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your interior décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed floor.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the floor surface thoroughly.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your interior décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed floor.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does floor polishing take?', answer: 'Depends on the area size.' }
@@ -733,21 +733,21 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 856,
     duration: 'Varies by area',
     features: ['Premium PU finish', 'Durable coating', 'Professional application', 'Travelling cost extra'],
-    image: '/Luxe assets/luxe-polish-pu-finish.webp',
+    image: '/Luxe assets/Machine Floor Polish.webp',
     options: [
       { id: 'pu-standard', name: 'PU Polish (per sqft)', price: 270, rating: 4.8, reviewCount: 456, estimatedTime: 'Varies' },
       { id: 'pu-premium', name: 'Premium PU Polish (per sqft)', price: 320, rating: 4.9, reviewCount: 400, estimatedTime: 'Varies' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Premium PU coating', 'Surface preparation', 'Professional application'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the surface thoroughly for PU polish application.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Surface Priming', description: 'Apply primer coat to ensure better adhesion of PU polish.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'PU Polish Application', description: 'Apply premium quality PU polish evenly for durable finish.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your furniture.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the surface thoroughly for PU polish application.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Surface Priming', description: 'Apply primer coat to ensure better adhesion of PU polish.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'PU Polish Application', description: 'Apply premium quality PU polish evenly for durable finish.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your furniture.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'What is PU polish?', answer: 'PU (Polyurethane) polish is a premium coating that provides excellent durability and finish.' },
@@ -766,21 +766,21 @@ export const servicePageData: ServiceData[] = [
     reviewCount: 723,
     duration: 'Varies by area',
     features: ['Decorative finish', 'Multiple color options', 'Professional application', 'Travelling cost extra'],
-    image: '/Luxe assets/luxe-furniture-decorative.webp',
+    image: '/Luxe assets/Hand floor polish.webp',
     options: [
       { id: 'deco-standard', name: 'Deco Polish (per sqft)', price: 249, rating: 4.7, reviewCount: 389, estimatedTime: 'Varies' },
       { id: 'deco-premium', name: 'Premium Deco Polish (per sqft)', price: 279, rating: 4.8, reviewCount: 334, estimatedTime: 'Varies' }
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Decorative coating', 'Surface preparation', 'Professional application'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the surface thoroughly for Deco polish application.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Color Selection', description: 'Choose from multiple decorative colors that match your interior décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Deco Polish Application', description: 'Apply premium quality Deco polish evenly for aesthetic finish.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your furniture.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the surface thoroughly for Deco polish application.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Color Selection', description: 'Choose from multiple decorative colors that match your interior décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Deco Polish Application', description: 'Apply premium quality Deco polish evenly for aesthetic finish.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your furniture.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'What is Deco polish?', answer: 'Deco polish is a decorative coating available in multiple colors for aesthetic finish.' },
@@ -807,14 +807,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Antique wood restoration', 'Carving preservation', 'Traditional polish finish', '6 months warranty on polish'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp', '/Luxe assets/luxe-process-gap-filling-application.webp', '/Luxe assets/luxe-process-drying-finishing.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp', '/Luxe assets/step 4.webp', '/Luxe assets/step 5.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Assessment', description: 'Expert assessment of antique furniture condition and restoration requirements.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Gentle Cleaning & Preparation', description: 'Careful cleaning of antique wood and intricate carvings with specialized tools.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Restoration Work', description: 'Repair damaged areas, fill cracks, and restore original beauty of carvings.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 4, title: 'Traditional Polish Application', description: 'Apply authentic traditional polish that enhances antique character.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 5, title: 'Detail Enhancement', description: 'Highlight intricate carvings and restore original luster with premium finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Final Inspection', description: 'Thorough quality check ensuring antique furniture restored to its former glory.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Assessment', description: 'Expert assessment of antique furniture condition and restoration requirements.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Gentle Cleaning & Preparation', description: 'Careful cleaning of antique wood and intricate carvings with specialized tools.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Restoration Work', description: 'Repair damaged areas, fill cracks, and restore original beauty of carvings.', image: '/Luxe assets/step 4.webp' },
+      { step: 4, title: 'Traditional Polish Application', description: 'Apply authentic traditional polish that enhances antique character.', image: '/Luxe assets/step 2.webp' },
+      { step: 5, title: 'Detail Enhancement', description: 'Highlight intricate carvings and restore original luster with premium finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Final Inspection', description: 'Thorough quality check ensuring antique furniture restored to its former glory.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does antique furniture restoration take?', answer: 'Restoration time varies from 4-6 hours depending on the size and condition of the antique piece. We ensure careful, unhurried work.' },
@@ -842,14 +842,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost', 'Multi-color paint options', 'Surface preparation', 'Professional application'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the metal almirah surface thoroughly.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Color Selection', description: 'Choose from multiple colors that match your interior décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Primer & Paint Application', description: 'Apply primer and paint evenly for durable finish.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your almirah.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and prepare the metal almirah surface thoroughly.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Color Selection', description: 'Choose from multiple colors that match your interior décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Primer & Paint Application', description: 'Apply primer and paint evenly for durable finish.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your almirah.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'What colors are available?', answer: 'Multiple colors are available. You can choose during consultation.' },
@@ -877,14 +877,14 @@ export const servicePageData: ServiceData[] = [
     ],
     selectedOption: -1,
     priceIncludes: ['Material & labour cost (Hand Polish)', 'Premium polish brand', 'Post-service cleaning', '6 months warranty', 'Machine Polish: Extra ₹1,499/-'],
-    materials: ['/Luxe assets/luxe-process-shade-selection.webp', '/Luxe assets/luxe-process-cleaning-sanding.webp'],
+    materials: ['/Luxe assets/step 2.webp', '/Luxe assets/step 3.webp'],
     processSteps: [
-      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/luxe-process-consultation-booking.webp' },
-      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the shoe rack surface to remove old polish and scratches.', image: '/Luxe assets/luxe-process-cleaning-sanding.webp' },
-      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/luxe-process-shade-selection.webp' },
-      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/luxe-process-gap-filling-application.webp' },
-      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/luxe-process-drying-finishing.webp' },
-      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed shoe rack.', image: '/Luxe assets/luxe-furniture-wooden-collection.webp' }
+      { step: 1, title: 'Consultation & Booking', description: 'Book your service online or via WhatsApp. Our team will confirm your appointment.', image: '/Luxe assets/Step 1.webp' },
+      { step: 2, title: 'Surface Preparation', description: 'Our professionals clean and sand the shoe rack surface to remove old polish and scratches.', image: '/Luxe assets/step 3.webp' },
+      { step: 3, title: 'Polish Shade Selection', description: 'Choose from clear or colored finishes that match your furniture and home décor.', image: '/Luxe assets/step 2.webp' },
+      { step: 4, title: 'Gap Filling & Polish Application', description: 'We fill any gaps or cracks, then apply premium quality polish evenly.', image: '/Luxe assets/step 4.webp' },
+      { step: 5, title: 'Drying & Finishing', description: 'Allow proper drying time and apply finishing coats for a smooth, glossy finish.', image: '/Luxe assets/step 5.webp' },
+      { step: 6, title: 'Quality Check & Handover', description: 'Final inspection to ensure perfect finish. We clean up and hand over your refreshed shoe rack.', image: '/Luxe assets/step 6.webp' }
     ],
     faqs: [
       { question: 'How long does shoe rack polishing take?', answer: 'Typically 1.5-2.5 hours depending on size.' }

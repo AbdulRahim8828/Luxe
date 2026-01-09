@@ -299,10 +299,10 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                 </div>
               </section>
 
-              {/* A1 Cover Promise Section - Responsive sizing */}
+              {/* LUXE Cover Promise Section - Responsive sizing */}
               <section className="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-yellow-500/30" aria-labelledby="promise-heading">
                 <h3 id="promise-heading" className="text-base sm:text-lg font-semibold text-yellow-400 mb-3 sm:mb-4">
-                  A1 Cover Promise
+                  LUXE Cover Promise
                 </h3>
                 <div className="space-y-3 sm:space-y-4">
                   {/* 6 months warranty */}
