@@ -10,7 +10,8 @@ export const blogPosts: BlogPost[] = [
     author: "A1 Furniture Polish Team",
     date: "09/01/2026",
     readTime: "7 min read",
-    image: "/Luxe assets/Hero Image.webp"
+    image: "/Luxe assets/Hero Image.webp",
+    featured: true
   },
   {
     slug: "a1-furniture-polish-pricing-services-in-bandra-complete-guide-2025",
@@ -65,7 +66,8 @@ export const blogPosts: BlogPost[] = [
     author: "A1 Furniture Polish Team",
     date: "09/01/2026",
     readTime: "6 min read",
-    image: "/Luxe assets/King size Bed.webp"
+    image: "/Luxe assets/King size Bed.webp",
+    featured: true
   },
   {
     slug: "wood-polishing-cost-in-mumbai",
