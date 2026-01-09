@@ -67,7 +67,7 @@ const BlogPost = () => {
         title={post.title}
         description={post.description}
         canonical={getCanonicalURL(`/blog/${post.slug}`)}
-        image={post.image}
+        ogImage={post.image}
       />
       <div className="bg-black min-h-screen">
         {/* Hero Section */}
@@ -75,6 +75,8 @@ const BlogPost = () => {
           <OptimizedImage
             src={post.image}
             alt={post.title}
+            width={1200}
+            height={400}
             className="w-full h-full object-cover"
             sizes="100vw"
           />
@@ -149,6 +151,8 @@ const BlogPost = () => {
                     <OptimizedImage
                       src={relatedPost.image}
                       alt={relatedPost.title}
+                      width={400}
+                      height={240}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />

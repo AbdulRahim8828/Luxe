@@ -47,7 +47,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    "blog_old_backup"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "blog_old_backup",
+    "**/*.d.ts"
+  ]
 }

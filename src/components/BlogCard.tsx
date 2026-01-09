@@ -23,6 +23,8 @@ const BlogCard = ({ post, variant = 'default', showTags = false, showExcerpt = f
         <OptimizedImage
           src={post.image}
           alt={post.title}
+          width={isFeatured ? 600 : 400}
+          height={isFeatured ? 320 : 240}
           className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 ${
             isFeatured ? 'h-64 lg:h-80' : 'h-48'
           }`}
