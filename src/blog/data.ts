@@ -113,15 +113,34 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
+// Content mapping for better reliability
+const contentMap: Record<string, () => Promise<any>> = {
+  "10-powerful-reasons-why-choose-a1-furniture-polish-for-wooden-furniture-in-goregaon": () => import('./assets/10-powerful-reasons-why-choose-a1-furniture-polish-for-wooden-furniture-in-goregaon.js'),
+  "a1-furniture-polish-pricing-services-in-bandra-complete-guide-2025": () => import('./assets/a1-furniture-polish-pricing-services-in-bandra-complete-guide-2025.js'),
+  "best-wood-polishing-in-andheri-restore-shine-with-a1-furniture-polish": () => import('./assets/best-wood-polishing-in-andheri-restore-shine-with-a1-furniture-polish.js'),
+  "professional-furniture-polishing-services-in-jogeshwari-a1-furniture-polish": () => import('./assets/professional-furniture-polishing-services-in-jogeshwari-a1-furniture-polish.js'),
+  "step-by-step-furniture-polishing-guide-for-mumbai-homes": () => import('./assets/step-by-step-furniture-polishing-guide-for-mumbai-homes.js'),
+  "top-furniture-polish-services-in-mumbai-enhance-your-home-d-cor": () => import('./assets/top-furniture-polish-services-in-mumbai-enhance-your-home-d-cor.js'),
+  "wood-polishing-cost-in-mumbai": () => import('./assets/wood-polishing-cost-in-mumbai.js'),
+  "choosing-the-right-wood-polish": () => import('./assets/choosing-the-right-wood-polish.js'),
+  "common-polishing-mistakes": () => import('./assets/common-polishing-mistakes.js'),
+  "how-to-maintain-wooden-furniture": () => import('./assets/how-to-maintain-wooden-furniture.js')
+};
+
 // Simple function to get blog content
 export const getBlogContent = async (slug: string): Promise<string> => {
   try {
-    // Import content from the blog assets
-    const module = await import(`./assets/${slug}.js`);
-    return module.default;
+    const contentLoader = contentMap[slug];
+    if (contentLoader) {
+      const module = await contentLoader();
+      return module.default;
+    } else {
+      console.warn(`No content loader found for slug: ${slug}`);
+      return '<p>Content not available for this article.</p>';
+    }
   } catch (error) {
     console.error(`Failed to load content for ${slug}:`, error);
-    return '<p>Content not available</p>';
+    return '<p>Content could not be loaded. Please try again later.</p>';
   }
 };
 
