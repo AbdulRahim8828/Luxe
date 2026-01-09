@@ -37,10 +37,6 @@
     "src/**/*.tsx",
     "src/**/*.js",
     "src/**/*.jsx",
-    "blog/**/*.ts",
-    "blog/**/*.tsx",
-    "blog/**/*.js",
-    "blog/**/*.jsx",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -50,7 +46,8 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "blog_old_backup"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
