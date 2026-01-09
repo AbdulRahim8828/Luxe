@@ -48,6 +48,7 @@
     "node_modules",
     "dist",
     "blog_old_backup",
+    "blog",
     "**/*.d.ts"
   ]
 }
