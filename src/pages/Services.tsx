@@ -118,13 +118,13 @@ const Services = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
 
         {/* Hero Section */}
-        <div className="relative z-10 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border-b border-gray-800/50 pt-5">
+        <div className="relative z-10 bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm border-b border-gray-800/50 pt-5">
           <div className="max-w-6xl mx-auto px-4 py-4 md:py-8">
             <div className="text-center">
               <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4" style={{ fontFamily: 'Playfair Display' }}>
                 Our <span className="text-yellow-400">Premium</span> Services
               </h1>
-              <p className="text-gray-400 text-xs md:text-base max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-300 text-xs md:text-base max-w-2xl mx-auto leading-relaxed">
                 Choose from our comprehensive range of furniture polishing and restoration services
               </p>
             </div>
@@ -189,7 +189,7 @@ const Services = () => {
                   <button
                     onClick={() => addService(service.id, 0)}
                     disabled={isAddingToCart}
-                    className="bg-yellow-500 hover:bg-yellow-600 text-black py-2 md:p-2 px-2 rounded-lg transition-all duration-300 disabled:opacity-50 min-h-[36px] md:min-h-[auto] flex items-center justify-center md:min-w-[44px]"
+                    className="bg-yellow-500 hover:bg-yellow-400 text-black py-2 md:p-2 px-2 rounded-lg transition-all duration-300 disabled:opacity-50 min-h-[36px] md:min-h-[auto] flex items-center justify-center md:min-w-[44px]"
                   >
                     <Plus className="w-4 h-4 mr-1 md:mr-0" />
                     <span className="md:hidden text-xs font-medium">Add</span>

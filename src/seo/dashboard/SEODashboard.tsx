@@ -134,21 +134,21 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
 
   if (loading && !report) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-        <span className="ml-3 text-gray-600">Generating SEO report...</span>
+      <div className="flex items-center justify-center h-64 bg-gray-900">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500"></div>
+        <span className="ml-3 text-gray-300">Generating SEO report...</span>
       </div>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-gray-50 min-h-screen">
+    <div className="max-w-7xl mx-auto p-6 bg-gray-900 min-h-screen">
       {/* Header */}
       <div className="mb-8">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">SEO Dashboard</h1>
-            <p className="text-gray-600 mt-1">
+            <h1 className="text-3xl font-bold text-white">SEO Dashboard</h1>
+            <p className="text-gray-300 mt-1">
               Last updated: {stats.lastUpdated.toLocaleString()}
             </p>
           </div>
@@ -160,19 +160,19 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
                 onChange={(e) => setAutoRefresh(e.target.checked)}
                 className="mr-2"
               />
-              Auto-refresh
+              <span className="text-gray-300">Auto-refresh</span>
             </label>
             <button
               onClick={generateReport}
               disabled={loading}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+              className="px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-400 disabled:opacity-50 font-medium"
             >
               {loading ? 'Refreshing...' : 'Refresh'}
             </button>
             <button
               onClick={handleAutoFix}
               disabled={loading}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 font-medium"
             >
               Auto-Fix Issues
             </button>
@@ -182,27 +182,27 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
 
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Total Pages</h3>
-          <p className="text-2xl font-bold text-gray-900">{stats.totalPages}</p>
+        <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+          <h3 className="text-sm font-medium text-gray-400">Total Pages</h3>
+          <p className="text-2xl font-bold text-white">{stats.totalPages}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Average Score</h3>
+        <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+          <h3 className="text-sm font-medium text-gray-400">Average Score</h3>
           <p className={`text-2xl font-bold ${getScoreColor(stats.averageScore)}`}>
             {stats.averageScore}/100
           </p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Critical Issues</h3>
-          <p className="text-2xl font-bold text-red-600">{stats.criticalIssues}</p>
+        <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+          <h3 className="text-sm font-medium text-gray-400">Critical Issues</h3>
+          <p className="text-2xl font-bold text-red-400">{stats.criticalIssues}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Warning Issues</h3>
-          <p className="text-2xl font-bold text-yellow-600">{stats.warningIssues}</p>
+        <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+          <h3 className="text-sm font-medium text-gray-400">Warning Issues</h3>
+          <p className="text-2xl font-bold text-yellow-400">{stats.warningIssues}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Info Issues</h3>
-          <p className="text-2xl font-bold text-blue-600">{stats.infoIssues}</p>
+        <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+          <h3 className="text-sm font-medium text-gray-400">Info Issues</h3>
+          <p className="text-2xl font-bold text-blue-400">{stats.infoIssues}</p>
         </div>
       </div>
 
@@ -218,10 +218,10 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
             <button
               key={tab.key}
               onClick={() => setSelectedTab(tab.key as any)}
-              className={`py-2 px-1 border-b-2 font-medium text-sm ${
+              className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 selectedTab === tab.key
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  ? 'border-yellow-500 text-yellow-400'
+                  : 'border-transparent text-gray-400 hover:text-gray-300 hover:border-gray-600'
               }`}
             >
               {tab.label}
@@ -231,7 +231,7 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
       </div>
 
       {/* Tab Content */}
-      <div className="bg-white rounded-lg shadow">
+      <div className="bg-gray-800 rounded-lg shadow border border-gray-700">
         {selectedTab === 'overview' && (
           <OverviewTab report={report} />
         )}
@@ -251,7 +251,7 @@ export const SEODashboard: React.FC<SEODashboardProps> = ({ pages, config }) => 
 
 // Overview Tab Component
 const OverviewTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
-  if (!report) return <div className="p-6">No data available</div>;
+  if (!report) return <div className="p-6 text-gray-300">No data available</div>;
 
   const getScoreDistribution = () => {
     const distribution = { excellent: 0, good: 0, fair: 0, poor: 0 };
@@ -268,34 +268,34 @@ const OverviewTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
 
   return (
     <div className="p-6">
-      <h2 className="text-xl font-semibold mb-6">SEO Overview</h2>
+      <h2 className="text-xl font-semibold mb-6 text-white">SEO Overview</h2>
       
       {/* Score Distribution */}
       <div className="mb-8">
-        <h3 className="text-lg font-medium mb-4">Score Distribution</h3>
+        <h3 className="text-lg font-medium mb-4 text-gray-300">Score Distribution</h3>
         <div className="grid grid-cols-4 gap-4">
-          <div className="text-center p-4 bg-green-50 rounded-lg">
-            <div className="text-2xl font-bold text-green-600">{scoreDistribution.excellent}</div>
-            <div className="text-sm text-green-700">Excellent (90-100)</div>
+          <div className="text-center p-4 bg-green-900/30 rounded-lg border border-green-700/50">
+            <div className="text-2xl font-bold text-green-400">{scoreDistribution.excellent}</div>
+            <div className="text-sm text-green-300">Excellent (90-100)</div>
           </div>
-          <div className="text-center p-4 bg-blue-50 rounded-lg">
-            <div className="text-2xl font-bold text-blue-600">{scoreDistribution.good}</div>
-            <div className="text-sm text-blue-700">Good (70-89)</div>
+          <div className="text-center p-4 bg-blue-900/30 rounded-lg border border-blue-700/50">
+            <div className="text-2xl font-bold text-blue-400">{scoreDistribution.good}</div>
+            <div className="text-sm text-blue-300">Good (70-89)</div>
           </div>
-          <div className="text-center p-4 bg-yellow-50 rounded-lg">
-            <div className="text-2xl font-bold text-yellow-600">{scoreDistribution.fair}</div>
-            <div className="text-sm text-yellow-700">Fair (50-69)</div>
+          <div className="text-center p-4 bg-yellow-900/30 rounded-lg border border-yellow-700/50">
+            <div className="text-2xl font-bold text-yellow-400">{scoreDistribution.fair}</div>
+            <div className="text-sm text-yellow-300">Fair (50-69)</div>
           </div>
-          <div className="text-center p-4 bg-red-50 rounded-lg">
-            <div className="text-2xl font-bold text-red-600">{scoreDistribution.poor}</div>
-            <div className="text-sm text-red-700">Poor (0-49)</div>
+          <div className="text-center p-4 bg-red-900/30 rounded-lg border border-red-700/50">
+            <div className="text-2xl font-bold text-red-400">{scoreDistribution.poor}</div>
+            <div className="text-sm text-red-300">Poor (0-49)</div>
           </div>
         </div>
       </div>
 
       {/* Top Issues */}
       <div>
-        <h3 className="text-lg font-medium mb-4">Most Common Issues</h3>
+        <h3 className="text-lg font-medium mb-4 text-gray-300">Most Common Issues</h3>
         <TopIssuesChart healthChecks={report.healthChecks} />
       </div>
     </div>
@@ -307,7 +307,7 @@ const IssuesTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
   const [filterSeverity, setFilterSeverity] = useState<'all' | 'critical' | 'warning' | 'info'>('all');
   const [filterType, setFilterType] = useState<string>('all');
 
-  if (!report) return <div className="p-6">No data available</div>;
+  if (!report) return <div className="p-6 text-gray-300">No data available</div>;
 
   const allIssues = report.healthChecks.flatMap(check => check.issues);
   const filteredIssues = allIssues.filter(issue => {
@@ -321,12 +321,12 @@ const IssuesTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold">SEO Issues</h2>
+        <h2 className="text-xl font-semibold text-white">SEO Issues</h2>
         <div className="flex space-x-4">
           <select
             value={filterSeverity}
             onChange={(e) => setFilterSeverity(e.target.value as any)}
-            className="border rounded px-3 py-1"
+            className="border border-gray-600 rounded px-3 py-1 bg-gray-700 text-gray-300"
           >
             <option value="all">All Severities</option>
             <option value="critical">Critical</option>
@@ -336,7 +336,7 @@ const IssuesTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
           <select
             value={filterType}
             onChange={(e) => setFilterType(e.target.value)}
-            className="border rounded px-3 py-1"
+            className="border border-gray-600 rounded px-3 py-1 bg-gray-700 text-gray-300"
           >
             <option value="all">All Types</option>
             {issueTypes.map(type => (
@@ -348,25 +348,25 @@ const IssuesTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
 
       <div className="space-y-4">
         {filteredIssues.map((issue, index) => (
-          <div key={index} className={`p-4 rounded-lg border-l-4 ${getSeverityBorderColor(issue.severity)}`}>
+          <div key={index} className={`p-4 rounded-lg border-l-4 bg-gray-700/50 ${getSeverityBorderColor(issue.severity)}`}>
             <div className="flex justify-between items-start">
               <div className="flex-1">
                 <div className="flex items-center space-x-2">
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}>
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColorDark(issue.severity)}`}>
                     {issue.severity.toUpperCase()}
                   </span>
-                  <span className="text-sm text-gray-600">{issue.issueType.replace(/_/g, ' ')}</span>
+                  <span className="text-sm text-gray-400">{issue.issueType.replace(/_/g, ' ')}</span>
                 </div>
-                <h4 className="font-medium mt-1">{issue.pageUrl}</h4>
-                <p className="text-gray-600 text-sm mt-1">{issue.description}</p>
+                <h4 className="font-medium mt-1 text-white">{issue.pageUrl}</h4>
+                <p className="text-gray-300 text-sm mt-1">{issue.description}</p>
                 {issue.fixAction && (
-                  <p className="text-blue-600 text-sm mt-2">
+                  <p className="text-yellow-400 text-sm mt-2">
                     <strong>Fix:</strong> {issue.fixAction}
                   </p>
                 )}
               </div>
               {issue.autoFixable && (
-                <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">
+                <span className="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded border border-green-700/50">
                   Auto-fixable
                 </span>
               )}
@@ -376,7 +376,7 @@ const IssuesTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
       </div>
 
       {filteredIssues.length === 0 && (
-        <div className="text-center py-8 text-gray-500">
+        <div className="text-center py-8 text-gray-400">
           No issues found matching the selected filters.
         </div>
       )}
@@ -386,7 +386,7 @@ const IssuesTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
 
 // Performance Tab Component
 const PerformanceTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
-  if (!report) return <div className="p-6">No data available</div>;
+  if (!report) return <div className="p-6 text-gray-300">No data available</div>;
 
   const lowScorePages = report.healthChecks
     .filter(check => check.score < 70)
@@ -395,13 +395,13 @@ const PerformanceTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
 
   return (
     <div className="p-6">
-      <h2 className="text-xl font-semibold mb-6">Performance Analysis</h2>
+      <h2 className="text-xl font-semibold mb-6 text-white">Performance Analysis</h2>
       
       {/* Performance Metrics */}
       <div className="mb-8">
-        <h3 className="text-lg font-medium mb-4">Core Web Vitals Status</h3>
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-          <p className="text-yellow-800">
+        <h3 className="text-lg font-medium mb-4 text-gray-300">Core Web Vitals Status</h3>
+        <div className="bg-yellow-900/30 border border-yellow-700/50 rounded-lg p-4">
+          <p className="text-yellow-300">
             Core Web Vitals monitoring requires integration with performance measurement tools.
             This feature tracks Largest Contentful Paint (LCP), First Input Delay (FID), 
             and Cumulative Layout Shift (CLS) metrics.
@@ -411,18 +411,18 @@ const PerformanceTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
 
       {/* Low Performing Pages */}
       <div>
-        <h3 className="text-lg font-medium mb-4">Pages Needing Attention</h3>
+        <h3 className="text-lg font-medium mb-4 text-gray-300">Pages Needing Attention</h3>
         <div className="space-y-3">
           {lowScorePages.map((check, index) => (
-            <div key={index} className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+            <div key={index} className="flex justify-between items-center p-4 bg-gray-700/50 rounded-lg border border-gray-600/50">
               <div>
-                <h4 className="font-medium">{check.pageUrl}</h4>
-                <p className="text-sm text-gray-600">
+                <h4 className="font-medium text-white">{check.pageUrl}</h4>
+                <p className="text-sm text-gray-400">
                   {check.issues.length} issues found
                 </p>
               </div>
               <div className="text-right">
-                <div className={`text-lg font-bold ${getScoreColor(check.score)}`}>
+                <div className={`text-lg font-bold ${getScoreColorDark(check.score)}`}>
                   {check.score}/100
                 </div>
                 <div className="text-xs text-gray-500">SEO Score</div>
@@ -437,27 +437,27 @@ const PerformanceTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
 
 // Recommendations Tab Component
 const RecommendationsTab: React.FC<{ report: SEOReport | null }> = ({ report }) => {
-  if (!report) return <div className="p-6">No data available</div>;
+  if (!report) return <div className="p-6 text-gray-300">No data available</div>;
 
   return (
     <div className="p-6">
-      <h2 className="text-xl font-semibold mb-6">SEO Recommendations</h2>
+      <h2 className="text-xl font-semibold mb-6 text-white">SEO Recommendations</h2>
       
       <div className="space-y-4">
         {report.recommendations.map((recommendation, index) => (
-          <div key={index} className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <div key={index} className="p-4 bg-yellow-900/30 border border-yellow-700/50 rounded-lg">
             <div className="flex items-start">
-              <div className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
+              <div className="flex-shrink-0 w-6 h-6 bg-yellow-500 text-black rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
                 {index + 1}
               </div>
-              <p className="text-blue-900">{recommendation}</p>
+              <p className="text-yellow-200">{recommendation}</p>
             </div>
           </div>
         ))}
       </div>
 
       {report.recommendations.length === 0 && (
-        <div className="text-center py-8 text-gray-500">
+        <div className="text-center py-8 text-gray-400">
           No specific recommendations available. Your SEO performance looks good!
         </div>
       )}
@@ -485,18 +485,18 @@ const TopIssuesChart: React.FC<{ healthChecks: SEOHealthCheck[] }> = ({ healthCh
     <div className="space-y-3">
       {sortedIssues.map(([issueType, count]) => (
         <div key={issueType} className="flex items-center">
-          <div className="w-32 text-sm text-gray-600 capitalize">
+          <div className="w-32 text-sm text-gray-400 capitalize">
             {issueType.replace(/_/g, ' ')}
           </div>
           <div className="flex-1 mx-4">
-            <div className="bg-gray-200 rounded-full h-4">
+            <div className="bg-gray-700 rounded-full h-4">
               <div
-                className="bg-blue-600 h-4 rounded-full"
+                className="bg-yellow-500 h-4 rounded-full"
                 style={{ width: `${(count / maxCount) * 100}%` }}
               ></div>
             </div>
           </div>
-          <div className="w-12 text-sm font-medium text-right">{count}</div>
+          <div className="w-12 text-sm font-medium text-right text-gray-300">{count}</div>
         </div>
       ))}
     </div>
@@ -512,6 +512,14 @@ const getSeverityColor = (severity: 'critical' | 'warning' | 'info'): string => 
   }
 };
 
+const getSeverityColorDark = (severity: 'critical' | 'warning' | 'info'): string => {
+  switch (severity) {
+    case 'critical': return 'text-red-400 bg-red-900/30';
+    case 'warning': return 'text-yellow-400 bg-yellow-900/30';
+    case 'info': return 'text-blue-400 bg-blue-900/30';
+  }
+};
+
 const getSeverityBorderColor = (severity: 'critical' | 'warning' | 'info'): string => {
   switch (severity) {
     case 'critical': return 'border-red-500';
@@ -524,6 +532,12 @@ const getScoreColor = (score: number): string => {
   if (score >= 80) return 'text-green-600';
   if (score >= 60) return 'text-yellow-600';
   return 'text-red-600';
+};
+
+const getScoreColorDark = (score: number): string => {
+  if (score >= 80) return 'text-green-400';
+  if (score >= 60) return 'text-yellow-400';
+  return 'text-red-400';
 };
 
 export default SEODashboard;
