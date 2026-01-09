@@ -90,7 +90,7 @@ const About = () => {
               <div className="relative mt-6 lg:mt-0">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-yellow-500/20">
                   <OptimizedImage
-                    src="/Luxe assets/Sofa And chair.webp"
+                    src="/Luxe assets/About page .webp"
                     alt="LUXE premium furniture restoration team in Mumbai"
                     className="w-full h-64 lg:h-80 object-cover"
                     width={800}
