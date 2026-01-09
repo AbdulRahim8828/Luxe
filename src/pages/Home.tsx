@@ -59,7 +59,7 @@ const Home = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             {/* Left Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-left">
               {/* Premium Badge */}
               <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-4 md:mb-6">
                 <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-yellow-500 rounded-full mr-2 md:mr-3"></div>
@@ -74,12 +74,67 @@ const Home = () => {
               </h1>
               
               {/* Description - Better Mobile Text */}
-              <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-4 md:mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-4 md:mb-6 max-w-lg leading-relaxed">
                 <span className="text-yellow-400 font-semibold">Luxury Finish</span> for Timeless Furniture. Expert restoration for premium homes and offices.
               </p>
 
-              {/* Feature Pills - Mobile Optimized */}
-              <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6 max-w-md mx-auto lg:mx-0">
+              {/* Mobile Image - Show only on mobile */}
+              <div className="lg:hidden relative mb-6">
+                <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-3 max-w-sm hover:border-yellow-500/30 transition-all duration-300 shadow-xl">
+                  <img
+                    src="/Luxe assets/Hero%20Image.webp"
+                    alt="LUXE Premium Wooden Furniture Polishing Services"
+                    className="w-full h-40 object-cover rounded-xl mb-3"
+                    loading="eager"
+                    onError={(e) => {
+                      console.log('Hero image failed to load, trying fallback');
+                      e.currentTarget.src = '/Luxe assets/Sofa And chair.webp';
+                    }}
+                  />
+                  
+                  {/* Rating Badge */}
+                  <div className="absolute top-5 right-5 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    10+ Years
+                  </div>
+
+                  {/* Rating Section */}
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4" fill="currentColor" />
+                      ))}
+                    </div>
+                    <span className="text-white font-semibold text-sm">4.8</span>
+                  </div>
+                  
+                  <p className="text-gray-300 text-xs mb-3">500+ Premium Clients</p>
+                  
+                  <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-2">
+                    <p className="text-yellow-400 text-xs font-medium">Trusted by Luxury Properties</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons - Enhanced Visibility */}
+              <div className="flex flex-col sm:flex-row gap-3 mb-6 md:mb-8 max-w-md">
+                <Link
+                  to="/services"
+                  className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black px-6 py-3 md:px-7 md:py-4 rounded-xl font-bold text-sm md:text-base flex items-center justify-center space-x-2 shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105 border border-yellow-400"
+                >
+                  <span>Book Premium Service</span>
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="bg-transparent border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black px-6 py-3 md:px-7 md:py-4 rounded-xl font-bold text-sm md:text-base flex items-center justify-center space-x-2 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25"
+                >
+                  <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                  <span>Call Now</span>
+                </Link>
+              </div>
+
+              {/* Feature Pills - Mobile Optimized - Moved after buttons */}
+              <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6 max-w-md">
                 <div className="flex items-center space-x-2 bg-gray-800/50 px-2 py-2 md:px-3 md:py-2 rounded-lg border border-gray-700/50">
                   <div className="w-6 h-6 md:w-7 md:h-7 bg-yellow-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-yellow-400" />
@@ -106,26 +161,8 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* CTA Buttons - Enhanced Visibility */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-6 md:mb-8 max-w-md mx-auto lg:mx-0">
-                <Link
-                  to="/services"
-                  className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black px-6 py-3 md:px-7 md:py-4 rounded-xl font-bold text-sm md:text-base flex items-center justify-center space-x-2 shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105 border border-yellow-400"
-                >
-                  <span>Book Premium Service</span>
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="bg-transparent border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black px-6 py-3 md:px-7 md:py-4 rounded-xl font-bold text-sm md:text-base flex items-center justify-center space-x-2 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25"
-                >
-                  <Phone className="w-4 h-4 md:w-5 md:h-5" />
-                  <span>Call Now</span>
-                </Link>
-              </div>
-
               {/* Trust Badges - Enhanced Mobile Layout */}
-              <div className="grid grid-cols-3 gap-2 md:gap-6 lg:flex lg:flex-wrap lg:justify-start lg:items-center">
+              <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6 lg:flex lg:flex-wrap lg:justify-start lg:items-center">
                 <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-start space-y-2 lg:space-y-0 lg:space-x-3 bg-gray-800/30 p-2 rounded-xl lg:bg-transparent lg:p-0">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
                     <Star className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 fill-current" />
@@ -156,8 +193,8 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Content - Image Card - Mobile Optimized */}
-            <div className="relative mt-4 lg:mt-0">
+            {/* Right Content - Image Card - Desktop Only */}
+            <div className="hidden lg:block relative">
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-3 md:p-4 max-w-sm mx-auto hover:border-yellow-500/30 transition-all duration-300 shadow-xl">
                 <img
                   src="/Luxe assets/Hero%20Image.webp"

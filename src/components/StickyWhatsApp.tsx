@@ -21,7 +21,7 @@ const StickyWhatsApp = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-20 md:bottom-6 right-3 md:right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-16 md:bottom-6 right-4 md:right-6 z-40 flex flex-col gap-3">
       {/* Tooltip */}
       {showTooltip && (
         <div className="absolute bottom-full right-0 mb-3 animate-slideInUp">
@@ -42,14 +42,14 @@ const StickyWhatsApp = () => {
       {/* Call Button */}
       <a
         href="tel:+918828709945"
-        className="group relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95"
+        className="group relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95"
         aria-label="Call us"
       >
         {/* Pulse Animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-60 animate-ping"></span>
         
         {/* Phone Icon */}
-        <Phone className="relative w-7 h-7 md:w-8 md:h-8 text-white drop-shadow-lg" strokeWidth={2.5} />
+        <Phone className="relative w-5 h-5 md:w-8 md:h-8 text-white drop-shadow-lg" strokeWidth={2.5} />
       </a>
 
       {/* WhatsApp Button */}
@@ -57,14 +57,14 @@ const StickyWhatsApp = () => {
         href="https://wa.me/918828709945?text=Hi! I'm interested in your furniture polishing services."
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95"
+        className="group relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95"
         aria-label="Chat on WhatsApp"
       >
         {/* Pulse Animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60 animate-ping"></span>
         
         {/* WhatsApp Icon */}
-        <FaWhatsapp className="relative w-8 h-8 md:w-9 md:h-9 text-white drop-shadow-lg" />
+        <FaWhatsapp className="relative w-6 h-6 md:w-9 md:h-9 text-white drop-shadow-lg" />
         
         {/* Notification Badge */}
         <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 md:h-6 md:w-6 items-center justify-center">

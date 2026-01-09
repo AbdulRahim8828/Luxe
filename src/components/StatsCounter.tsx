@@ -62,11 +62,11 @@ const StatItem: React.FC<StatItemProps> = ({ icon, end, label, suffix = '+', dur
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={ref} className="text-center p-3 md:p-6">
-      <div className="w-10 h-10 md:w-20 md:h-20 bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 hover:border-yellow-500/30 hover:from-yellow-500/10 hover:to-yellow-600/5 transition-all duration-300 shadow-lg">
+    <div ref={ref} className="text-center p-2 md:p-6">
+      <div className="w-8 h-8 md:w-20 md:h-20 bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-lg md:rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4 hover:border-yellow-500/30 hover:from-yellow-500/10 hover:to-yellow-600/5 transition-all duration-300 shadow-lg">
         {icon}
       </div>
-      <div className="text-xl md:text-4xl font-bold text-white mb-1 md:mb-2 luxe-heading">
+      <div className="text-lg md:text-4xl font-bold text-white mb-1 md:mb-2 luxe-heading">
         {count}{suffix}
       </div>
       <div className="text-xs md:text-base text-yellow-300 font-medium luxe-body leading-tight">
@@ -78,7 +78,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon, end, label, suffix = '+', dur
 
 const StatsCounter = () => {
   return (
-    <section className="py-8 md:py-16 luxe-bg-secondary relative overflow-hidden">
+    <section className="py-6 md:py-16 luxe-bg-secondary relative overflow-hidden">
       {/* Luxury Decorative Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-yellow-600/30 to-yellow-800/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl md:blur-3xl"></div>
@@ -88,7 +88,7 @@ const StatsCounter = () => {
 
       <div className="max-w-7xl mx-auto px-3 md:px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-yellow-600/20 to-yellow-700/20 border border-yellow-600/30 rounded-full mb-3 md:mb-4">
             <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-yellow-500 rounded-full mr-2 md:mr-3 animate-pulse"></div>
             <span className="text-yellow-400 text-xs md:text-sm font-medium tracking-wider uppercase">Our Impact</span>
@@ -101,7 +101,7 @@ const StatsCounter = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
           <StatItem
             icon={<Users className="w-4 h-4 md:w-8 md:h-8 text-yellow-400" />}
             end={500}

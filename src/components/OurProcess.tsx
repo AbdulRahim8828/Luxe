@@ -117,100 +117,95 @@ const OurProcess = () => {
             ))}
           </div>
 
-          {/* Mobile & Tablet Horizontal Scroll */}
-          <div className="lg:hidden overflow-x-auto pb-6 -mx-4 px-4 scrollbar-hide">
-            <div className="flex gap-6" style={{ width: 'max-content' }}>
-              {steps.map((item, index) => (
-                <div 
-                  key={item.step} 
-                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 pt-8 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 relative mt-6"
-                  style={{ width: '320px', animationDelay: `${index * 0.1}s` }}
-                >
-                  {/* Step Number Badge */}
-                  <div className="absolute -top-4 right-4 w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-sm shadow-xl border-2 border-gray-800">
-                    {item.step}
-                  </div>
-                  
-                  {/* Icon */}
-                  <div className="mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+          {/* Mobile & Tablet Vertical Stack */}
+          <div className="lg:hidden space-y-6">
+            {steps.map((item, index) => (
+              <div 
+                key={item.step} 
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 group animate-slideInUp hover:border-yellow-500/30 transition-all duration-300 relative"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Step Number Badge */}
+                <div className="absolute -top-3 -right-3 w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-sm shadow-xl border-2 border-gray-800">
+                  {item.step}
+                </div>
+                
+                <div className="flex gap-4">
+                  {/* Left: Icon and Image */}
+                  <div className="flex-shrink-0">
+                    {/* Icon */}
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30 mb-3">
                       <item.icon className="w-6 h-6 text-yellow-400" />
+                    </div>
+                    
+                    {/* Image */}
+                    <div className="relative w-20 h-20 overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900">
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        className="w-full h-full object-cover" 
+                        loading="lazy" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                   </div>
                   
-                  {/* Image */}
-                  <div className="relative h-40 overflow-hidden rounded-xl mb-4 bg-gradient-to-br from-gray-800 to-gray-900">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover" 
-                      loading="lazy" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-2">
+                  {/* Right: Content */}
+                  <div className="flex-1 pt-2">
+                    <div className="flex items-start gap-2 mb-3">
                       <CheckCircle2 className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
                       <h3 className="text-lg font-bold text-white">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed pl-7">
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
-
-                  {/* Arrow for mobile */}
-                  {index < steps.length - 1 && (
-                    <div className="absolute -right-3 top-1/2 -translate-y-1/2 z-20">
-                      <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                        <ArrowRight className="w-4 h-4 text-black" />
-                      </div>
-                    </div>
-                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Process Guarantee */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-2xl px-8 py-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-black" />
-            </div>
-            <div className="text-left">
-              <div className="text-xl font-bold text-white mb-1">Premium Process Guarantee</div>
-              <div className="text-gray-300">6-Step Quality Assurance • 100% Satisfaction • Professional Excellence</div>
+        {/* Process Guarantee - Mobile Optimized */}
+        <div className="hidden md:block text-center mt-16">
+          <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto">
+            {/* Desktop Layout */}
+            <div className="flex items-center gap-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <Sparkles className="w-8 h-8 text-black" />
+              </div>
+              <div className="text-left">
+                <div className="text-2xl font-bold text-white mb-2">Premium Process Guarantee</div>
+                <div className="text-gray-300">6-Step Quality Assurance • 100% Satisfaction • Professional Excellence</div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
-              <Clock className="w-8 h-8 text-yellow-400" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+              <Clock className="w-6 h-6 md:w-8 md:h-8 text-yellow-400" />
             </div>
-            <div className="text-2xl font-bold text-yellow-400 mb-2">2-4 Hours</div>
-            <div className="text-gray-300">Average Completion Time</div>
+            <div className="text-xl md:text-2xl font-bold text-yellow-400 mb-1 md:mb-2">2-4 Hours</div>
+            <div className="text-sm md:text-base text-gray-300">Average Completion Time</div>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
-              <Shield className="w-8 h-8 text-yellow-400" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+              <Shield className="w-6 h-6 md:w-8 md:h-8 text-yellow-400" />
             </div>
-            <div className="text-2xl font-bold text-yellow-400 mb-2">6 Months</div>
-            <div className="text-gray-300">Warranty Coverage</div>
+            <div className="text-xl md:text-2xl font-bold text-yellow-400 mb-1 md:mb-2">6 Months</div>
+            <div className="text-sm md:text-base text-gray-300">Warranty Coverage</div>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
-              <User className="w-8 h-8 text-yellow-400" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center border border-yellow-500/30">
+              <User className="w-6 h-6 md:w-8 md:h-8 text-yellow-400" />
             </div>
-            <div className="text-2xl font-bold text-yellow-400 mb-2">Expert</div>
-            <div className="text-gray-300">Certified Artisans</div>
+            <div className="text-xl md:text-2xl font-bold text-yellow-400 mb-1 md:mb-2">Expert</div>
+            <div className="text-sm md:text-base text-gray-300">Certified Artisans</div>
           </div>
         </div>
       </div>
