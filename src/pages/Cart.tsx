@@ -38,18 +38,18 @@ const Cart = () => {
           canonical="/cart"
         />
         
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black pt-16 pb-24 px-4 relative overflow-hidden">
+        <div className="min-h-screen luxe-bg-primary pt-8 pb-24 px-4 relative overflow-hidden">
           {/* Enhanced Background Elements */}
           <div className="absolute top-20 left-4 w-40 h-40 bg-gradient-to-br from-yellow-600/15 to-yellow-800/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-32 right-4 w-48 h-48 bg-gradient-to-br from-yellow-700/15 to-yellow-900/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-yellow-500/5 to-yellow-600/5 rounded-full blur-2xl"></div>
           
-          <div className="max-w-md mx-auto relative z-10">
+          <div className="max-w-sm mx-auto relative z-10">
             {/* Enhanced Header with Hero Section */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <Link 
                 to="/services" 
-                className="inline-flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-2xl hover:bg-gray-800/30 backdrop-blur-sm border border-transparent hover:border-yellow-500/20 mb-6 group"
+                className="inline-flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-2xl hover:bg-gray-800/30 backdrop-blur-sm border border-transparent hover:border-yellow-500/20 mb-2 group"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl flex items-center justify-center border border-gray-700/50 group-hover:border-yellow-500/30 transition-all duration-300">
                   <ArrowLeft className="w-5 h-5 group-hover:transform group-hover:-translate-x-1 transition-transform duration-300" />
@@ -57,7 +57,7 @@ const Cart = () => {
                 <span className="font-semibold">Back to Services</span>
               </Link>
               
-              <div className="mb-6">
+              <div className="mb-2">
                 <h1 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Playfair Display' }}>
                   Your Cart
                 </h1>
@@ -129,18 +129,18 @@ const Cart = () => {
         canonical="/cart"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black pt-16 pb-24 px-4 relative overflow-hidden">
+      <div className="min-h-screen luxe-bg-primary pt-8 pb-24 px-4 relative overflow-hidden">
         {/* Enhanced Background Elements */}
         <div className="absolute top-20 left-4 w-40 h-40 bg-gradient-to-br from-yellow-600/15 to-yellow-800/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-32 right-4 w-48 h-48 bg-gradient-to-br from-yellow-700/15 to-yellow-900/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/3 left-1/3 w-32 h-32 bg-gradient-to-br from-yellow-500/5 to-yellow-600/5 rounded-full blur-2xl"></div>
         
-        <div className="max-w-md mx-auto relative z-10">
+        <div className="max-w-sm mx-auto relative z-10">
           {/* Enhanced Header with Hero Section */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <Link 
               to="/services" 
-              className="inline-flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-2xl hover:bg-gray-800/30 backdrop-blur-sm border border-transparent hover:border-yellow-500/20 mb-6 group"
+              className="inline-flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-all duration-300 p-3 rounded-2xl hover:bg-gray-800/30 backdrop-blur-sm border border-transparent hover:border-yellow-500/20 mb-4 group"
             >
               <div className="w-10 h-10 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl flex items-center justify-center border border-gray-700/50 group-hover:border-yellow-500/30 transition-all duration-300">
                 <ArrowLeft className="w-5 h-5 group-hover:transform group-hover:-translate-x-1 transition-transform duration-300" />
@@ -165,29 +165,29 @@ const Cart = () => {
           {/* Enhanced Cart Items */}
           <div className="space-y-4 mb-8">
             {cartItems.map((item) => (
-              <div key={item.id} className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-5 hover:border-yellow-500/30 transition-all duration-300 shadow-xl hover:shadow-yellow-500/10 group">
-                <div className="flex items-start space-x-4">
+              <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 hover:border-yellow-500/30 transition-all duration-300 shadow-xl hover:shadow-yellow-500/10 group">
+                <div className="flex items-start space-x-3">
                   {/* Enhanced Service Icon */}
                   <div className="relative">
-                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-2xl flex items-center justify-center flex-shrink-0 border border-yellow-500/30 group-hover:scale-105 transition-transform duration-300">
-                      <ShoppingBag className="w-7 h-7 text-yellow-400" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-xl flex items-center justify-center flex-shrink-0 border border-yellow-500/30 group-hover:scale-105 transition-transform duration-300">
+                      <ShoppingBag className="w-6 h-6 text-yellow-400" />
                     </div>
-                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
-                      <Award className="w-3 h-3 text-black" />
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
+                      <Award className="w-2 h-2 text-black" />
                     </div>
                   </div>
                   
                   {/* Enhanced Service Details */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-white font-bold text-base mb-2 leading-tight">
+                    <h3 className="text-white font-bold text-sm mb-1 leading-tight">
                       {item.serviceName}
                     </h3>
-                    <p className="text-gray-300 text-sm mb-3 leading-relaxed bg-gray-700/30 px-3 py-1 rounded-lg inline-block">
+                    <p className="text-gray-300 text-xs mb-2 leading-relaxed bg-gray-700/30 px-2 py-1 rounded-lg inline-block">
                       {item.optionName}
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
-                        <p className="text-yellow-400 font-bold text-lg">
+                        <p className="text-yellow-400 font-bold text-base">
                           ₹{item.price.toLocaleString()}
                         </p>
                         <span className="text-gray-500 text-xs">per service</span>
@@ -203,23 +203,23 @@ const Cart = () => {
                 </div>
                 
                 {/* Enhanced Quantity Controls */}
-                <div className="flex items-center justify-between mt-5 pt-5 border-t border-gray-700/50">
+                <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-700/50">
                   <span className="text-gray-300 font-medium">Quantity</span>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-3">
                     <button
                       onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
-                      className="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white transition-all duration-300 border border-gray-600/50 hover:border-gray-500/50 hover:scale-105"
+                      className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white transition-all duration-300 border border-gray-600/50 hover:border-gray-500/50 hover:scale-105"
                     >
                       <Minus className="w-4 h-4" />
                     </button>
-                    <div className="w-12 h-10 flex items-center justify-center bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border border-yellow-500/30 rounded-xl">
-                      <span className="text-yellow-400 font-bold">
+                    <div className="w-10 h-8 flex items-center justify-center bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border border-yellow-500/30 rounded-lg">
+                      <span className="text-yellow-400 font-bold text-sm">
                         {item.quantity}
                       </span>
                     </div>
                     <button
                       onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
-                      className="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white transition-all duration-300 border border-gray-600/50 hover:border-gray-500/50 hover:scale-105"
+                      className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white transition-all duration-300 border border-gray-600/50 hover:border-gray-500/50 hover:scale-105"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -230,54 +230,50 @@ const Cart = () => {
           </div>
 
           {/* Enhanced Order Summary */}
-          <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 mb-8 shadow-2xl">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-xl flex items-center justify-center border border-yellow-500/30">
-                <Star className="w-4 h-4 text-yellow-400" />
+          <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5 mb-6 shadow-2xl">
+            <div className="flex items-center space-x-2 mb-5">
+              <div className="w-6 h-6 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-lg flex items-center justify-center border border-yellow-500/30">
+                <Star className="w-3 h-3 text-yellow-400" />
               </div>
-              <h3 className="text-white font-bold text-xl" style={{ fontFamily: 'Playfair Display' }}>
+              <h3 className="text-white font-bold text-lg" style={{ fontFamily: 'Playfair Display' }}>
                 Order Summary
               </h3>
             </div>
             
             <div className="space-y-4">
-              <div className="flex justify-between items-center text-gray-300 p-3 bg-gray-700/30 rounded-xl">
-                <span className="font-medium">Subtotal ({cartItems.reduce((total, item) => total + item.quantity, 0)} items)</span>
+              <div className="flex justify-between items-center text-gray-300 p-2 bg-gray-700/30 rounded-lg">
+                <span className="font-medium text-sm">Subtotal ({cartItems.reduce((total, item) => total + item.quantity, 0)} items)</span>
                 <span className="font-bold text-white">₹{getTotalPrice().toLocaleString()}</span>
               </div>
-              <div className="flex justify-between items-center text-gray-300 p-3 bg-gray-700/30 rounded-xl">
-                <span className="font-medium">Service Charge</span>
-                <span className="text-green-400 font-bold">Free</span>
-              </div>
-              <div className="flex justify-between items-center text-gray-300 p-3 bg-gray-700/30 rounded-xl">
-                <span className="font-medium">Home Visit</span>
-                <span className="text-green-400 font-bold">Free</span>
+              <div className="flex justify-between items-center text-gray-300 p-2 bg-gray-700/30 rounded-lg">
+                <span className="font-medium text-sm">Home Visit</span>
+                <span className="text-yellow-400 font-bold">₹49</span>
               </div>
               <div className="border-t border-gray-700/50 pt-4">
-                <div className="flex justify-between items-center p-4 bg-gradient-to-r from-yellow-500/10 to-yellow-600/10 rounded-2xl border border-yellow-500/20">
-                  <span className="text-white font-bold text-xl">Total Amount</span>
-                  <span className="text-yellow-400 font-bold text-3xl">₹{getTotalPrice().toLocaleString()}</span>
+                <div className="flex justify-between items-center p-3 bg-gradient-to-r from-yellow-500/10 to-yellow-600/10 rounded-xl border border-yellow-500/20">
+                  <span className="text-white font-bold text-lg">Total Amount</span>
+                  <span className="text-yellow-400 font-bold text-2xl">₹{getTotalPrice().toLocaleString()}</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Enhanced Checkout Buttons */}
-          <div className="space-y-4 mb-8">
+          <div className="space-y-3 mb-6">
             <button
               onClick={handleCheckout}
               disabled={isCheckingOut}
-              className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-5 rounded-2xl font-bold text-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none flex items-center justify-center space-x-3 shadow-xl shadow-yellow-500/25 group"
+              className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-4 rounded-xl font-bold text-base hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none flex items-center justify-center space-x-3 shadow-xl shadow-yellow-500/25 group"
             >
-              <MessageCircle className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+              <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               <span>{isCheckingOut ? 'Opening WhatsApp...' : 'Book via WhatsApp'}</span>
             </button>
             
             <a
               href="tel:+918828709945"
-              className="w-full bg-transparent border-2 border-yellow-500 text-yellow-400 py-5 rounded-2xl font-bold text-lg hover:bg-yellow-500 hover:text-black transition-all duration-300 flex items-center justify-center space-x-3 group backdrop-blur-sm"
+              className="w-full bg-transparent border-2 border-yellow-500 text-yellow-400 py-4 rounded-xl font-bold text-base hover:bg-yellow-500 hover:text-black transition-all duration-300 flex items-center justify-center space-x-3 group backdrop-blur-sm"
             >
-              <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+              <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               <span>Call to Book Now</span>
             </a>
           </div>

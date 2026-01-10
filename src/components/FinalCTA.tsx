@@ -36,7 +36,7 @@ const FinalCTA: React.FC = () => {
                 <Award className="w-6 h-6 text-yellow-400" />
               </div>
               <div className="text-center">
-                <div className="text-white font-semibold text-xs">Award Winning</div>
+                <div className="text-white font-semibold text-xs">Premium Quality</div>
                 <div className="text-gray-400 text-xs">Excellence</div>
               </div>
             </div>

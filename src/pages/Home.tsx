@@ -177,8 +177,8 @@ const Home = () => {
                     <Award className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
                   </div>
                   <div className="text-center lg:text-left">
-                    <div className="text-white font-semibold text-xs md:text-base">Award</div>
-                    <div className="text-gray-400 text-xs md:text-sm">Winning</div>
+                    <div className="text-white font-semibold text-xs md:text-base">Premium</div>
+                    <div className="text-gray-400 text-xs md:text-sm">Quality</div>
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-start space-y-2 lg:space-y-0 lg:space-x-3 bg-gray-800/30 p-2 rounded-xl lg:bg-transparent lg:p-0">
