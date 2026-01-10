@@ -154,9 +154,9 @@ export const brandConfig: BrandConfig = {
     'South Mumbai'
   ],
   contactInfo: {
-    phone: '+91 98765 43210',
-    email: 'info@luxewoodenfurniturepolishing.com',
-    address: 'Mumbai, Maharashtra, India'
+    phone: '+91 8828709945',
+    email: 'A1furniturepolishservice@gmail.com',
+    address: 'Shop No 18, Akbar Ali Compound, Relief Road, near HK College, Oshiwara, Jogeshwari West, Mumbai, Maharashtra 400102'
   }
 };
 

@@ -61,7 +61,11 @@ export class SEOIntegrationService {
         description: pageData.metaDescription,
         image: '/Luxe assets/wooden furniture .webp'
       },
-      structuredData: pageData.schema,
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        ...pageData.schema
+      },
       lastModified: new Date(),
       seoScore: 0 // Will be calculated by SEO Monitor
     };
@@ -231,7 +235,7 @@ export class SEOIntegrationService {
       console.log(`SEO Health Check Results:`, {
         totalPages: seoPages.length,
         totalIssues: allIssues.length,
-        averageScore: report.averageScore,
+        overallScore: report.overallScore,
         criticalIssues: allIssues.filter(issue => issue.severity === 'critical').length
       });
 

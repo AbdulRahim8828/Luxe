@@ -70,6 +70,9 @@ describe('SEO Migration Validation Tests', () => {
           'description': 'Premium wooden furniture polishing services in Mumbai',
           'url': 'https://www.luxewoodenfurniturepolishing.com',
           'telephone': '+91-9876543210',
+          'image': '/Luxe assets/logo.png',
+          '@id': 'https://www.luxewoodenfurniturepolishing.com',
+          'sameAs': ['https://www.facebook.com/luxefurniturepolish'],
           'address': {
             '@type': 'PostalAddress',
             'streetAddress': '123 Luxury Lane',

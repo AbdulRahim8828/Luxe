@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle } from 'lucide-react';
-import SEOHead from '../../src/components/SEOHead';
+import SEOHead from '../components/SEOHead';
 import { FadeIn } from '../components/ScrollAnimations';
 import { getCanonicalURL } from '../utils/canonicalURL';
 import { getContactSEO } from '../seo/config/luxurySEOConfig';

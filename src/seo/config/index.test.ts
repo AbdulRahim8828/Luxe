@@ -98,10 +98,17 @@ describe('SEO System Configuration', () => {
     it('should merge configurations correctly', () => {
       const overrides = {
         linkManager: {
-          minOutgoingLinks: 5
+          minOutgoingLinks: 5,
+          maxOutgoingLinks: 10,
+          contextualRelevanceThreshold: 0.7,
+          avoidCircularReferences: true
         },
         contentValidator: {
-          minWordCount: 500
+          minWordCount: 500,
+          keywordDensityMin: 0.5,
+          keywordDensityMax: 3.0,
+          headingStructureRequired: true,
+          locationInfoRequired: true
         }
       };
 

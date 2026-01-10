@@ -3,9 +3,6 @@
 // Types
 export * from './types';
 
-// Interfaces
-export * from './interfaces';
-
 // Models
 export { SEOPageModel } from './models/SEOPageModel';
 

@@ -52,11 +52,46 @@ describe('SEO Integration System', () => {
       schema: {
         localBusiness: {
           '@context': 'https://schema.org',
-          '@type': 'LocalBusiness'
+          '@type': 'LocalBusiness',
+          name: 'LUXE Wooden Furniture Polishing',
+          image: '/Luxe assets/logo.png',
+          '@id': 'https://luxewoodenfurniturepolishing.com',
+          url: 'https://luxewoodenfurniturepolishing.com',
+          telephone: '+91 8828709945',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Shop No 18, Akbar Ali Compound, Relief Road',
+            addressLocality: 'Mumbai',
+            addressRegion: 'Maharashtra',
+            postalCode: '400102',
+            addressCountry: 'IN'
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 19.1136,
+            longitude: 72.8697
+          },
+          openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            opens: '09:00',
+            closes: '18:00'
+          },
+          sameAs: ['https://www.facebook.com/luxefurniturepolish'],
+          priceRange: '₹₹'
         },
         service: {
           '@context': 'https://schema.org',
-          '@type': 'Service'
+          '@type': 'Service',
+          serviceType: 'Furniture Polishing',
+          provider: {
+            '@type': 'LocalBusiness',
+            name: 'LUXE Wooden Furniture Polishing'
+          },
+          areaServed: {
+            '@type': 'City',
+            name: 'Mumbai'
+          }
         }
       },
       primaryKeyword: 'furniture polishing Mumbai',
@@ -161,6 +196,7 @@ describe('SEO Integration System', () => {
         linkManager: {
           minOutgoingLinks: 5,
           maxOutgoingLinks: 10,
+          contextualRelevanceThreshold: 0.8,
           avoidCircularReferences: true
         }
       };

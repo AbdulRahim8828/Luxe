@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../blog/types';
-import OptimizedImage from '../../src/components/OptimizedImage';
+import OptimizedImage from '../components/OptimizedImage';
 
 interface BlogCardProps {
   post: BlogPost;

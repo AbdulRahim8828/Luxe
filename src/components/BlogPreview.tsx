@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { blogPosts } from '../blog/data';
-import OptimizedImage from '../../src/components/OptimizedImage';
+import OptimizedImage from '../components/OptimizedImage';
 
 const BlogPreview = () => {
   const latestPosts = blogPosts.slice(0, 3);
