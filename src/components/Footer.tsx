@@ -16,8 +16,12 @@ const Footer = () => {
           {/* Luxury Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-black font-bold text-xl">L</span>
+              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg border-2 border-yellow-500/20">
+                <img 
+                  src="/Luxe assets/logo.png" 
+                  alt="LUXE Wooden Furniture Polishing - Wooden Furniture" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white" style={{ fontFamily: 'Playfair Display' }}>LUXE</h3>
