@@ -15,7 +15,7 @@ export class SitemapGenerator implements ISitemapGenerator {
   private sitemapEntries: Map<string, SitemapEntry> = new Map();
   private baseUrl: string;
 
-  constructor(config?: Partial<SitemapGeneratorConfig>, baseUrl: string = 'https://a1furniturepolish.com') {
+  constructor(config?: Partial<SitemapGeneratorConfig>, baseUrl: string = 'https://luxewoodenfurniturepolishing.com') {
     this.config = { ...defaultSitemapGeneratorConfig, ...config };
     this.baseUrl = baseUrl.replace(/\/$/, ''); // Remove trailing slash
   }

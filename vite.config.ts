@@ -80,7 +80,7 @@ export default defineConfig({
       ]
     }),
     // sitemap({ 
-    //   hostname: 'https://a1furniturepolish.com', 
+    //   hostname: 'https://luxewoodenfurniturepolishing.com', 
     //   dynamicRoutes
     // }), // Replaced with custom optimized sitemap generation
   ],
@@ -131,10 +131,77 @@ export default defineConfig({
           // Route-based code splitting for pages
           if (id.includes('src/pages/')) {
             const pageName = id.split('src/pages/')[1].split('.')[0];
-            // Group similar pages together for better caching
+            
+            // Split generated pages into smaller chunks by service type and location
             if (pageName.includes('generated/')) {
-              return 'generated-pages';
+              const fileName = pageName.split('generated/')[1];
+              
+              // Group by service type for better caching
+              if (fileName.includes('FurniturePolishing')) {
+                return 'generated-furniture-polishing';
+              }
+              if (fileName.includes('WoodPolishing')) {
+                return 'generated-wood-polishing';
+              }
+              if (fileName.includes('PuPolish')) {
+                return 'generated-pu-polish';
+              }
+              if (fileName.includes('PuGlossPolish')) {
+                return 'generated-pu-gloss-polish';
+              }
+              if (fileName.includes('PuMattPolish')) {
+                return 'generated-pu-matt-polish';
+              }
+              if (fileName.includes('MelaminePolish')) {
+                return 'generated-melamine-polish';
+              }
+              if (fileName.includes('DucoPolish')) {
+                return 'generated-duco-polish';
+              }
+              if (fileName.includes('TeakWoodPolish')) {
+                return 'generated-teak-wood-polish';
+              }
+              if (fileName.includes('InteriorWoodFinishing')) {
+                return 'generated-interior-wood-finishing';
+              }
+              if (fileName.includes('DoorPolishing')) {
+                return 'generated-door-polishing';
+              }
+              if (fileName.includes('WardrobePolishing')) {
+                return 'generated-wardrobe-polishing';
+              }
+              if (fileName.includes('DiningTablePolishing')) {
+                return 'generated-dining-table-polishing';
+              }
+              if (fileName.includes('SofaWoodPolish')) {
+                return 'generated-sofa-wood-polish';
+              }
+              if (fileName.includes('BedWoodPolish')) {
+                return 'generated-bed-wood-polish';
+              }
+              if (fileName.includes('CabinetWoodPolish')) {
+                return 'generated-cabinet-wood-polish';
+              }
+              if (fileName.includes('BookshelfrackPolish')) {
+                return 'generated-bookshelfrack-polish';
+              }
+              if (fileName.includes('MandirPolish')) {
+                return 'generated-mandir-polish';
+              }
+              if (fileName.includes('JhulaPolish')) {
+                return 'generated-jhula-polish';
+              }
+              if (fileName.includes('WoodenFloorPolishing')) {
+                return 'generated-wooden-floor-polishing';
+              }
+              if (fileName.includes('AntiqueFurniturePolish')) {
+                return 'generated-antique-furniture-polish';
+              }
+              
+              // Fallback for any other generated pages
+              return 'generated-other';
             }
+            
             if (pageName.includes('locations/')) {
               return 'location-pages';
             }
@@ -211,7 +278,7 @@ export default defineConfig({
       },
     },
     // Chunk size warnings - stricter for luxury performance
-    chunkSizeWarningLimit: 800, // Reduced from 1000
+    chunkSizeWarningLimit: 500, // Reduced from 800 for better performance
     // Source maps for production debugging (disabled for performance)
     sourcemap: false,
     // CSS code splitting

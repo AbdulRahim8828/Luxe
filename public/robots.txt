@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://a1furniturepolish.com/sitemap.xml
+Sitemap: https://luxewoodenfurniturepolishing.com/sitemap.xml
 
 # Favicon
 Allow: /favicon.ico

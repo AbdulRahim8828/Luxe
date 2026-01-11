@@ -176,9 +176,9 @@ function generateOpenGraphTags(pageData: any): OpenGraphData {
     title: ogTags['og:title'] || pageData.title || 'A1 Furniture Polish',
     description: ogTags['og:description'] || pageData.metaDescription || 'Professional furniture polishing services in Mumbai',
     image: ogTags['og:image'] || generateImageUrl(pageData),
-    url: `https://www.a1furniturepolish.com${pageData.url || ''}`,
+    url: `https://luxewoodenfurniturepolishing.com${pageData.url || ''}`,
     type: 'website',
-    siteName: 'A1 Furniture Polish'
+    siteName: 'Luxe Wooden Furniture Polishing'
   };
 }
 

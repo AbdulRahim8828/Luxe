@@ -18,7 +18,7 @@ interface PageConfig {
 const pageConfigs: PageConfig[] = [
   // Homepage - Highest priority, changes daily
   {
-    url: 'https://a1furniturepolish.com/',
+    url: 'https://luxewoodenfurniturepolishing.com/',
     priority: 1.0,
     changeFreq: 'daily',
     lastModified: new Date('2024-12-13')
@@ -26,31 +26,31 @@ const pageConfigs: PageConfig[] = [
   
   // Main pages - High priority, changes weekly
   {
-    url: 'https://a1furniturepolish.com/about',
+    url: 'https://luxewoodenfurniturepolishing.com/about',
     priority: 0.9,
     changeFreq: 'monthly',
     lastModified: new Date('2024-12-10')
   },
   {
-    url: 'https://a1furniturepolish.com/services',
+    url: 'https://luxewoodenfurniturepolishing.com/services',
     priority: 0.9,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-12')
   },
   {
-    url: 'https://a1furniturepolish.com/contact',
+    url: 'https://luxewoodenfurniturepolishing.com/contact',
     priority: 0.8,
     changeFreq: 'monthly',
     lastModified: new Date('2024-12-05')
   },
   {
-    url: 'https://a1furniturepolish.com/blog',
+    url: 'https://luxewoodenfurniturepolishing.com/blog',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-12')
   },
   {
-    url: 'https://a1furniturepolish.com/products',
+    url: 'https://luxewoodenfurniturepolishing.com/products',
     priority: 0.7,
     changeFreq: 'monthly',
     lastModified: new Date('2024-12-08')
@@ -58,43 +58,43 @@ const pageConfigs: PageConfig[] = [
 
   // Main service pages - High priority
   {
-    url: 'https://a1furniturepolish.com/services/wooden-furniture-polish',
+    url: 'https://luxewoodenfurniturepolishing.com/services/wooden-furniture-polish',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/sofa-chair-polishing',
+    url: 'https://luxewoodenfurniturepolishing.com/sofa-chair-polishing',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/services/table-and-bed-polishing',
+    url: 'https://luxewoodenfurniturepolishing.com/services/table-and-bed-polishing',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/services/antique-restoration',
+    url: 'https://luxewoodenfurniturepolishing.com/services/antique-restoration',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/services/commercial-polishing',
+    url: 'https://luxewoodenfurniturepolishing.com/services/commercial-polishing',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/sofa-fabric-change',
+    url: 'https://luxewoodenfurniturepolishing.com/sofa-fabric-change',
     priority: 0.8,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/office-chair-repair',
+    url: 'https://luxewoodenfurniturepolishing.com/office-chair-repair',
     priority: 0.7,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
@@ -102,13 +102,13 @@ const pageConfigs: PageConfig[] = [
 
   // Location-specific pages - Medium-high priority
   {
-    url: 'https://a1furniturepolish.com/goregaon-furniture-polish',
+    url: 'https://luxewoodenfurniturepolishing.com/goregaon-furniture-polish',
     priority: 0.7,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
   },
   {
-    url: 'https://a1furniturepolish.com/powai-furniture-polish',
+    url: 'https://luxewoodenfurniturepolishing.com/powai-furniture-polish',
     priority: 0.7,
     changeFreq: 'weekly',
     lastModified: new Date('2024-12-11')
@@ -133,7 +133,7 @@ function generateBlogPageConfigs(): PageConfig[] {
     }
 
     return {
-      url: `https://a1furniturepolish.com/blog/${post.slug}`,
+      url: `https://luxewoodenfurniturepolishing.com/blog/${post.slug}`,
       priority: 0.6,
       changeFreq: 'monthly' as const,
       lastModified
@@ -164,7 +164,7 @@ function generateServicePageConfigs(): PageConfig[] {
     // Ensure URL is absolute
     const absoluteUrl = page.url.startsWith('http') 
       ? page.url 
-      : `https://a1furniturepolish.com${page.url}`;
+      : `https://luxewoodenfurniturepolishing.com${page.url}`;
 
     return {
       url: absoluteUrl,
@@ -177,26 +177,26 @@ function generateServicePageConfigs(): PageConfig[] {
 
 function createSEOPage(config: PageConfig): SEOPage {
   // Extract page info from URL
-  const urlPath = config.url.replace('https://a1furniturepolish.com', '');
-  let title = 'A1 Furniture Polish';
+  const urlPath = config.url.replace('https://luxewoodenfurniturepolishing.com', '');
+  let title = 'Luxe Wooden Furniture Polishing';
   let metaDescription = 'Professional furniture polishing services in Mumbai';
 
   // Generate appropriate title and description based on URL
   if (urlPath === '/' || urlPath === '') {
-    title = 'A1 Furniture Polish - Professional Furniture Polishing Services in Mumbai';
+    title = 'Luxe Wooden Furniture Polishing - Professional Furniture Polishing Services in Mumbai';
     metaDescription = 'Expert furniture polishing, restoration & repair services in Mumbai. Transform your wooden furniture with our professional polishing solutions. Book now!';
   } else if (urlPath === '/about') {
-    title = 'About A1 Furniture Polish - Mumbai\'s Trusted Furniture Experts';
-    metaDescription = 'Learn about A1 Furniture Polish, Mumbai\'s leading furniture polishing service with years of experience in wooden furniture restoration and repair.';
+    title = 'About Luxe Wooden Furniture Polishing - Mumbai\'s Trusted Furniture Experts';
+    metaDescription = 'Learn about Luxe Wooden Furniture Polishing, Mumbai\'s leading furniture polishing service with years of experience in wooden furniture restoration and repair.';
   } else if (urlPath === '/services') {
-    title = 'Furniture Polishing Services in Mumbai - A1 Furniture Polish';
+    title = 'Furniture Polishing Services in Mumbai - Luxe Wooden Furniture Polishing';
     metaDescription = 'Complete range of furniture polishing services in Mumbai including wooden furniture polish, sofa repair, antique restoration & more. Professional results guaranteed.';
   } else if (urlPath === '/contact') {
-    title = 'Contact A1 Furniture Polish - Book Your Service Today';
-    metaDescription = 'Contact A1 Furniture Polish for professional furniture polishing services in Mumbai. Call now for free quotes and same-day service booking.';
+    title = 'Contact Luxe Wooden Furniture Polishing - Book Your Service Today';
+    metaDescription = 'Contact Luxe Wooden Furniture Polishing for professional furniture polishing services in Mumbai. Call now for free quotes and same-day service booking.';
   } else if (urlPath === '/blog') {
-    title = 'Furniture Care Blog - Tips & Guides by A1 Furniture Polish';
-    metaDescription = 'Expert furniture care tips, polishing guides, and maintenance advice from Mumbai\'s leading furniture polishing professionals at A1 Furniture Polish.';
+    title = 'Furniture Care Blog - Tips & Guides by Luxe Wooden Furniture Polishing';
+    metaDescription = 'Expert furniture care tips, polishing guides, and maintenance advice from Mumbai\'s leading furniture polishing professionals at Luxe Wooden Furniture Polishing.';
   } else if (urlPath.startsWith('/blog/')) {
     // Find the blog post for more accurate title/description
     const slug = urlPath.replace('/blog/', '');
@@ -210,8 +210,8 @@ function createSEOPage(config: PageConfig): SEOPage {
     const pageName = urlPath.split('/').pop() || '';
     title = pageName.split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ') + ' - A1 Furniture Polish';
-    metaDescription = `Professional ${pageName.replace(/-/g, ' ')} services in Mumbai. Expert furniture polishing and restoration by A1 Furniture Polish.`;
+    ).join(' ') + ' - Luxe Wooden Furniture Polishing';
+    metaDescription = `Professional ${pageName.replace(/-/g, ' ')} services in Mumbai. Expert furniture polishing and restoration by Luxe Wooden Furniture Polishing.`;
   }
 
   return {
@@ -308,7 +308,7 @@ async function generateOptimizedSitemap() {
 
     // Generate robots.txt as well
     const robotsTxt = sitemapGenerator.generateRobotsTxt(
-      'https://a1furniturepolish.com/sitemap.xml'
+      'https://luxewoodenfurniturepolishing.com/sitemap.xml'
     );
 
     const publicDir = path.join(process.cwd(), 'public');

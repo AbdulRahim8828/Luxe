@@ -18,7 +18,7 @@ describe('SEO Integration System', () => {
       metaDescription: 'Get affordable furniture polishing in Mumbai. Expert craftsmen, quality materials, affordable rates. Same-day service available. Book online today!',
       h1: 'Affordable Furniture Polishing in Mumbai',
       url: '/services/affordable-furniture-polishing-mumbai',
-      canonicalUrl: 'https://www.a1furniturepolish.com/services/affordable-furniture-polishing-mumbai',
+      canonicalUrl: 'https://luxewoodenfurniturepolishing.com/services/affordable-furniture-polishing-mumbai',
       serviceCategory: 'furniture-polishing',
       serviceName: 'Affordable Furniture Polishing',
       location: 'Mumbai',
